@@ -125,13 +125,6 @@
     </owl:Class>
     
 
-
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Facial_Feature -->
-
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Facial_Feature"/>
-    
-
-
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Hat -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Hat">
@@ -200,13 +193,6 @@
         <skos:definition xml:lang="en">ornamental chain or string of beads, jewels, or links worn round the neck</skos:definition>
     </owl:Class>
     
-
-
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion -->
-
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion"/>
-    
-
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Ornament -->
 
