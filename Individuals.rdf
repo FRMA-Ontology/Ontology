@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/"
      xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/"
      xmlns:WT="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/"
+     xmlns:IMG="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
      xmlns:lio="http://purl.org/net/lio#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -27,10 +28,10 @@
         <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology Examplar Data</rdfs:label>
         <skos:definition xml:lang="en">This ontology contains examplar data used to test the FRMA ontology</skos:definition>
     </owl:Ontology>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -38,34 +39,34 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Beard -->
 
     <owl:Class rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Beard"/>
-    
+
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Eyebrows -->
 
     <owl:Class rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Eyebrows"/>
-    
+
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#HairColor -->
 
     <owl:Class rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#HairColor"/>
-    
+
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Haircut -->
 
     <owl:Class rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Haircut"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -73,7 +74,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Bangs -->
@@ -83,7 +84,7 @@
         <skos:definition xml:lang="en">whether or not person has hair covering their forehead</skos:definition>
         <skos:prefLabel xml:lang="en">Bangs</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#BlackHair -->
@@ -93,7 +94,7 @@
         <skos:definition xml:lang="en">black hair</skos:definition>
         <skos:prefLabel xml:lang="en">Black Hair</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#BlondHair -->
@@ -103,7 +104,7 @@
         <skos:definition xml:lang="en">fair or pale yellow hair</skos:definition>
         <skos:prefLabel xml:lang="en">Blond Hair</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#BrownHair -->
@@ -113,7 +114,7 @@
         <skos:definition xml:lang="en">brown hair</skos:definition>
         <skos:prefLabel xml:lang="en">Brown Hair</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#BushyEyebrows -->
@@ -123,7 +124,7 @@
         <skos:definition xml:lang="en">eyebrows that are growing thickly</skos:definition>
         <skos:prefLabel xml:lang="en">Bushy Eyebrows</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#FiveOClockShadow -->
@@ -133,7 +134,7 @@
         <skos:definition xml:lang="en">dark stubble that appears on a man&apos;s face some hours after shaving</skos:definition>
         <skos:prefLabel xml:lang="en">Five OClock Shadow</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Goatee -->
@@ -143,7 +144,7 @@
         <skos:definition xml:lang="en">small pointed beard like that of a goat</skos:definition>
         <skos:prefLabel xml:lang="en">Goatee</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#GrayHair -->
@@ -153,7 +154,7 @@
         <skos:definition xml:lang="en">gray hair</skos:definition>
         <skos:prefLabel xml:lang="en">Gray Hair</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#ThinEyebrows -->
@@ -162,7 +163,7 @@
         <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Eyebrows"/>
         <skos:prefLabel xml:lang="en">Thin Eyebrows</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/DataSampleFelipePerezRoque0004 -->
@@ -170,9 +171,9 @@
     <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/DataSampleFelipePerezRoque0004">
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/DataSample"/>
         <MLMO:hasFeature rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ImageFelipe_Perez_Roque_0004"/>
-        
+
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNet -->
@@ -180,7 +181,7 @@
     <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNet">
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalNeuralNetwork"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetConv1 -->
@@ -192,7 +193,7 @@
         <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</MLMO:hasMatrixSizeX>
         <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</MLMO:hasMatrixSizeY>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetPool2 -->
@@ -205,7 +206,7 @@
         <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeY>
         <MLMO:hasPoolingFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Max Pool + norm</MLMO:hasPoolingFunction>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetTest01 -->
@@ -216,7 +217,7 @@
         <Relations:uses rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNet"/>
         <Relations:uses rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/TestSetLFW"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetTest01ResultSet -->
@@ -224,7 +225,7 @@
     <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetTest01ResultSet">
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ResultSet"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetTraining -->
@@ -233,7 +234,7 @@
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/Training"/>
         <Relations:provides rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNet"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FelipeNeckTie -->
@@ -241,7 +242,7 @@
     <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FelipeNeckTie">
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/NeckTie"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/Felipe_Perez_Roque -->
@@ -250,7 +251,7 @@
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Person"/>
         <WT:isWearing rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FelipeNeckTie"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ImageFelipe_Perez_Roque_0004 -->
@@ -259,7 +260,7 @@
         <rdf:type rdf:resource="http://purl.org/net/lio#Image"/>
         <lio:depicts rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/Felipe_Perez_Roque"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ResultFelipePerezRoque0004 -->
@@ -267,7 +268,7 @@
     <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ResultFelipePerezRoque0004">
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/Result"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/TestSetLFW -->
