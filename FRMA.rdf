@@ -1,33 +1,183 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/"
      xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/"
-     xmlns:AnnotationVocabulary1="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:AnnotationVocabulary="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:AnnotationVocabulary="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+     xmlns:AnnotationVocabulary1="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
      xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
     <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/">
+
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/"/>
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/"/>
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/"/>
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/"/>
+
         <terms:creator xml:lang="en">Alexander Schwartzberg</terms:creator>
-        <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology</rdfs:label>
-        <skos:definition xml:lang="en">Machine learning allows us to learn a model for a given task such as facial recognition with a high degree of accuracy. However, after these models are generated they are often treated as black boxes and the limitations of a model are often unknown to the end user. The system developed for this use case will provide an intuitive interface to explore the limits of a facial recognition model by semantically integrating “smart” images(semantically describe who the image depicts and what Kumar [2] features the image exhibits) with classification results to discover common causes for misclassifications.</skos:definition>
         <terms:creator xml:lang="en">Andrew Gaudet</terms:creator>
-        <terms:creator xml:lang="en">Matthew Johnson</terms:creator>
         <terms:creator xml:lang="en">John Angel</terms:creator>
         <terms:creator xml:lang="en">Jordan Faas-Bush</terms:creator>
+        <terms:creator xml:lang="en">Matthew Johnson</terms:creator>
+        <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology</rdfs:label>
+        <skos:definition xml:lang="en">Machine learning allows us to learn a model for a given task such as facial recognition with a high degree of accuracy. However, after these models are generated they are often treated as black boxes and the limitations of a model are often unknown to the end user. The system developed for this use case will provide an intuitive interface to explore the limits of a facial recognition model by semantically integrating “smart” images(semantically describe who the image depicts and what Kumar [2] features the image exhibits) with classification results to discover common causes for misclassifications.</skos:definition>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOcclusionSourceOf -->
+
+    <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOcclusionSourceOf">
+        <rdfs:label xml:lang="en">is the occlusion source of</rdfs:label>
+        <skos:definition xml:lang="en">is the source and/or causes of a specific occlusion on an image of a face</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/AuricleOcclusion -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/AuricleOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion"/>
+        <rdfs:label xml:lang="en">auricle occlusion</rdfs:label>
+        <skos:definition xml:lang="en">occlusion of the ears</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/BuccalOcclusion -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/BuccalOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion"/>
+        <rdfs:label xml:lang="en">buccal occlusion</rdfs:label>
+        <skos:definition xml:lang="en">occlusion of the cheeks</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/CervicalOcclusion -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/CervicalOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion"/>
+        <rdfs:label xml:lang="en">cervical occlusion</rdfs:label>
+        <skos:definition xml:lang="en">occlusion of the neck</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/CranialOcclusion -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/CranialOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion"/>
+        <rdfs:label xml:lang="en">cranial occlusion</rdfs:label>
+        <skos:definition xml:lang="en">occusion of the top of the head, above the ears</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FrontalOcclusion -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FrontalOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion"/>
+        <rdfs:label xml:lang="en">frontal occlusion</rdfs:label>
+        <skos:definition xml:lang="en">occlusion of the forehead</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MentalOcclusion -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MentalOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion"/>
+        <rdfs:label xml:lang="en">mental occlusion</rdfs:label>
+        <skos:definition xml:lang="en">occlusion of the chin</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/NasalOcclusion -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/NasalOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion"/>
+        <rdfs:label xml:lang="en">nasal occlusion</rdfs:label>
+        <skos:definition xml:lang="en">occlusion of the nose</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/OcularOcclusion -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/OcularOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion"/>
+        <rdfs:label xml:lang="en">ocular occlusion</rdfs:label>
+        <skos:definition xml:lang="en">occlusion of the eyes</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/OralOcclusion -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/OralOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion"/>
+        <rdfs:label xml:lang="en">oral occlusion</rdfs:label>
+        <skos:definition xml:lang="en">occlusion of the lips and mouth</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ParotidOcclusion -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ParotidOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion"/>
+        <rdfs:label xml:lang="en">parotid occlusion</rdfs:label>
+        <skos:definition xml:lang="en">occlusion of the angle of the jaw</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ZygomaticOcclusion -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ZygomaticOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion"/>
+        <rdfs:label xml:lang="en">zygomatic occlusion</rdfs:label>
+        <skos:definition xml:lang="en">occlusion of the cheek bones</skos:definition>
+    </owl:Class>
 </rdf:RDF>
+
 
 
 

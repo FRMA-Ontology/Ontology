@@ -10,7 +10,8 @@
      xmlns:frma="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:AnnotationVocabulary="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/">
     <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/">
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/"/>
@@ -49,9 +50,20 @@
     
 
 
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOcclusionSourceOf -->
+
+    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOcclusionSourceOf">
+        <owl:equivalentProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/isOcclusionSourceOf"/>
+    </rdf:Description>
+    
+
+
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/isOcclusionSourceOf -->
 
-    <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/isOcclusionSourceOf"/>
+    <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/isOcclusionSourceOf">
+        <rdfs:label xml:lang="en">is the occlusion source of</rdfs:label>
+        <skos:definition xml:lang="en">is the source and/or causes of a specific occlusion on an image of a face</skos:definition>
+    </owl:ObjectProperty>
     
 
 
@@ -97,10 +109,24 @@
     
 
 
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion -->
+
+    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion">
+        <owl:equivalentClass rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Occlusion"/>
+    </rdf:Description>
+    
+
+
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Earrings -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Earrings">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Jewelry"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/AuricleOcclusion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Earrings</rdfs:label>
         <skos:definition xml:lang="en">piece of jewellery worn on the lobe or edge of the ear</skos:definition>
     </owl:Class>
@@ -121,6 +147,12 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Eyewear">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Headwear"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/OcularOcclusion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Eyewear</rdfs:label>
         <skos:definition xml:lang="en">things worn on the eyes</skos:definition>
     </owl:Class>
@@ -131,6 +163,12 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Hat">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Headwear"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/CranialOcclusion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Hat</rdfs:label>
         <skos:definition xml:lang="en">shaped covering for the head</skos:definition>
     </owl:Class>
@@ -140,7 +178,7 @@
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Headwear -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Headwear">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/WearableThing"/>
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/OccludingWearableObject"/>
         <rdfs:label xml:lang="en">headwear</rdfs:label>
         <skos:definition xml:lang="en">items worn on the head</skos:definition>
     </owl:Class>
@@ -161,6 +199,12 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Lipstick">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Makeup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/OralOcclusion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Lipstick</rdfs:label>
         <skos:definition xml:lang="en">coloured cosmetic applied to the lips from a small solid stick</skos:definition>
     </owl:Class>
@@ -181,6 +225,12 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/NeckTie">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Ornament"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/CervicalOcclusion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Necktie</rdfs:label>
         <skos:definition xml:lang="en">strip of material worn round the collar and tied in a knot at the front with the ends hanging down, typically forming part of a man&apos;s smart or formal outfit</skos:definition>
     </owl:Class>
@@ -191,8 +241,29 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Necklace">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Jewelry"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/CervicalOcclusion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Necklace</rdfs:label>
         <skos:definition xml:lang="en">ornamental chain or string of beads, jewels, or links worn round the neck</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/OccludingWearableObject -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/OccludingWearableObject">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Occlusion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">occluding wearable object</rdfs:label>
+        <skos:definition xml:lang="en">item that can be worn</skos:definition>
     </owl:Class>
     
 
@@ -206,24 +277,9 @@
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Ornament -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Ornament">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/WearableThing"/>
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/OccludingWearableObject"/>
         <rdfs:label xml:lang="en">Ornament</rdfs:label>
         <skos:definition xml:lang="en">thing used or serving to make something look more attractive but usually having no practical purpose</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/WearableThing -->
-
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/WearableThing">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/isOcclusionSourceOf"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Occlusion"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Wearable</rdfs:label>
-        <skos:definition xml:lang="en">item that can be worn</skos:definition>
     </owl:Class>
 </rdf:RDF>
 
