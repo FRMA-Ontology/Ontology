@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/"
      xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/"
+     xmlns:PFD="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -31,6 +32,148 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/hasConstituent -->
+
+    <owl:AnnotationProperty rdf:about="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/hasConstituent"/>
+    
+
+
+    <!-- http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/provides -->
+
+    <owl:AnnotationProperty rdf:about="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/provides"/>
+    
+
+
+    <!-- http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/uses -->
+
+    <owl:AnnotationProperty rdf:about="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/uses"/>
+    
+
+
+    <!-- http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasTag -->
+
+    <owl:AnnotationProperty rdf:about="http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasTag"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasDimension -->
+
+    <owl:AnnotationProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasDimension"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasFeature -->
+
+    <owl:AnnotationProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasFeature"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasIndex -->
+
+    <owl:AnnotationProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasIndex"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasMatrixSizeX -->
+
+    <owl:AnnotationProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasMatrixSizeX"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasMatrixSizeY -->
+
+    <owl:AnnotationProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasMatrixSizeY"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasPoolingFunction -->
+
+    <owl:AnnotationProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasPoolingFunction"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasDemographic -->
+
+    <owl:AnnotationProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasDemographic"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasShape -->
+
+    <owl:AnnotationProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasShape"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasSize -->
+
+    <owl:AnnotationProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasSize"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/isBaggy -->
+
+    <owl:AnnotationProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/isBaggy"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/isOpen -->
+
+    <owl:AnnotationProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/isOpen"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/teethVisable -->
+
+    <owl:AnnotationProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/teethVisable"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Beard -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Beard"/>
+    
+
+
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Eyebrows -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Eyebrows"/>
+    
+
+
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#HairColor -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#HairColor"/>
+    
+
+
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Haircut -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Haircut"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Individuals
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -39,12 +182,101 @@
     
 
 
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Bangs -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Bangs">
+        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Haircut"/>
+        <skos:definition xml:lang="en">whether or not person has hair covering their forehead</skos:definition>
+        <skos:prefLabel xml:lang="en">Bangs</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#BlackHair -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#BlackHair">
+        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#HairColor"/>
+        <skos:definition xml:lang="en">black hair</skos:definition>
+        <skos:prefLabel xml:lang="en">Black Hair</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#BlondHair -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#BlondHair">
+        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#HairColor"/>
+        <skos:definition xml:lang="en">fair or pale yellow hair</skos:definition>
+        <skos:prefLabel xml:lang="en">Blond Hair</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#BrownHair -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#BrownHair">
+        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#HairColor"/>
+        <skos:definition xml:lang="en">brown hair</skos:definition>
+        <skos:prefLabel xml:lang="en">Brown Hair</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#BushyEyebrows -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#BushyEyebrows">
+        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Eyebrows"/>
+        <skos:definition xml:lang="en">eyebrows that are growing thickly</skos:definition>
+        <skos:prefLabel xml:lang="en">Bushy Eyebrows</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#FiveOClockShadow -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#FiveOClockShadow">
+        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Beard"/>
+        <skos:definition xml:lang="en">dark stubble that appears on a man&apos;s face some hours after shaving</skos:definition>
+        <skos:prefLabel xml:lang="en">Five OClock Shadow</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Goatee -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Goatee">
+        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Beard"/>
+        <skos:definition xml:lang="en">small pointed beard like that of a goat</skos:definition>
+        <skos:prefLabel xml:lang="en">Goatee</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#GrayHair -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#GrayHair">
+        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#HairColor"/>
+        <skos:definition xml:lang="en">gray hair</skos:definition>
+        <skos:prefLabel xml:lang="en">Gray Hair</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#ThinEyebrows -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#ThinEyebrows">
+        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Eyebrows"/>
+        <skos:prefLabel xml:lang="en">Thin Eyebrows</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/DataSampleFelipePerezRoque0004 -->
 
     <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/DataSampleFelipePerezRoque0004">
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/DataSample"/>
-        <MLMO:hasFeature rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ImageFelipe_Perez_Roque_0004"/>
         <LanguageRepresentation:hasTag xml:lang="en">Felipe_Perez_Roque</LanguageRepresentation:hasTag>
+        <MLMO:hasFeature rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ImageFelipe_Perez_Roque_0004"/>
     </owl:NamedIndividual>
     
 
@@ -110,10 +342,56 @@
     
 
 
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FelipePerezRoqueEye -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FelipePerezRoqueEye">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Eye"/>
+        <PFD:hasColor rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Brown"/>
+        <PFD:isBaggy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</PFD:isBaggy>
+        <PFD:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</PFD:isOpen>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FelipePerezRoqueFace -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FelipePerezRoqueFace">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Face"/>
+        <PFD:hasVisualFeature rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/RoundJaw"/>
+        <PFD:hasVisualFeature rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Frowning"/>
+        <PFD:hasVisualFeature rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/FullyVisibleForehead"/>
+        <PFD:hasVisualFeature rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Narrow_Eyes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FelipePerezRoqueMouth -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FelipePerezRoqueMouth">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Mouth"/>
+        <PFD:hasSize rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Big"/>
+        <PFD:hasVisualFeature rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/MouthSlightlyOpen"/>
+        <PFD:teethVisable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</PFD:teethVisable>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FelipePerezRoqueNose -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FelipePerezRoqueNose">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Nose"/>
+        <PFD:hasShape rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/PointyNose"/>
+        <PFD:hasSize rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Big"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/Felipe_Perez_Roque -->
 
     <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/Felipe_Perez_Roque">
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Person"/>
+        <PFD:hasDemographic rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Masculine"/>
+        <PFD:hasDemographic rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/White"/>
     </owl:NamedIndividual>
     
 
@@ -139,93 +417,6 @@
     <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/TestSetLFW">
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/TestSet"/>
         <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/DataSampleFelipePerezRoque0004"/>
-    </owl:NamedIndividual>
-
-    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/Individuals/Bangs -->
-
-    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Bangs">
-        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Haircut"/>
-        <skos:definition xml:lang="en">whether or not person has hair covering their forehead</skos:definition>
-        <skos:prefLabel xml:lang="en">Bangs</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/Individuals/BlackHair -->
-
-    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#BlackHair">
-        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#HairColor"/>
-        <skos:definition xml:lang="en">black hair</skos:definition>
-        <skos:prefLabel xml:lang="en">Black Hair</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/Individuals/BlondHair -->
-
-    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#BlondHair">
-        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#HairColor"/>
-        <skos:definition xml:lang="en">fair or pale yellow hair</skos:definition>
-        <skos:prefLabel xml:lang="en">Blond Hair</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/Individuals/BrownHair -->
-
-    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#BrownHair">
-        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#HairColor"/>
-        <skos:definition xml:lang="en">brown hair</skos:definition>
-        <skos:prefLabel xml:lang="en">Brown Hair</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/Individuals/BushyEyebrows -->
-
-    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#BushyEyebrows">
-        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Eyebrows"/>
-        <skos:definition xml:lang="en">eyebrows that are growing thickly</skos:definition>
-        <skos:prefLabel xml:lang="en">Bushy Eyebrows</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/Individuals/FiveOClockShadow -->
-
-    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#FiveOClockShadow">
-        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Beard"/>
-        <skos:definition xml:lang="en">dark stubble that appears on a man&apos;s face some hours after shaving</skos:definition>
-        <skos:prefLabel xml:lang="en">Five OClock Shadow</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/Individuals/Goatee -->
-
-    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Goatee">
-        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Beard"/>
-        <skos:definition xml:lang="en">small pointed beard like that of a goat</skos:definition>
-        <skos:prefLabel xml:lang="en">Goatee</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/Individuals/GrayHair -->
-
-    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#GrayHair">
-        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#HairColor"/>
-        <skos:definition xml:lang="en">gray hair</skos:definition>
-        <skos:prefLabel xml:lang="en">Gray Hair</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/Individuals/ThinEyebrows -->
-
-    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#ThinEyebrows">
-        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Eyebrows"/>
-        <skos:prefLabel xml:lang="en">Thin Eyebrows</skos:prefLabel>
     </owl:NamedIndividual>
 </rdf:RDF>
 
