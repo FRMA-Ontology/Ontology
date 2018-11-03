@@ -13,6 +13,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
     <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/">
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/"/>
         <dct:creator>John Angel</dct:creator>
         <rdfs:label xml:lang="en">Wearable Things</rdfs:label>
         <skos:definition xml:lang="en">When dealing with facial recognition on images of people, it is common to need to effectively deal with items that the image subject is wearing. This ontolgy exists to represent objects commonly worn by people in photos and images.</skos:definition>
@@ -48,13 +49,13 @@
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOcclusionSourceOf -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/isOcclusionSourceOf -->
 
     <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/isOcclusionSourceOf"/>
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isWearing -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/isWearing -->
 
     <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/isWearing">
         <rdfs:label xml:lang="en">is wearing</rdfs:label>
@@ -74,7 +75,7 @@
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isHeavyMakeup -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/isHeavyMakeup -->
 
     <owl:DatatypeProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/isHeavyMakeup">
         <rdfs:domain rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Makeup"/>
@@ -96,7 +97,7 @@
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Earrings -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Earrings -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Earrings">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Jewelry"/>
@@ -106,7 +107,7 @@
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Eyeglasses -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Eyeglasses -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Eyeglasses">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Eyewear"/>
@@ -116,7 +117,7 @@
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Eyewear -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Eyewear -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Eyewear">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Headwear"/>
@@ -125,7 +126,8 @@
     </owl:Class>
     
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Hat -->
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Hat -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Hat">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Headwear"/>
@@ -135,7 +137,7 @@
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Headwear -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Headwear -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Headwear">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/WearableThing"/>
@@ -145,7 +147,7 @@
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Jewelry -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Jewelry -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Jewelry">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Ornament"/>
@@ -155,7 +157,7 @@
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Lipstick -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Lipstick -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Lipstick">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Makeup"/>
@@ -165,7 +167,7 @@
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Makeup -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Makeup -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Makeup">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Ornament"/>
@@ -175,7 +177,7 @@
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/NeckTie -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/NeckTie -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/NeckTie">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Ornament"/>
@@ -185,7 +187,7 @@
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Necklace -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Necklace -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Necklace">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Jewelry"/>
@@ -194,7 +196,14 @@
     </owl:Class>
     
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Ornament -->
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Occlusion -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Occlusion"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Ornament -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Ornament">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/WearableThing"/>
@@ -203,7 +212,8 @@
     </owl:Class>
     
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThing -->
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/WearableThing -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/WearableThing">
         <rdfs:subClassOf>
