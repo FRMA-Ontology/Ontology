@@ -56,17 +56,23 @@ def basic_text_query(tags, names):
 			for attribute in attributeList[2:]:
 				print(attribute, " : ", tags[name][imageIndex][attribute] > 0)
 			print()
-		else:
+		elif len(name) > 0:
 			print("Name", name, "is not in tags")
 
 def output_labeled_everything(tags, names, output_file):
 	f = open(output_file, "w")
 
 	all_text_labeled = ""
+	numMissingData = 0
 	for name in names:
 		# output the data to a text file so it's easier to read:
 		images = tags[name]
-		for image in images:
+		for imageNum in range(len(images)):
+			image = images[imageNum]
+			if (len(image) == 0):
+				print("Error on image", imageNum+1, "for person:", name, "- image has no data")
+				numMissingData += 1
+				continue
 			for attribute in attributeList[:2]:
 				# the name and image number shouldn't be converted into booleans
 				all_text_labeled += attribute + " : " + str(image[attribute]) + "\n"
@@ -77,6 +83,7 @@ def output_labeled_everything(tags, names, output_file):
 	f.write(all_text_labeled)
 
 	f.close()
+	print(numMissingData, "Images missing label data")
 
 
 if __name__ == "__main__":
@@ -84,6 +91,9 @@ if __name__ == "__main__":
 	print("\n",names,"\n")
 	basic_text_query(tags, names)
 	# print(tags[names[0]][0])
+
+	# run this if you want to output a text file to "labeled_attributes.txt" that has all of the labels nicely formatted for all the photos
+	# that have them
 	# output_labeled_everything(tags, names, "labeled_attributes.txt")
 
 
