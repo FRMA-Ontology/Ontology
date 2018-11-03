@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/IMG/"
-     xml:base="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/IMG/"
+<rdf:RDF xmlns="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
+     xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
      xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -14,7 +14,7 @@
      xmlns:lio-orig="http://purl.org/net/lio#"
      xmlns:lio="https://w3id.org/lio/v1#">
 
-    <owl:Ontology rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/IMG/">
+    <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/">
         <owl:imports rdf:resource="http://www.imagesnippets.com/lio/lio.owl"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology - Image Sub-Ontology</rdfs:label>

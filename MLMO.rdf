@@ -13,6 +13,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+     xmlns:AnnotationVocabulary="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
      xmlns:fibo-fnd-arr-cls="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/ClassificationSchemes/">
     <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/">
         <owl:imports rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/ClassificationSchemes/"/>
@@ -24,10 +25,10 @@
         <rdfs:label xml:lang="en">Machine Learning Model Ontology</rdfs:label>
         <dct:creator>Matthew Johnson</dct:creator>
     </owl:Ontology>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -35,16 +36,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -52,13 +53,13 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/hasConstituent -->
 
     <owl:ObjectProperty rdf:about="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/hasConstituent"/>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasFeature -->
@@ -67,10 +68,10 @@
         <rdfs:label xml:lang="en">has feature</rdfs:label>
         <skos:definition xml:lang="en">links an entity to the data characteristics</skos:definition>
     </owl:ObjectProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -78,7 +79,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasActivationFunction -->
@@ -89,7 +90,7 @@
         <rdfs:label xml:lang="en">has activation function</rdfs:label>
         <skos:definition xml:lang="en">links a fully connected layer to the activation function used by the neurons</skos:definition>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasDimension -->
@@ -100,7 +101,7 @@
         <rdfs:label xml:lang="en">has dimension</rdfs:label>
         <skos:definition xml:lang="en">the number of functions with a layer</skos:definition>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasIndex -->
@@ -111,7 +112,7 @@
         <rdfs:label xml:lang="en">has index</rdfs:label>
         <skos:definition xml:lang="en">the position of the layer in the model</skos:definition>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasMatrixSizeX -->
@@ -121,7 +122,7 @@
         <rdfs:label xml:lang="en">has matrix size x</rdfs:label>
         <skos:definition xml:lang="en">the number of columns in a matrix</skos:definition>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasMatrixSizeY -->
@@ -131,7 +132,7 @@
         <rdfs:label xml:lang="en">has matrix size y</rdfs:label>
         <skos:definition xml:lang="en">the number of rows in a matrix</skos:definition>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasPoolingFunction -->
@@ -142,10 +143,10 @@
         <rdfs:label xml:lang="en">has pooling function</rdfs:label>
         <skos:definition xml:lang="en">links a pooling layer to the pooling function used by the neurons</skos:definition>
     </owl:DatatypeProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -153,13 +154,13 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/CollectionConstituent -->
 
     <owl:Class rdf:about="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/CollectionConstituent"/>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/Activity -->
@@ -168,7 +169,7 @@
         <rdfs:label xml:lang="en">activity</rdfs:label>
         <skos:definition xml:lang="en">something that occurs over a period of time and acts upon or with entities</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer -->
@@ -192,7 +193,7 @@
         <rdfs:label xml:lang="en">convolutional layer</rdfs:label>
         <skos:definition xml:lang="en">performs the convolution operation using a learned filter</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalNeuralNetwork -->
@@ -208,7 +209,7 @@
         <rdfs:label xml:lang="en">convolutional neural network</rdfs:label>
         <skos:definition xml:lang="en">a neural network that has one or more layers of learned weighted filters</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/DataSample -->
@@ -231,7 +232,7 @@
         <rdfs:label xml:lang="en">data sample</rdfs:label>
         <skos:definition xml:lang="en">basic unit of data consumed by a machine elarning model containing data features and a groundtruth label</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/Dataset -->
@@ -247,7 +248,7 @@
         <rdfs:label xml:lang="en">data Set</rdfs:label>
         <skos:definition xml:lang="en">collection of data samples used to train and test a machine learning model</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/FullyConnectedLayer -->
@@ -264,7 +265,24 @@
         <rdfs:label xml:lang="en">fully connected layer</rdfs:label>
         <skos:definition xml:lang="en">summation across the products of the learned bias and the previous layers passed through an activation function</skos:definition>
     </owl:Class>
+    
 
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/InceptionLayer -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/InceptionLayer">
+        <rdfs:subClassOf rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/Collection"/>
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/Layer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/Layer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">inception layer</rdfs:label>
+        <skos:definition xml:lang="en">perfroms multiple convolutions and pooling operations in parallel</skos:definition>
+    </owl:Class>
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/Layer -->
@@ -288,7 +306,7 @@
         <rdfs:label xml:lang="en">layer</rdfs:label>
         <skos:definition xml:lang="en">collection of functions at the same depth within a neural network</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/Model -->
@@ -298,7 +316,7 @@
         <rdfs:label xml:lang="en">model</rdfs:label>
         <skos:definition xml:lang="en">collection of learned patterns used to discriminate which of several groups something belongs to</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/NeuralNetwork -->
@@ -315,7 +333,7 @@
         <rdfs:label xml:lang="en">neural network</rdfs:label>
         <skos:definition xml:lang="en">machine learning model that is composed of one or more neural layers where each layer is fully connected to the previous layer</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/PoolingLayer -->
@@ -346,7 +364,7 @@
         <rdfs:label xml:lang="en">pooling layer</rdfs:label>
         <skos:definition xml:lang="en">perfroms the max function across the previous layer</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/Result -->
@@ -369,7 +387,7 @@
         <rdfs:label xml:lang="en">result</rdfs:label>
         <skos:definition xml:lang="en">a prediction that links data features to a predicted result</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ResultSet -->
@@ -385,7 +403,7 @@
         <rdfs:label xml:lang="en">result set</rdfs:label>
         <skos:definition xml:lang="en">collection of predictions generated by a machine learning model during testing</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/TestSet -->
@@ -397,7 +415,7 @@
         <rdfs:label xml:lang="en">test set</rdfs:label>
         <skos:definition xml:lang="en">data samples used to provide an unbiased evaluation of a final model</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/Testing -->
@@ -428,7 +446,7 @@
         <rdfs:label xml:lang="en">testing</rdfs:label>
         <skos:definition xml:lang="en">process that evaluates a machine learning model by calculating the predictive accuracy across a test set</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/Training -->
@@ -456,7 +474,7 @@
         <rdfs:label xml:lang="en">training</rdfs:label>
         <skos:definition xml:lang="en">process that uses a machine learning algorithm to find patterns within a training set and captures them as machine learning model</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/TrainingSet -->
@@ -466,7 +484,7 @@
         <rdfs:label xml:lang="en">training Set</rdfs:label>
         <skos:definition xml:lang="en">data samples used to fit the model</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ValidationSet -->
@@ -488,10 +506,10 @@
     <rdf:Description>
         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
     </rdf:Description>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // General axioms
@@ -528,3 +546,4 @@
 
 
 <!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
