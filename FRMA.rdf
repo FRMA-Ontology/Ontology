@@ -16,7 +16,7 @@
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/"/>
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
-        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/"/>
+        <owl:imports rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA-PFD/"/>
         <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology</rdfs:label>
         <skos:definition xml:lang="en">Machine learning allows us to learn a model for a given task such as facial recognition with a high degree of accuracy. However, after these models are generated they are often treated as black boxes and the limitations of a model are often unknown to the end user. The system developed for this use case will provide an intuitive interface to explore the limits of a facial recognition model by semantically integrating “smart” images(semantically describe who the image depicts and what Kumar [2] features the image exhibits) with classification results to discover common causes for misclassifications.</skos:definition>
         <terms:creator xml:lang="en">John Angel</terms:creator>
