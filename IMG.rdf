@@ -17,7 +17,7 @@
     <owl:Ontology rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/IMG/">
         <owl:imports rdf:resource="http://www.imagesnippets.com/lio/lio.owl"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
-        <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology - Image</rdfs:label>
+        <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology - Image Sub-Ontology</rdfs:label>
         <skos:definition xml:lang="en">Image Ontology enables the FRMA system to classify the properties of different image files.</skos:definition>
         <dct:creator>Alexander Schwartzberg</dct:creator>
     </owl:Ontology>
