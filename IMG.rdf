@@ -25,13 +25,6 @@
         <owl:imports rdf:resource="http://www.imagesnippets.com/lio/lio.owl"/>
         <owl:imports rdf:resource="http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
-        <owl:imports rdf:resource="http://www.w3.org/ns/prov-o"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/2018Q3/FND/AgentsAndPeople/Agents/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/2018Q3/FND/Arrangements/Arrangements/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/2018Q3/FND/Arrangements/ClassificationSchemes/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/2018Q3/FND/Arrangements/IdentifiersAndIndices/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/2018Q3/FND/Relations/Relations/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/2018Q3/FND/Utilities/AnnotationVocabulary/"/>
         <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology - Image Portion</rdfs:label>
         <skos:definition xml:lang="en">Machine learning allows us to learn a model for a given task such as facial recognition with a high degree of accuracy. However, after these models are generated they are often treated as black boxes and the limitations of a model are often unknown to the end user. The system developed for this use case will provide an intuitive interface to explore the limits of a facial recognition model by semantically integrating “smart” images(semantically describe who the image depicts and what Kumar [2] features the image exhibits) with classification results to discover common causes for misclassifications.</skos:definition>
     </owl:Ontology>
