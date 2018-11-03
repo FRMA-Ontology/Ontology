@@ -25,10 +25,81 @@
         <terms:creator xml:lang="en">Jordan Faas-Bush</terms:creator>
         <terms:creator xml:lang="en">John Angel</terms:creator>
     </owl:Ontology>
-    
 
 
-    <!-- 
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/hasConstituent -->
+
+    <owl:AnnotationProperty rdf:about="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/hasConstituent"/>
+
+
+
+    <!-- http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/provides -->
+
+    <owl:AnnotationProperty rdf:about="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/provides"/>
+
+
+
+    <!-- http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/uses -->
+
+    <owl:AnnotationProperty rdf:about="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/uses"/>
+
+
+
+    <!-- http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasTag -->
+
+    <owl:AnnotationProperty rdf:about="http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasTag"/>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasDimension -->
+
+    <owl:AnnotationProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasDimension"/>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasFeature -->
+
+    <owl:AnnotationProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasFeature"/>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasIndex -->
+
+    <owl:AnnotationProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasIndex"/>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasMatrixSizeX -->
+
+    <owl:AnnotationProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasMatrixSizeX"/>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasMatrixSizeY -->
+
+    <owl:AnnotationProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasMatrixSizeY"/>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasPoolingFunction -->
+
+    <owl:AnnotationProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasPoolingFunction"/>
+
+
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -36,17 +107,17 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/DataSampleFelipePerezRoque0004 -->
 
     <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/DataSampleFelipePerezRoque0004">
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/DataSample"/>
-        <MLMO:hasFeature rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ImageFelipe_Perez_Roque_0004"/>
         <LanguageRepresentation:hasTag xml:lang="en">Felipe_Perez_Roque</LanguageRepresentation:hasTag>
+        <MLMO:hasFeature rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ImageFelipe_Perez_Roque_0004"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNet -->
@@ -54,7 +125,7 @@
     <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNet">
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalNeuralNetwork"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetConv1 -->
@@ -66,7 +137,468 @@
         <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</MLMO:hasMatrixSizeX>
         <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</MLMO:hasMatrixSizeY>
     </owl:NamedIndividual>
-    
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception3 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception3">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/InceptionLayer"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception3Conv"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</MLMO:hasIndex>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception3Conv -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception3Conv">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception5 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception5">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/InceptionLayer"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception5Conv1"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception5Conv2"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception5Conv3"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception5Pool1"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</MLMO:hasIndex>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception5Conv1 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception5Conv1">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception5Conv2 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception5Conv2">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception5Conv3 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception5Conv3">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception5Pool1 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception5Pool1">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/PoolingLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</MLMO:hasMatrixSizeY>
+        <MLMO:hasPoolingFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Max Pool + norm</MLMO:hasPoolingFunction>
+    </owl:NamedIndividual>
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception6 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception6">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/InceptionLayer"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception6Conv1"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception6Conv2"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception6Conv3"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception6Pool1"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</MLMO:hasIndex>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception6Conv1 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception6Conv1">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception6Conv2 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception6Conv2">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception6Conv3 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception6Conv3">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception6Pool1 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception6Pool1">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/PoolingLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</MLMO:hasMatrixSizeY>
+        <MLMO:hasPoolingFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L2 pool</MLMO:hasPoolingFunction>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception7 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception7">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/InceptionLayer"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception7Conv1"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception7Conv2"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception7Conv3"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception7Pool1"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</MLMO:hasIndex>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception7Conv1 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception7Conv1">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception7Conv2 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception7Conv2">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception7Conv3 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception7Conv3">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception7Pool1 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception7Pool1">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/PoolingLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeY>
+        <MLMO:hasPoolingFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Max pool</MLMO:hasPoolingFunction>
+    </owl:NamedIndividual>
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception8 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception8">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/InceptionLayer"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception8Conv1"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception8Conv2"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception8Conv3"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception8Pool1"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</MLMO:hasIndex>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception8Conv1 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception8Conv1">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception8Conv2 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception8Conv2">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception8Conv3 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception8Conv3">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception8Pool1 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception8Pool1">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/PoolingLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">128</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasMatrixSizeY>
+        <MLMO:hasPoolingFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L2</MLMO:hasPoolingFunction>
+    </owl:NamedIndividual>
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception9 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception9">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/InceptionLayer"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception9Conv1"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception9Conv2"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception9Conv3"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception9Pool1"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</MLMO:hasIndex>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception9Conv1 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception9Conv1">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception9Conv2 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception9Conv2">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception9Conv3 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception9Conv3">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception9Pool1 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception9Pool1">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/PoolingLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">128</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasMatrixSizeY>
+        <MLMO:hasPoolingFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L2</MLMO:hasPoolingFunction>
+    </owl:NamedIndividual>
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception10 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception10">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/InceptionLayer"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception10Conv1"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception10Conv2"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception10Conv3"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception10Pool1"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</MLMO:hasIndex>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception10Conv1 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception10Conv1">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception10Conv2 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception10Conv2">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception10Conv3 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception10Conv3">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception10Pool1 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception10Pool1">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/PoolingLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">128</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasMatrixSizeY>
+        <MLMO:hasPoolingFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L2</MLMO:hasPoolingFunction>
+    </owl:NamedIndividual>
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception11 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception11">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/InceptionLayer"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception11Conv1"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception11Conv2"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception11Conv3"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception11Pool1"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</MLMO:hasIndex>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception11Conv1 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception11Conv1">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception11Conv2 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception11Conv2">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception11Conv3 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception11Conv3">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception11Pool1 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetInception11Pool1">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/PoolingLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">128</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasMatrixSizeY>
+        <MLMO:hasPoolingFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L2</MLMO:hasPoolingFunction>
+    </owl:NamedIndividual>
+
+
+
+
+
+
+
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetPool2 -->
@@ -79,7 +611,20 @@
         <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeY>
         <MLMO:hasPoolingFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Max Pool + norm</MLMO:hasPoolingFunction>
     </owl:NamedIndividual>
-    
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetPool4 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetPool4">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/PoolingLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeY>
+        <MLMO:hasPoolingFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">norm + max pool</MLMO:hasPoolingFunction>
+    </owl:NamedIndividual>
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetTest01 -->
@@ -90,7 +635,7 @@
         <Relations:uses rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNet"/>
         <Relations:uses rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/TestSetLFW"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetTest01ResultSet -->
@@ -98,7 +643,7 @@
     <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetTest01ResultSet">
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ResultSet"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetTraining -->
@@ -107,7 +652,7 @@
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/Training"/>
         <Relations:provides rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNet"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ImageFelipe_Perez_Roque_0004 -->
@@ -115,7 +660,7 @@
     <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ImageFelipe_Perez_Roque_0004">
         <rdf:type rdf:resource="http://purl.org/net/lio#Image"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ResultFelipePerezRoque0004 -->
@@ -123,7 +668,7 @@
     <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ResultFelipePerezRoque0004">
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/Result"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/TestSetLFW -->
@@ -137,4 +682,3 @@
 
 
 <!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
-
