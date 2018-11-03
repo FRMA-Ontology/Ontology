@@ -140,6 +140,93 @@
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/TestSet"/>
         <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/DataSampleFelipePerezRoque0004"/>
     </owl:NamedIndividual>
+
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/Individuals/Bangs -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Bangs">
+        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Haircut"/>
+        <skos:definition xml:lang="en">whether or not person has hair covering their forehead</skos:definition>
+        <skos:prefLabel xml:lang="en">Bangs</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/Individuals/BlackHair -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#BlackHair">
+        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#HairColor"/>
+        <skos:definition xml:lang="en">black hair</skos:definition>
+        <skos:prefLabel xml:lang="en">Black Hair</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/Individuals/BlondHair -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#BlondHair">
+        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#HairColor"/>
+        <skos:definition xml:lang="en">fair or pale yellow hair</skos:definition>
+        <skos:prefLabel xml:lang="en">Blond Hair</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/Individuals/BrownHair -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#BrownHair">
+        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#HairColor"/>
+        <skos:definition xml:lang="en">brown hair</skos:definition>
+        <skos:prefLabel xml:lang="en">Brown Hair</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/Individuals/BushyEyebrows -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#BushyEyebrows">
+        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Eyebrows"/>
+        <skos:definition xml:lang="en">eyebrows that are growing thickly</skos:definition>
+        <skos:prefLabel xml:lang="en">Bushy Eyebrows</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/Individuals/FiveOClockShadow -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#FiveOClockShadow">
+        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Beard"/>
+        <skos:definition xml:lang="en">dark stubble that appears on a man&apos;s face some hours after shaving</skos:definition>
+        <skos:prefLabel xml:lang="en">Five OClock Shadow</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/Individuals/Goatee -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Goatee">
+        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Beard"/>
+        <skos:definition xml:lang="en">small pointed beard like that of a goat</skos:definition>
+        <skos:prefLabel xml:lang="en">Goatee</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/Individuals/GrayHair -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#GrayHair">
+        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#HairColor"/>
+        <skos:definition xml:lang="en">gray hair</skos:definition>
+        <skos:prefLabel xml:lang="en">Gray Hair</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/Individuals/ThinEyebrows -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#ThinEyebrows">
+        <rdf:type rdf:resource="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/HO#Eyebrows"/>
+        <skos:prefLabel xml:lang="en">Thin Eyebrows</skos:prefLabel>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
