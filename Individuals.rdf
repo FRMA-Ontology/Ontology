@@ -3,6 +3,7 @@
      xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/"
      xmlns:MLMO="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/"
      xmlns:WT="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/"
+     xmlns:IMG="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
      xmlns:lio="http://purl.org/net/lio#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:Arrangements="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/"
