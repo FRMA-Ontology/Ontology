@@ -227,6 +227,13 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasTag"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">data sample</rdfs:label>
         <skos:definition xml:lang="en">basic unit of data consumed by a machine elarning model containing data features and a groundtruth label</skos:definition>
     </owl:Class>
@@ -294,7 +301,7 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/Model">
         <rdfs:subClassOf rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/ClassificationSchemes/Classifier"/>
-        <rdfs:label xml:lang="en">Model</rdfs:label>
+        <rdfs:label xml:lang="en">model</rdfs:label>
         <skos:definition xml:lang="en">collection of learned patterns used to discriminate which of several groups something belongs to</skos:definition>
     </owl:Class>
     
@@ -358,6 +365,13 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasTag"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">result</rdfs:label>
         <skos:definition xml:lang="en">a prediction that links data features to a predicted result</skos:definition>
     </owl:Class>
@@ -400,6 +414,20 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/uses"/>
                 <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/TestSet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/provides"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ResultSet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/uses"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/Model"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/Training"/>
