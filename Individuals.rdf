@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals#"
-     xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals"
+<rdf:RDF xmlns="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/"
+     xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -10,7 +10,7 @@
      xmlns:AnnotationVocabulary="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
-    <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals">
+    <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/">
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/"/>
         <terms:creator xml:lang="en">Alexander Schwartzberg</terms:creator>
         <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology Examplar Data</rdfs:label>
