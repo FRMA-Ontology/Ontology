@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/"
      xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/"
+     xmlns:PFD="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/"
      xmlns:MLMO="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/"
      xmlns:WT="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/"
      xmlns:IMG="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
@@ -69,7 +70,7 @@
     <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Individuals
+    // Annotation properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
@@ -166,8 +167,6 @@
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/DataSampleFelipePerezRoque0004 -->
-
     <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/DataSampleFelipePerezRoque0004">
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/DataSample"/>
         <MLMO:hasFeature rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ImageFelipe_Perez_Roque_0004"/>
@@ -176,15 +175,11 @@
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNet -->
-
     <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNet">
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalNeuralNetwork"/>
     </owl:NamedIndividual>
 
 
-
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetConv1 -->
 
     <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetConv1">
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
@@ -442,6 +437,156 @@
         <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</MLMO:hasIndex>
         <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</MLMO:hasMatrixSizeX>
         <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/DataSampleFelipePerezRoque0004 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/DataSampleFelipePerezRoque0004">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/DataSample"/>
+        <LanguageRepresentation:hasTag xml:lang="en">Felipe_Perez_Roque</LanguageRepresentation:hasTag>
+        <MLMO:hasFeature rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ImageFelipe_Perez_Roque_0004"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNet -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNet">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalNeuralNetwork"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetConv1 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetConv1">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</MLMO:hasMatrixSizeY>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetPool2 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetPool2">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/PoolingLayer"/>
+        <MLMO:hasDimension rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</MLMO:hasDimension>
+        <MLMO:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MLMO:hasIndex>
+        <MLMO:hasMatrixSizeX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeX>
+        <MLMO:hasMatrixSizeY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MLMO:hasMatrixSizeY>
+        <MLMO:hasPoolingFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Max Pool + norm</MLMO:hasPoolingFunction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetTest01 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetTest01">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/Testing"/>
+        <Relations:provides rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetTest01ResultSet"/>
+        <Relations:uses rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNet"/>
+        <Relations:uses rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/TestSetLFW"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetTest01ResultSet -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetTest01ResultSet">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ResultSet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetTraining -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetTraining">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/Training"/>
+        <Relations:provides rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FelipePerezRoqueEye -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FelipePerezRoqueEye">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Eye"/>
+        <PFD:hasColor rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Brown"/>
+        <PFD:isBaggy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</PFD:isBaggy>
+        <PFD:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</PFD:isOpen>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FelipePerezRoqueFace -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FelipePerezRoqueFace">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Face"/>
+        <PFD:hasVisualFeature rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/RoundJaw"/>
+        <PFD:hasVisualFeature rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Frowning"/>
+        <PFD:hasVisualFeature rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/FullyVisibleForehead"/>
+        <PFD:hasVisualFeature rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Narrow_Eyes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FelipePerezRoqueMouth -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FelipePerezRoqueMouth">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Mouth"/>
+        <PFD:hasSize rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Big"/>
+        <PFD:hasVisualFeature rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/MouthSlightlyOpen"/>
+        <PFD:teethVisable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</PFD:teethVisable>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FelipePerezRoqueNose -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FelipePerezRoqueNose">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Nose"/>
+        <PFD:hasShape rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/PointyNose"/>
+        <PFD:hasSize rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Big"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/Felipe_Perez_Roque -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/Felipe_Perez_Roque">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Person"/>
+        <PFD:hasDemographic rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Masculine"/>
+        <PFD:hasDemographic rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/White"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ImageFelipe_Perez_Roque_0004 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ImageFelipe_Perez_Roque_0004">
+        <rdf:type rdf:resource="http://purl.org/net/lio#Image"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ResultFelipePerezRoque0004 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ResultFelipePerezRoque0004">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/TestSetLFW -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/TestSetLFW">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/TestSet"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/DataSampleFelipePerezRoque0004"/>
     </owl:NamedIndividual>
 
 
