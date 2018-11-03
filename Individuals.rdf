@@ -1,14 +1,18 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/"
      xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:MLMO="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:Arrangements="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:AnnotationVocabulary="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Relations="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/"
+     xmlns:LanguageRepresentation="http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:AnnotationVocabulary="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
      xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
     <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/">
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/"/>
@@ -20,6 +24,115 @@
         <terms:creator xml:lang="en">Jordan Faas-Bush</terms:creator>
         <terms:creator xml:lang="en">John Angel</terms:creator>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/hasConstituent -->
+
+    <owl:AnnotationProperty rdf:about="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/hasConstituent"/>
+    
+
+
+    <!-- http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasTag -->
+
+    <owl:AnnotationProperty rdf:about="http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasTag"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasFeature -->
+
+    <owl:AnnotationProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasFeature"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/DataSampleFelipePerezRoque0004 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/DataSampleFelipePerezRoque0004">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/DataSample"/>
+        <LanguageRepresentation:hasTag xml:lang="en">Felipe Perez Roque</LanguageRepresentation:hasTag>
+        <MLMO:hasFeature rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ImageFelipe_Perez_Roque_0004"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNet -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNet">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ConvolutionalNeuralNetwork"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetTest01 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetTest01">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/Testing"/>
+        <Relations:provides rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetTest01ResultSet"/>
+        <Relations:uses rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNet"/>
+        <Relations:uses rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/TestSetLFW"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetTest01ResultSet -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetTest01ResultSet">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/ResultSet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetTraining -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNetTraining">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/Training"/>
+        <Relations:provides rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/FaceNet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ImageFelipe_Perez_Roque_0004 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ImageFelipe_Perez_Roque_0004"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ResultFelipePerezRoque0004 -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/ResultFelipePerezRoque0004">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/TestSetLFW -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/TestSetLFW">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/TestSet"/>
+        <Arrangements:hasConstituent rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Individuals/DataSampleFelipePerezRoque0004"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
