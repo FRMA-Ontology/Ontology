@@ -50,7 +50,7 @@
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOcclusionSource -->
 
-    <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOcclusionSource"/>
+    <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOcclusionSourceOf"/>
     
 
 
