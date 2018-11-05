@@ -3,6 +3,7 @@
      xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
      xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
      xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:lio="https://w3id.org/lio/v1#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -11,19 +12,18 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:lio-orig="http://purl.org/net/lio#"
-     xmlns:lio="https://w3id.org/lio/v1#">
-
+     xmlns:lio-orig="http://purl.org/net/lio#">
     <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/">
         <owl:imports rdf:resource="http://www.imagesnippets.com/lio/lio.owl"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <dct:creator>Alexander Schwartzberg</dct:creator>
         <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology - Image Sub-Ontology</rdfs:label>
         <skos:definition xml:lang="en">Image Ontology enables the FRMA system to classify the properties of different image files.</skos:definition>
-        <dct:creator>Alexander Schwartzberg</dct:creator>
     </owl:Ontology>
+    
 
 
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -31,7 +31,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <!--
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
+    
+
+
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -39,16 +48,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
 
 
-
-    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/IMGfidelityDescribedBy -->
+    <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/IMG/fidelityDescribedBy -->
 
     <owl:ObjectProperty rdf:about="https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/IMG/fidelityDescribedBy">
         <rdfs:label xml:lang="en">fidelity described by</rdfs:label>
         <skos:definition xml:lang="en">the fidelity of this image</skos:definition>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/IMG/isStoredAs -->
@@ -60,7 +69,7 @@
         <rdfs:label xml:lang="en">is stored as</rdfs:label>
         <skos:definition xml:lang="en">links a given image to a file in which it is stored</skos:definition>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/IMG/lightingDescribedBy -->
@@ -69,7 +78,7 @@
         <rdfs:label xml:lang="en">lighting described by</rdfs:label>
         <skos:definition xml:lang="en">the lighting characteristics of this image</skos:definition>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/IMG/stores -->
@@ -80,10 +89,10 @@
         <rdfs:label xml:lang="en">stores</rdfs:label>
         <skos:definition xml:lang="en">links a given image file to the image that it contains</skos:definition>
     </owl:ObjectProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -91,7 +100,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/IMG/hasFileExtension -->
@@ -103,7 +112,7 @@
         <skos:definition xml:lang="en">the extension of the image file</skos:definition>
         <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Example extensions include jpg, jpeg, gif, png, which have corresponding file format types and characteristics.</skos:example>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/IMG/hasFilePath -->
@@ -114,7 +123,7 @@
         <rdfs:label xml:lang="en">has file path</rdfs:label>
         <skos:definition xml:lang="en">an absolute file path for the image file as stored on a local or network file system</skos:definition>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/IMG/hasRGB -->
@@ -124,10 +133,10 @@
         <rdfs:label xml:lang="en">has RGB</rdfs:label>
         <skos:definition xml:lang="en">relates the red, green, and blue values of a color ot the Color class</skos:definition>
     </owl:DatatypeProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -135,7 +144,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/IMG/BlackAndWhiteImage -->
@@ -145,7 +154,7 @@
         <rdfs:label xml:lang="en">Black and White Image</rdfs:label>
         <skos:definition xml:lang="en">an image having, showing, or producing pictures that do not have colors except for black, white, and shades of gray</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/IMG/BlurryImageFidelity -->
@@ -155,7 +164,7 @@
         <rdfs:label xml:lang="en">Blurry Image Fidelity</rdfs:label>
         <skos:definition xml:lang="en">lower quality image showing signs of visible distortion or information loss</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/IMG/ColorImage -->
@@ -165,7 +174,7 @@
         <rdfs:label xml:lang="en">Color Image</rdfs:label>
         <skos:definition xml:lang="en">an image produces useing media capable of reproducing colors</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/IMG/ImageFidelity -->
@@ -174,7 +183,7 @@
         <rdfs:label xml:lang="en">Image Fidelity</rdfs:label>
         <skos:definition xml:lang="en">the measurable quality of an image</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/IMG/ImageFile -->
@@ -189,7 +198,7 @@
         <rdfs:label xml:lang="en">image file</rdfs:label>
         <skos:definition xml:lang="en">a digital version of a photograph, stored in any of a number of standard formats that can be rasterized for display purposes</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/IMG/OptimalConditionPhoto -->
@@ -198,7 +207,7 @@
         <rdfs:label xml:lang="en">Optimal Condition Photo</rdfs:label>
         <skos:definition xml:lang="en">the best possible image for recognition tasks</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu//web/Courses/Ontologies/2018/FRMA/IMG/SharpImageFidelity -->
@@ -208,7 +217,27 @@
         <rdfs:label xml:lang="en">Sharp Image Fidelity</rdfs:label>
         <skos:definition xml:lang="en">high quality image showing little to no signs of visible distortion or information loss</skos:definition>
     </owl:Class>
+    
 
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Candid_Image -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Candid_Image">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lio/v1#Image"/>
+        <rdfs:label>Candid Image</rdfs:label>
+        <skos:definition>a photo in which the subject is acting naturally or spontaneously</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Posed_Image -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Posed_Image">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lio/v1#Image"/>
+        <rdfs:label>Posed Image</rdfs:label>
+        <skos:definition>assumes a posture or attitude usually for artistic purposes</skos:definition>
+    </owl:Class>
+    
 
 
     <!-- https://w3id.org/lio/v1#Image -->
@@ -241,3 +270,4 @@
 
 
 <!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+
