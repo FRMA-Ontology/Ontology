@@ -14,7 +14,6 @@
 <rdf:RDF xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:lio="https://w3id.org/lio/v1#"
-     xmlns:lio-orig="http://purl.org/net/lio#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
