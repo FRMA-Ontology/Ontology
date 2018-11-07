@@ -845,10 +845,28 @@
     <owl:NamedIndividual rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/FelipePerezRoqueFace">
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Face"/>
         <pfd:hasVisualFeature rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/FelipePerezRoqueEye"/>
+        <pfd:hasVisualFeature rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/FelipePerezRoqueHeadHair"/>
         <pfd:hasVisualFeature rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Frowning"/>
         <pfd:hasVisualFeature rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/FullyVisibleForehead"/>
         <pfd:hasVisualFeature rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Narrow_Eyes"/>
         <pfd:hasVisualFeature rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/RoundJaw"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/FelipePerezRoqueHaircut -->
+
+    <owl:NamedIndividual rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/FelipePerezRoqueHaircut">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Haircut"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/FelipePerezRoqueHeadHair -->
+
+    <owl:NamedIndividual rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/FelipePerezRoqueHeadHair">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/HeadHair"/>
+        <ho:hasHaircut rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/FelipePerezRoqueHaircut"/>
     </owl:NamedIndividual>
     
 
