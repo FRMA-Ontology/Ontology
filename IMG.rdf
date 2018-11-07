@@ -146,6 +146,18 @@
     
 
 
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Balanced_Lighting_Variation -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Balanced_Lighting_Variation">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Lighting_Variation"/>
+        <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Harsh_Lighting_Variation"/>
+        <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Soft_Lighting_Variation"/>
+        <rdfs:label>Balanced Lighting Variation</rdfs:label>
+        <skos:definition>both small light source in close proximity relative to the subject and large light source in distant proximity relative to the subject</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/BlackAndWhiteImage -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/BlackAndWhiteImage">
@@ -198,7 +210,7 @@
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Flash_Lighting_Variation -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Flash_Lighting_Variation">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Lighting_Variation"/>
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Harsh_Lighting_Variation"/>
         <rdfs:label>Flash Lighting Variation</rdfs:label>
         <skos:definition>whether or not the system classifies a photo as using camera flash to illuminate the subject</skos:definition>
     </owl:Class>
@@ -209,6 +221,7 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Harsh_Lighting_Variation">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Lighting_Variation"/>
+        <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Soft_Lighting_Variation"/>
         <rdfs:label>Harsh Lighting Variation</rdfs:label>
         <skos:definition>small light source in close proximity relative to the subject</skos:definition>
     </owl:Class>
