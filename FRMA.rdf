@@ -79,6 +79,12 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/AuricleOcclusion">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/UpperFaceOcclusion"/>
+		<rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOccludingBodyRegion"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001690"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">auricle occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the ears</skos:definition>
     </owl:Class>
@@ -89,6 +95,12 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/BuccalOcclusion">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/LowerFaceOcclusion"/>
+		<rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOccludingBodyRegion"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001567"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">buccal occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the cheeks</skos:definition>
     </owl:Class>
@@ -99,6 +111,12 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/CervicalOcclusion">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion"/>
+		<rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOccludingBodyRegion"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0005434"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FaceOcclusion"/>
         <rdfs:label xml:lang="en">cervical occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the neck</skos:definition>
@@ -120,6 +138,12 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FaceOcclusion">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion"/>
+		<rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOccludingBodyRegion"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001456"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -128,6 +152,12 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FrontalOcclusion">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/UpperFaceOcclusion"/>
+		<rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOccludingBodyRegion"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0008200"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">frontal occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the forehead</skos:definition>
     </owl:Class>
@@ -146,6 +176,12 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MentalOcclusion">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/LowerFaceOcclusion"/>
+		<rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOccludingBodyRegion"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0008199"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">mental occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the chin</skos:definition>
     </owl:Class>
@@ -156,6 +192,12 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/NasalOcclusion">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/UpperFaceOcclusion"/>
+		<rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOccludingBodyRegion"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000004"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">nasal occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the nose</skos:definition>
     </owl:Class>
@@ -164,7 +206,14 @@
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion">
+		<rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOccludingBodyRegion"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000475"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+	</owl:Class>
     
 
 
@@ -172,6 +221,12 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/OcularOcclusion">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/UpperFaceOcclusion"/>
+		<rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOccludingBodyRegion"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004088"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">ocular occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the eyes</skos:definition>
     </owl:Class>
@@ -182,6 +237,12 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/OralOcclusion">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/LowerFaceOcclusion"/>
+		<rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOccludingBodyRegion"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000165"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">oral occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the lips and mouth</skos:definition>
     </owl:Class>
@@ -192,6 +253,12 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ParotidOcclusion">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/LowerFaceOcclusion"/>
+		<rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOccludingBodyRegion"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001710"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">parotid occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the angle of the jaw</skos:definition>
     </owl:Class>
@@ -210,6 +277,12 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ZygomaticOcclusion">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/LowerFaceOcclusion"/>
+		<rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOccludingBodyRegion"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001683"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">zygomatic occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the cheek bones</skos:definition>
     </owl:Class>
