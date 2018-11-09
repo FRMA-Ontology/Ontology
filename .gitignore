@@ -1,2 +1,6 @@
 .DS_Store
 catalog-*.xml
+
+
+attributes_data/found_images/
+attributes_data/lfw_images/
