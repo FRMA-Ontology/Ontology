@@ -1,36 +1,38 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/"
      xml:base="http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/"
-     xmlns:img="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
-     xmlns:fibo-fnd-rel-rel="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:ho="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:fibo-fnd-arr-arr="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:lcc-lr="http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
-     xmlns:pfd="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/"
-     xmlns:frma="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/"
-     xmlns:mlmo="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/"
-     xmlns:lio="http://purl.org/net/lio#"
+     xmlns:wt="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/"
      xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:img="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
+     xmlns:lio="http://purl.org/net/lio#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:pfd="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:AnnotationVocabulary="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
-     xmlns:frmai="http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:frma="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/"
+     xmlns:mlmo="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:wt="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/"
+     xmlns:frmai="http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/"
+     xmlns:lcc-lr="http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:fibo-fnd-arr-arr="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/"
+     xmlns:fibo-fnd-rel-rel="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/"
+     xmlns:AnnotationVocabulary="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
      xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
     <owl:Ontology rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/">
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/"/>
         <dct:creator xml:lang="en">Alexander Schwartzberg</dct:creator>
-        <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology Examplar Data</rdfs:label>
-        <skos:definition xml:lang="en">This ontology contains examplar data used to test the FRMA ontology</skos:definition>
         <dct:creator xml:lang="en">Andrew Gaudet</dct:creator>
-        <dct:creator xml:lang="en">Matthew Johnson</dct:creator>
         <dct:creator xml:lang="en">John Angel</dct:creator>
         <dct:creator xml:lang="en">Jordan Faas-Bush</dct:creator>
+        <dct:creator xml:lang="en">Matthew Johnson</dct:creator>
+        <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology Examplar Data</rdfs:label>
+        <skos:definition xml:lang="en">This ontology contains examplar data used to test the FRMA ontology</skos:definition>
     </owl:Ontology>
     
 
@@ -904,11 +906,29 @@
     
 
 
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/Felipe_Perez_Roque_balanced_lighting -->
+
+    <owl:NamedIndividual rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/Felipe_Perez_Roque_balanced_lighting">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Balanced_Lighting_Variation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/Felipe_Perez_Roque_meeting_room -->
+
+    <owl:NamedIndividual rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/Felipe_Perez_Roque_meeting_room">
+        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Indoors"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/ImageFelipe_Perez_Roque_0004 -->
 
     <owl:NamedIndividual rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/ImageFelipe_Perez_Roque_0004">
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Posed_Image"/>
         <lio:depicts rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/Felipe_Perez_Roque"/>
+        <lio:hasDepictedBackground rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/Felipe_Perez_Roque_meeting_room"/>
+        <img:lightingDescribedBy rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/Felipe_Perez_Roque_balanced_lighting"/>
     </owl:NamedIndividual>
     
 
@@ -1018,9 +1038,39 @@
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Eyebrows"/>
         <skos:prefLabel xml:lang="en">Thin Eyebrows</skos:prefLabel>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Big -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Big"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Frowning -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Frowning"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/FullyVisibleForehead -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/FullyVisibleForehead"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Masculine -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Masculine"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Narrow_Eyes -->
+
+    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Narrow_Eyes"/>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
 
