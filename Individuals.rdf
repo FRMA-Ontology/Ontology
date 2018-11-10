@@ -23,7 +23,7 @@
      xmlns:wt="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/"
      xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
     <owl:Ontology rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/">
-        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/"/>
+        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/"/>
         <dct:creator xml:lang="en">Alexander Schwartzberg</dct:creator>
         <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology Examplar Data</rdfs:label>
         <skos:definition xml:lang="en">This ontology contains examplar data used to test the FRMA ontology</skos:definition>
