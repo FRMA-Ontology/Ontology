@@ -1,38 +1,38 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/"
      xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/"
-     xmlns:img="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:ho="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:pfd="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/"
-     xmlns:frma="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/"
-     xmlns:mlmo="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/"
+     xmlns:wt="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/"
      xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:img="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:pfd="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:AnnotationVocabulary="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:frma="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/"
+     xmlns:mlmo="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:wt="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/"
-     xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
-     xmlns:obo="http://purl.obolibrary.org/obo/">
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:AnnotationVocabulary="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+     xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
     <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/">
-        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/"/>
-        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/"/>
-        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/"/>
-        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/"/>
+        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"/>
+        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/"/>
+        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/"/>
+        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/"/>
         <dct:creator xml:lang="en">Alexander Schwartzberg</dct:creator>
-        <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology</rdfs:label>
-        <skos:definition xml:lang="en">Machine learning allows us to learn a model for a given task such as facial recognition with a high degree of accuracy. However, after these models are generated they are often treated as black boxes and the limitations of a model are often unknown to the end user. The system developed for this use case will provide an intuitive interface to explore the limits of a facial recognition model by semantically integrating “smart” images(semantically describe who the image depicts and what Kumar [2] features the image exhibits) with classification results to discover common causes for misclassifications.</skos:definition>
         <dct:creator xml:lang="en">Andrew Gaudet</dct:creator>
-        <dct:creator xml:lang="en">Matthew Johnson</dct:creator>
         <dct:creator xml:lang="en">John Angel</dct:creator>
         <dct:creator xml:lang="en">Jordan Faas-Bush</dct:creator>
+        <dct:creator xml:lang="en">Matthew Johnson</dct:creator>
+        <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology</rdfs:label>
+        <skos:definition xml:lang="en">Machine learning allows us to learn a model for a given task such as facial recognition with a high degree of accuracy. However, after these models are generated they are often treated as black boxes and the limitations of a model are often unknown to the end user. The system developed for this use case will provide an intuitive interface to explore the limits of a facial recognition model by semantically integrating “smart” images(semantically describe who the image depicts and what Kumar [2] features the image exhibits) with classification results to discover common causes for misclassifications.</skos:definition>
     </owl:Ontology>
     
 
@@ -45,6 +45,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/hasOcclusion -->
+
+    <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/hasOcclusion"/>
     
 
 
@@ -282,6 +288,127 @@
     
 
 
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Person -->
+
+    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Person">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/hasOcclusion"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/Occlusion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Earrings -->
+
+    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Earrings">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/AuricleOcclusion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Eyewear -->
+
+    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Eyewear">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/OcularOcclusion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Hat -->
+
+    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Hat">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/CranialOcclusion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Headwear -->
+
+    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Headwear">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/CervicalOcclusion"/>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Lipstick -->
+
+    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Lipstick">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/OralOcclusion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Makeup -->
+
+    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Makeup">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/FaceOcclusion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/NeckTie -->
+
+    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/NeckTie">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/CervicalOcclusion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Necklace -->
+
+    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/Necklace">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/CervicalOcclusion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/WearableObject -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/WearableObject">
@@ -296,5 +423,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
 
