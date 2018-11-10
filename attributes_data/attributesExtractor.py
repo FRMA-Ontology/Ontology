@@ -119,10 +119,11 @@ def generate_rdf_individuals(names, tags, base_filename, output_filename, restri
 		restricted_images = [(x[0].lower(), x[1]) for x in restricted_images]
 	for name in names:
 		photos = tags[name]
+
 		for photo_num in range(len(photos)):
 			# add the info for this photo:
 			if (restricted_images):
-				if (name, photo_num) not in restricted_images:
+				if (name, photo_num+1) not in restricted_images: # added 1 since images have base number 1 not 0
 					continue
 			add_image_to_graph(photos[photo_num], g)
 
@@ -167,6 +168,8 @@ def add_image_to_graph(image_data, graph):
 	# graph.add((image_IRI, RDF.type, OWL.NamedIndividual))
 
 	pfd_iri = "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD"
+	hasPart = rdflib.term.URIRef("http://purl.obolibrary.org/obo/BFO_0000051")
+
 	# create the person
 	person_iri = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person")
 	graph.add((person_iri, RDF.type, OWL.NamedIndividual))
@@ -176,7 +179,7 @@ def add_image_to_graph(image_data, graph):
 	face_iri = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Face")
 	graph.add((face_iri, RDF.type, OWL.NamedIndividual))
 	graph.add((face_iri, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Face")))
-	graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasVisualFeature"), face_iri))
+	graph.add((person_iri, hasPart, face_iri))
 
 
 	# demographic:
@@ -188,7 +191,7 @@ def add_image_to_graph(image_data, graph):
 		graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasDemographic"), rdflib.term.URIRef(pfd_iri + "/Black")))
 	if (image_data["Indian"] > 0):
 		graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasDemographic"), rdflib.term.URIRef(pfd_iri + "/Indian")))
-	
+
 	if (image_data["Strong Nose-Mouth Lines"] > 0):
 		graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasStrongNoseMouthLines"), rdflib.term.Literal(True)))
 	else:
@@ -199,27 +202,38 @@ def add_image_to_graph(image_data, graph):
 	else:
 		graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/isAttractive"), rdflib.term.Literal(False)))
 
+
+	gender_iri = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/Gender")
+	graph.add((gender_iri, RDF.type, OWL.NamedIndividual))
+	graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasDemographic"), gender_iri))
 	if (image_data["Male"] > 0):
-		graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasDemographic"), rdflib.term.URIRef(pfd_iri + "/Masculine")))
+		graph.add((gender_iri, RDF.type, rdflib.term.URIRef(pfd_iri + "/Masculine")))
 	else:
 		# currently we assume that if they aren't male they're female
-		graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasDemographic"), rdflib.term.URIRef(pfd_iri + "/Feminine")))
+		graph.add((gender_iri, RDF.type, rdflib.term.URIRef(pfd_iri + "/Feminine")))
 
+
+	age_range_iri = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/AgeRange")
+	graph.add((age_range_iri, RDF.type, OWL.NamedIndividual))
+	graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasDemographic"), age_range_iri))
 	if (image_data["Baby"] > 0):
-		graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasDemographic"), rdflib.term.URIRef(pfd_iri + "/Baby")))
+		graph.add((age_range_iri, RDF.type, rdflib.term.URIRef(pfd_iri + "/Baby")))
 	if (image_data["Child"] > 0):
-		graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasDemographic"), rdflib.term.URIRef(pfd_iri + "/Child")))
+		graph.add((age_range_iri, RDF.type, rdflib.term.URIRef(pfd_iri + "/Child")))
 	if (image_data["Youth"] > 0):
-		graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasDemographic"), rdflib.term.URIRef(pfd_iri + "/Youth")))
+		graph.add((age_range_iri, RDF.type, rdflib.term.URIRef(pfd_iri + "/Youth")))
 	if (image_data["Middle Aged"] > 0):
-		graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasDemographic"), rdflib.term.URIRef(pfd_iri + "/Middle_Aged")))
+		graph.add((age_range_iri, RDF.type, rdflib.term.URIRef(pfd_iri + "/Middle_Aged")))
 	if (image_data["Senior"] > 0):
-		graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasDemographic"), rdflib.term.URIRef(pfd_iri + "/Senior")))
+		graph.add((age_range_iri, RDF.type, rdflib.term.URIRef(pfd_iri + "/Senior")))
 
+	weight_iri = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/AgeRange")
+	graph.add((weight_iri, RDF.type, OWL.NamedIndividual))
+	graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasDemographic"), weight_iri))
 	if (image_data["Chubby"] > 0):
-		graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasDemographic"), rdflib.term.URIRef(pfd_iri + "/Chubby")))
+		graph.add((weight_iri, RDF.type, rdflib.term.URIRef(pfd_iri + "/Chubby")))
 	else:
-		graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasDemographic"), rdflib.term.URIRef(pfd_iri + "/Skinny")))
+		graph.add((weight_iri, RDF.type, rdflib.term.URIRef(pfd_iri + "/Skinny")))
 
 
 	# wearables:
@@ -242,7 +256,7 @@ def add_image_to_graph(image_data, graph):
 		graph.add((wearable_individual, RDF.type, rdflib.term.URIRef(wt_iri + "/" + wearing_item_class)))
 		# make the person wear them:
 		graph.add((person_iri, rdflib.term.URIRef(wt_iri + "/isWearing"), wearable_individual))
-	
+
 	wearable_generic_things = [("Wearing Hat", "Hat"), ("Wearing Earrings", "Earrings"), ("Wearing Necktie", "Necktie"),
 					("Wearing Necklace", "Necklace"), ("Wearing Lipstick", "Lipstick")]
 	for t in wearable_generic_things:
@@ -275,21 +289,222 @@ def add_image_to_graph(image_data, graph):
 	hair_individual = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + hair_name)
 	graph.add((hair_individual, RDF.type, OWL.NamedIndividual))
 	graph.add((hair_individual, RDF.type, rdflib.term.URIRef(hair_iri_string + "/" + hair_name)))
-	# link the person to the hair:
-	graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasVisualFeature"), hair_individual))
+	graph.add((person_iri, hasPart, hair_individual))
 
-	# if (image_data["Curly Hair"] > 0):
-	# 	graph.add((hair_individual, rdflib.term.URIRef(hair_iri_string + "/hasTexture"), rdflib.term.URIRef(hair_iri_string + "/CurlyHair")))
+	hair_texture = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + hair_name + "/HairTexture")
+	graph.add((hair_individual, RDF.type, OWL.NamedIndividual))
+	graph.add((hair_individual, RDF.type, rdflib.term.URIRef(hair_iri_string + "/" + "HairTexture")))
+	graph.add((hair_individual, rdflib.term.URIRef(hair_iri_string + "/" + "hasTexture"), hair_texture))
 
-	# FIX HAIR TEXTURES
+	if (image_data["Curly Hair"] > 0):
+		graph.add((hair_texture, RDF.type, rdflib.term.URIRef(hair_iri_string + "/" + "CurlyHair")))
+
+	if (image_data["Wavy Hair"] > 0):
+		graph.add((hair_texture, RDF.type, rdflib.term.URIRef(hair_iri_string + "/" + "WavyHair")))
+
+	if (image_data["Straight Hair"] > 0):
+		graph.add((hair_texture, RDF.type, rdflib.term.URIRef(hair_iri_string + "/" + "StraightHair")))
+
+	if (image_data["Bangs"] > 0):
+		graph.add((hair_individual, rdflib.term.URIRef(hair_iri_string + "/" + "hasHaircut"), rdflib.term.URIRef(hair_iri_string + "/" + "Bangs")))
+	else:
+		hair_cut = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + hair_name + "/Haircut")
+		graph.add((hair_individual, RDF.type, OWL.NamedIndividual))
+		graph.add((hair_individual, RDF.type, rdflib.term.URIRef(hair_iri_string + "/" + "Haircut")))
+		graph.add((hair_individual, rdflib.term.URIRef(hair_iri_string + "/" + "hasHaircut"), rdflib.term.URIRef(hair_iri_string + "/" + "Haircut")))
+
+		if (image_data["Receding Hairline"] > 0):
+			graph.add((hair_individual, RDF.type, rdflib.term.URIRef(hair_iri_string + "/" + "RecedingHairline")))
+
+		if (image_data["Bald"] > 0):
+			graph.add((hair_individual, RDF.type, rdflib.term.URIRef(hair_iri_string + "/" + "Bald")))
+
+
+	newColor = True
+	if (image_data["Black Hair"] > 0):
+		newColor = False
+		graph.add((hair_individual, rdflib.term.URIRef(hair_iri_string + "/" + "hasHairColor"), rdflib.term.URIRef(hair_iri_string + "/" + "BlackHair")))
+
+	if (image_data["Black Hair"] > 0):
+		newColor = False
+		graph.add((hair_individual, rdflib.term.URIRef(hair_iri_string + "/" + "hasHairColor"), rdflib.term.URIRef(hair_iri_string + "/" + "BlackHair")))
+
+	if (image_data["Brown Hair"] > 0):
+		newColor = False
+		graph.add((hair_individual, rdflib.term.URIRef(hair_iri_string + "/" + "hasHairColor"), rdflib.term.URIRef(hair_iri_string + "/" + "BrownHair")))
+
+	if (image_data["Gray Hair"] > 0):
+		newColor = False
+		graph.add((hair_individual, rdflib.term.URIRef(hair_iri_string + "/" + "hasHairColor"), rdflib.term.URIRef(hair_iri_string + "/" + "GrayHair")))
+
+	if newColor:
+		graph.add((hair_color, RDF.type, OWL.NamedIndividual))
+		graph.add((hair_color, RDF.type, rdflib.term.URIRef(hair_iri_string + "/" + "HairColor")))
+		graph.add((hair_individual, rdflib.term.URIRef(hair_iri_string + "/" + "hasHairColor"), hair_color))
+
+	if (image_data["5 o' Clock Shadow"] > 0):
+		graph.add((person_iri, hasPart, rdflib.term.URIRef(hair_iri_string + "/" + "FiveOClockShadow")))
+
+	if (image_data["Bushy Eyebrows"] > 0):
+		graph.add((person_iri, hasPart, rdflib.term.URIRef(hair_iri_string + "/" + "BushyEyebrows")))
+	else:
+		graph.add((person_iri, hasPart, rdflib.term.URIRef(hair_iri_string + "/" + "ThinEyebrows")))
+
+	if (image_data["Goatee"] > 0):
+		graph.add((person_iri, hasPart, rdflib.term.URIRef(hair_iri_string + "/" + "Goatee")))
+
+	if (image_data["Sideburns"] > 0):
+		facialHair = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + "FacialHair0")
+		graph.add((facialHair, RDF.type, OWL.NamedIndividual))
+		graph.add((facialHair, RDF.type, rdflib.term.URIRef(hair_iri_string + "/" + "Sideburn")))
+		graph.add((person_iri, hasPart, facialHair))
+
+	if (image_data["Mustache"] > 0):
+		facialHair = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + "FacialHair1")
+		graph.add((facialHair, RDF.type, OWL.NamedIndividual))
+		graph.add((facialHair, RDF.type, rdflib.term.URIRef(hair_iri_string + "/" + "Mustache")))
+		graph.add((person_iri, hasPart, facialHair))
+
+
+	hasVisualFeature = rdflib.term.URIRef(pfd_iri + "/" + "hasVisualFeature")
+
+    # Face Stuff
+	expressionIri = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + "Expression")
+	graph.add((expressionIri, RDF.type, OWL.NamedIndividual))
+	graph.add((face_iri, hasVisualFeature, expressionIri))
+	graph.add((expressionIri, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "FacialExpression")))
+
+	if (image_data["Smiling"] > 0):
+		graph.add((expressionIri, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "Smiling")))
+
+	if (image_data["Frowning"] > 0):
+		graph.add((expressionIri, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "Frowning")))
+
+	if (image_data["Arched Eyebrows"] > 0):
+		graph.add((expressionIri, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "ArchedEyebrow")))
+
+	if (image_data["Narrow Eyes"] > 0):
+		graph.add((expressionIri, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "NarrowEyes")))
+
+
+	if (image_data["Round Jaw"] > 0):
+		graph.add((face_iri, hasPart, rdflib.term.URIRef(pfd_iri + "/" + "RoundJaw")))
+
+	if (image_data["Double Chin"] > 0):
+		graph.add((face_iri, hasPart, rdflib.term.URIRef(pfd_iri + "/" + "DoubleChin")))
+
+
+	hasShape = rdflib.term.URIRef(pfd_iri + "/" + "hasShape")
+	if (image_data["Oval Face"] > 0):
+		graph.add((face_iri, hasShape, rdflib.term.URIRef(pfd_iri + "/" + "OvalFace")))
+
+	if (image_data["Square Face"] > 0):
+		graph.add((face_iri, hasShape, rdflib.term.URIRef(pfd_iri + "/" + "SquareFace")))
+
+	if (image_data["Round Face"] > 0):
+		graph.add((face_iri, hasShape, rdflib.term.URIRef(pfd_iri + "/" + "RoundFace")))
+
+	cheekIRI = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + "Cheek")
+	graph.add((cheekIRI, RDF.type, OWL.NamedIndividual))
+	graph.add((face_iri, hasPart, cheekIRI))
+	graph.add((cheekIRI, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "Cheek")))
+
+	if (image_data["Rosy Cheeks"] > 0):
+		graph.add((cheekIRI, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "RosyCheek")))
+
+	if (image_data["High Cheekbones"] > 0):
+		graph.add((cheekIRI, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "HighCheekbone")))
+
+	noseIRI = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + "Nose")
+	graph.add((noseIRI, RDF.type, OWL.NamedIndividual))
+	graph.add((face_iri, hasPart, noseIRI))
+	graph.add((noseIRI, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "Nose")))
+
+	if (image_data["Big Nose"] > 0):
+		graph.add((noseIRI, rdflib.term.URIRef(pfd_iri + "/" + "hasSize"), rdflib.term.URIRef(pfd_iri + "/" + "Large")))
+	else:
+		graph.add((noseIRI, rdflib.term.URIRef(pfd_iri + "/" + "hasSize"), rdflib.term.URIRef(pfd_iri + "/" + "Medium")))
+
+	if (image_data["Pointy Nose"] > 0):
+		graph.add((noseIRI, rdflib.term.URIRef(pfd_iri + "/" + "hasShape"), rdflib.term.URIRef(pfd_iri + "/" + "PointyNoise")))
+	else:
+		noseShape = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + "NoseShape")
+		graph.add((noseShape, RDF.type, OWL.NamedIndividual))
+		graph.add((noseShape, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "NoseShape")))
+		graph.add((noseIRI, rdflib.term.URIRef(pfd_iri + "/" + "hasShape"), noseShape))
+
+
+	mouthIRI = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + "Mouth")
+	graph.add((mouthIRI, RDF.type, OWL.NamedIndividual))
+	graph.add((face_iri, hasPart, mouthIRI))
+	graph.add((mouthIRI, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "Mouth")))
+
+	if (image_data["Big Lips"] > 0):
+		graph.add((mouthIRI, rdflib.term.URIRef(pfd_iri + "/" + "hasSize"), rdflib.term.URIRef(pfd_iri + "/" + "Large")))
+	else:
+		graph.add((mouthIRI, rdflib.term.URIRef(pfd_iri + "/" + "hasSize"), rdflib.term.URIRef(pfd_iri + "/" + "Medium")))
+
+	graph.add((mouthIRI, rdflib.term.URIRef(pfd_iri + "/" + "teethVisable"), rdflib.term.Literal(not (image_data["Teeth Not Visible"] > 0))))
+
+	if (image_data["Mouth Wide Open"] > 0):
+		graph.add((mouthIRI, rdflib.term.URIRef(pfd_iri + "/" + "isOpen"), rdflib.term.URIRef(pfd_iri + "/" + "MouthWideOpen")))
+	else:
+		if(image_data["Mouth Slightly Open"] > 0):
+			graph.add((mouthIRI, rdflib.term.URIRef(pfd_iri + "/" + "isOpen"), rdflib.term.URIRef(pfd_iri + "/" + "MouthSlightlyOpen")))
+		else:
+			graph.add((mouthIRI, rdflib.term.URIRef(pfd_iri + "/" + "isOpen"), rdflib.term.URIRef(pfd_iri + "/" + "MouthClosed")))
 
 
 
+	eyeIRI = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + "Eye")
+	graph.add((eyeIRI, RDF.type, OWL.NamedIndividual))
+	graph.add((face_iri, hasPart, eyeIRI))
+	graph.add((eyeIRI, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "Eye")))
+
+	graph.add((eyeIRI, rdflib.term.URIRef(pfd_iri + "/" + "isOpen"), rdflib.term.Literal(not (image_data["Eyes Open"] > 0))))
+	graph.add((eyeIRI, rdflib.term.URIRef(pfd_iri + "/" + "isBaggy"), rdflib.term.Literal(not (image_data["Bags Under Eyes"] > 0))))
+
+	if (image_data["Brown Eyes"] > 0):
+		graph.add((eyeIRI, rdflib.term.URIRef(pfd_iri + "/" + "hasColor"), rdflib.term.URIRef(pfd_iri + "/" + "Brown")))
+	else:
+		eyeColorIri = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + "Eye/Color")
+		graph.add((eyeColorIri, RDF.type, OWL.NamedIndividual))
+		graph.add((eyeColorIri, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "EyeColor")))
+		graph.add((eyeIRI, rdflib.term.URIRef(pfd_iri + "/" + "hasColor"), eyeColorIri))
 
 
+	skinIRI = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + "Skin")
+	graph.add((skinIRI, RDF.type, OWL.NamedIndividual))
+	graph.add((face_iri, hasPart, skinIRI))
+	graph.add((skinIRI, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "Skin")))
 
 
+	if (image_data["Shiny Skin"] > 0):
+		graph.add((skinIRI, hasVisualFeature, rdflib.term.URIRef(pfd_iri + "/" + "Shiny")))
+	else:
+		skinFinish = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + "Skin/Finish")
+		graph.add((skinFinish, RDF.type, OWL.NamedIndividual))
+		graph.add((skinFinish, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "Finish")))
+		graph.add((skinIRI, hasVisualFeature, skinFinish))
 
+
+	if (image_data["Pale Skin"] > 0):
+		graph.add((skinIRI, hasVisualFeature, rdflib.term.URIRef(pfd_iri + "/" + "Pale")))
+	else:
+		if (image_data["Flushed Face"] > 0):
+			graph.add((skinIRI, hasVisualFeature, rdflib.term.URIRef(pfd_iri + "/" + "Flushed")))
+		else:
+			skinTone = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + "Skin/Tone")
+			graph.add((skinTone, RDF.type, OWL.NamedIndividual))
+			graph.add((skinTone, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "Tone")))
+			graph.add((skinIRI, hasVisualFeature, skinTone))
+
+	frma_iri = "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA"
+	if ((image_data["Fully Visible Forehead"] > 0) or (image_data["Partially Visible Forehead"] > 0)):
+		occlusionIRI = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + "Occlusion")
+		graph.add((occlusionIRI, RDF.type, OWL.NamedIndividual))
+		graph.add((occlusionIRI, RDF.type, rdflib.term.URIRef(frma_iri + "/" + "FrontalOcclusion")))
+		graph.add((person_iri, rdflib.term.URIRef(frma_iri + "/" + "hasOcculsion"), occlusionIRI))
 
 def clean_up_xml_string(xml):
 	classes = xml.split("\n  <owl")
@@ -385,7 +600,11 @@ if __name__ == "__main__":
 		if i % int(len(restricted_images_all)/4) == 0:
 			restricted_images.append(restricted_images_all[i])
 	print(len(restricted_images))
-	generate_rdf_individuals(names, tags, "../Individuals.rdf", "individuals.rdf", restricted_images)
+	# generate_rdf_individuals(names, tags, "../Individuals.rdf", "individuals.rdf", restricted_images)
+
+	restricted_single = [('Patrick Bourrat', 1)]
+	generate_rdf_individuals(names, tags, "../FaceNet_Individual.rdf", "individuals.rdf", restricted_single)
+
 
 
 
