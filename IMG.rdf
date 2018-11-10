@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
      xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
-     xmlns:dct="http://purl.org/dc/terms/"
      xmlns:img="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
      xmlns:lio="https://w3id.org/lio/v1#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:dct="http://purl.org/dc/terms/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:lio-orig="http://purl.org/net/lio#">
+     xmlns:lio-orig="http://purl.org/net/lio#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/">
     <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/">
         <owl:imports rdf:resource="http://www.imagesnippets.com/lio/lio.owl"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
-        <dct:creator>Alexander Schwartzberg</dct:creator>
-        <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology - Image Sub-Ontology</rdfs:label>
         <skos:definition xml:lang="en">Image Ontology enables the FRMA system to classify the properties of different image files.</skos:definition>
+        <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology - Image Sub-Ontology</rdfs:label>
+        <dct:creator>Alexander Schwartzberg</dct:creator>
     </owl:Ontology>
     
 
@@ -152,7 +152,7 @@
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Lighting_Variation"/>
         <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Harsh_Lighting_Variation"/>
         <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Soft_Lighting_Variation"/>
-        <rdfs:label>Balanced Lighting Variation</rdfs:label>
+        <rdfs:label>balanced lighting variation</rdfs:label>
         <skos:definition>both small light source in close proximity relative to the subject and large light source in distant proximity relative to the subject</skos:definition>
     </owl:Class>
     
@@ -162,7 +162,7 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/BlackAndWhiteImage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lio/v1#Image"/>
-        <rdfs:label xml:lang="en">Black and White Image</rdfs:label>
+        <rdfs:label xml:lang="en">black and white image</rdfs:label>
         <skos:definition xml:lang="en">an image having, showing, or producing pictures that do not have colors except for black, white, and shades of gray</skos:definition>
     </owl:Class>
     
@@ -173,7 +173,7 @@
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/BlurryImageFidelity">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/ImageFidelity"/>
         <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/SharpImageFidelity"/>
-        <rdfs:label xml:lang="en">Blurry Image Fidelity</rdfs:label>
+        <rdfs:label xml:lang="en">blurry image fidelity</rdfs:label>
         <skos:definition xml:lang="en">lower quality image showing signs of visible distortion or information loss</skos:definition>
     </owl:Class>
     
@@ -183,7 +183,7 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Candid_Image">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lio/v1#Image"/>
-        <rdfs:label>Candid Image</rdfs:label>
+        <rdfs:label>candid image</rdfs:label>
         <skos:definition>a photo in which the subject is acting naturally or spontaneously</skos:definition>
     </owl:Class>
     
@@ -193,7 +193,7 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/ColorImage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lio/v1#Image"/>
-        <rdfs:label xml:lang="en">Color Image</rdfs:label>
+        <rdfs:label xml:lang="en">color image</rdfs:label>
         <skos:definition xml:lang="en">an image produces useing media capable of reproducing colors</skos:definition>
     </owl:Class>
     
@@ -202,7 +202,8 @@
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Depicted_Background -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Depicted_Background">
-        <rdfs:label>Depicted Background</rdfs:label>
+        <rdfs:label>depicted background</rdfs:label>
+        <skos:definition xml:lang="en">the ground or parts, as of a scene, situated in the rear</skos:definition>
     </owl:Class>
     
 
@@ -211,7 +212,7 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Flash_Lighting_Variation">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Harsh_Lighting_Variation"/>
-        <rdfs:label>Flash Lighting Variation</rdfs:label>
+        <rdfs:label>flash lighting variation</rdfs:label>
         <skos:definition>whether or not the system classifies a photo as using camera flash to illuminate the subject</skos:definition>
     </owl:Class>
     
@@ -222,7 +223,7 @@
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Harsh_Lighting_Variation">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Lighting_Variation"/>
         <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Soft_Lighting_Variation"/>
-        <rdfs:label>Harsh Lighting Variation</rdfs:label>
+        <rdfs:label>harsh lighting variation</rdfs:label>
         <skos:definition>small light source in close proximity relative to the subject</skos:definition>
     </owl:Class>
     
@@ -231,7 +232,7 @@
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/ImageFidelity -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/ImageFidelity">
-        <rdfs:label xml:lang="en">Image Fidelity</rdfs:label>
+        <rdfs:label xml:lang="en">image fidelity</rdfs:label>
         <skos:definition xml:lang="en">the measurable quality of an image</skos:definition>
     </owl:Class>
     
@@ -257,7 +258,8 @@
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Indoors">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Depicted_Background"/>
         <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Outdoors"/>
-        <rdfs:label>Indoors</rdfs:label>
+        <rdfs:label xml:lang="en">indoors</rdfs:label>
+        <skos:definition xml:lang="en">whether or not the image was taken indoors</skos:definition>
     </owl:Class>
     
 
@@ -265,7 +267,7 @@
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Lighting_Variation -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Lighting_Variation">
-        <rdfs:label>Lighting Variation</rdfs:label>
+        <rdfs:label>lighting variation</rdfs:label>
         <skos:definition>images have differening levels and locations of brightness</skos:definition>
     </owl:Class>
     
@@ -274,7 +276,7 @@
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/OptimalConditionPhoto -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/OptimalConditionPhoto">
-        <rdfs:label xml:lang="en">Optimal Condition Photo</rdfs:label>
+        <rdfs:label xml:lang="en">optimal condition photo</rdfs:label>
         <skos:definition xml:lang="en">the best possible image for recognition tasks</skos:definition>
     </owl:Class>
     
@@ -284,7 +286,8 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Outdoors">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Depicted_Background"/>
-        <rdfs:label>Outdoors</rdfs:label>
+        <rdfs:label>outdoors</rdfs:label>
+        <skos:definition xml:lang="en">whether or not the image was taken outdoors</skos:definition>
     </owl:Class>
     
 
@@ -293,7 +296,7 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Posed_Image">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lio/v1#Image"/>
-        <rdfs:label>Posed Image</rdfs:label>
+        <rdfs:label>posed image</rdfs:label>
         <skos:definition>assumes a posture or attitude usually for artistic purposes</skos:definition>
     </owl:Class>
     
@@ -303,7 +306,7 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/SharpImageFidelity">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/ImageFidelity"/>
-        <rdfs:label xml:lang="en">Sharp Image Fidelity</rdfs:label>
+        <rdfs:label xml:lang="en">sharp image fidelity</rdfs:label>
         <skos:definition xml:lang="en">high quality image showing little to no signs of visible distortion or information loss</skos:definition>
     </owl:Class>
     
@@ -313,7 +316,7 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Soft_Lighting_Variation">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Lighting_Variation"/>
-        <rdfs:label>Soft Lighting Variation</rdfs:label>
+        <rdfs:label>soft lighting variation</rdfs:label>
         <skos:definition>large light source in distant proximity relative to the subject</skos:definition>
     </owl:Class>
     
@@ -360,5 +363,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
