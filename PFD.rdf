@@ -91,18 +91,6 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UBPROP_0000008 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/UBPROP_0000008"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/UBPROP_0000010 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/UBPROP_0000010"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/UBPROP_0000011 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/UBPROP_0000011"/>
@@ -148,12 +136,6 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     <!-- http://www.geneontology.org/formats/oboInOwl#id -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
     
 
 
@@ -367,43 +349,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001456"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000116 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TODO - distinguish generic olfactory apparatus from nose; we have olfactory organ for the generic organ - add new class &apos;olfactory structure&apos;?</obo:IAO_0000116>
         <obo:UBPROP_0000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organ that is the specialized structure of the face that contains olfactory neurons. The peripheral olfactory organ is paired[ZFA:0000047].</obo:UBPROP_0000001>
         <obo:UBPROP_0000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a protuberance in vertebrates that houses the nostrils, or nares, which admit and expel air for respiration in conjunction with the mouth. Behind the nose are the olfactory mucosa and the sinuses. Behind the nasal cavity, air next passes through the pharynx, shared with the digestive system, and then into the rest of the respiratory system. In humans, the nose is located centrally on the face; on most other mammals, it is on the upper tip of the snout[WP]. GO: The nose is the specialized structure of the face that serves as the organ of the sense of smell and as part of the respiratory system. Includes the nasi externus (external nose) and cavitas nasi (nasal cavity)[Wikipedia:Nose].</obo:UBPROP_0000001>
-        <oboInOwl:hasDbXref rdf:resource="http://en.wikipedia.org/wiki/Nose"/>
-        <oboInOwl:hasDbXref rdf:resource="http://linkedlifedata.com/resource/umls/id/C0028429"/>
-        <oboInOwl:hasDbXref rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Nose"/>
-        <oboInOwl:hasDbXref rdf:resource="http://www.snomedbrowser.com/Codes/Details/181195007"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BTO:0000840</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CALOHA:TS-2037</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EFO:0000828</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EHDAA2:0001274</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EHDAA:1502</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMAPA:16542</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EV:0100037</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EV:0100370</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA:46472</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GAID:77</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:0000281</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MAT:0000139</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:A01.456.505.733</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MIAA:0000139</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OpenCyc:Mx4rvViCbJwpEbGdrcN5Y29ycA</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TAO:0000047</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0028429</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZFA:0000047</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">galen:Nose</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nasal sac</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nose</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peripheral olfactory organ</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uberon</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nasus</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proboscis</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UBERON:0000004</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#efo_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#major_organ"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#uberon_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#vertebrate_core"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">olfactory apparatus</rdfs:label>
     </owl:Class>
     
@@ -416,45 +363,9 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <obo:UBPROP_0000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organism subdivision that is the part of the body consisting of the cranial and pharyngeal regions.[AAO]</obo:UBPROP_0000001>
         <obo:UBPROP_0000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organism subdivision which is the part of the body which consists of the cranial and pharygeal regions.[TAO]</obo:UBPROP_0000001>
         <obo:UBPROP_0000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vertebrate evolution has been characterized by a fresh and vast array of cranial structures that collectively form the head.[well established][VHOG]</obo:UBPROP_0000003>
-        <oboInOwl:hasDbXref rdf:resource="http://en.wikipedia.org/wiki/Head"/>
-        <oboInOwl:hasDbXref rdf:resource="http://linkedlifedata.com/resource/umls/id/C0018670"/>
-        <oboInOwl:hasDbXref rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Head"/>
-        <oboInOwl:hasDbXref rdf:resource="http://uri.neuinfo.org/nif/nifstd/birnlex_1230"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AAO:0010335</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AEO:0000106</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BILA:0000115</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BTO:0000282</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CALOHA:TS-0436</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EFO:0000964</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EHDAA2:0003106</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMAPA:31858</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBbt:00000004</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA:7154</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GAID:61</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HAO:0000397</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:0000023</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MAT:0000294</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:A01.456</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MIAA:0000294</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OpenCyc:Mx4rEOLm4rgPEdmAAAACs6hRjg</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OpenCyc:Mx4rvVi6YJwpEbGdrcN5Y29ycA</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SPD:0000016</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TAO:0001114</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TGMA:0000002</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0018670</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VHOG:0001644</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WBbt:0005739</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XAO:0003024</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZFA:0001114</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">galen:Head</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">head (volume)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adult head</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uberon</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cephalic area</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UBERON:0000033</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#efo_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#uberon_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#vertebrate_core"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">head</rdfs:label>
     </owl:Class>
     
@@ -469,60 +380,11 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000033"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The proximal portion of the digestive tract, containing the oral cavity and bounded by the oral opening. In vertebrates, this extends to the pharynx and includes gums, lips, tongue and parts of the palate. Typically also includes the teeth, except where these occur elsewhere (e.g. pharyngeal jaws) or protrude from the mouth (tusks).</obo:IAO_0000115>
         <obo:UBPROP_0000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cavity in which food is initially ingested and generally contains teeth, tongue and glands.[AAO]</obo:UBPROP_0000001>
         <obo:UBPROP_0000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molecular and developmental cell lineage data suggest that the acoel mouth opening is homologous to the mouth of protostomes and deuterostomes and that the last common ancestor of the Bilateria (the &apos;urbilaterian&apos;) had only this single digestive opening.[well established][VHOG]</obo:UBPROP_0000003>
         <obo:UBPROP_0000007 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oral</obo:UBPROP_0000007>
         <obo:UBPROP_0000011 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">some AOs place this as developing from the stomodeum but we weaken this to developmental contribution, as the mouth includes non-ectodermal derivatives</obo:UBPROP_0000011>
         <obo:UBPROP_0000012 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in FMA, the tongue, palate etc are part of the mouth which is itself a subdivision of the face. ZFA includes a separate class &apos;oral region&apos; which is part of the mouth, but excludes tongue and lips</obo:UBPROP_0000012>
-        <oboInOwl:hasDbXref rdf:resource="http://en.wikipedia.org/wiki/Mouth"/>
-        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/uberon/images/lamprey_sucker_rosava_3238889218.jpg"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AAO:0010355</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BTO:0001090</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BTO:0004698</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CALOHA:TS-1315</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EFO:0000825</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EHDAA2:0001326</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EHDAA:542</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMAPA:16262</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBbt:00003126</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA:49184</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GAID:75</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:0000341</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:0002474</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MAT:0000038</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:A01.456.505.631</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MIAA:0000038</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OpenCyc:Mx4rvVidh5wpEbGdrcN5Y29ycA</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TADS:0000040</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TAO:0000547</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TAO:0000590</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TGMA:0000131</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VHOG:0000280</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VHOG:0000812</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XAO:0003029</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZFA:0000547</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZFA:0000590</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">galen:Mouth</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regio oralis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adult mouth</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uberon</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cavital oralis</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cavitas oris</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cavum oris</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mouth cavity</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oral region</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oral vestibule</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rima oris</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stoma</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stomatodaeum</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vestibule of mouth</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vestibulum oris</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UBERON:0000165</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#efo_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#major_organ"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#uberon_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#vertebrate_core"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mouth</rdfs:label>
     </owl:Class>
     
@@ -531,32 +393,14 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     <!-- http://purl.obolibrary.org/obo/UBERON_0000970 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000970">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Face"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ that detects light.</obo:IAO_0000115>
         <obo:IAO_0000232 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class encompasses a variety of light-detecting structures from different phyla with no implication of homology, from the compound insect eye to the vertebrate camera-type eye (distinct classes are provided for each)</obo:IAO_0000232>
-        <obo:UBPROP_0000007 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ocular</obo:UBPROP_0000007>
-        <obo:UBPROP_0000007 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">optic</obo:UBPROP_0000007>
-        <obo:UBPROP_0000010 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note that whilst this is classified as an organ, it is in fact more of a unit composed of different structures: in Drosophila, it includes the interommatidial bristle as a part; we consider here the vertebrate eye to include the eyeball/eye proper as a part, with the eye having as parts (when present): eyelids, conjuctiva,</obo:UBPROP_0000010>
-        <oboInOwl:hasDbXref rdf:resource="http://en.wikipedia.org/wiki/Eye"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BILA:0000017</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BTO:0000439</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CALOHA:TS-0309</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EFO:0000827</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EV:0100336</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBbt:00005162</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GAID:69</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MAT:0000140</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D005123</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MIAA:0000140</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OpenCyc:Mx4rvViTvpwpEbGdrcN5Y29ycA</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uberon</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">light-detecting organ</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visual apparatus</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UBERON:0000970</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#efo_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#functional_classification"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#major_organ"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#organ_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#uberon_slim"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eye</rdfs:label>
     </owl:Class>
     
@@ -571,16 +415,9 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000033"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000116 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class was created automatically from a combination of ontologies</obo:IAO_0000116>
-        <oboInOwl:hasDbXref rdf:resource="http://www.snomedbrowser.com/Codes/Details/123852005"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA:24218</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XAO:0000040</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">head region</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">head subdivision</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">region of head</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uberon</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UBERON:0001444</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#non_informative"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subdivision of head</rdfs:label>
     </owl:Class>
     
@@ -597,30 +434,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A subdivision of the head that has as parts the layers deep to the surface of the anterior surface, including the mouth, eyes, and olfactory apparatus (when present). In vertebrates, this includes the facial skeleton and structures superficial to the facial skeleton (cheeks, mouth, eyeballs, skin of face, etc).</obo:IAO_0000115>
-        <obo:UBPROP_0000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subdivision of head which consists of the viscerocranium and all layers superficial to it. Examples: There is only one face.</obo:UBPROP_0000001>
-        <obo:UBPROP_0000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The area that extends from the median ocellus to the oral foramen[HAO].</obo:UBPROP_0000001>
-        <obo:UBPROP_0000007 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">facial</obo:UBPROP_0000007>
-        <obo:UBPROP_0000011 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The face develops from outward growth of tissue located rostral to the cranium &amp; pharynx. The lower jaw and most of the upper jaw are formed by growth of the first pharyngeal (branchial) arch. The upper incisor region and the nose and forehead (frontal region) are formed from tissue located rostral to the neural tube (frontonasal prominence)</obo:UBPROP_0000011>
-        <oboInOwl:hasDbXref rdf:resource="http://en.wikipedia.org/wiki/Face"/>
-        <oboInOwl:hasDbXref rdf:resource="http://linkedlifedata.com/resource/umls/id/C0015450"/>
-        <oboInOwl:hasDbXref rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Face"/>
-        <oboInOwl:hasDbXref rdf:resource="http://www.snomedbrowser.com/Codes/Details/302549007"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BTO:0003369</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CALOHA:TS-2216</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMAPA:32763</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA:24728</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GAID:64</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HAO:0000316</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:0002473</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:A01.456.505</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OpenCyc:Mx4rvVi5GZwpEbGdrcN5Y29ycA</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0015450</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">galen:Face</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uberon</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">facia/facies</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visage</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UBERON:0001456</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#uberon_slim"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">face</rdfs:label>
     </owl:Class>
     
@@ -637,28 +452,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fleshy subdivision of one side of the face bounded by an eye, ear and the nose.</obo:IAO_0000115>
         <obo:UBPROP_0000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Surface structure that includes the scales, skin, and muscles that are located ventral and posterior to the eye.[TAO]</obo:UBPROP_0000001>
-        <obo:UBPROP_0000007 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">buccal</obo:UBPROP_0000007>
-        <obo:UBPROP_0000008 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In many animals the inside of the cheek is lined with mucous membrane covered with stratified squamous epithelium and supplied with secretions from buccal glands.</obo:UBPROP_0000008>
-        <oboInOwl:hasDbXref rdf:resource="http://en.wikipedia.org/wiki/Cheek"/>
-        <oboInOwl:hasDbXref rdf:resource="http://linkedlifedata.com/resource/umls/id/C0007966"/>
-        <oboInOwl:hasDbXref rdf:resource="http://www.snomedbrowser.com/Codes/Details/182325008"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BTO:0001754</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMAPA:37451</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA:46476</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GAID:65</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:0002475</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D002610</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT:C13070</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OpenCyc:Mx4rvVi5WZwpEbGdrcN5Y29ycA</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TAO:0002113</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0007966</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">galen:Cheek</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uberon</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">buccae</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jowl</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UBERON:0001567</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#pheno_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#uberon_slim"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cheek</rdfs:label>
     </owl:Class>
     
@@ -676,18 +471,6 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The subdivision of the face that includes the eye (eyeball plus adnexa such as eyelids) and the orbit of the skull and associated parts of the face such as the eyebrows, if present</obo:IAO_0000115>
         <obo:IAO_0000116 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">note the FMA class is more narrow though, and is more like eye + muscles + vasculature. The FMA also has FMA:72951 orbital part of eye</obo:IAO_0000116>
-        <obo:UBPROP_0000012 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in HP covers eyelid, eyebrow.</obo:UBPROP_0000012>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA:260119</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">content of orbital part of eye</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eye region</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">orbital part of face</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uberon</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ocular and peri-ocular region</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ocular region</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">orbital content</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">orbital part of eye</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UBERON:0004088</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#pheno_slim"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">orbital region</rdfs:label>
     </owl:Class>
     
@@ -705,25 +488,6 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A subdivision of the face that is the anteriormost part of the lower jaw region.</obo:IAO_0000115>
         <obo:UBPROP_0000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Surface structure that is the anteriormost region of the lower jaw.[TAO]</obo:UBPROP_0000001>
-        <obo:UBPROP_0000007 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mental</obo:UBPROP_0000007>
-        <obo:UBPROP_0000008 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In humans, the chin is the lowermost part of the face. It is formed by the lower front of the mandible. The chin developed as a point of muscular attachment facilitating minute movements of the lips associated with speech. In human evolution, the chin is a cladistic apomorphy, partially defining anatomically modern Humans as distinct from archaic forms</obo:UBPROP_0000008>
-        <oboInOwl:hasDbXref rdf:resource="http://en.wikipedia.org/wiki/Chin"/>
-        <oboInOwl:hasDbXref rdf:resource="http://www.snomedbrowser.com/Codes/Details/362632004"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMAPA:37827</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA:46495</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GAID:67</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D002680</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT:C81169</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TAO:0002254</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">galen:Chin</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mental part of face</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mental region</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mental region of face</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regio mentalis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uberon</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mentum</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UBERON:0008199</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#pheno_slim"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chin</rdfs:label>
     </owl:Class>
     
@@ -739,18 +503,6 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A zone of skin that is part of the face.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:resource="http://linkedlifedata.com/resource/umls/id/C0222084"/>
-        <oboInOwl:hasDbXref rdf:resource="http://www.snomedbrowser.com/Codes/Details/361703006"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMAPA:36657</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA:24758</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT:C33561</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0222084</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">face skin</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uberon</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">facial skin</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UBERON:1000021</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#pheno_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#phenotype_rcn"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skin of face</rdfs:label>
     </owl:Class>
     
