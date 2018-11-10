@@ -1,0 +1,819 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY dct "http://purl.org/dc/terms/" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY lio "http://purl.org/net/lio#" >
+    <!ENTITY frmai "http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/" >
+    <!ENTITY frma "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/" >
+    <!ENTITY mlmo "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/" >
+    <!ENTITY wt "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/" >
+    <!ENTITY pfd "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/" >
+    <!ENTITY img "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/" >
+    <!ENTITY lcc-lr "http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/">
+	  <!ENTITY ho "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/" >
+    <!ENTITY fibo-fnd-rel-rel "http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/">
+    <!ENTITY fibo-fnd-arr-arr "http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/">
+]>
+
+<rdf:RDF xml:base="http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/"
+     xmlns:fibo-fnd-rel-rel="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/"
+     xmlns:img="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
+     xmlns:mlmo="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/"
+     xmlns:pfd="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/"
+     xmlns:wt="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/"
+     xmlns:ho="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/"
+     xmlns:frmai="http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:lio="http://purl.org/net/lio#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:lcc-lr="http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+     xmlns:fibo-fnd-arr-arr="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/"
+     xmlns:dct="http://purl.org/dc/terms/">
+
+    <owl:Ontology rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/">
+        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/"/>
+        <dct:creator xml:lang="en">Alexander Schwartzberg</dct:creator>
+        <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology Examplar Data</rdfs:label>
+        <skos:definition xml:lang="en">This ontology contains examplar data used to test the FRMA ontology</skos:definition>
+        <dct:creator xml:lang="en">Andrew Gaudet</dct:creator>
+        <dct:creator xml:lang="en">Matthew Johnson</dct:creator>
+        <dct:creator xml:lang="en">John Angel</dct:creator>
+        <dct:creator xml:lang="en">Jordan Faas-Bush</dct:creator>
+    </owl:Ontology>
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+    <!-- &frmai;FaceNet -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNet">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalNeuralNetwork"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetConv1 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetConv1">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">6</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">0</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">7</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">7</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetFullyConnected16 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetFullyConnected16">
+        <rdf:type rdf:resource="&mlmo;FullyConnectedLayer"/>
+        <mlmo:hasActivationFunction rdf:datatype="&xsd;string">Rectified Linear Activation</mlmo:hasActivationFunction>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">128</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">15</mlmo:hasIndex>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception10 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception10">
+        <rdf:type rdf:resource="&mlmo;InceptionLayer"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception10Conv1"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception10Conv2"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception10Conv3"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception10Pool1"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">9</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">4</mlmo:hasIndex>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception10Conv1 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception10Conv1">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">0</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception10Conv2 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception10Conv2">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">1</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception10Conv3 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception10Conv3">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">2</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">5</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">5</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception10Pool1 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception10Pool1">
+        <rdf:type rdf:resource="&mlmo;PoolingLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">3</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">128</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeY>
+        <mlmo:hasPoolingFunction rdf:datatype="&xsd;string">L2</mlmo:hasPoolingFunction>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception11 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception11">
+        <rdf:type rdf:resource="&mlmo;InceptionLayer"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception11Conv1"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception11Conv2"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception11Conv3"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception11Pool1"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">10</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">4</mlmo:hasIndex>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception11Conv1 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception11Conv1">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">0</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception11Conv2 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception11Conv2">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">1</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception11Conv3 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception11Conv3">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">2</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">5</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">5</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception11Pool1 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception11Pool1">
+        <rdf:type rdf:resource="&mlmo;PoolingLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">3</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">128</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeY>
+        <mlmo:hasPoolingFunction rdf:datatype="&xsd;string">L2</mlmo:hasPoolingFunction>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception12 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception12">
+        <rdf:type rdf:resource="&mlmo;InceptionLayer"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception12Conv1"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception12Conv2"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception12Conv3"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception12Pool1"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">4</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">11</mlmo:hasIndex>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception12Conv1 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception12Conv1">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">0</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception12Conv2 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception12Conv2">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">1</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception12Conv3 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception12Conv3">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">2</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">5</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">5</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception12Pool1 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception12Pool1">
+        <rdf:type rdf:resource="&mlmo;PoolingLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">2</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">3</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeY>
+        <mlmo:hasPoolingFunction rdf:datatype="&xsd;string">Max Pool</mlmo:hasPoolingFunction>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception13 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception13">
+        <rdf:type rdf:resource="&mlmo;InceptionLayer"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception13Conv1"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception13Conv2"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception13Conv3"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception13Pool1"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">4</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">12</mlmo:hasIndex>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception13Conv1 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception13Conv1">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">0</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception13Conv2 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception13Conv2">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">1</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception13Conv3 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception13Conv3">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">2</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">5</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">5</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception13Pool1 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception13Pool1">
+        <rdf:type rdf:resource="&mlmo;PoolingLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">2</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">3</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">128</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeY>
+        <mlmo:hasPoolingFunction rdf:datatype="&xsd;string">L2</mlmo:hasPoolingFunction>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception14 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception14">
+        <rdf:type rdf:resource="&mlmo;InceptionLayer"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception14Conv1"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception14Conv2"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception14Conv3"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception14Pool1"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">13</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">4</mlmo:hasIndex>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception14Conv1 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception14Conv1">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">0</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception14Conv2 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception14Conv2">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">1</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception14Conv3 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception14Conv3">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">2</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">5</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">5</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception14Pool1 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception14Pool1">
+        <rdf:type rdf:resource="&mlmo;PoolingLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">2</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">3</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">128</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeY>
+        <mlmo:hasPoolingFunction rdf:datatype="&xsd;string">Max Pool</mlmo:hasPoolingFunction>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception3 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception3">
+        <rdf:type rdf:resource="&mlmo;InceptionLayer"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception3Conv"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">2</mlmo:hasIndex>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception3Conv -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception3Conv">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">0</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception5 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception5">
+        <rdf:type rdf:resource="&mlmo;InceptionLayer"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception5Conv1"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception5Conv2"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception5Conv3"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception5Pool1"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">4</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">4</mlmo:hasIndex>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception5Conv1 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception5Conv1">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">0</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception5Conv2 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception5Conv2">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">1</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception5Conv3 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception5Conv3">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">2</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">5</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">5</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception5Pool1 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception5Pool1">
+        <rdf:type rdf:resource="&mlmo;PoolingLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">3</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">32</mlmo:hasMatrixSizeY>
+        <mlmo:hasPoolingFunction rdf:datatype="&xsd;string">Max Pool + norm</mlmo:hasPoolingFunction>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception6 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception6">
+        <rdf:type rdf:resource="&mlmo;InceptionLayer"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception6Conv1"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception6Conv2"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception6Conv3"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception6Pool1"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">4</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">5</mlmo:hasIndex>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception6Conv1 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception6Conv1">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">0</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception6Conv2 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception6Conv2">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">1</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception6Conv3 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception6Conv3">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">2</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">5</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">5</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception6Pool1 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception6Pool1">
+        <rdf:type rdf:resource="&mlmo;PoolingLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">3</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">64</mlmo:hasMatrixSizeY>
+        <mlmo:hasPoolingFunction rdf:datatype="&xsd;string">L2 pool</mlmo:hasPoolingFunction>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception7 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception7">
+        <rdf:type rdf:resource="&mlmo;InceptionLayer"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception7Conv1"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception7Conv2"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception7Conv3"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception7Pool1"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">4</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">6</mlmo:hasIndex>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception7Conv1 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception7Conv1">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">0</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception7Conv2 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception7Conv2">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">1</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception7Conv3 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception7Conv3">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">2</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">5</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">5</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception7Pool1 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception7Pool1">
+        <rdf:type rdf:resource="&mlmo;PoolingLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">2</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">3</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeY>
+        <mlmo:hasPoolingFunction rdf:datatype="&xsd;string">Max pool</mlmo:hasPoolingFunction>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception8 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception8">
+        <rdf:type rdf:resource="&mlmo;InceptionLayer"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception8Conv1"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception8Conv2"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception8Conv3"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception8Pool1"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">7</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">4</mlmo:hasIndex>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception8Conv1 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception8Conv1">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">0</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception8Conv2 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception8Conv2">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">1</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception8Conv3 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception8Conv3">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">2</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">5</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">5</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception8Pool1 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception8Pool1">
+        <rdf:type rdf:resource="&mlmo;PoolingLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">3</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">128</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeY>
+        <mlmo:hasPoolingFunction rdf:datatype="&xsd;string">L2</mlmo:hasPoolingFunction>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception9 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception9">
+        <rdf:type rdf:resource="&mlmo;InceptionLayer"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception9Conv1"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception9Conv2"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception9Conv3"/>
+        <fibo-fnd-arr-arr:hasConstituent rdf:resource="&frmai;FaceNetInception9Pool1"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">4</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">8</mlmo:hasIndex>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception9Conv1 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception9Conv1">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">0</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception9Conv2 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception9Conv2">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">1</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception9Conv3 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception9Conv3">
+        <rdf:type rdf:resource="&mlmo;ConvolutionalLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">2</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">5</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">5</mlmo:hasMatrixSizeY>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetInception9Pool1 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetInception9Pool1">
+        <rdf:type rdf:resource="&mlmo;PoolingLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">3</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">128</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeY>
+        <mlmo:hasPoolingFunction rdf:datatype="&xsd;string">L2</mlmo:hasPoolingFunction>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetPool15 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetPool15">
+        <rdf:type rdf:resource="&mlmo;PoolingLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">14</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">1024</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeY>
+        <mlmo:hasPoolingFunction rdf:datatype="&xsd;string">AVG Pool</mlmo:hasPoolingFunction>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetPool17 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetPool17">
+        <rdf:type rdf:resource="&mlmo;PoolingLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">1</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">16</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">128</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">1</mlmo:hasMatrixSizeY>
+        <mlmo:hasPoolingFunction rdf:datatype="&xsd;string">L2</mlmo:hasPoolingFunction>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetPool2 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetPool2">
+        <rdf:type rdf:resource="&mlmo;PoolingLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">2</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">1</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeY>
+        <mlmo:hasPoolingFunction rdf:datatype="&xsd;string">Max Pool + norm</mlmo:hasPoolingFunction>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetPool4 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetPool4">
+        <rdf:type rdf:resource="&mlmo;PoolingLayer"/>
+        <mlmo:hasDimension rdf:datatype="&xsd;integer">2</mlmo:hasDimension>
+        <mlmo:hasIndex rdf:datatype="&xsd;integer">3</mlmo:hasIndex>
+        <mlmo:hasMatrixSizeX rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeX>
+        <mlmo:hasMatrixSizeY rdf:datatype="&xsd;integer">3</mlmo:hasMatrixSizeY>
+        <mlmo:hasPoolingFunction rdf:datatype="&xsd;string">norm + max pool</mlmo:hasPoolingFunction>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetTest01 -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetTest01">
+        <rdf:type rdf:resource="&mlmo;Testing"/>
+        <fibo-fnd-rel-rel:provides rdf:resource="&frmai;FaceNetTest01ResultSet"/>
+        <fibo-fnd-rel-rel:uses rdf:resource="&frmai;FaceNet"/>
+        <fibo-fnd-rel-rel:uses rdf:resource="&frmai;TestSetLFW"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- &frmai;FaceNetTraining -->
+
+    <owl:NamedIndividual rdf:about="&frmai;FaceNetTraining">
+        <rdf:type rdf:resource="&mlmo;Training"/>
+        <fibo-fnd-rel-rel:provides rdf:resource="&frmai;FaceNet"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
