@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/"
-     xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/"
+<rdf:RDF xmlns="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/"
+     xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/"
      xmlns:img="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
@@ -9,7 +9,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:pfd="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/"
-     xmlns:frma="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/"
+     xmlns:frma="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/"
      xmlns:mlmo="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -19,7 +19,7 @@
      xmlns:wt="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/"
      xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
      xmlns:obo="http://purl.obolibrary.org/obo/">
-    <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/">
+    <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/">
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/"/>
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/"/>
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/"/>
@@ -48,18 +48,18 @@
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOccludingBodyRegion -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOccludingBodyRegion -->
 
-    <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOccludingBodyRegion">
+    <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOccludingBodyRegion">
         <rdfs:label xml:lang="en">is occluding the region of</rdfs:label>
         <skos:definition xml:lang="en">to be a cover, block, or hamper to the visual representation of a body region in an image</skos:definition>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOcclusionSourceOf -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf -->
 
-    <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOcclusionSourceOf">
+    <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf">
         <rdfs:label xml:lang="en">is the occlusion source of</rdfs:label>
         <skos:definition xml:lang="en">is the source and/or causes of a specific occlusion on an image of a face</skos:definition>
     </owl:ObjectProperty>
@@ -77,23 +77,23 @@
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/AuricleOcclusion -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/AuricleOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/AuricleOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/UpperFaceOcclusion"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/AuricleOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/UpperFaceOcclusion"/>
         <rdfs:label xml:lang="en">auricle occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the ears</skos:definition>
     </owl:Class>
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/BuccalOcclusion -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/BuccalOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/BuccalOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/LowerFaceOcclusion"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/BuccalOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/LowerFaceOcclusion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOccludingBodyRegion"/>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOccludingBodyRegion"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001567"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -103,66 +103,70 @@
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/CervicalOcclusion -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/CervicalOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/CervicalOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion"/>
-        <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FaceOcclusion"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/CervicalOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/Occlusion"/>
+        <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/FaceOcclusion"/>
         <rdfs:label xml:lang="en">cervical occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the neck</skos:definition>
     </owl:Class>
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/CranialOcclusion -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/CranialOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/CranialOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/UpperFaceOcclusion"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/CranialOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/UpperFaceOcclusion"/>
         <rdfs:label xml:lang="en">cranial occlusion</rdfs:label>
         <skos:definition xml:lang="en">occusion of the top of the head, above the ears</skos:definition>
     </owl:Class>
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FaceOcclusion -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/FaceOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FaceOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/FaceOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/Occlusion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOccludingBodyRegion"/>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOccludingBodyRegion"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001456"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">face occlusion</rdfs:label>
+        <skos:definition xml:lang="en">something that blocks the view of a persons face within an image</skos:definition>
     </owl:Class>
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FrontalOcclusion -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/FrontalOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FrontalOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/UpperFaceOcclusion"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/FrontalOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/UpperFaceOcclusion"/>
         <rdfs:label xml:lang="en">frontal occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the forehead</skos:definition>
     </owl:Class>
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/LowerFaceOcclusion -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/LowerFaceOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/LowerFaceOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FaceOcclusion"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/LowerFaceOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/FaceOcclusion"/>
+        <rdfs:label xml:lang="en">lower face occlusion</rdfs:label>
+        <skos:definition xml:lang="en">something that blocks a portion of the view of a persons face from the bottom of the nose to the bottom of the head within within an image</skos:definition>
     </owl:Class>
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MentalOcclusion -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/MentalOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MentalOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/LowerFaceOcclusion"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/MentalOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/LowerFaceOcclusion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOccludingBodyRegion"/>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOccludingBodyRegion"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0008199"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -172,13 +176,13 @@
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/NasalOcclusion -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/NasalOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/NasalOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/UpperFaceOcclusion"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/NasalOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/UpperFaceOcclusion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOccludingBodyRegion"/>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOccludingBodyRegion"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000004"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -188,19 +192,22 @@
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/Occlusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/Occlusion">
+        <rdfs:label xml:lang="en">occlusion</rdfs:label>
+        <skos:definition xml:lang="en">something that blocks the view of a subject within an image</skos:definition>
+    </owl:Class>
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/OcularOcclusion -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/OcularOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/OcularOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/UpperFaceOcclusion"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/OcularOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/UpperFaceOcclusion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOccludingBodyRegion"/>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOccludingBodyRegion"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004088"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -210,13 +217,13 @@
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/OralOcclusion -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/OralOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/OralOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/LowerFaceOcclusion"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/OralOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/LowerFaceOcclusion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOccludingBodyRegion"/>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOccludingBodyRegion"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000165"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -226,57 +233,65 @@
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ParotidOcclusion -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/ParotidOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ParotidOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/LowerFaceOcclusion"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/ParotidOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/LowerFaceOcclusion"/>
         <rdfs:label xml:lang="en">parotid occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the angle of the jaw</skos:definition>
     </owl:Class>
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/UpperFaceOcclusion -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/UpperFaceOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/UpperFaceOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FaceOcclusion"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/UpperFaceOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/FaceOcclusion"/>
+        <rdfs:label xml:lang="en">upper face occlusion</rdfs:label>
+        <skos:definition xml:lang="en">something that blocks a portion of the view of a persons face from the bottom of the nose to the top of the head within within an image</skos:definition>
     </owl:Class>
     
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ZygomaticOcclusion -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/ZygomaticOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ZygomaticOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/LowerFaceOcclusion"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/ZygomaticOcclusion">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/LowerFaceOcclusion"/>
         <rdfs:label xml:lang="en">zygomatic occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the cheek bones</skos:definition>
     </owl:Class>
     
 
 
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Hair -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Hair"/>
+    
+
+
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Face -->
 
-    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Face">
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Face">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                 <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Hair"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/WearableObject -->
 
-    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/WearableObject">
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/WearableObject">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/isOcclusionSourceOf"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/Occlusion"/>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/Occlusion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </rdf:Description>
+    </owl:Class>
 </rdf:RDF>
 
 
