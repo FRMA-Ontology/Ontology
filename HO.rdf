@@ -10,8 +10,7 @@
 	  <!ENTITY ho "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/" >
 ]>
 
-<rdf:RDF xmlns="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/"
-     xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/"
+<rdf:RDF xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -40,26 +39,26 @@
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/hasHairColor -->
+    <!-- &ho;hasHairColor -->
 
-    <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/hasHairColor">
+    <owl:ObjectProperty rdf:about="&ho;hasHairColor">
         <rdfs:label xml:lang="en">has hair color</rdfs:label>
         <skos:definition xml:lang="en">possesses, owns, or holds</skos:definition>
     </owl:ObjectProperty>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/hasHaircut -->
+    <!-- &ho;hasHaircut -->
 
-    <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/hasHaircut">
+    <owl:ObjectProperty rdf:about="&ho;hasHaircut">
         <rdfs:label xml:lang="en">has haircut</rdfs:label>
     </owl:ObjectProperty>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/hasTexture -->
+    <!-- &ho;hasTexture -->
 
-    <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/hasTexture">
+    <owl:ObjectProperty rdf:about="&ho;hasTexture">
         <rdfs:label xml:lang="en">has texture</rdfs:label>
     </owl:ObjectProperty>
 
@@ -76,79 +75,79 @@
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Bald -->
+    <!-- &ho;Bald -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Bald">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Balding"/>
-        <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/RecedingHairline"/>
+    <owl:Class rdf:about="&ho;Bald">
+        <rdfs:subClassOf rdf:resource="&ho;Balding"/>
+        <owl:disjointWith rdf:resource="&ho;RecedingHairline"/>
         <rdfs:label xml:lang="en">bald</rdfs:label>
         <skos:definition xml:lang="en">having a scalp wholly lacking hair</skos:definition>
     </owl:Class>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Balding -->
+    <!-- &ho;Balding -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Balding">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Haircut"/>
-        <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/LongHair"/>
+    <owl:Class rdf:about="&ho;Balding">
+        <rdfs:subClassOf rdf:resource="&ho;Haircut"/>
+        <owl:disjointWith rdf:resource="&ho;LongHair"/>
         <rdfs:label xml:lang="en">balding</rdfs:label>
         <skos:definition xml:lang="en">haircuts with little or no hair</skos:definition>
     </owl:Class>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Beard -->
+    <!-- &ho;Beard -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Beard">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/FacialHair"/>
+    <owl:Class rdf:about="&ho;Beard">
+        <rdfs:subClassOf rdf:resource="&ho;FacialHair"/>
         <rdfs:label xml:lang="en">beard</rdfs:label>
         <skos:definition xml:lang="en">growth of hair on the chin and lower cheeks of a man&apos;s face</skos:definition>
     </owl:Class>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/CurlyHair -->
+    <!-- &ho;CurlyHair -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/CurlyHair">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/HairTexture"/>
-        <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/StraightHair"/>
-        <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/WavyHair"/>
+    <owl:Class rdf:about="&ho;CurlyHair">
+        <rdfs:subClassOf rdf:resource="&ho;HairTexture"/>
+        <owl:disjointWith rdf:resource="&ho;StraightHair"/>
+        <owl:disjointWith rdf:resource="&ho;WavyHair"/>
         <rdfs:label xml:lang="en">curly hair</rdfs:label>
         <skos:definition xml:lang="en">hair that is arranged in curls or curves</skos:definition>
     </owl:Class>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Eyebrows -->
+    <!-- &ho;Eyebrows -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Eyebrows">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/FacialHair"/>
+    <owl:Class rdf:about="&ho;Eyebrows">
+        <rdfs:subClassOf rdf:resource="&ho;FacialHair"/>
         <rdfs:label xml:lang="en">eyebrows</rdfs:label>
         <skos:definition xml:lang="en">the features of a person&apos;s eyebrows</skos:definition>
     </owl:Class>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/FacialHair -->
+    <!-- &ho;FacialHair -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/FacialHair">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Hair"/>
-        <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/HeadHair"/>
+    <owl:Class rdf:about="&ho;FacialHair">
+        <rdfs:subClassOf rdf:resource="&ho;Hair"/>
+        <owl:disjointWith rdf:resource="&ho;HeadHair"/>
         <rdfs:label xml:lang="en">facial hair</rdfs:label>
         <skos:definition xml:lang="en">hair on a person&apos;s face</skos:definition>
     </owl:Class>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Hair -->
+    <!-- &ho;Hair -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Hair">
+    <owl:Class rdf:about="&ho;Hair">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/hasHairColor"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/HairColor"/>
+                <owl:onProperty rdf:resource="&ho;hasHairColor"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="&ho;HairColor"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">hair</rdfs:label>
@@ -157,48 +156,48 @@
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/HairColor -->
+    <!-- &ho;HairColor -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/HairColor">
+    <owl:Class rdf:about="&ho;HairColor">
         <rdfs:label xml:lang="en">hair color</rdfs:label>
         <skos:definition xml:lang="en">the color of a person&apos;s hair</skos:definition>
     </owl:Class>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/HairTexture -->
+    <!-- &ho;HairTexture -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/HairTexture">
+    <owl:Class rdf:about="&ho;HairTexture">
         <rdfs:label xml:lang="en">hair texture</rdfs:label>
         <skos:definition xml:lang="en">the curl pattern, volume, and consistency of hair</skos:definition>
     </owl:Class>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Haircut -->
+    <!-- &ho;Haircut -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Haircut">
+    <owl:Class rdf:about="&ho;Haircut">
         <rdfs:label xml:lang="en">haircut</rdfs:label>
         <skos:definition xml:lang="en">the style of a person&apos;s hair</skos:definition>
     </owl:Class>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/HeadHair -->
+    <!-- &ho;HeadHair -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/HeadHair">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Hair"/>
+    <owl:Class rdf:about="&ho;HeadHair">
+        <rdfs:subClassOf rdf:resource="&ho;Hair"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/hasHaircut"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Haircut"/>
+                <owl:onProperty rdf:resource="&ho;hasHaircut"/>
+                <owl:someValuesFrom rdf:resource="&ho;Haircut"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/hasTexture"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/HairTexture"/>
+                <owl:onProperty rdf:resource="&ho;hasTexture"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="&ho;HairTexture"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">head hair</rdfs:label>
@@ -207,61 +206,61 @@
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/LongHair -->
+    <!-- &ho;LongHair -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/LongHair">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Haircut"/>
+    <owl:Class rdf:about="&ho;LongHair">
+        <rdfs:subClassOf rdf:resource="&ho;Haircut"/>
         <rdfs:label xml:lang="en">long hair</rdfs:label>
         <skos:definition xml:lang="en">haircuts with a large amount of hair</skos:definition>
     </owl:Class>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Mustache -->
+    <!-- &ho;Mustache -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Mustache">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/FacialHair"/>
+    <owl:Class rdf:about="&ho;Mustache">
+        <rdfs:subClassOf rdf:resource="&ho;FacialHair"/>
         <rdfs:label xml:lang="en">mustache</rdfs:label>
         <skos:definition xml:lang="en">whether or not the individual in the photo has a mustache</skos:definition>
     </owl:Class>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/RecedingHairline -->
+    <!-- &ho;RecedingHairline -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/RecedingHairline">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Balding"/>
+    <owl:Class rdf:about="&ho;RecedingHairline">
+        <rdfs:subClassOf rdf:resource="&ho;Balding"/>
         <rdfs:label xml:lang="en">receding hairline</rdfs:label>
         <skos:definition xml:lang="en">the ceasing of hair growth at the temples and above the forehead</skos:definition>
     </owl:Class>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Sideburn -->
+    <!-- &ho;Sideburn -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Sideburn">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/FacialHair"/>
+    <owl:Class rdf:about="&ho;Sideburn">
+        <rdfs:subClassOf rdf:resource="&ho;FacialHair"/>
         <rdfs:label xml:lang="en">sideburn</rdfs:label>
         <skos:definition xml:lang="en">strip of hair grown by a man down each side of the face in front of his ears</skos:definition>
     </owl:Class>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/StraightHair -->
+    <!-- &ho;StraightHair -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/StraightHair">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/HairTexture"/>
-        <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/WavyHair"/>
+    <owl:Class rdf:about="&ho;StraightHair">
+        <rdfs:subClassOf rdf:resource="&ho;HairTexture"/>
+        <owl:disjointWith rdf:resource="&ho;WavyHair"/>
         <rdfs:label xml:lang="en">straight hair</rdfs:label>
         <skos:definition xml:lang="en">hair that is not curly or wavy</skos:definition>
     </owl:Class>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/WavyHair -->
+    <!-- &ho;WavyHair -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/WavyHair">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/HairTexture"/>
+    <owl:Class rdf:about="&ho;WavyHair">
+        <rdfs:subClassOf rdf:resource="&ho;HairTexture"/>
         <rdfs:label xml:lang="en">wavy hair</rdfs:label>
         <skos:definition xml:lang="en">hair that has a form or edge that smoothly curves in and out</skos:definition>
     </owl:Class>
@@ -279,90 +278,90 @@
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Bangs -->
+    <!-- &ho;Bangs -->
 
-    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Bangs">
-        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/LongHair"/>
+    <owl:NamedIndividual rdf:about="&ho;Bangs">
+        <rdf:type rdf:resource="&ho;LongHair"/>
         <rdfs:label xml:lang="en">Bangs</rdfs:label>
         <skos:definition xml:lang="en">whether or not person has hair covering their forehead</skos:definition>
     </owl:NamedIndividual>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/BlackHair -->
+    <!-- &ho;BlackHair -->
 
-    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/BlackHair">
-        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/HairColor"/>
+    <owl:NamedIndividual rdf:about="&ho;BlackHair">
+        <rdf:type rdf:resource="&ho;HairColor"/>
         <rdfs:label xml:lang="en">Black Hair</rdfs:label>
         <skos:definition xml:lang="en">black hair</skos:definition>
     </owl:NamedIndividual>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/BlondHair -->
+    <!-- &ho;BlondHair -->
 
-    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/BlondHair">
-        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/HairColor"/>
+    <owl:NamedIndividual rdf:about="&ho;BlondHair">
+        <rdf:type rdf:resource="&ho;HairColor"/>
         <rdfs:label xml:lang="en">Blond Hair</rdfs:label>
         <skos:definition xml:lang="en">fair or pale yellow hair</skos:definition>
     </owl:NamedIndividual>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/BrownHair -->
+    <!-- &ho;BrownHair -->
 
-    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/BrownHair">
-        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/HairColor"/>
+    <owl:NamedIndividual rdf:about="&ho;BrownHair">
+        <rdf:type rdf:resource="&ho;HairColor"/>
         <rdfs:label xml:lang="en">Brown Hair</rdfs:label>
         <skos:definition xml:lang="en">brown hair</skos:definition>
     </owl:NamedIndividual>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/BushyEyebrows -->
+    <!-- &ho;BushyEyebrows -->
 
-    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/BushyEyebrows">
-        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Eyebrows"/>
+    <owl:NamedIndividual rdf:about="&ho;BushyEyebrows">
+        <rdf:type rdf:resource="&ho;Eyebrows"/>
         <rdfs:label xml:lang="en">Bushy Eyebrows</rdfs:label>
         <skos:definition xml:lang="en">eyebrows that are growing thickly</skos:definition>
     </owl:NamedIndividual>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/FiveOClockShadow -->
+    <!-- &ho;FiveOClockShadow -->
 
-    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/FiveOClockShadow">
-        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Beard"/>
+    <owl:NamedIndividual rdf:about="&ho;FiveOClockShadow">
+        <rdf:type rdf:resource="&ho;Beard"/>
         <rdfs:label xml:lang="en">Five OClock Shadow</rdfs:label>
         <skos:definition xml:lang="en">dark stubble that appears on a man&apos;s face some hours after shaving</skos:definition>
     </owl:NamedIndividual>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Goatee -->
+    <!-- &ho;Goatee -->
 
-    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Goatee">
-        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Beard"/>
+    <owl:NamedIndividual rdf:about="&ho;Goatee">
+        <rdf:type rdf:resource="&ho;Beard"/>
         <rdfs:label xml:lang="en">Goatee</rdfs:label>
         <skos:definition xml:lang="en">small pointed beard like that of a goat</skos:definition>
     </owl:NamedIndividual>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/GrayHair -->
+    <!-- &ho;GrayHair -->
 
-    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/GrayHair">
-        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/HairColor"/>
+    <owl:NamedIndividual rdf:about="&ho;GrayHair">
+        <rdf:type rdf:resource="&ho;HairColor"/>
         <rdfs:label xml:lang="en">Gray Hair</rdfs:label>
         <skos:definition xml:lang="en">gray hair</skos:definition>
     </owl:NamedIndividual>
 
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/ThinEyebrows -->
+    <!-- &ho;ThinEyebrows -->
 
-    <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/ThinEyebrows">
-        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/Eyebrows"/>
+    <owl:NamedIndividual rdf:about="&ho;ThinEyebrows">
+        <rdf:type rdf:resource="&ho;Eyebrows"/>
         <rdfs:label xml:lang="en">Thin Eyebrows</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
