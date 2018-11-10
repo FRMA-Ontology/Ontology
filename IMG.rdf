@@ -1,6 +1,18 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
-     xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY dct "http://purl.org/dc/terms/" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY lio "https://w3id.org/lio/v1#" >
+    <!ENTITY lio-orig "http://purl.org/net/lio#" >
+	  <!ENTITY img "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/" >
+]>
+
+<rdf:RDF xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
      xmlns:img="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
      xmlns:lio="https://w3id.org/lio/v1#"
      xmlns:dct="http://purl.org/dc/terms/"
@@ -19,27 +31,9 @@
         <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology - Image Sub-Ontology</rdfs:label>
         <dct:creator>Alexander Schwartzberg</dct:creator>
     </owl:Ontology>
-    
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
-    
-
-
-    <!-- 
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -47,51 +41,49 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
+    <!-- &img;fidelityDescribedBy -->
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/fidelityDescribedBy -->
-
-    <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/fidelityDescribedBy">
+    <owl:ObjectProperty rdf:about="&img;fidelityDescribedBy">
         <rdfs:label xml:lang="en">fidelity described by</rdfs:label>
         <skos:definition xml:lang="en">the fidelity of this image</skos:definition>
     </owl:ObjectProperty>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/isStoredAs -->
 
-    <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/isStoredAs">
-        <owl:inverseOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/stores"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lio/v1#Image"/>
-        <rdfs:range rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/ImageFile"/>
+    <!-- &img;isStoredAs -->
+
+    <owl:ObjectProperty rdf:about="&img;isStoredAs">
+        <owl:inverseOf rdf:resource="&img;stores"/>
+        <rdfs:domain rdf:resource="&lio;Image"/>
+        <rdfs:range rdf:resource="&img;ImageFile"/>
         <rdfs:label xml:lang="en">is stored as</rdfs:label>
         <skos:definition xml:lang="en">links a given image to a file in which it is stored</skos:definition>
     </owl:ObjectProperty>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/lightingDescribedBy -->
 
-    <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/lightingDescribedBy">
+    <!-- &img;lightingDescribedBy -->
+
+    <owl:ObjectProperty rdf:about="&img;lightingDescribedBy">
         <rdfs:label xml:lang="en">lighting described by</rdfs:label>
         <skos:definition xml:lang="en">the lighting characteristics of this image</skos:definition>
     </owl:ObjectProperty>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/stores -->
 
-    <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/stores">
-        <rdfs:domain rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/ImageFile"/>
-        <rdfs:range rdf:resource="https://w3id.org/lio/v1#Image"/>
+    <!-- &img;stores -->
+
+    <owl:ObjectProperty rdf:about="&img;stores">
+        <rdfs:domain rdf:resource="&img;ImageFile"/>
+        <rdfs:range rdf:resource="&lio;Image"/>
         <rdfs:label xml:lang="en">stores</rdfs:label>
         <skos:definition xml:lang="en">links a given image file to the image that it contains</skos:definition>
     </owl:ObjectProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -99,43 +91,43 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/hasFileExtension -->
 
-    <owl:DatatypeProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/hasFileExtension">
-        <rdfs:domain rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/ImageFile"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <!-- &img;hasFileExtension -->
+
+    <owl:DatatypeProperty rdf:about="&img;hasFileExtension">
+        <rdfs:domain rdf:resource="&img;ImageFile"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:label xml:lang="en">has file extension</rdfs:label>
         <skos:definition xml:lang="en">the extension of the image file</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Example extensions include jpg, jpeg, gif, png, which have corresponding file format types and characteristics.</skos:example>
+        <skos:example rdf:datatype="&xsd;string">Example extensions include jpg, jpeg, gif, png, which have corresponding file format types and characteristics.</skos:example>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/hasFilePath -->
 
-    <owl:DatatypeProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/hasFilePath">
-        <rdfs:domain rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/ImageFile"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <!-- &img;hasFilePath -->
+
+    <owl:DatatypeProperty rdf:about="&img;hasFilePath">
+        <rdfs:domain rdf:resource="&img;ImageFile"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
         <rdfs:label xml:lang="en">has file path</rdfs:label>
         <skos:definition xml:lang="en">an absolute file path for the image file as stored on a local or network file system</skos:definition>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/hasRGB -->
 
-    <owl:DatatypeProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/hasRGB">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <!-- &img;hasRGB -->
+
+    <owl:DatatypeProperty rdf:about="&img;hasRGB">
+        <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:label xml:lang="en">has RGB</rdfs:label>
         <skos:definition xml:lang="en">relates the red, green, and blue values of a color ot the Color class</skos:definition>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -143,225 +135,224 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Balanced_Lighting_Variation -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Balanced_Lighting_Variation">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Lighting_Variation"/>
-        <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Harsh_Lighting_Variation"/>
-        <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Soft_Lighting_Variation"/>
+    <!-- &img;Balanced_Lighting_Variation -->
+
+    <owl:Class rdf:about="&img;Balanced_Lighting_Variation">
+        <rdfs:subClassOf rdf:resource="&img;Lighting_Variation"/>
+        <owl:disjointWith rdf:resource="&img;Harsh_Lighting_Variation"/>
+        <owl:disjointWith rdf:resource="&img;Soft_Lighting_Variation"/>
         <rdfs:label>balanced lighting variation</rdfs:label>
         <skos:definition>both small light source in close proximity relative to the subject and large light source in distant proximity relative to the subject</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/BlackAndWhiteImage -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/BlackAndWhiteImage">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lio/v1#Image"/>
+    <!-- &img;BlackAndWhiteImage -->
+
+    <owl:Class rdf:about="&img;BlackAndWhiteImage">
+        <rdfs:subClassOf rdf:resource="&lio;Image"/>
         <rdfs:label xml:lang="en">black and white image</rdfs:label>
         <skos:definition xml:lang="en">an image having, showing, or producing pictures that do not have colors except for black, white, and shades of gray</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/BlurryImageFidelity -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/BlurryImageFidelity">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/ImageFidelity"/>
-        <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/SharpImageFidelity"/>
+    <!-- &img;BlurryImageFidelity -->
+
+    <owl:Class rdf:about="&img;BlurryImageFidelity">
+        <rdfs:subClassOf rdf:resource="&img;ImageFidelity"/>
+        <owl:disjointWith rdf:resource="&img;SharpImageFidelity"/>
         <rdfs:label xml:lang="en">blurry image fidelity</rdfs:label>
         <skos:definition xml:lang="en">lower quality image showing signs of visible distortion or information loss</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Candid_Image -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Candid_Image">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lio/v1#Image"/>
+    <!-- &img;Candid_Image -->
+
+    <owl:Class rdf:about="&img;Candid_Image">
+        <rdfs:subClassOf rdf:resource="&lio;Image"/>
         <rdfs:label>candid image</rdfs:label>
         <skos:definition>a photo in which the subject is acting naturally or spontaneously</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/ColorImage -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/ColorImage">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lio/v1#Image"/>
+    <!-- &img;ColorImage -->
+
+    <owl:Class rdf:about="&img;ColorImage">
+        <rdfs:subClassOf rdf:resource="&lio;Image"/>
         <rdfs:label xml:lang="en">color image</rdfs:label>
         <skos:definition xml:lang="en">an image produces useing media capable of reproducing colors</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Depicted_Background -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Depicted_Background">
+    <!-- &img;Depicted_Background -->
+
+    <owl:Class rdf:about="&img;Depicted_Background">
         <rdfs:label>depicted background</rdfs:label>
         <skos:definition xml:lang="en">the ground or parts, as of a scene, situated in the rear</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Flash_Lighting_Variation -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Flash_Lighting_Variation">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Harsh_Lighting_Variation"/>
+    <!-- &img;Flash_Lighting_Variation -->
+
+    <owl:Class rdf:about="&img;Flash_Lighting_Variation">
+        <rdfs:subClassOf rdf:resource="&img;Harsh_Lighting_Variation"/>
         <rdfs:label>flash lighting variation</rdfs:label>
         <skos:definition>whether or not the system classifies a photo as using camera flash to illuminate the subject</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Harsh_Lighting_Variation -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Harsh_Lighting_Variation">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Lighting_Variation"/>
-        <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Soft_Lighting_Variation"/>
+    <!-- &img;Harsh_Lighting_Variation -->
+
+    <owl:Class rdf:about="&img;Harsh_Lighting_Variation">
+        <rdfs:subClassOf rdf:resource="&img;Lighting_Variation"/>
+        <owl:disjointWith rdf:resource="&img;Soft_Lighting_Variation"/>
         <rdfs:label>harsh lighting variation</rdfs:label>
         <skos:definition>small light source in close proximity relative to the subject</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/ImageFidelity -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/ImageFidelity">
+    <!-- &img;ImageFidelity -->
+
+    <owl:Class rdf:about="&img;ImageFidelity">
         <rdfs:label xml:lang="en">image fidelity</rdfs:label>
         <skos:definition xml:lang="en">the measurable quality of an image</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/ImageFile -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/ImageFile">
+    <!-- &img;ImageFile -->
+
+    <owl:Class rdf:about="&img;ImageFile">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/stores"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/lio/v1#Image"/>
+                <owl:onProperty rdf:resource="&img;stores"/>
+                <owl:someValuesFrom rdf:resource="&lio;Image"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">image file</rdfs:label>
         <skos:definition xml:lang="en">a digital version of a photograph, stored in any of a number of standard formats that can be rasterized for display purposes</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Indoors -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Indoors">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Depicted_Background"/>
-        <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Outdoors"/>
+    <!-- &img;Indoors -->
+
+    <owl:Class rdf:about="&img;Indoors">
+        <rdfs:subClassOf rdf:resource="&img;Depicted_Background"/>
+        <owl:disjointWith rdf:resource="&img;Outdoors"/>
         <rdfs:label xml:lang="en">indoors</rdfs:label>
         <skos:definition xml:lang="en">whether or not the image was taken indoors</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Lighting_Variation -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Lighting_Variation">
+    <!-- &img;Lighting_Variation -->
+
+    <owl:Class rdf:about="&img;Lighting_Variation">
         <rdfs:label>lighting variation</rdfs:label>
         <skos:definition>images have differening levels and locations of brightness</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/OptimalConditionPhoto -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/OptimalConditionPhoto">
+    <!-- &img;OptimalConditionPhoto -->
+
+    <owl:Class rdf:about="&img;OptimalConditionPhoto">
         <rdfs:label xml:lang="en">optimal condition photo</rdfs:label>
         <skos:definition xml:lang="en">the best possible image for recognition tasks</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Outdoors -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Outdoors">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Depicted_Background"/>
+    <!-- &img;Outdoors -->
+
+    <owl:Class rdf:about="&img;Outdoors">
+        <rdfs:subClassOf rdf:resource="&img;Depicted_Background"/>
         <rdfs:label>outdoors</rdfs:label>
         <skos:definition xml:lang="en">whether or not the image was taken outdoors</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Posed_Image -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Posed_Image">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lio/v1#Image"/>
+    <!-- &img;Posed_Image -->
+
+    <owl:Class rdf:about="&img;Posed_Image">
+        <rdfs:subClassOf rdf:resource="&lio;Image"/>
         <rdfs:label>posed image</rdfs:label>
         <skos:definition>assumes a posture or attitude usually for artistic purposes</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/SharpImageFidelity -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/SharpImageFidelity">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/ImageFidelity"/>
+    <!-- &img;SharpImageFidelity -->
+
+    <owl:Class rdf:about="&img;SharpImageFidelity">
+        <rdfs:subClassOf rdf:resource="&img;ImageFidelity"/>
         <rdfs:label xml:lang="en">sharp image fidelity</rdfs:label>
         <skos:definition xml:lang="en">high quality image showing little to no signs of visible distortion or information loss</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Soft_Lighting_Variation -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Soft_Lighting_Variation">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Lighting_Variation"/>
+    <!-- &img;Soft_Lighting_Variation -->
+
+    <owl:Class rdf:about="&img;Soft_Lighting_Variation">
+        <rdfs:subClassOf rdf:resource="&img;Lighting_Variation"/>
         <rdfs:label>soft lighting variation</rdfs:label>
         <skos:definition>large light source in distant proximity relative to the subject</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://w3id.org/lio/v1#Image -->
 
-    <rdf:Description rdf:about="https://w3id.org/lio/v1#Image">
+    <!-- &lio;Image -->
+
+    <rdf:Description rdf:about="&lio;Image">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/net/lio#hasDepictedBackground"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Depicted_Background"/>
+                <owl:onProperty rdf:resource="&lio-orig;hasDepictedBackground"/>
+                <owl:someValuesFrom rdf:resource="&img;Depicted_Background"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/fidelityDescribedBy"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/ImageFidelity"/>
+                <owl:onProperty rdf:resource="&img;fidelityDescribedBy"/>
+                <owl:someValuesFrom rdf:resource="&img;ImageFidelity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/isStoredAs"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/ImageFile"/>
+                <owl:onProperty rdf:resource="&img;isStoredAs"/>
+                <owl:someValuesFrom rdf:resource="&img;ImageFile"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/lightingDescribedBy"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Lighting_Variation"/>
+                <owl:onProperty rdf:resource="&img;lightingDescribedBy"/>
+                <owl:someValuesFrom rdf:resource="&img;Lighting_Variation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/lio/v1#depicts"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/lio/v1#PictorialElement"/>
+                <owl:onProperty rdf:resource="&lio;depicts"/>
+                <owl:someValuesFrom rdf:resource="&lio;PictorialElement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
     <rdf:Description>
-        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
     </rdf:Description>
 </rdf:RDF>
 
 
 
 <!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
-
