@@ -14,6 +14,7 @@
     <!ENTITY img "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/" >
 	  <!ENTITY ho "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/" >
     <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY lio "http://purl.org/net/lio#" >
 ]>
 
 <rdf:RDF xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/"
@@ -99,7 +100,46 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+     <!-- &frma;MugShotPhoto -->
 
+     <owl:Class rdf:about="&frma;MugShotPhoto">
+         <owl:equivalentClass>
+             <owl:Class>
+                 <owl:intersectionOf rdf:parseType="Collection">
+                     <rdf:Description rdf:about="&img;Posed_Image"/>
+                     <owl:Restriction>
+                         <owl:onProperty rdf:resource="&lio;depicts"/>
+                         <owl:someValuesFrom>
+                             <owl:Restriction>
+                                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                                 <owl:someValuesFrom rdf:resource="&pfd;Face"/>
+                             </owl:Restriction>
+                         </owl:someValuesFrom>
+                     </owl:Restriction>
+                     <owl:Restriction>
+                         <owl:onProperty rdf:resource="&lio;depicts"/>
+                         <owl:someValuesFrom>
+                             <owl:Restriction>
+                                 <owl:onProperty rdf:resource="&wt;isWearing"/>
+                                 <owl:someValuesFrom>
+                                     <owl:Restriction>
+                                         <owl:onProperty rdf:resource="&frma;isOcclusionSourceOf"/>
+                                         <owl:someValuesFrom>
+                                             <owl:Class>
+                                                 <owl:complementOf rdf:resource="&frma;FaceOcclusion"/>
+                                             </owl:Class>
+                                         </owl:someValuesFrom>
+                                     </owl:Restriction>
+                                 </owl:someValuesFrom>
+                             </owl:Restriction>
+                         </owl:someValuesFrom>
+                     </owl:Restriction>
+                 </owl:intersectionOf>
+             </owl:Class>
+         </owl:equivalentClass>
+         <rdfs:label>mug shot photo</rdfs:label>
+         <skos:definition>an image that is posed, has good lighting, is indoors, does not have face occlusions where the subject has his eyes open</skos:definition>
+     </owl:Class>
 
 
     <!-- &frma;AuricleOcclusion -->
