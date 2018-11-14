@@ -12,7 +12,7 @@ currently we assume that if they aren't male they're female
 
 
 import rdflib
-from rdflib.namespace import RDF, Namespace, OWL, XSD
+from rdflib.namespace import RDF, Namespace, OWL, XSD, RDFS
 
 # these imports are for copying images to a new folder when trying to find images that match criteria
 import shutil, os
@@ -105,7 +105,7 @@ def output_labeled_everything(tags, names, output_file):
 	f.close()
 	print(numMissingData, "Images missing label data")
 
-def generate_rdf_individuals(names, tags, base_filename, output_filename, restricted_images = None):
+def generate_rdf_individuals(names, tags, base_filename, output_filename, generateFakeResults, restricted_images = None ):
 	# for every name, create the RDF individuals for each of their images.
 	g = rdflib.Graph()
 	g.parse(base_filename)
@@ -115,6 +115,7 @@ def generate_rdf_individuals(names, tags, base_filename, output_filename, restri
 	# 	if (subj, pred, obj) not in g:
 	# 		raise Exception("It better be!")
 
+	id = 1
 	if (restricted_images):
 		restricted_images = [(x[0].lower(), x[1]) for x in restricted_images]
 	for name in names:
@@ -125,8 +126,11 @@ def generate_rdf_individuals(names, tags, base_filename, output_filename, restri
 			if (restricted_images):
 				if (name, photo_num+1) not in restricted_images: # added 1 since images have base number 1 not 0
 					continue
-			add_image_to_graph(photos[photo_num], g)
-
+				if generateFakeResults:
+					add_image_to_graph(photos[photo_num], g, id)
+					id = id + 1
+				else:
+					add_image_to_graph(photos[photo_num], g, 0)
 	# here add another triple to test this
 	# instantiatedNamespace = Namespace(individualsNamespaceString)
 	# g.add((instantiatedNamespace.ThisIsATest, RDF.type, OWL.NamedIndividual))
@@ -138,7 +142,7 @@ def generate_rdf_individuals(names, tags, base_filename, output_filename, restri
 	output_file.write(o)
 	output_file.close()
 
-def add_image_to_graph(image_data, graph):
+def add_image_to_graph(image_data, graph, generateFakeResultId):
 	# this adds image stuff
 	"""
 	Things we need to do:
@@ -156,6 +160,35 @@ def add_image_to_graph(image_data, graph):
 	person_id = person_name.replace(" ", "")
 	# print(person_id)
 	image_IRI = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]))
+
+
+
+	if generateFakeResultId > 0:
+		hasFeature = rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasFeature")
+		hasConstituent = rdflib.term.URIRef("http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/hasConstituent")
+		hasTag = rdflib.term.URIRef("http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasTag")
+
+		resultset_facenet_IRI = rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2017/OE_9_FRMA_Individuals/FaceNetTest01ResultSet")
+		result_facenet_IRI = rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2017/OE_9_FRMA_Individuals/FaceNetTest01ResultSet/Result" + str(generateFakeResultId))
+
+		resultset_dlib_IRI = rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2017/OE_9_FRMA_Individuals/dlibTest01ResultSet")
+		result_dlib_IRI = rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2017/OE_9_FRMA_Individuals/dlibTest01ResultSet/Result" + str(generateFakeResultId))
+
+		graph.add((resultset_facenet_IRI, hasConstituent, result_facenet_IRI))
+		graph.add((resultset_facenet_IRI, RDFS.label, rdflib.term.Literal("FaceNet", datatype=XSD.string)))
+
+		graph.add((resultset_dlib_IRI, hasConstituent, result_dlib_IRI))
+		graph.add((resultset_dlib_IRI, RDFS.label, rdflib.term.Literal("DLib", datatype=XSD.string)))
+
+		if (generateFakeResultId % 2) == 1: # every other answer
+			graph.add((result_facenet_IRI, hasTag, rdflib.term.Literal(person_name, datatype=XSD.string)))
+			graph.add((result_dlib_IRI, hasTag, rdflib.term.Literal("Steve Erwin", datatype=XSD.string)))
+		else:
+			graph.add((result_facenet_IRI, hasTag, rdflib.term.Literal("Steve Erwin", datatype=XSD.string)))
+			graph.add((result_dlib_IRI, hasTag, rdflib.term.Literal(person_name, datatype=XSD.string)))
+		graph.add((result_dlib_IRI, hasFeature, image_IRI))
+		graph.add((result_facenet_IRI, hasFeature, image_IRI))
+
 
 	# create the base image class
 	graph.add((image_IRI, RDF.type, OWL.NamedIndividual))
@@ -332,16 +365,16 @@ def add_image_to_graph(image_data, graph):
 		graph.add((hair_individual, rdflib.term.URIRef(hair_iri_string + "/" + "hasHaircut"), rdflib.term.URIRef(hair_iri_string + "/" + "Bangs")))
 	else:
 		hair_cut = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + hair_name + "/Haircut")
-		graph.add((hair_individual, RDF.type, OWL.NamedIndividual))
-		graph.add((hair_individual, RDF.type, rdflib.term.URIRef(hair_iri_string + "/" + "Haircut")))
-		graph.add((hair_individual, rdflib.term.URIRef(hair_iri_string + "/" + "hasHaircut"), rdflib.term.URIRef(hair_iri_string + "/" + "Haircut")))
+		graph.add((hair_cut, RDF.type, OWL.NamedIndividual))
+		graph.add((hair_cut, RDF.type, rdflib.term.URIRef(hair_iri_string + "/" + "Haircut")))
+		graph.add((hair_individual, rdflib.term.URIRef(hair_iri_string + "/" + "hasHaircut"), hair_cut))
 
 		# these need to be disjoint
 		if (image_data["Receding Hairline"] > 0):
-			graph.add((hair_individual, RDF.type, rdflib.term.URIRef(hair_iri_string + "/" + "RecedingHairline")))
+			graph.add((hair_cut, RDF.type, rdflib.term.URIRef(hair_iri_string + "/" + "RecedingHairline")))
 		else:
 			if (image_data["Bald"] > 0):
-				graph.add((hair_individual, RDF.type, rdflib.term.URIRef(hair_iri_string + "/" + "Bald")))
+				graph.add((hair_cut, RDF.type, rdflib.term.URIRef(hair_iri_string + "/" + "Bald")))
 
 
 	newColor = True
@@ -630,7 +663,7 @@ if __name__ == "__main__":
 
 	# restricted_single = [('Patrick Bourrat', 1)]
 	restricted_single = [('Bill Clinton', 19), ('Billy Crystal', 5), ('Colin Farrell', 3), ('Derek Jeter', 4), ('Harry Belafonte', 2), ('Arnold Schwarzenegger', 1), ('Benjamin Franklin', 1), ('Bill Gates', 3), ('Bill OReilly', 1), ('Bill Paxton', 3), ('Al Gore', 8), ('Alexis Bledel', 1), ('Angelina Jolie', 1), ('Antonio Banderas', 2), ('Johnny Depp', 1), ('Johnny Depp', 2), ('Aaron Eckhart', 1), ('Adam Sandler', 1), ('Alanis Morissette', 1), ('Alec Baldwin', 1)]
-	generate_rdf_individuals(names, tags, "../FaceNet_Individual.rdf", "individuals.rdf", restricted_single)
+	generate_rdf_individuals(names, tags, "../FaceNet_Individual.rdf", "individuals.rdf", True, restricted_single)
 
 
 
