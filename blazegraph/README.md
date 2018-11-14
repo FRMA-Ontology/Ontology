@@ -2,6 +2,9 @@
 
 Blazegraph server pre-loaded with the FRMA Ontology.
 
+### Prerequisites
+- [Docker](https://www.docker.com/)
+
 ## Instructions
 
 1. Start the Docker containers:
