@@ -1,0 +1,17 @@
+{
+  "name": "frma-dataworker",
+  "version": "0.1.0",
+  "description": "Loads a Blazegraph server with the FRMA Ontology",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start": "node index.js"
+  },
+  "author": "Team FRMA",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.3",
+    "dotenv": "^6.1.0",
+    "request": "^2.88.0"
+  }
+}
