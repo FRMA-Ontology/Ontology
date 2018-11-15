@@ -9,22 +9,20 @@
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY lio "https://w3id.org/lio/v1#" >
     <!ENTITY lio-orig "http://purl.org/net/lio#" >
-	  <!ENTITY img "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/" >
+	  <!ENTITY img "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/" >
 ]>
 
-<rdf:RDF xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
-     xmlns:img="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
+<rdf:RDF xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/"
+     xmlns:img="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/"
      xmlns:lio="https://w3id.org/lio/v1#"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:lio-orig="http://purl.org/net/lio#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:vann="http://purl.org/vocab/vann/">
-    <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" >
+    <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/">
         <owl:imports rdf:resource="http://www.imagesnippets.com/lio/lio.owl"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <skos:definition xml:lang="en">Image Ontology enables the FRMA system to classify the properties of different image files.</skos:definition>
@@ -138,12 +136,12 @@
 
 
 
-    <!-- &img;Balanced_Lighting_Variation -->
+    <!-- &img;BalancedLightingVariation -->
 
-    <owl:Class rdf:about="&img;Balanced_Lighting_Variation">
-        <rdfs:subClassOf rdf:resource="&img;Lighting_Variation"/>
-        <owl:disjointWith rdf:resource="&img;Harsh_Lighting_Variation"/>
-        <owl:disjointWith rdf:resource="&img;Soft_Lighting_Variation"/>
+    <owl:Class rdf:about="&img;BalancedLightingVariation">
+        <rdfs:subClassOf rdf:resource="&img;LightingVariation"/>
+        <owl:disjointWith rdf:resource="&img;HarshLightingVariation"/>
+        <owl:disjointWith rdf:resource="&img;SoftLightingVariation"/>
         <rdfs:label>balanced lighting variation</rdfs:label>
         <skos:definition>both small light source in close proximity relative to the subject and large light source in distant proximity relative to the subject</skos:definition>
     </owl:Class>
@@ -171,9 +169,9 @@
 
 
 
-    <!-- &img;Candid_Image -->
+    <!-- &img;CandidImage -->
 
-    <owl:Class rdf:about="&img;Candid_Image">
+    <owl:Class rdf:about="&img;CandidImage">
         <rdfs:subClassOf rdf:resource="&lio;Image"/>
         <rdfs:label>candid image</rdfs:label>
         <skos:definition>a photo in which the subject is acting naturally or spontaneously</skos:definition>
@@ -191,30 +189,30 @@
 
 
 
-    <!-- &img;Depicted_Background -->
+    <!-- &img;DepictedBackground -->
 
-    <owl:Class rdf:about="&img;Depicted_Background">
+    <owl:Class rdf:about="&img;DepictedBackground">
         <rdfs:label>depicted background</rdfs:label>
         <skos:definition xml:lang="en">the ground or parts, as of a scene, situated in the rear</skos:definition>
     </owl:Class>
 
 
 
-    <!-- &img;Flash_Lighting_Variation -->
+    <!-- &img;FlashLightingVariation -->
 
-    <owl:Class rdf:about="&img;Flash_Lighting_Variation">
-        <rdfs:subClassOf rdf:resource="&img;Harsh_Lighting_Variation"/>
+    <owl:Class rdf:about="&img;FlashLightingVariation">
+        <rdfs:subClassOf rdf:resource="&img;HarshLightingVariation"/>
         <rdfs:label>flash lighting variation</rdfs:label>
         <skos:definition>whether or not the system classifies a photo as using camera flash to illuminate the subject</skos:definition>
     </owl:Class>
 
 
 
-    <!-- &img;Harsh_Lighting_Variation -->
+    <!-- &img;HarshLightingVariation -->
 
-    <owl:Class rdf:about="&img;Harsh_Lighting_Variation">
-        <rdfs:subClassOf rdf:resource="&img;Lighting_Variation"/>
-        <owl:disjointWith rdf:resource="&img;Soft_Lighting_Variation"/>
+    <owl:Class rdf:about="&img;HarshLightingVariation">
+        <rdfs:subClassOf rdf:resource="&img;LightingVariation"/>
+        <owl:disjointWith rdf:resource="&img;SoftLightingVariation"/>
         <rdfs:label>harsh lighting variation</rdfs:label>
         <skos:definition>small light source in close proximity relative to the subject</skos:definition>
     </owl:Class>
@@ -248,7 +246,7 @@
     <!-- &img;Indoors -->
 
     <owl:Class rdf:about="&img;Indoors">
-        <rdfs:subClassOf rdf:resource="&img;Depicted_Background"/>
+        <rdfs:subClassOf rdf:resource="&img;DepictedBackground"/>
         <owl:disjointWith rdf:resource="&img;Outdoors"/>
         <rdfs:label xml:lang="en">indoors</rdfs:label>
         <skos:definition xml:lang="en">whether or not the image was taken indoors</skos:definition>
@@ -256,9 +254,9 @@
 
 
 
-    <!-- &img;Lighting_Variation -->
+    <!-- &img;LightingVariation -->
 
-    <owl:Class rdf:about="&img;Lighting_Variation">
+    <owl:Class rdf:about="&img;LightingVariation">
         <rdfs:label>lighting variation</rdfs:label>
         <skos:definition>images have differening levels and locations of brightness</skos:definition>
     </owl:Class>
@@ -277,16 +275,16 @@
     <!-- &img;Outdoors -->
 
     <owl:Class rdf:about="&img;Outdoors">
-        <rdfs:subClassOf rdf:resource="&img;Depicted_Background"/>
+        <rdfs:subClassOf rdf:resource="&img;DepictedBackground"/>
         <rdfs:label>outdoors</rdfs:label>
         <skos:definition xml:lang="en">whether or not the image was taken outdoors</skos:definition>
     </owl:Class>
 
 
 
-    <!-- &img;Posed_Image -->
+    <!-- &img;PosedImage -->
 
-    <owl:Class rdf:about="&img;Posed_Image">
+    <owl:Class rdf:about="&img;PosedImage">
         <rdfs:subClassOf rdf:resource="&lio;Image"/>
         <rdfs:label>posed image</rdfs:label>
         <skos:definition>assumes a posture or attitude usually for artistic purposes</skos:definition>
@@ -304,10 +302,10 @@
 
 
 
-    <!-- &img;Soft_Lighting_Variation -->
+    <!-- &img;SoftLightingVariation -->
 
-    <owl:Class rdf:about="&img;Soft_Lighting_Variation">
-        <rdfs:subClassOf rdf:resource="&img;Lighting_Variation"/>
+    <owl:Class rdf:about="&img;SoftLightingVariation">
+        <rdfs:subClassOf rdf:resource="&img;LightingVariation"/>
         <rdfs:label>soft lighting variation</rdfs:label>
         <skos:definition>large light source in distant proximity relative to the subject</skos:definition>
     </owl:Class>
@@ -320,7 +318,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&lio-orig;hasDepictedBackground"/>
-                <owl:someValuesFrom rdf:resource="&img;Depicted_Background"/>
+                <owl:someValuesFrom rdf:resource="&img;DepictedBackground"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -338,7 +336,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&img;lightingDescribedBy"/>
-                <owl:someValuesFrom rdf:resource="&img;Lighting_Variation"/>
+                <owl:someValuesFrom rdf:resource="&img;LightingVariation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
