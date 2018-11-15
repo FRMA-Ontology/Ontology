@@ -7,10 +7,10 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY dct "http://purl.org/dc/terms/" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
-	  <!ENTITY wt "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/" >
+	  <!ENTITY wt "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/" >
 ]>
 
-<rdf:RDF xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/"
+<rdf:RDF xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -18,8 +18,8 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:wt="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/">
-    <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/">
+     xmlns:wt="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/">
+    <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/">
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <skos:definition xml:lang="en">When dealing with facial recognition on images of people, it is common to need to effectively deal with items that the image subject is wearing. This ontolgy exists to represent objects commonly worn by people in photos and images.</skos:definition>
         <rdfs:label xml:lang="en">Wearable Things</rdfs:label>
