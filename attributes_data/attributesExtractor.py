@@ -153,7 +153,7 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 		print("Tried to add image to graph that had no data")
 		return
 
-	base_iri = "https://tw.rpi.edu//web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/"
+	base_iri = "https://tw.rpi.edu//web/Courses/Ontologies/2017/OE_9_FRMA_Individuals/"
 	# image_iri = "https://tw.rpi.edu//web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/Image/PERSON_NAME/IMAGENUM"
 
 	person_name = image_data["person"]
@@ -196,9 +196,9 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 
 	if (image_data["Posed Photo"] > 0):
 
-		graph.add((image_IRI, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Posed_Image")))
+		graph.add((image_IRI, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/PosedImage")))
 	else:
-		graph.add((image_IRI, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Candid_Image")))
+		graph.add((image_IRI, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/CandidImage")))
 
 	if (image_data["Color Photo"] > 0):
 		graph.add((image_IRI, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/ColorImage")))

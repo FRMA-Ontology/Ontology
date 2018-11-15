@@ -106,7 +106,7 @@
          <owl:equivalentClass>
              <owl:Class>
                  <owl:intersectionOf rdf:parseType="Collection">
-                     <rdf:Description rdf:about="&img;Posed_Image"/>
+                     <rdf:Description rdf:about="&img;PosedImage"/>
                      <owl:Restriction>
                          <owl:onProperty rdf:resource="&lio;depicts"/>
                          <owl:someValuesFrom>
