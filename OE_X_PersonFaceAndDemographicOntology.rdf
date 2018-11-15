@@ -23,10 +23,147 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <dct:creator xml:lang="en">Jordan Faas-Bush</dct:creator>
         <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology - Person, Face, and Demographic</rdfs:label>
     </owl:Ontology>
-      
+    
 
 
-    <!--
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000111 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000232 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000232"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000412 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBPROP_0000001 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/UBPROP_0000001"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBPROP_0000003 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/UBPROP_0000003"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBPROP_0000007 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/UBPROP_0000007"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBPROP_0000011 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/UBPROP_0000011"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBPROP_0000012 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/UBPROP_0000012"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#shorthand -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#shorthand"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/disjointWith -->
+
+    <owl:AnnotationProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/disjointWith"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/onProperty -->
+
+    <owl:AnnotationProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/onProperty"/>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/someValuesFrom -->
+
+    <owl:AnnotationProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/someValuesFrom"/>
+    
+
+
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -34,7 +171,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
@@ -48,7 +185,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <oboInOwl:shorthand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part_of</oboInOwl:shorthand>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part_of</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
@@ -65,7 +202,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">has part</rdfs:label>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_part</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://purl.obolibrary.org/obo/RO_0002433 -->
@@ -74,7 +211,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <obo:IAO_0000115>p contributes to morphology of w if and only if a change in the morphology of p entails a change in the morphology of w. Examples: every skull contributes to morphology of the head which it is a part of. Counter-example: nuclei do not generally contribute to the morphology of the cell they are part of, as they are buffered by cytoplasm.</obo:IAO_0000115>
         <rdfs:label>contributes to morphology of</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasColor -->
@@ -84,7 +221,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">has color</rdfs:label>
         <skos:definition>relates an object to its color</skos:definition>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasDemographic -->
@@ -94,7 +231,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">has demographic</rdfs:label>
         <skos:definition>relates the demograophic properties to a person who exhibts them</skos:definition>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasShape -->
@@ -104,7 +241,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">has shape</rdfs:label>
         <skos:definition>relates an object to its shape</skos:definition>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasSize -->
@@ -114,7 +251,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">has size</rdfs:label>
         <skos:definition>relates an object to its size</skos:definition>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasVisualFeature -->
@@ -124,10 +261,10 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">has visual feature</rdfs:label>
         <skos:definition>relates a visual feature to the object exhibiting it</skos:definition>
     </owl:ObjectProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -135,7 +272,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasRGB -->
@@ -145,7 +282,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">has RGB</rdfs:label>
         <skos:definition xml:lang="en">relates the red, green, and blue values of a color ot the Color class</skos:definition>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasStrongNoseMouthLines -->
@@ -156,7 +293,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">has strong nose mouth lines</rdfs:label>
         <skos:definition xml:lang="en">the subject&apos;s nose mouth lines are highly visible</skos:definition>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/isAttractive -->
@@ -167,7 +304,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">is attractive</rdfs:label>
         <skos:definition xml:lang="en">a face that adheres to scientific beauty standards (golden ratio, horizontal face symmetry)</skos:definition>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/isBaggy -->
@@ -178,7 +315,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">is baggy</rdfs:label>
         <skos:definition xml:lang="en">relates whether an eye is baggy to eye features</skos:definition>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/isOpen -->
@@ -187,7 +324,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">is open</rdfs:label>
         <skos:definition xml:lang="en">relates whether an eye is open to eye features</skos:definition>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/teethVisable -->
@@ -198,10 +335,10 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">teeth visable</rdfs:label>
         <skos:definition xml:lang="en">relates the visablity of teeth to features of the mouth</skos:definition>
     </owl:DatatypeProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -209,24 +346,36 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://purl.obolibrary.org/obo/UBERON_0000004 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000004">
-        <owl:equivalentClass rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Nose"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001444"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001456"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasShape"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/NoseShape"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasSize"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Size"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:UBPROP_0000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organ that is the specialized structure of the face that contains olfactory neurons. The peripheral olfactory organ is paired[ZFA:0000047].</obo:UBPROP_0000001>
         <obo:UBPROP_0000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a protuberance in vertebrates that houses the nostrils, or nares, which admit and expel air for respiration in conjunction with the mouth. Behind the nose are the olfactory mucosa and the sinuses. Behind the nasal cavity, air next passes through the pharynx, shared with the digestive system, and then into the rest of the respiratory system. In humans, the nose is located centrally on the face; on most other mammals, it is on the upper tip of the snout[WP]. GO: The nose is the specialized structure of the face that serves as the organ of the sense of smell and as part of the respiratory system. Includes the nasi externus (external nose) and cavitas nasi (nasal cavity)[Wikipedia:Nose].</obo:UBPROP_0000001>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">olfactory apparatus</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://purl.obolibrary.org/obo/UBERON_0000020 -->
@@ -236,7 +385,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ that is capable of transducing sensory stimulus to the nervous system.</obo:IAO_0000115>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sense organ</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://purl.obolibrary.org/obo/UBERON_0000033 -->
@@ -251,7 +400,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cephalic area</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">head</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://purl.obolibrary.org/obo/UBERON_0000062 -->
@@ -262,23 +411,23 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002095"/>
         <disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0034921"/>
     </owl:Class>
-
+    
 
 
     <!-- http://purl.obolibrary.org/obo/UBERON_0000165 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000165">
-        <owl:equivalentClass rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Mouth"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001444"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000033"/>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasSize"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Size"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Face"/>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasVisualFeature"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/MouthOpenState"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:UBPROP_0000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cavity in which food is initially ingested and generally contains teeth, tongue and glands.[AAO]</obo:UBPROP_0000001>
@@ -288,7 +437,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <obo:UBPROP_0000012 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in FMA, the tongue, palate etc are part of the mouth which is itself a subdivision of the face. ZFA includes a separate class &apos;oral region&apos; which is part of the mouth, but excludes tongue and lips</obo:UBPROP_0000012>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mouth</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://purl.obolibrary.org/obo/UBERON_0000475 -->
@@ -297,13 +446,12 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anatomical structure which is a subdivision of a whole organism, consisting of components of multiple anatomical systems, largely surrounded by a contiguous region of integument.</obo:IAO_0000115>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organism subdivision</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://purl.obolibrary.org/obo/UBERON_0000970 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000970">
-        <owl:equivalentClass rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Eye"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000020"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -311,17 +459,11 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004088"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Face"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ that detects light.</obo:IAO_0000115>
         <obo:IAO_0000232 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class encompasses a variety of light-detecting structures from different phyla with no implication of homology, from the compound insect eye to the vertebrate camera-type eye (distinct classes are provided for each)</obo:IAO_0000232>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eye</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://purl.obolibrary.org/obo/UBERON_0001444 -->
@@ -339,13 +481,12 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">region of head</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subdivision of head</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://purl.obolibrary.org/obo/UBERON_0001456 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001456">
-        <owl:equivalentClass rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Face"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001444"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -356,253 +497,9 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002433"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000165"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000033"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A subdivision of the head that has as parts the layers deep to the surface of the anterior surface, including the mouth, eyes, and nose (when present). In vertebrates, this includes the facial skeleton and structures superficial to the facial skeleton (cheeks, mouth, eyeballs, skin of face, etc).</obo:IAO_0000115>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A subdivision of the head that has as parts the layers deep to the surface of the anterior surface, including the mouth, eyes, and olfactory apparatus (when present). In vertebrates, this includes the facial skeleton and structures superficial to the facial skeleton (cheeks, mouth, eyeballs, skin of face, etc).</obo:IAO_0000115>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">facia/facies</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visage</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">face</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/UBERON_0001567 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001567">
-        <owl:equivalentClass rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Cheek"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001444"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Face"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fleshy subdivision of one side of the face bounded by an eye, ear and the nose.</obo:IAO_0000115>
-        <obo:UBPROP_0000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Surface structure that includes the scales, skin, and muscles that are located ventral and posterior to the eye.[TAO]</obo:UBPROP_0000001>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">buccae</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jowl</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cheek</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/UBERON_0001690 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001690">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000020"/>
-        <obo:UBPROP_0000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Both vertebrate and invertebrate auditory organs are thought to have evolved from primitive mechanosensors, but the nature of the ancestral structure and the evolutionary trajectories followed in distinct animal lineages remain unknown. In particular, we do not know how many types of mechanosensor existed in the protostome-deuterostome ancestor from which insects and vertebrates evolved or whether the PDA had an auditory organ.[well established][VHOG]</obo:UBPROP_0000003>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ear</rdfs:label>
-        <disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0014448"/>
-    </owl:Class>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/UBERON_0001691 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001691">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001444"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Part of the ear external to the tympanum (eardrum). It typically consists of a tube (the external auditory meatus) that directs sound waves on to the tympanum, and may also include the external pinna, which extends beyond the skull[GO].</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">external ear</rdfs:label>
-        <disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0006618"/>
-    </owl:Class>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/UBERON_0002268 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002268">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000020"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ that houses olfactory neurons and is responsible for the sense of smell. Examples include the vertebrate nose and the Drosophila dorsal organ.</obo:IAO_0000115>
-        <obo:IAO_0000116 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An olfactory organ overlaps with the olfactory system, because some parts of the nose (e.g. nasal skeleton) are parts of the skeletal system, which is spatially disjoint</obo:IAO_0000116>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">olfactory organ</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/UBERON_0004088 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0004088">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001444"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001456"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The subdivision of the face that includes the eye (eyeball plus adnexa such as eyelids) and the orbit of the skull and associated parts of the face such as the eyebrows, if present</obo:IAO_0000115>
-        <obo:IAO_0000116 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">note the FMA class is more narrow though, and is more like eye + muscles + vasculature. The FMA also has FMA:72951 orbital part of eye</obo:IAO_0000116>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">orbital region</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/UBERON_0008199 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0008199">
-        <owl:equivalentClass rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Chin"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001444"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001456"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A subdivision of the face that is the anteriormost part of the lower jaw region.</obo:IAO_0000115>
-        <obo:UBPROP_0000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Surface structure that is the anteriormost region of the lower jaw.[TAO]</obo:UBPROP_0000001>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chin</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/UBERON_0008200 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0008200">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001444"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The part of the face above the eyes[MESH]. In human anatomy, the forehead is the fore part of the head. It is, formally, an area of the head bounded by three features, two of the skull and one of the scalp. The top of the forehead is marked by the hairline, the edge of the area where hair on the scalp grows. The bottom of the forehead is marked by the supraorbital ridge, the bone feature of the skull above the eyes. The two sides of the forehead are marked by the temporal ridge, a bone feature that links the supraorbital ridge to the coronal suture line and beyond[WP].</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">forehead</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/UBERON_1000021 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_1000021">
-        <owl:equivalentClass rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Skin"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001456"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A zone of skin that is part of the face.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skin of face</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/AgeRange -->
-
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/AgeRange">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Demographic"/>
-        <rdfs:label xml:lang="en">age range</rdfs:label>
-        <skos:definition xml:lang="en">how many years old a person is</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Baby -->
-
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Baby">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/AgeRange"/>
-        <rdfs:label xml:lang="en">baby</rdfs:label>
-        <skos:definition xml:lang="en">person from age 0 to 1 years old</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Cheek -->
-
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Cheek">
-        <rdfs:label xml:lang="en">cheek</rdfs:label>
-        <skos:definition xml:lang="en">either side of the face below the eyes</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Child -->
-
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Child">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/AgeRange"/>
-        <rdfs:label xml:lang="en">child</rdfs:label>
-        <skos:definition xml:lang="en">person from age 1 to 5 years old</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Chin -->
-
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Chin">
-        <rdfs:label xml:lang="en">chin</rdfs:label>
-        <skos:definition xml:lang="en">the protruding part of the face below the mouth, formed by the apex of the lower jaw</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Chubby -->
-
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Chubby">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/WeightRange"/>
-        <rdfs:label xml:lang="en">chubby</rdfs:label>
-        <skos:definition xml:lang="en">categorized as &quot;chubby&quot; by the LFW tags</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Color -->
-
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Color">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasRGB"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">color</rdfs:label>
-        <skos:definition xml:lang="en">a phenomenon of light (such as red, brown, pink, or gray) or visual perception that enables one to differentiate otherwise identical objects</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Demographic -->
-
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Demographic">
-        <rdfs:label>demographic</rdfs:label>
-        <skos:definition>statistical data relating to the population and particular groups within it</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Ethnicity -->
-
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Ethnicity">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Demographic"/>
-        <rdfs:label xml:lang="en">ethnicity</rdfs:label>
-        <skos:definition xml:lang="en">the ethnicity of the individual in the photo</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Eye -->
-
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Eye">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasColor"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/EyeColor"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">eye</rdfs:label>
-        <skos:definition xml:lang="en">each of a pair of globular organs in the head through which people and vertebrate animals see, the visible part typically appearing almond-shaped in animals with eyelids.</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/EyeColor -->
-
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/EyeColor">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Color"/>
-        <rdfs:label xml:lang="en">eye color</rdfs:label>
-        <skos:definition xml:lang="en">the color of an eye</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Face -->
-
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Face">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasShape"/>
@@ -629,10 +526,228 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>face</rdfs:label>
-        <skos:definition xml:lang="en">the front part of a person&apos;s head from the forehead to the chin, or the corresponding part in an animal</skos:definition>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A subdivision of the head that has as parts the layers deep to the surface of the anterior surface, including the mouth, eyes, and nose (when present). In vertebrates, this includes the facial skeleton and structures superficial to the facial skeleton (cheeks, mouth, eyeballs, skin of face, etc).</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A subdivision of the head that has as parts the layers deep to the surface of the anterior surface, including the mouth, eyes, and olfactory apparatus (when present). In vertebrates, this includes the facial skeleton and structures superficial to the facial skeleton (cheeks, mouth, eyeballs, skin of face, etc).</obo:IAO_0000115>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">facia/facies</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visage</oboInOwl:hasRelatedSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">face</rdfs:label>
     </owl:Class>
+    
 
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0001567 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001567">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001444"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fleshy subdivision of one side of the face bounded by an eye, ear and the nose.</obo:IAO_0000115>
+        <obo:UBPROP_0000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Surface structure that includes the scales, skin, and muscles that are located ventral and posterior to the eye.[TAO]</obo:UBPROP_0000001>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">buccae</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jowl</oboInOwl:hasRelatedSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cheek</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0001690 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001690">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000020"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001691"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:UBPROP_0000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Both vertebrate and invertebrate auditory organs are thought to have evolved from primitive mechanosensors, but the nature of the ancestral structure and the evolutionary trajectories followed in distinct animal lineages remain unknown. In particular, we do not know how many types of mechanosensor existed in the protostome-deuterostome ancestor from which insects and vertebrates evolved or whether the PDA had an auditory organ.[well established][VHOG]</obo:UBPROP_0000003>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ear</rdfs:label>
+        <disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0014448"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0001691 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001691">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001444"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Part of the ear external to the tympanum (eardrum). It typically consists of a tube (the external auditory meatus) that directs sound waves on to the tympanum, and may also include the external pinna, which extends beyond the skull[GO].</obo:IAO_0000115>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">external ear</rdfs:label>
+        <disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0006618"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0002268 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002268">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000020"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000004"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ that houses olfactory neurons and is responsible for the sense of smell. Examples include the vertebrate nose and the Drosophila dorsal organ.</obo:IAO_0000115>
+        <obo:IAO_0000116 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An olfactory organ overlaps with the olfactory system, because some parts of the nose (e.g. nasal skeleton) are parts of the skeletal system, which is spatially disjoint</obo:IAO_0000116>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">olfactory organ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0004088 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0004088">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001444"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001456"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The subdivision of the face that includes the eye (eyeball plus adnexa such as eyelids) and the orbit of the skull and associated parts of the face such as the eyebrows, if present</obo:IAO_0000115>
+        <obo:IAO_0000116 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">note the FMA class is more narrow though, and is more like eye + muscles + vasculature. The FMA also has FMA:72951 orbital part of eye</obo:IAO_0000116>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">orbital region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0008199 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0008199">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001444"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001456"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A subdivision of the face that is the anteriormost part of the lower jaw region.</obo:IAO_0000115>
+        <obo:UBPROP_0000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Surface structure that is the anteriormost region of the lower jaw.[TAO]</obo:UBPROP_0000001>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0008200 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0008200">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001444"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The part of the face above the eyes[MESH]. In human anatomy, the forehead is the fore part of the head. It is, formally, an area of the head bounded by three features, two of the skull and one of the scalp. The top of the forehead is marked by the hairline, the edge of the area where hair on the scalp grows. The bottom of the forehead is marked by the supraorbital ridge, the bone feature of the skull above the eyes. The two sides of the forehead are marked by the temporal ridge, a bone feature that links the supraorbital ridge to the coronal suture line and beyond[WP].</obo:IAO_0000115>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">forehead</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_1000021 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_1000021">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000020"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001456"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasVisualFeature"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Finish"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasVisualFeature"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/SkinTone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A zone of skin that is part of the face.</obo:IAO_0000115>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skin of face</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/AgeRange -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/AgeRange">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Demographic"/>
+        <rdfs:label xml:lang="en">age range</rdfs:label>
+        <skos:definition xml:lang="en">how many years old a person is</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Baby -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Baby">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/AgeRange"/>
+        <rdfs:label xml:lang="en">baby</rdfs:label>
+        <skos:definition xml:lang="en">person from age 0 to 1 years old</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Child -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Child">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/AgeRange"/>
+        <rdfs:label xml:lang="en">child</rdfs:label>
+        <skos:definition xml:lang="en">person from age 1 to 5 years old</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Chubby -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Chubby">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/WeightRange"/>
+        <rdfs:label xml:lang="en">chubby</rdfs:label>
+        <skos:definition xml:lang="en">categorized as &quot;chubby&quot; by the LFW tags</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Color -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Color">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasRGB"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">color</rdfs:label>
+        <skos:definition xml:lang="en">a phenomenon of light (such as red, brown, pink, or gray) or visual perception that enables one to differentiate otherwise identical objects</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Demographic -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Demographic">
+        <rdfs:label>demographic</rdfs:label>
+        <skos:definition>statistical data relating to the population and particular groups within it</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Ethnicity -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Ethnicity">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Demographic"/>
+        <rdfs:label xml:lang="en">ethnicity</rdfs:label>
+        <skos:definition xml:lang="en">the ethnicity of the individual in the photo</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/EyeColor -->
+
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/EyeColor">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Color"/>
+        <rdfs:label xml:lang="en">eye color</rdfs:label>
+        <skos:definition xml:lang="en">the color of an eye</skos:definition>
+    </owl:Class>
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/FaceShape -->
@@ -641,7 +756,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">face shape</rdfs:label>
         <skos:definition xml:lang="en">the shape of the subject&apos;s face</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/FacialExpression -->
@@ -650,7 +765,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">facial expression</rdfs:label>
         <skos:definition xml:lang="en">the expression the subject is making in the photo</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Feminine -->
@@ -661,7 +776,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">feminine</rdfs:label>
         <skos:definition xml:lang="en">categorized as &quot;female&quot; by the LFW tags</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Finish -->
@@ -670,7 +785,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">finish</rdfs:label>
         <skos:definition xml:lang="en">the refelectivness of a material</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/ForheadVisibility -->
@@ -679,7 +794,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">forehead visibility</rdfs:label>
         <skos:definition xml:lang="en">amount of the subject&apos;s forehead that can be seen in the photo</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Frowning -->
@@ -690,7 +805,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">frowning</rdfs:label>
         <skos:definition xml:lang="en">the subject&apos;s mouth is in the shape of a frown</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/GenderExpression -->
@@ -700,18 +815,18 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">gender expression</rdfs:label>
         <skos:definition xml:lang="en">whether a person is male or female</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/HighCheekbones -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/HighCheekbones">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Cheek"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001567"/>
         <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/RosyCheeks"/>
         <rdfs:label xml:lang="en">high cheekbones</rdfs:label>
         <skos:definition xml:lang="en">the subject&apos;s cheeks are labeled as high</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Masculine -->
@@ -721,7 +836,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">masculine</rdfs:label>
         <skos:definition xml:lang="en">categorized as &quot;male&quot; by the LFW tags</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/MiddleAged -->
@@ -731,28 +846,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">middle aged</rdfs:label>
         <skos:definition xml:lang="en">person from age 45 to 64</skos:definition>
     </owl:Class>
-
-
-
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Mouth -->
-
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Mouth">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasSize"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Size"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasVisualFeature"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/MouthOpenState"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">mouth</rdfs:label>
-        <skos:definition xml:lang="en">opening in the lower part of the human face, surrounded by the lips</skos:definition>
-    </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/MouthOpenState -->
@@ -768,7 +862,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">mouth open state</rdfs:label>
         <skos:definition xml:lang="en">mouth shape</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/NarrowEyes -->
@@ -778,28 +872,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">narrow eyes</rdfs:label>
         <skos:definition xml:lang="en">the subject&apos;s eyes appear narrow</skos:definition>
     </owl:Class>
-
-
-
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Nose -->
-
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Nose">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasShape"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/NoseShape"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasSize"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Size"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">nose</rdfs:label>
-        <skos:definition xml:lang="en">part of the face projecting above the mouth on the face of a person or animal, containing the nostrils and used for breathing and smelling</skos:definition>
-    </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/NoseShape -->
@@ -808,19 +881,13 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">nose shape</rdfs:label>
         <skos:definition xml:lang="en">having a pointy tip or end</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Person -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Person">
         <rdfs:subClassOf rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/AgentsAndPeople/Agents/AutonomousAgent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Face"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasDemographic"/>
@@ -830,17 +897,17 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">person</rdfs:label>
         <skos:definition xml:lang="en">human being</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/RosyCheeks -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/RosyCheeks">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Cheek"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001567"/>
         <rdfs:label xml:lang="en">rosy cheeks</rdfs:label>
         <skos:definition xml:lang="en">the subject&apos;s cheeks appear rosy</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Senior -->
@@ -850,7 +917,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">senior</rdfs:label>
         <skos:definition xml:lang="en">person from 65 and up</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Size -->
@@ -859,28 +926,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">size</rdfs:label>
         <skos:definition xml:lang="en">how large an object is</skos:definition>
     </owl:Class>
-
-
-
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Skin -->
-
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Skin">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasVisualFeature"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Finish"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasVisualFeature"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/SkinTone"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">skin</rdfs:label>
-        <skos:definition xml:lang="en">the epidermus of the main subject of the photo</skos:definition>
-    </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/SkinTone -->
@@ -889,7 +935,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">skin tone</rdfs:label>
         <skos:definition xml:lang="en">the realtive color</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Skinny -->
@@ -899,7 +945,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label>skinny</rdfs:label>
         <skos:definition>categorized as &quot;skinny&quot; by the LFW tags</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Smiling -->
@@ -909,7 +955,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">smiling</rdfs:label>
         <skos:definition xml:lang="en">the subject&apos;s mouth is in the shape of a smile</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/WeightRange -->
@@ -919,7 +965,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">weight range</rdfs:label>
         <skos:definition xml:lang="en">subjective labels given by the tags for LFW</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Youth -->
@@ -929,10 +975,10 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">youth</rdfs:label>
         <skos:definition xml:lang="en">person from age 5 to 17 years old</skos:definition>
     </owl:Class>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -940,7 +986,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Asian -->
@@ -948,7 +994,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Asian">
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Ethnicity"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Black -->
@@ -956,7 +1002,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Black">
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Ethnicity"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Brown -->
@@ -966,17 +1012,17 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">Brown Eye Color</rdfs:label>
         <skos:definition xml:lang="en">the eye has a brown color</skos:definition>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/DoubleChin -->
 
     <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/DoubleChin">
-        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Chin"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/UBERON_0008199"/>
         <rdfs:label xml:lang="en">Double Chin</rdfs:label>
         <skos:definition xml:lang="en">the subject has a double chin in this photo</skos:definition>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Flush -->
@@ -986,7 +1032,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">Flush</rdfs:label>
         <skos:definition xml:lang="en">excited or elated by something</skos:definition>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Indian -->
@@ -994,7 +1040,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Indian">
         <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Ethnicity"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Large -->
@@ -1004,7 +1050,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">Large</rdfs:label>
         <skos:definition xml:lang="en">categorized as &quot;large&quot; by the LFW tags</skos:definition>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Medium -->
@@ -1014,7 +1060,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">Medium</rdfs:label>
         <skos:definition xml:lang="en">categorized as &quot;medium&quot; by the LFW tags</skos:definition>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/MouthClosed -->
@@ -1024,7 +1070,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">Mouth Closed</rdfs:label>
         <skos:definition xml:lang="en">the subject&apos;s mouth is closed</skos:definition>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/MouthSlightlyOpen -->
@@ -1034,7 +1080,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">Mouth Slightly Open</rdfs:label>
         <skos:definition xml:lang="en">the subject&apos;s mouth is slightly open</skos:definition>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/MouthWideOpen -->
@@ -1044,7 +1090,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">Mouth Wide Open</rdfs:label>
         <skos:definition xml:lang="en">the subject&apos;s mouth is wide open</skos:definition>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/OvalFace -->
@@ -1054,7 +1100,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">Oval Face</rdfs:label>
         <skos:definition xml:lang="en">the shape of the subject&apos;s face appears oval shaped</skos:definition>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Pale -->
@@ -1064,7 +1110,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">Pale</rdfs:label>
         <skos:definition xml:lang="en">has little color</skos:definition>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/PartiallyVisibleForehead -->
@@ -1074,7 +1120,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">Partially Visible Forehead</rdfs:label>
         <skos:definition xml:lang="en">the subject&apos;s forehead is partially visible in the photo</skos:definition>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/PointyNose -->
@@ -1084,7 +1130,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">Pointy Nose</rdfs:label>
         <skos:definition xml:lang="en">categorized as having a &quot;pointy nose&quot; by the LFW tags</skos:definition>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/RoundFace -->
@@ -1094,17 +1140,17 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">Round Face</rdfs:label>
         <skos:definition xml:lang="en">the shape of the subject&apos;s face appears rounded</skos:definition>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/RoundJaw -->
 
     <owl:NamedIndividual rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/RoundJaw">
-        <rdf:type rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Chin"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/UBERON_0008199"/>
         <rdfs:label xml:lang="en">Round Jaw</rdfs:label>
         <skos:definition xml:lang="en">The subject has a round jaw</skos:definition>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Shiny -->
@@ -1114,7 +1160,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">Shiny</rdfs:label>
         <skos:definition xml:lang="en">skin that is shiny as labeled by LFW</skos:definition>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Small -->
@@ -1124,7 +1170,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">Small</rdfs:label>
         <skos:definition xml:lang="en">categorized as &quot;small&quot; by the LFW tags</skos:definition>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/SquareFace -->
@@ -1134,7 +1180,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">Square Face</rdfs:label>
         <skos:definition xml:lang="en">the shape of the subject&apos;s face appears square</skos:definition>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/White -->
@@ -1147,80 +1193,13 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <someValuesFrom>
             <rdf:Description>
                 <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002416"/>
-            </rdf:Description>
-        </someValuesFrom>
-    </rdf:Description>
-    <rdf:Description>
-        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-        <someValuesFrom>
-            <rdf:Description>
-                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001434"/>
-            </rdf:Description>
-        </someValuesFrom>
-    </rdf:Description>
-    <rdf:Description>
-        <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002496"/>
-        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000111"/>
-    </rdf:Description>
-    <rdf:Description>
-        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000467"/>
-    </rdf:Description>
-    <rdf:Description>
-        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-        <someValuesFrom>
-            <rdf:Description>
-                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001015"/>
-            </rdf:Description>
-        </someValuesFrom>
-    </rdf:Description>
-    <rdf:Description>
-        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001032"/>
-    </rdf:Description>
-    <rdf:Description>
-        <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002002"/>
-        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0006984"/>
-    </rdf:Description>
-    <rdf:Description>
-        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-        <someValuesFrom>
-            <rdf:Description>
-                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                 <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001016"/>
             </rdf:Description>
         </someValuesFrom>
     </rdf:Description>
     <rdf:Description>
-        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000165"/>
-    </rdf:Description>
-    <rdf:Description>
-        <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002433"/>
-        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000033"/>
-    </rdf:Description>
-    <rdf:Description>
-        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000033"/>
-    </rdf:Description>
-    <rdf:Description>
         <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
         <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002105"/>
-    </rdf:Description>
-    <rdf:Description>
-        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000033"/>
-    </rdf:Description>
-    <rdf:Description>
-        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001456"/>
-    </rdf:Description>
-    <rdf:Description>
-        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000468"/>
     </rdf:Description>
     <rdf:Description>
         <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1233,24 +1212,91 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     </rdf:Description>
     <rdf:Description>
         <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001690"/>
+        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000468"/>
+    </rdf:Description>
+    <rdf:Description>
+        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001456"/>
+    </rdf:Description>
+    <rdf:Description>
+        <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002496"/>
+        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000111"/>
+    </rdf:Description>
+    <rdf:Description>
+        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000033"/>
+    </rdf:Description>
+    <rdf:Description>
+        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <someValuesFrom>
+            <rdf:Description>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001015"/>
+            </rdf:Description>
+        </someValuesFrom>
+    </rdf:Description>
+    <rdf:Description>
+        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000033"/>
     </rdf:Description>
     <rdf:Description>
         <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002433"/>
-        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001690"/>
+        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000033"/>
+    </rdf:Description>
+    <rdf:Description>
+        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000165"/>
+    </rdf:Description>
+    <rdf:Description>
+        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000467"/>
+    </rdf:Description>
+    <rdf:Description>
+        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <someValuesFrom>
+            <rdf:Description>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001434"/>
+            </rdf:Description>
+        </someValuesFrom>
+    </rdf:Description>
+    <rdf:Description>
+        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <someValuesFrom>
+            <rdf:Description>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002416"/>
+            </rdf:Description>
+        </someValuesFrom>
+    </rdf:Description>
+    <rdf:Description>
+        <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002433"/>
+        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000033"/>
     </rdf:Description>
     <rdf:Description>
         <onProperty rdf:resource="http://purl.obolibrary.org/obo/BSPO_0000126"/>
         <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000033"/>
     </rdf:Description>
     <rdf:Description>
-        <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002433"/>
-        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000033"/>
+        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001690"/>
     </rdf:Description>
+    <rdf:Description>
+        <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002433"/>
+        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001690"/>
+    </rdf:Description>
+    <rdf:Description>
+        <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002002"/>
+        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0006984"/>
+    </rdf:Description>
+    <rdf:Description>
+        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001032"/>
+    </rdf:Description>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // General axioms
@@ -1273,3 +1319,4 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
 
 <!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
