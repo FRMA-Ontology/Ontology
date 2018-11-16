@@ -178,6 +178,9 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 		graph.add((resultset_facenet_IRI, hasConstituent, result_facenet_IRI))
 		graph.add((resultset_facenet_IRI, RDFS.label, rdflib.term.Literal("FaceNet", datatype=XSD.string)))
 
+		graph.add((resultset_dlib_IRI, RDF.type, OWL.NamedIndividual))
+		graph.add((resultset_dlib_IRI, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/ResultSet"))
+		
 		graph.add((resultset_dlib_IRI, hasConstituent, result_dlib_IRI))
 		graph.add((resultset_dlib_IRI, RDFS.label, rdflib.term.Literal("DLib", datatype=XSD.string)))
 

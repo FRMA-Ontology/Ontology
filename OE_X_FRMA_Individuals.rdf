@@ -1061,6 +1061,9 @@
     </owl:NamedIndividual>
 
 
+    <owl:NamedIndividual rdf:about="&frma-ind;dlibTest01ResultSet">
+        <rdf:type rdf:resource="&mlmo;ResultSet"/>
+    </owl:NamedIndividual>
 
     <!-- &frma-ind;dlibTest01ResultSet -->
 
