@@ -8,41 +8,44 @@
     <!ENTITY dct "http://purl.org/dc/terms/" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY frma "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/" >
-    <!ENTITY mlmo "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/" >
-    <!ENTITY wt "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/" >
-    <!ENTITY pfd "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/" >
-    <!ENTITY img "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/" >
-	  <!ENTITY ho "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/" >
+    <!ENTITY mlmo "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/" >
+    <!ENTITY wt "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/" >
+    <!ENTITY pfd "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/" >
+    <!ENTITY img "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/" >
+	  <!ENTITY ho "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/" >
+    <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
     <!ENTITY obo "http://purl.obolibrary.org/obo/" >
     <!ENTITY lio "http://purl.org/net/lio#" >
+    <!ENTITY fibo-fnd-utl-av "http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/">
+    <!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/">
 ]>
 
 <rdf:RDF xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/"
-     xmlns:img="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"
+     xmlns:img="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:ho="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/"
+     xmlns:ho="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:pfd="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/"
+     xmlns:lio="https://w3id.org/lio/v1#"
+     xmlns:pfd="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/"
      xmlns:frma="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/"
-     xmlns:mlmo="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/"
+     xmlns:mlmo="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:AnnotationVocabulary="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:wt="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/"
-     xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+     xmlns:fibo-fnd-utl-av="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+     xmlns:wt="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/"
+     xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
      xmlns:obo="http://purl.obolibrary.org/obo/">
+
     <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/">
-        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT/"/>
-        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/"/>
-        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/"/>
-        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/"/>
+        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/"/>
+        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/"/>
+        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/"/>
+        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
-        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO/"/>
+        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/"/>
         <dct:creator xml:lang="en">Alexander Schwartzberg</dct:creator>
         <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology</rdfs:label>
         <skos:definition xml:lang="en">Machine learning allows us to learn a model for a given task such as facial recognition with a high degree of accuracy. However, after these models are generated they are often treated as black boxes and the limitations of a model are often unknown to the end user. The system developed for this use case will provide an intuitive interface to explore the limits of a facial recognition model by semantically integrating “smart” images(semantically describe who the image depicts and what Kumar [2] features the image exhibits) with classification results to discover common causes for misclassifications.</skos:definition>
@@ -112,7 +115,7 @@
                          <owl:someValuesFrom>
                              <owl:Restriction>
                                  <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                                 <owl:someValuesFrom rdf:resource="&pfd;Face"/>
+                                 <owl:someValuesFrom rdf:resource="&obo;UBERON_0001456"/>
                              </owl:Restriction>
                          </owl:someValuesFrom>
                      </owl:Restriction>
@@ -329,7 +332,7 @@
 
     <!-- &pfd;Face -->
 
-    <owl:Class rdf:about="&pfd;Face">
+    <owl:Class rdf:about="&obo;UBERON_0001456">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
