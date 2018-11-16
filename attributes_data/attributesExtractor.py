@@ -527,7 +527,7 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 	if (image_data["Brown Eyes"] > 0):
 		graph.add((eyeIRI, rdflib.term.URIRef(pfd_iri + "/" + "hasColor"), rdflib.term.URIRef(pfd_iri + "/" + "Brown")))
 	else:
-		eyeColorIri = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + "Eye/Color")
+		eyeColorIri = rdflib.term.URIRef(base_iri + "/EyeColor")
 		graph.add((eyeColorIri, RDF.type, OWL.NamedIndividual))
 		graph.add((eyeColorIri, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "EyeColor")))
 		graph.add((eyeIRI, rdflib.term.URIRef(pfd_iri + "/" + "hasColor"), eyeColorIri))
