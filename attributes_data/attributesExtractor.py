@@ -20,7 +20,7 @@ import shutil, os
 attributeLabels = """person	imagenum	Male	Asian	White	Black	Baby	Child	Youth	Middle Aged	Senior	Black Hair	Blond Hair	Brown Hair	Bald	No Eyewear	Eyeglasses	Sunglasses	Mustache	Smiling	Frowning	Chubby	Blurry	Harsh Lighting	Flash	Soft Lighting	Outdoor	Curly Hair	Wavy Hair	Straight Hair	Receding Hairline	Bangs	Sideburns	Fully Visible Forehead	Partially Visible Forehead	Obstructed Forehead	Bushy Eyebrows	Arched Eyebrows	Narrow Eyes	Eyes Open	Big Nose	Pointy Nose	Big Lips	Mouth Closed	Mouth Slightly Open	Mouth Wide Open	Teeth Not Visible	No Beard	Goatee	Round Jaw	Double Chin	Wearing Hat	Oval Face	Square Face	Round Face	Color Photo	Posed Photo	Attractive Man	Attractive Woman	Indian	Gray Hair	Bags Under Eyes	Heavy Makeup	Rosy Cheeks	Shiny Skin	Pale Skin	5 o' Clock Shadow	Strong Nose-Mouth Lines	Wearing Lipstick	Flushed Face	High Cheekbones	Brown Eyes	Wearing Earrings	Wearing Necktie	Wearing Necklace"""
 attributeList = attributeLabels.strip().split("\t")
 
-individualsNamespaceString = "http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_8_FRMA_Individuals/"
+individualsNamespaceString = "http://tw.rpi.edu/web/Courses/Ontologies/2017/OE_9_FRMA_Individuals/"
 
 def load_attributes_file(filename = "lfw_attributes.txt"):
 	# loads the file and creates a dictionary of names to image numbers to image attributes.
@@ -134,7 +134,7 @@ def generate_rdf_individuals(names, tags, base_filename, output_filename, genera
 	# here add another triple to test this
 	# instantiatedNamespace = Namespace(individualsNamespaceString)
 	# g.add((instantiatedNamespace.ThisIsATest, RDF.type, OWL.NamedIndividual))
-	# g.add((instantiatedNamespace.ThisIsATest, rdflib.term.URIRef('https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/hasDemographic'), OWL.NamedIndividual))
+	# g.add((instantiatedNamespace.ThisIsATest, rdflib.term.URIRef('https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/hasDemographic'), OWL.NamedIndividual))
 	# print("PRedicats", list(g.predicates()))
 
 	o = clean_up_xml_string(g.serialize(format='pretty-xml').decode("utf-8"))
@@ -164,7 +164,7 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 
 
 	if generateFakeResultId > 0:
-		hasFeature = rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MLMO/hasFeature")
+		hasFeature = rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasFeature")
 		hasConstituent = rdflib.term.URIRef("http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/hasConstituent")
 		hasTag = rdflib.term.URIRef("http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasTag")
 
@@ -196,37 +196,37 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 
 	if (image_data["Posed Photo"] > 0):
 
-		graph.add((image_IRI, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/PosedImage")))
+		graph.add((image_IRI, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/PosedImage")))
 	else:
-		graph.add((image_IRI, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/CandidImage")))
+		graph.add((image_IRI, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/CandidImage")))
 
 	if (image_data["Color Photo"] > 0):
-		graph.add((image_IRI, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/ColorImage")))
+		graph.add((image_IRI, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/ColorImage")))
 	else:
-		graph.add((image_IRI, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/BlackAndWhiteImage")))
+		graph.add((image_IRI, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/BlackAndWhiteImage")))
 
 
 	image_filepath = person_name.replace(" ", "_") + "/" + person_name.replace(" ", "_") + "_" + "%04d" % (image_data["imagenum"],) + ".jpg"
-	graph.add((image_IRI, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/hasFilePath"), rdflib.term.Literal(image_filepath, datatype=XSD.anyURI)))
-	graph.add((image_IRI, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/hasFileExtension"), rdflib.term.Literal(".jpg", datatype=XSD.string)))
+	graph.add((image_IRI, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/hasFilePath"), rdflib.term.Literal(image_filepath, datatype=XSD.anyURI)))
+	graph.add((image_IRI, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/hasFileExtension"), rdflib.term.Literal(".jpg", datatype=XSD.string)))
 
 
 	# create the lighting information
-	# "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/IMG/Lighting_Variation"
+	# "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/Lighting_Variation"
 	# graph.add((image_IRI, RDF.type, OWL.NamedIndividual))
 
-	pfd_iri = "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD"
+	pfd_iri = "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology"
 	hasPart = rdflib.term.URIRef("http://purl.obolibrary.org/obo/BFO_0000051")
 
 	# create the person
 	person_iri = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person")
 	graph.add((person_iri, RDF.type, OWL.NamedIndividual))
-	graph.add((person_iri, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Person")))
+	graph.add((person_iri, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/Person")))
 	graph.add((person_iri, rdflib.term.URIRef("http://www.omg.org/spec/EDMC-FIBO/FND/AgentsAndPeople/Agents/hasName"), rdflib.term.Literal(person_name, datatype=XSD.string)))
 	# create the face
 	face_iri = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Face")
 	graph.add((face_iri, RDF.type, OWL.NamedIndividual))
-	graph.add((face_iri, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PFD/Face")))
+	graph.add((face_iri, RDF.type, rdflib.term.URIRef("http://purl.obolibrary.org/obo/UBERON_0001456")))
 	graph.add((person_iri, hasPart, face_iri))
 
 	graph.add((image_IRI, rdflib.term.URIRef("http://purl.org/net/lio#depicts"), person_iri))
@@ -292,7 +292,7 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 
 
 	# wearables:
-	wt_iri = "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WT"
+	wt_iri = "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology"
 	eyewear_iri = base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/Eyewear"
 	if (image_data["Eyeglasses"] > 0):
 		# make an eyeglasses individual
@@ -337,7 +337,7 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 			graph.add((wearable_individual, rdflib.term.URIRef(pfd_iri + "/isHeavyMakeup"), rdflib.term.Literal(image_data["Heavy Makeup"] > 0, datatype=XSD.boolean)))
 
 	# Hair:
-	hair_iri_string = "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HO"
+	hair_iri_string = "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology"
 
 	# create the head hair individual
 	hair_name = "HeadHair"
@@ -466,7 +466,7 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 	cheekIRI = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + "Cheek")
 	graph.add((cheekIRI, RDF.type, OWL.NamedIndividual))
 	graph.add((face_iri, hasPart, cheekIRI))
-	graph.add((cheekIRI, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "Cheek")))
+	graph.add((cheekIRI, RDF.type, rdflib.term.URIRef("http://purl.obolibrary.org/obo/UBERON_0001567")))
 
 	if (image_data["Rosy Cheeks"] > 0):
 		graph.add((cheekIRI, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "RosyCheek")))
@@ -477,7 +477,7 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 	noseIRI = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + "Nose")
 	graph.add((noseIRI, RDF.type, OWL.NamedIndividual))
 	graph.add((face_iri, hasPart, noseIRI))
-	graph.add((noseIRI, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "Nose")))
+	graph.add((noseIRI, RDF.type, rdflib.term.URIRef("http://purl.obolibrary.org/obo/UBERON_0000004")))
 
 	if (image_data["Big Nose"] > 0):
 		graph.add((noseIRI, rdflib.term.URIRef(pfd_iri + "/" + "hasSize"), rdflib.term.URIRef(pfd_iri + "/" + "Large")))
@@ -496,7 +496,7 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 	mouthIRI = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + "Mouth")
 	graph.add((mouthIRI, RDF.type, OWL.NamedIndividual))
 	graph.add((face_iri, hasPart, mouthIRI))
-	graph.add((mouthIRI, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "Mouth")))
+	graph.add((mouthIRI, RDF.type, rdflib.term.URIRef("http://purl.obolibrary.org/obo/UBERON_0000165")))
 
 	if (image_data["Big Lips"] > 0):
 		graph.add((mouthIRI, rdflib.term.URIRef(pfd_iri + "/" + "hasSize"), rdflib.term.URIRef(pfd_iri + "/" + "Large")))
@@ -518,7 +518,7 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 	eyeIRI = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + "Eye")
 	graph.add((eyeIRI, RDF.type, OWL.NamedIndividual))
 	graph.add((face_iri, hasPart, eyeIRI))
-	graph.add((eyeIRI, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "Eye")))
+	graph.add((eyeIRI, RDF.type, rdflib.term.URIRef("http://purl.obolibrary.org/obo/UBERON_0000970")))
 
 	graph.add((eyeIRI, rdflib.term.URIRef(pfd_iri + "/" + "isOpen"), rdflib.term.Literal(not (image_data["Eyes Open"] > 0), datatype=XSD.boolean)))
 	graph.add((eyeIRI, rdflib.term.URIRef(pfd_iri + "/" + "isBaggy"), rdflib.term.Literal(not (image_data["Bags Under Eyes"] > 0), datatype=XSD.boolean)))
@@ -535,7 +535,7 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 	skinIRI = rdflib.term.URIRef(base_iri + "Image/" + person_id + "/"+str(image_data["imagenum"]) + "/Person/" + "Skin")
 	graph.add((skinIRI, RDF.type, OWL.NamedIndividual))
 	graph.add((face_iri, hasPart, skinIRI))
-	graph.add((skinIRI, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "Skin")))
+	graph.add((skinIRI, RDF.type, rdflib.term.URIRef("http://purl.obolibrary.org/obo/UBERON_1000021")))
 
 
 	if (image_data["Shiny Skin"] > 0):
