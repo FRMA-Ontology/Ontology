@@ -26,6 +26,7 @@
         <rdfs:label xml:lang="en">Wearable Things</rdfs:label>
         <dct:creator>John Angel</dct:creator>
         <owl:versionInfo>Modified on 11/17/2018</owl:versionInfo>
+        <owl:priorVersion>https://raw.githubusercontent.com/FRMA-Ontology/Ontology/9ad9704c913d0aee68056473efa1e3574a8808a8/WT.rdf</owl:priorVersion>
     </owl:Ontology>
 
 

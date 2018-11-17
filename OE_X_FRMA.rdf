@@ -40,7 +40,7 @@
      xmlns:obo="http://purl.obolibrary.org/obo/">
 
     <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/">
-        <owl:versionIRI rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/1.0.1"/>
+        <owl:versionIRI rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/1.0.1"/>
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/"/>
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/"/>
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/"/>
@@ -55,6 +55,7 @@
         <dct:creator xml:lang="en">Jordan Faas-Bush</dct:creator>
         <dct:creator xml:lang="en">Alexander Schwartzberg</dct:creator>
         <owl:versionInfo>Modified on 11/17/2018</owl:versionInfo>
+        <owl:priorVersion>https://raw.githubusercontent.com/FRMA-Ontology/Ontology/9ad9704c913d0aee68056473efa1e3574a8808a8/FRMA.rdf</owl:priorVersion>
     </owl:Ontology>
 
 

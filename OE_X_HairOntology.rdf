@@ -26,6 +26,7 @@
         <dct:creator xml:lang="en">Andrew Gaudet</dct:creator>
         <rdfs:label xml:lang="en">Hair Ontology</rdfs:label>
         <owl:versionInfo>Modified on 11/17/2018</owl:versionInfo>
+        <owl:priorVersion>https://raw.githubusercontent.com/FRMA-Ontology/Ontology/9ad9704c913d0aee68056473efa1e3574a8808a8/HO.rdf</owl:priorVersion>
     </owl:Ontology>
 
 
