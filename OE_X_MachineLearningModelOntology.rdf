@@ -27,6 +27,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:fibo-fnd-arr-cls="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/ClassificationSchemes/">
     <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/">
+        <owl:versionIRI rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/1.0.1"/>
         <owl:imports rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/ClassificationSchemes/"/>
         <owl:imports rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/"/>
         <owl:imports rdf:resource="http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"/>
@@ -35,6 +36,9 @@
         <skos:definition xml:lang="en">Machine Learning Model Ontology allows users to describe the learning process, the structure of the learned model, and the evaluation of the model from a data-centric perspective.</skos:definition>
         <rdfs:label xml:lang="en">Machine Learning Model Ontology</rdfs:label>
         <dct:creator>Matthew Johnson</dct:creator>
+        <owl:versionInfo>Modified on 11/17/2018</owl:versionInfo>
+        <owl:priorVersion>https://raw.githubusercontent.com/FRMA-Ontology/Ontology/9ad9704c913d0aee68056473efa1e3574a8808a8/MLMO.rdf</owl:priorVersion>
+        <rdfs:comment>Expanded Ontology IRI from /FRMA/MLMO to /FRMA/MachineLearningModelOntology. Removed equivalence Statements and just used Uberon. Added additional Uberon concepts: organs -> sense organ -> eyes. Nose and Face subdivision. Added owl:VersionIRI, owlVersionInfo, and owlPriorVersion metadata.</rdfs:comment>
     </owl:Ontology>
 
 

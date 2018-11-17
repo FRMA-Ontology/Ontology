@@ -40,19 +40,23 @@
      xmlns:obo="http://purl.obolibrary.org/obo/">
 
     <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/">
+        <owl:versionIRI rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/1.0.1"/>
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/"/>
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/"/>
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/"/>
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/"/>
-        <dct:creator xml:lang="en">Alexander Schwartzberg</dct:creator>
         <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology</rdfs:label>
         <skos:definition xml:lang="en">Machine learning allows us to learn a model for a given task such as facial recognition with a high degree of accuracy. However, after these models are generated they are often treated as black boxes and the limitations of a model are often unknown to the end user. The system developed for this use case will provide an intuitive interface to explore the limits of a facial recognition model by semantically integrating “smart” images(semantically describe who the image depicts and what Kumar [2] features the image exhibits) with classification results to discover common causes for misclassifications.</skos:definition>
         <dct:creator xml:lang="en">Andrew Gaudet</dct:creator>
         <dct:creator xml:lang="en">Matthew Johnson</dct:creator>
         <dct:creator xml:lang="en">John Angel</dct:creator>
         <dct:creator xml:lang="en">Jordan Faas-Bush</dct:creator>
+        <dct:creator xml:lang="en">Alexander Schwartzberg</dct:creator>
+        <owl:versionInfo>Modified on 11/17/2018</owl:versionInfo>
+        <owl:priorVersion>https://raw.githubusercontent.com/FRMA-Ontology/Ontology/9ad9704c913d0aee68056473efa1e3574a8808a8/FRMA.rdf</owl:priorVersion>
+        <rdfs:comment>Added owl:VersionIRI, owlVersionInfo, and owlPriorVersion metadata.</rdfs:comment>
     </owl:Ontology>
 
 

@@ -20,10 +20,14 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:wt="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/">
     <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/">
+        <owl:versionIRI rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/1.0.1"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <skos:definition xml:lang="en">When dealing with facial recognition on images of people, it is common to need to effectively deal with items that the image subject is wearing. This ontolgy exists to represent objects commonly worn by people in photos and images.</skos:definition>
         <rdfs:label xml:lang="en">Wearable Things</rdfs:label>
         <dct:creator>John Angel</dct:creator>
+        <owl:versionInfo>Modified on 11/17/2018</owl:versionInfo>
+        <owl:priorVersion>https://raw.githubusercontent.com/FRMA-Ontology/Ontology/9ad9704c913d0aee68056473efa1e3574a8808a8/WT.rdf</owl:priorVersion>
+        <rdfs:comment>Added owl:VersionIRI, owlVersionInfo, and owlPriorVersion metadata.</rdfs:comment>
     </owl:Ontology>
 
 
