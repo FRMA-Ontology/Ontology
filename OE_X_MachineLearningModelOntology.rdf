@@ -36,6 +36,7 @@
         <skos:definition xml:lang="en">Machine Learning Model Ontology allows users to describe the learning process, the structure of the learned model, and the evaluation of the model from a data-centric perspective.</skos:definition>
         <rdfs:label xml:lang="en">Machine Learning Model Ontology</rdfs:label>
         <dct:creator>Matthew Johnson</dct:creator>
+        <owl:versionInfo>Modified on 11/17/2018</owl:versionInfo>
     </owl:Ontology>
 
 

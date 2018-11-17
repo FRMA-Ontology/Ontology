@@ -25,6 +25,7 @@
         <skos:definition xml:lang="en">When dealing with facial recognition on images of people, it is common to need to effectively deal with items that the image subject is wearing. This ontolgy exists to represent objects commonly worn by people in photos and images.</skos:definition>
         <rdfs:label xml:lang="en">Wearable Things</rdfs:label>
         <dct:creator>John Angel</dct:creator>
+        <owl:versionInfo>Modified on 11/17/2018</owl:versionInfo>
     </owl:Ontology>
 
 

@@ -37,6 +37,7 @@
 This sub-ontology is a section of the overall ontology focusing specifically on the features of a person such as their demographic and facial features that appear in their photos such as expression or nose shape.</skos:definition>
         <dct:creator xml:lang="en">Jordan Faas-Bush</dct:creator>
         <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology - Person, Face, and Demographic</rdfs:label>
+        <owl:versionInfo>Modified on 11/17/2018</owl:versionInfo>
     </owl:Ontology>
 
     <!--

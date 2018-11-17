@@ -25,6 +25,7 @@
         <skos:definition xml:lang="en">an ontology to describe the hair a person may have on their head and/or face</skos:definition>
         <dct:creator xml:lang="en">Andrew Gaudet</dct:creator>
         <rdfs:label xml:lang="en">Hair Ontology</rdfs:label>
+        <owl:versionInfo>Modified on 11/17/2018</owl:versionInfo>
     </owl:Ontology>
 
 

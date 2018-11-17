@@ -54,6 +54,7 @@
         <dct:creator xml:lang="en">John Angel</dct:creator>
         <dct:creator xml:lang="en">Jordan Faas-Bush</dct:creator>
         <dct:creator xml:lang="en">Alexander Schwartzberg</dct:creator>
+        <owl:versionInfo>Modified on 11/17/2018</owl:versionInfo>
     </owl:Ontology>
 
 
