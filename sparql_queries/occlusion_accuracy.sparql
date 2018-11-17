@@ -1,0 +1,47 @@
+prefix mlmo: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/>
+prefix fibo-fnd-arr-arr: <http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/>
+prefix lio: <https://w3id.org/lio/v1#>
+prefix lcc-lr: <http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
+prefix fibo-fnd-aap-a: <http://www.omg.org/spec/EDMC-FIBO/FND/AgentsAndPeople/Agents/>
+prefix wt: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/>
+
+select ?ResultSet ?OcclusionSourceType ((?numCorrect/?total)*100 as ?accuracy)
+where{
+  {
+  select ?ResultSet ?OcclusionSourceType (count(?classification) as ?numCorrect)
+  where{
+    ?ResultSet a mlmo:ResultSet .
+    ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+    ?Result lcc-lr:hasTag ?classification .
+    ?Result mlmo:hasFeature ?Image .
+
+        # Add restrictions here to get specific Accuracy
+    ?Image lio:depicts ?Person .
+    ?Person wt:isWearing ?OcclusionSource.
+    ?OcclusionSource a ?OcclusionSourceType.
+
+    ?Image lio:depicts ?Person .
+    ?Person fibo-fnd-aap-a:hasName ?Name
+    filter (?classification = ?Name)
+  }
+  group by ?OcclusionSourceType ?ResultSet
+  }
+  {
+  select ?ResultSet ?OcclusionSourceType (count(distinct ?Result) as ?total)
+  where{
+    ?ResultSet a mlmo:ResultSet .
+    ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+    ?Result mlmo:hasFeature ?Image .
+
+    # Add restrictions here to get specific Accuracy
+    ?Image lio:depicts ?Person .
+    ?Person wt:isWearing ?OcclusionSource.
+    ?OcclusionSource a ?OcclusionSourceType.
+
+  }
+  group by ?OcclusionSourceType ?ResultSet
+  }
+  minus{?occlusionSource a owl:NamedIndividual.}
+ }
+order by ?OcclusionSourceType
+
