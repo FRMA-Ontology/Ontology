@@ -1,0 +1,49 @@
+prefix mlmo: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/>
+prefix fibo-fnd-arr-arr: <http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/>
+prefix lio: <https://w3id.org/lio/v1#>
+prefix lcc-lr: <http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
+prefix fibo-fnd-aap-a: <http://www.omg.org/spec/EDMC-FIBO/FND/AgentsAndPeople/Agents/>
+PREFIX wt: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/>
+prefix obo: <http://purl.obolibrary.org/obo/>
+prefix pfd: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/>
+
+select ?ResultSet ?eyeglassCount ?brownEyeCount
+where {
+  {
+    select ?ResultSet (count(?classification) as ?brownEyeCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+      ?Image lio:depicts ?Person .
+      ?Person fibo-fnd-aap-a:hasName "Johnny Depp"^^xsd:string .
+      ?Person obo:BFO_0000051 ?face .
+      ?face obo:BFO_0000051 ?eye .
+      ?eye a obo:UBERON_0000970 .
+      ?eye pfd:hasColor pfd:Brown
+      optional{
+        filter (?classification = "Johnny Depp"^^xsd:string) # This line ensures we only have counts for correctly classified images
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+  {
+    select ?ResultSet (count(?classification) as ?eyeglassCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+
+      ?Result mlmo:hasFeature ?Image .
+      ?Image lio:depicts ?Person .
+      ?Person fibo-fnd-aap-a:hasName "Johnny Depp"^^xsd:string .
+      ?Person wt:isWearing ?wearable .
+      ?wearable a wt:Eyeglasses
+      optional{
+        filter (?classification = "Johnny Depp"^^xsd:string) # This line ensures we only have counts for correctly classified images
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+}
