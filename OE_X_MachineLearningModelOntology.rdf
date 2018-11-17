@@ -38,6 +38,7 @@
         <dct:creator>Matthew Johnson</dct:creator>
         <owl:versionInfo>Modified on 11/17/2018</owl:versionInfo>
         <owl:priorVersion>https://raw.githubusercontent.com/FRMA-Ontology/Ontology/9ad9704c913d0aee68056473efa1e3574a8808a8/MLMO.rdf</owl:priorVersion>
+        <rdfs:comment>Expanded Ontology IRI from /FRMA/MLMO to /FRMA/MachineLearningModelOntology. Removed equivalence Statements and just used Uberon. Added additional Uberon concepts: organs -> sense organ -> eyes. Nose and Face subdivision. Added owl:VersionIRI, owlVersionInfo, and owlPriorVersion metadata.</rdfs:comment>
     </owl:Ontology>
 
 

@@ -39,6 +39,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology - Person, Face, and Demographic</rdfs:label>
         <owl:versionInfo>Modified on 11/17/2018</owl:versionInfo>
         <owl:priorVersion>https://raw.githubusercontent.com/FRMA-Ontology/Ontology/9ad9704c913d0aee68056473efa1e3574a8808a8/PFD.rdf</owl:priorVersion>
+        <rdfs:comment>Added owl:VersionIRI, owlVersionInfo, and owlPriorVersion metadata.</rdfs:comment>
     </owl:Ontology>
 
     <!--
