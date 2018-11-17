@@ -71,14 +71,17 @@
         xmlns:obo="http://purl.obolibrary.org/obo/">
 
     <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/">
+        <owl:versionIRI rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/1.0.1"/>
         <owl:imports rdf:resource="&frma;"/>
-        <dct:creator xml:lang="en">Alexander Schwartzberg</dct:creator>
         <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology Examplar Data</rdfs:label>
         <skos:definition xml:lang="en">This ontology contains examplar data used to test the FRMA ontology</skos:definition>
         <dct:creator xml:lang="en">Andrew Gaudet</dct:creator>
         <dct:creator xml:lang="en">Matthew Johnson</dct:creator>
         <dct:creator xml:lang="en">John Angel</dct:creator>
         <dct:creator xml:lang="en">Jordan Faas-Bush</dct:creator>
+        <dct:creator xml:lang="en">Alexander Schwartzberg</dct:creator>
+        <owl:versionInfo>Modified on 11/17/2018</owl:versionInfo>
+        <owl:priorVersion>https://raw.githubusercontent.com/FRMA-Ontology/Ontology/9ad9704c913d0aee68056473efa1e3574a8808a8/Individuals.rdf</owl:priorVersion>
     </owl:Ontology>
 
 
