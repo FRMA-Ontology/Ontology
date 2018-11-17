@@ -1,0 +1,67 @@
+prefix mlmo: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/>
+prefix fibo-fnd-arr-arr: <http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/>
+prefix lio: <https://w3id.org/lio/v1#>
+prefix lcc-lr: <http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
+prefix fibo-fnd-aap-a: <http://www.omg.org/spec/EDMC-FIBO/FND/AgentsAndPeople/Agents/>
+prefix ho: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/>
+prefix obo: <http://purl.obolibrary.org/obo/>
+
+select ?ResultSet ((?sideburnMiss/?totalMiss)*100 as ?sideburn_missclass_rate) ((?mustacheMiss/?totalMiss)*100 as ?mustache_missclass_rate)
+where {
+
+  ## calculates Mustache Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?mustacheMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result lcc-lr:hasTag ?classification .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person obo:BFO_0000051 ?facialHair .
+      ?facialHair a ho:Mustache .
+
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      filter (?classification != ?Name)
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates sideburn Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?sideburnMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result lcc-lr:hasTag ?classification .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person obo:BFO_0000051 ?facialHair .
+      ?facialHair a ho:Sideburn .
+
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      filter (?classification != ?Name)
+    }
+    group by ?ResultSet
+  }
+
+  # Calulates the total number of incorrect Images
+  {
+    select ?ResultSet (count(distinct ?Result) as ?totalMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result lcc-lr:hasTag ?classification .
+      ?Result mlmo:hasFeature ?Image .
+      ?Image lio:depicts ?Person .
+      ?Person fibo-fnd-aap-a:hasName ?Name
+      filter (?classification != ?Name)
+
+    }
+    group by ?ResultSet
+  }
+}

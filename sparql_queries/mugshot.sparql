@@ -1,0 +1,29 @@
+# MugShot Query:
+# The query below returns the image IRI and the depicted persons name for
+# every image that is inferred by the ontology to be a mugshot photo.
+# Because this query relies on the inferencing in our ontology it can only run
+# in the Snap SPARQL Query, which when a reasoner is run generates the extra inferred
+# triple: image rdf:type MugShotPhoto. In the future we plan to run an inference
+# engine to generate these triples and include them in our triple store.
+
+PREFIX ho: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX lio: <https://w3id.org/lio/v1#>
+
+SELECT distinct ?image
+
+WHERE {
+  ?image lio:depicts ?person .
+  ?person obo:BFO_0000051 ?headhair .
+
+      ?headhair a ho:HeadHair .
+  ?headhair ho:hasHaircut ?haircut .
+
+  MINUS {
+    ?haircut a ho:RecedingHairline .
+  }
+
+  MINUS {
+    ?haircut a ho:Bald .
+  }
+}

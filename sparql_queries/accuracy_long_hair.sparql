@@ -1,0 +1,60 @@
+# Accuracy Query Example with Long Hair:
+prefix mlmo: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/>
+prefix fibo-fnd-arr-arr: <http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/>
+prefix lio: <https://w3id.org/lio/v1#>
+prefix lcc-lr: <http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
+prefix fibo-fnd-aap-a: <http://www.omg.org/spec/EDMC-FIBO/FND/AgentsAndPeople/Agents/>
+prefix obo: <http://purl.obolibrary.org/obo/>
+PREFIX ho: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/>
+
+select ?ResultSet ((?numCorrect/?total)*100 as ?accuracy)
+where {
+  {
+    select ?ResultSet (count(?classification) as ?numCorrect)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result lcc-lr:hasTag ?classification .
+      ?Result mlmo:hasFeature ?Image .
+
+      # Add restrictions here to get specific Accuracy
+      ?Image lio:depicts ?person .
+      ?person obo:BFO_0000051 ?headhair .
+      ?headhair a ho:HeadHair .
+      ?headhair ho:hasHaircut ?haircut .
+      MINUS {
+        ?haircut a ho:RecedingHairline .
+      }
+      MINUS {
+        ?haircut a ho:Bald .
+      }
+
+      ?Image lio:depicts ?Person .
+      ?Person fibo-fnd-aap-a:hasName ?Name
+      filter (?classification = ?Name)
+    }
+    group by ?ResultSet
+  }
+  {
+    select ?ResultSet (count(distinct ?Result) as ?total)
+    where{
+      ?Re sultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      # Add restrictions here to get specific Accuracy
+      ?Image lio:depicts ?person .
+      ?person obo:BFO_0000051 ?headhair .
+      ?headhair a ho:HeadHair .
+      ?headhair ho:hasHaircut ?haircut .
+      MINUS {
+        ?haircut a ho:RecedingHairline .
+      }
+      MINUS {
+        ?haircut a ho:Bald .
+      }
+
+    }
+    group by ?ResultSet
+  }
+}
