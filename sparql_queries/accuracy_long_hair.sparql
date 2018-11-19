@@ -38,7 +38,7 @@ where {
   {
     select ?ResultSet (count(distinct ?Result) as ?total)
     where{
-      ?Re sultSet a mlmo:ResultSet .
+      ?ResultSet a mlmo:ResultSet .
       ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
       ?Result mlmo:hasFeature ?Image .
 
