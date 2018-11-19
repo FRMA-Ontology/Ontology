@@ -6,24 +6,13 @@
 # triple: image rdf:type MugShotPhoto. In the future we plan to run an inference
 # engine to generate these triples and include them in our triple store.
 
-PREFIX ho: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
-PREFIX lio: <https://w3id.org/lio/v1#>
+prefix frma: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/>
+prefix lio: <https://w3id.org/lio/v1#>
+prefix fibo-fnd-aap-a: <http://www.omg.org/spec/EDMC-FIBO/FND/AgentsAndPeople/Agents/>
 
-SELECT distinct ?image
-
+SELECT ?mugshot ?name
 WHERE {
-  ?image lio:depicts ?person .
-  ?person obo:BFO_0000051 ?headhair .
-
-      ?headhair a ho:HeadHair .
-  ?headhair ho:hasHaircut ?haircut .
-
-  MINUS {
-    ?haircut a ho:RecedingHairline .
-  }
-
-  MINUS {
-    ?haircut a ho:Bald .
-  }
-}
+    ?mugshot a frma:MugShotPhoto .
+    ?mugshot lio:depicts ?person .
+    ?person  fibo-fnd-aap-a:hasName ?name .
+ }
