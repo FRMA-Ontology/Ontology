@@ -1,47 +1,62 @@
 <?xml version="1.0"?>
-
-<!DOCTYPE rdf:RDF [
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY dct "http://purl.org/dc/terms/" >
-    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
-	  <!ENTITY lcc-lr "http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/">
-	  <!ENTITY fibo-fnd-arr-arr "http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/">
-	  <!ENTITY fibo-fnd-arr-cls "http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/ClassificationSchemes/">
-	  <!ENTITY fibo-fnd-rel-rel "http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/">
-	  <!ENTITY mlmo "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/" >
-]>
-
-<rdf:RDF xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/"
-     xmlns:fibo-fnd-rel-rel="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:fibo-fnd-arr-arr="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:lcc-lr="http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
-     xmlns:mlmo="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/"
+<rdf:RDF xmlns="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/"
+     xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/"
      xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:fibo-fnd-arr-cls="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/ClassificationSchemes/">
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:mlmo="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:lcc-lr="http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+     xmlns:fibo-fnd-arr-arr="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/"
+     xmlns:fibo-fnd-arr-cls="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/ClassificationSchemes/"
+     xmlns:fibo-fnd-rel-rel="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/"
+     xmlns:AnnotationVocabulary="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+     xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
     <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/">
         <owl:versionIRI rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/1.0.1"/>
-        <owl:imports rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/ClassificationSchemes/"/>
         <owl:imports rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/"/>
-        <owl:imports rdf:resource="http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"/>
+        <owl:imports rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/ClassificationSchemes/"/>
         <owl:imports rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/"/>
+        <owl:imports rdf:resource="http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
-        <skos:definition xml:lang="en">Machine Learning Model Ontology allows users to describe the learning process, the structure of the learned model, and the evaluation of the model from a data-centric perspective.</skos:definition>
-        <rdfs:label xml:lang="en">Machine Learning Model Ontology</rdfs:label>
         <dct:creator>Matthew Johnson</dct:creator>
-        <owl:versionInfo>Modified on 11/17/2018</owl:versionInfo>
+        <rdfs:comment>Expanded Ontology IRI from /FRMA/MLMO to /FRMA/MachineLearningModelOntology. Removed equivalence Statements and just used Uberon. Added additional Uberon concepts: organs -&gt; sense organ -&gt; eyes. Nose and Face subdivision. Added owl:VersionIRI, owlVersionInfo, and owlPriorVersion metadata.</rdfs:comment>
+        <rdfs:label xml:lang="en">Machine Learning Model Ontology</rdfs:label>
         <owl:priorVersion>https://raw.githubusercontent.com/FRMA-Ontology/Ontology/9ad9704c913d0aee68056473efa1e3574a8808a8/MLMO.rdf</owl:priorVersion>
-        <rdfs:comment>Expanded Ontology IRI from /FRMA/MLMO to /FRMA/MachineLearningModelOntology. Removed equivalence Statements and just used Uberon. Added additional Uberon concepts: organs -> sense organ -> eyes. Nose and Face subdivision. Added owl:VersionIRI, owlVersionInfo, and owlPriorVersion metadata.</rdfs:comment>
+        <owl:versionInfo>Modified on 11/17/2018</owl:versionInfo>
+        <skos:definition xml:lang="en">Machine Learning Model Ontology allows users to describe the learning process, the structure of the learned model, and the evaluation of the model from a data-centric perspective.</skos:definition>
     </owl:Ontology>
 
 
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation">
+        <dct:description xml:lang="en">Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible.</dct:description>
+        <dct:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#bibliographicCitation-002"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-02-15</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:modified>
+        <rdfs:comment xml:lang="en">A bibliographic reference for the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Bibliographic Citation</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:domain rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+    </owl:AnnotationProperty>
 
     <!--
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -51,10 +66,11 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasFeature -->
 
-    <!-- &mlmo;hasFeature -->
-
-    <owl:ObjectProperty rdf:about="&mlmo;hasFeature">
+    <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasFeature">
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">has feature</rdfs:label>
         <skos:definition xml:lang="en">links an entity to the data characteristics</skos:definition>
     </owl:ObjectProperty>
@@ -72,64 +88,76 @@
 
 
 
-    <!-- &mlmo;hasActivationFunction -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasActivationFunction -->
 
-    <owl:DatatypeProperty rdf:about="&mlmo;hasActivationFunction">
-        <rdfs:domain rdf:resource="&mlmo;FullyConnectedLayer"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
+    <owl:DatatypeProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasActivationFunction">
+        <rdfs:domain rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/FullyConnectedLayer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Cornelisse, “An intuitive guide to Convolutional Neural Networks,” freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">has activation function</rdfs:label>
         <skos:definition xml:lang="en">links a fully connected layer to the activation function used by the neurons</skos:definition>
     </owl:DatatypeProperty>
 
 
 
-    <!-- &mlmo;hasDimension -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasDimension -->
 
-    <owl:DatatypeProperty rdf:about="&mlmo;hasDimension">
-        <rdfs:domain rdf:resource="&mlmo;Layer"/>
-        <rdfs:range rdf:resource="&xsd;integer"/>
+    <owl:DatatypeProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasDimension">
+        <rdfs:domain rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Layer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Cornelisse, “An intuitive guide to Convolutional Neural Networks,” freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">has dimension</rdfs:label>
         <skos:definition xml:lang="en">the number of functions with a layer</skos:definition>
     </owl:DatatypeProperty>
 
 
 
-    <!-- &mlmo;hasIndex -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasIndex -->
 
-    <owl:DatatypeProperty rdf:about="&mlmo;hasIndex">
-        <rdfs:domain rdf:resource="&mlmo;Layer"/>
-        <rdfs:range rdf:resource="&xsd;integer"/>
+    <owl:DatatypeProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasIndex">
+        <rdfs:domain rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Layer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Cornelisse, “An intuitive guide to Convolutional Neural Networks,” freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">has index</rdfs:label>
         <skos:definition xml:lang="en">the position of the layer in the model</skos:definition>
     </owl:DatatypeProperty>
 
 
 
-    <!-- &mlmo;hasMatrixSizeX -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasMatrixSizeX -->
 
-    <owl:DatatypeProperty rdf:about="&mlmo;hasMatrixSizeX">
-        <rdfs:range rdf:resource="&xsd;integer"/>
+    <owl:DatatypeProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasMatrixSizeX">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Cornelisse, “An intuitive guide to Convolutional Neural Networks,” freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">has matrix size x</rdfs:label>
         <skos:definition xml:lang="en">the number of columns in a matrix</skos:definition>
     </owl:DatatypeProperty>
 
 
 
-    <!-- &mlmo;hasMatrixSizeY -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasMatrixSizeY -->
 
-    <owl:DatatypeProperty rdf:about="&mlmo;hasMatrixSizeY">
-        <rdfs:range rdf:resource="&xsd;integer"/>
+    <owl:DatatypeProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasMatrixSizeY">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Cornelisse, “An intuitive guide to Convolutional Neural Networks,” freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">has matrix size y</rdfs:label>
         <skos:definition xml:lang="en">the number of rows in a matrix</skos:definition>
     </owl:DatatypeProperty>
 
 
 
-    <!-- &mlmo;hasPoolingFunction -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasPoolingFunction -->
 
-    <owl:DatatypeProperty rdf:about="&mlmo;hasPoolingFunction">
-        <rdfs:domain rdf:resource="&mlmo;PoolingLayer"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
+    <owl:DatatypeProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasPoolingFunction">
+        <rdfs:domain rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/PoolingLayer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Cornelisse, “An intuitive guide to Convolutional Neural Networks,” freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">has pooling function</rdfs:label>
         <skos:definition xml:lang="en">links a pooling layer to the pooling function used by the neurons</skos:definition>
     </owl:DatatypeProperty>
@@ -147,354 +175,393 @@
 
 
 
-    <!-- &fibo-fnd-arr-arr;CollectionConstituent -->
+    <!-- http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/CollectionConstituent -->
 
-    <owl:Class rdf:about="&fibo-fnd-arr-arr;CollectionConstituent"/>
+    <owl:Class rdf:about="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/CollectionConstituent"/>
 
 
 
-    <!-- &mlmo;Activity -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Activity -->
 
-    <owl:Class rdf:about="&mlmo;Activity">
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Activity">
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROV-O: The PROV Ontology. [Online]. Available: https://www.w3.org/TR/prov-o/#Activity. [Accessed: 02-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROV-O: The PROV Ontology. [Online]. Available: https://www.w3.org/TR/prov-o/#Activity. [Accessed: 02-Nov-2018].</dct:source>
         <rdfs:label xml:lang="en">activity</rdfs:label>
         <skos:definition xml:lang="en">something that occurs over a period of time and acts upon or with entities</skos:definition>
     </owl:Class>
 
 
 
-    <!-- &mlmo;ConvolutionalLayer -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/ConvolutionalLayer -->
 
-    <owl:Class rdf:about="&mlmo;ConvolutionalLayer">
-        <rdfs:subClassOf rdf:resource="&mlmo;Layer"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/ConvolutionalLayer">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Layer"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&mlmo;hasMatrixSizeX"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;integer"/>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasMatrixSizeX"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&mlmo;hasMatrixSizeY"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;integer"/>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasMatrixSizeY"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Cornelisse, “An intuitive guide to Convolutional Neural Networks,” freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">convolutional layer</rdfs:label>
         <skos:definition xml:lang="en">performs the convolution operation using a learned filter</skos:definition>
     </owl:Class>
 
 
 
-    <!-- &mlmo;ConvolutionalNeuralNetwork -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/ConvolutionalNeuralNetwork -->
 
-    <owl:Class rdf:about="&mlmo;ConvolutionalNeuralNetwork">
-        <rdfs:subClassOf rdf:resource="&mlmo;NeuralNetwork"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/ConvolutionalNeuralNetwork">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/NeuralNetwork"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&fibo-fnd-arr-arr;hasConstituent"/>
-                <owl:someValuesFrom rdf:resource="&mlmo;Layer"/>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Layer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CS231n Convolutional Neural Networks for Visual Recognition. [Online]. Available: http://cs231n.github.io/convolutional-networks/. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">convolutional neural network</rdfs:label>
         <skos:definition xml:lang="en">a neural network that has one or more layers of learned weighted filters</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FaceNet</skos:example>
     </owl:Class>
 
 
 
-    <!-- &mlmo;DataSample -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/DataSample -->
 
-    <owl:Class rdf:about="&mlmo;DataSample">
-        <rdfs:subClassOf rdf:resource="&fibo-fnd-arr-arr;CollectionConstituent"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/DataSample">
+        <rdfs:subClassOf rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/CollectionConstituent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&mlmo;hasFeature"/>
-                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lcc-lr;hasTag"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasTag"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10153068920222172, “About Train, Validation and Test Sets in Machine Learning,” Towards Data Science, 06-Dec-2017. [Online]. Available: https://towardsdatascience.com/train-validation-and-test-sets-72cb40cba9e7. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">data sample</rdfs:label>
         <skos:definition xml:lang="en">basic unit of data consumed by a machine elarning model containing data features and a groundtruth label</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An image with groundtruth label</skos:example>
     </owl:Class>
 
 
 
-    <!-- &mlmo;Dataset -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Dataset -->
 
-    <owl:Class rdf:about="&mlmo;Dataset">
-        <rdfs:subClassOf rdf:resource="&fibo-fnd-arr-arr;Collection"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Dataset">
+        <rdfs:subClassOf rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/Collection"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&fibo-fnd-arr-arr;hasConstituent"/>
-                <owl:someValuesFrom rdf:resource="&mlmo;DataSample"/>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/DataSample"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">data Set</rdfs:label>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10153068920222172, “About Train, Validation and Test Sets in Machine Learning,” Towards Data Science, 06-Dec-2017. [Online]. Available: https://towardsdatascience.com/train-validation-and-test-sets-72cb40cba9e7. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <rdfs:label xml:lang="en">data set</rdfs:label>
         <skos:definition xml:lang="en">collection of data samples used to train and test a machine learning model</skos:definition>
     </owl:Class>
 
 
 
-    <!-- &mlmo;FullyConnectedLayer -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/FullyConnectedLayer -->
 
-    <owl:Class rdf:about="&mlmo;FullyConnectedLayer">
-        <rdfs:subClassOf rdf:resource="&mlmo;Layer"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/FullyConnectedLayer">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Layer"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&mlmo;hasActivationFunction"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasActivationFunction"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Cornelisse, “An intuitive guide to Convolutional Neural Networks,” freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">fully connected layer</rdfs:label>
         <skos:definition xml:lang="en">summation across the products of the learned bias and the previous layers passed through an activation function</skos:definition>
     </owl:Class>
 
 
 
-    <!-- &mlmo;InceptionLayer -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/InceptionLayer -->
 
-    <owl:Class rdf:about="&mlmo;InceptionLayer">
-        <rdfs:subClassOf rdf:resource="&fibo-fnd-arr-arr;Collection"/>
-        <rdfs:subClassOf rdf:resource="&mlmo;Layer"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/InceptionLayer">
+        <rdfs:subClassOf rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/Collection"/>
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Layer"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&fibo-fnd-arr-arr;hasConstituent"/>
-                <owl:someValuesFrom rdf:resource="&mlmo;Layer"/>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Layer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">inception layer</rdfs:label>
         <skos:definition xml:lang="en">perfroms multiple convolutions and pooling operations in parallel</skos:definition>
     </owl:Class>
 
 
 
-    <!-- &mlmo;Layer -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Layer -->
 
-    <owl:Class rdf:about="&mlmo;Layer">
-        <rdfs:subClassOf rdf:resource="&fibo-fnd-arr-arr;CollectionConstituent"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Layer">
+        <rdfs:subClassOf rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/CollectionConstituent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&mlmo;hasDimension"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;integer"/>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasDimension"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&mlmo;hasIndex"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;integer"/>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasIndex"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neural Networks. [Online]. Available: https://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol4/cs11/report.html#What is a Neural Network. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">layer</rdfs:label>
         <skos:definition xml:lang="en">collection of functions at the same depth within a neural network</skos:definition>
     </owl:Class>
 
 
 
-    <!-- &mlmo;Model -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Model -->
 
-    <owl:Class rdf:about="&mlmo;Model">
-        <rdfs:subClassOf rdf:resource="&fibo-fnd-arr-cls;Classifier"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Model">
+        <rdfs:subClassOf rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/ClassificationSchemes/Classifier"/>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“Training ML Models,” Amazon. [Online]. Available: https://docs.aws.amazon.com/machine-learning/latest/dg/training-ml-models.html. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">model</rdfs:label>
         <skos:definition xml:lang="en">collection of learned patterns used to discriminate which of several groups something belongs to</skos:definition>
     </owl:Class>
 
 
 
-    <!-- &mlmo;NeuralNetwork -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/NeuralNetwork -->
 
-    <owl:Class rdf:about="&mlmo;NeuralNetwork">
-        <rdfs:subClassOf rdf:resource="&fibo-fnd-arr-arr;Collection"/>
-        <rdfs:subClassOf rdf:resource="&mlmo;Model"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/NeuralNetwork">
+        <rdfs:subClassOf rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/Collection"/>
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Model"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&fibo-fnd-arr-arr;hasConstituent"/>
-                <owl:someValuesFrom rdf:resource="&mlmo;FullyConnectedLayer"/>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/FullyConnectedLayer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neural Networks. [Online]. Available: https://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol4/cs11/report.html#What is a Neural Network. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">neural network</rdfs:label>
         <skos:definition xml:lang="en">machine learning model that is composed of one or more neural layers where each layer is fully connected to the previous layer</skos:definition>
     </owl:Class>
 
 
 
-    <!-- &mlmo;PoolingLayer -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/PoolingLayer -->
 
-    <owl:Class rdf:about="&mlmo;PoolingLayer">
-        <rdfs:subClassOf rdf:resource="&mlmo;Layer"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/PoolingLayer">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Layer"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&mlmo;hasMatrixSizeX"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;integer"/>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasMatrixSizeX"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&mlmo;hasMatrixSizeY"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;integer"/>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasMatrixSizeY"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&mlmo;hasPoolingFunction"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasPoolingFunction"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Cornelisse, “An intuitive guide to Convolutional Neural Networks,” freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">pooling layer</rdfs:label>
         <skos:definition xml:lang="en">perfroms the max function across the previous layer</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Max-Pooling Layer</skos:example>
     </owl:Class>
 
 
 
-    <!-- &mlmo;Result -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Result -->
 
-    <owl:Class rdf:about="&mlmo;Result">
-        <rdfs:subClassOf rdf:resource="&fibo-fnd-arr-arr;CollectionConstituent"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Result">
+        <rdfs:subClassOf rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/CollectionConstituent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&mlmo;hasFeature"/>
-                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lcc-lr;hasTag"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasTag"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“Evaluating ML Models,” Amazon. [Online]. Available: https://docs.aws.amazon.com/machine-learning/latest/dg/evaluating_models.html. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">result</rdfs:label>
         <skos:definition xml:lang="en">a prediction that links data features to a predicted result</skos:definition>
     </owl:Class>
 
 
 
-    <!-- &mlmo;ResultSet -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/ResultSet -->
 
-    <owl:Class rdf:about="&mlmo;ResultSet">
-        <rdfs:subClassOf rdf:resource="&fibo-fnd-arr-arr;Collection"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/ResultSet">
+        <rdfs:subClassOf rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/Collection"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&fibo-fnd-arr-arr;hasConstituent"/>
-                <owl:someValuesFrom rdf:resource="&mlmo;Result"/>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Result"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“Evaluating ML Models,” Amazon. [Online]. Available: https://docs.aws.amazon.com/machine-learning/latest/dg/evaluating_models.html. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">result set</rdfs:label>
         <skos:definition xml:lang="en">collection of predictions generated by a machine learning model during testing</skos:definition>
     </owl:Class>
 
 
 
-    <!-- &mlmo;TestSet -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/TestSet -->
 
-    <owl:Class rdf:about="&mlmo;TestSet">
-        <rdfs:subClassOf rdf:resource="&mlmo;Dataset"/>
-        <owl:disjointWith rdf:resource="&mlmo;TrainingSet"/>
-        <owl:disjointWith rdf:resource="&mlmo;ValidationSet"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/TestSet">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Dataset"/>
+        <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/TrainingSet"/>
+        <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/ValidationSet"/>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10153068920222172, “About Train, Validation and Test Sets in Machine Learning,” Towards Data Science, 06-Dec-2017. [Online]. Available: https://towardsdatascience.com/train-validation-and-test-sets-72cb40cba9e7. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">test set</rdfs:label>
         <skos:definition xml:lang="en">data samples used to provide an unbiased evaluation of a final model</skos:definition>
     </owl:Class>
 
 
 
-    <!-- &mlmo;Testing -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Testing -->
 
-    <owl:Class rdf:about="&mlmo;Testing">
-        <rdfs:subClassOf rdf:resource="&mlmo;Activity"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Testing">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Activity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&fibo-fnd-rel-rel;uses"/>
-                <owl:someValuesFrom rdf:resource="&mlmo;TestSet"/>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/uses"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/TestSet"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&fibo-fnd-rel-rel;provides"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="&mlmo;ResultSet"/>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/provides"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/ResultSet"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&fibo-fnd-rel-rel;uses"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="&mlmo;Model"/>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/uses"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Model"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="&mlmo;Training"/>
+        <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Training"/>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“Evaluating ML Models,” Amazon. [Online]. Available: https://docs.aws.amazon.com/machine-learning/latest/dg/evaluating_models.html. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">testing</rdfs:label>
         <skos:definition xml:lang="en">process that evaluates a machine learning model by calculating the predictive accuracy across a test set</skos:definition>
     </owl:Class>
 
 
 
-    <!-- &mlmo;Training -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Training -->
 
-    <owl:Class rdf:about="&mlmo;Training">
-        <rdfs:subClassOf rdf:resource="&mlmo;Activity"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Training">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Activity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&fibo-fnd-rel-rel;provides"/>
-                <owl:someValuesFrom rdf:resource="&mlmo;Model"/>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/provides"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Model"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&fibo-fnd-rel-rel;uses"/>
-                <owl:someValuesFrom rdf:resource="&mlmo;TrainingSet"/>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/uses"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/TrainingSet"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&fibo-fnd-rel-rel;uses"/>
-                <owl:someValuesFrom rdf:resource="&mlmo;ValidationSet"/>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/uses"/>
+                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/ValidationSet"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“Training ML Models,” Amazon. [Online]. Available: https://docs.aws.amazon.com/machine-learning/latest/dg/training-ml-models.html. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">training</rdfs:label>
         <skos:definition xml:lang="en">process that uses a machine learning algorithm to find patterns within a training set and captures them as machine learning model</skos:definition>
     </owl:Class>
 
 
 
-    <!-- &mlmo;TrainingSet -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/TrainingSet -->
 
-    <owl:Class rdf:about="&mlmo;TrainingSet">
-        <rdfs:subClassOf rdf:resource="&mlmo;Dataset"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/TrainingSet">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Dataset"/>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10153068920222172, “About Train, Validation and Test Sets in Machine Learning,” Towards Data Science, 06-Dec-2017. [Online]. Available: https://towardsdatascience.com/train-validation-and-test-sets-72cb40cba9e7. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">training Set</rdfs:label>
         <skos:definition xml:lang="en">data samples used to fit the model</skos:definition>
     </owl:Class>
 
 
 
-    <!-- &mlmo;ValidationSet -->
+    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/ValidationSet -->
 
-    <owl:Class rdf:about="&mlmo;ValidationSet">
-        <rdfs:subClassOf rdf:resource="&mlmo;Dataset"/>
+    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/ValidationSet">
+        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Dataset"/>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10153068920222172, “About Train, Validation and Test Sets in Machine Learning,” Towards Data Science, 06-Dec-2017. [Online]. Available: https://towardsdatascience.com/train-validation-and-test-sets-72cb40cba9e7. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">validation set</rdfs:label>
         <skos:definition xml:lang="en">data samples used to provide an unbiased evaluation of a model fit while tuning model hyperparameters</skos:definition>
     </owl:Class>
     <rdf:Description>
-        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
     </rdf:Description>
     <rdf:Description>
-        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
     </rdf:Description>
     <rdf:Description>
-        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
     </rdf:Description>
     <rdf:Description>
-        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
     </rdf:Description>
 
 
@@ -508,31 +575,31 @@
      -->
 
     <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&mlmo;ConvolutionalLayer"/>
-            <rdf:Description rdf:about="&mlmo;FullyConnectedLayer"/>
-            <rdf:Description rdf:about="&mlmo;PoolingLayer"/>
+            <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/ConvolutionalLayer"/>
+            <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/FullyConnectedLayer"/>
+            <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/PoolingLayer"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&mlmo;DataSample"/>
-            <rdf:Description rdf:about="&mlmo;Layer"/>
-            <rdf:Description rdf:about="&mlmo;Result"/>
+            <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/DataSample"/>
+            <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Layer"/>
+            <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Result"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&mlmo;Dataset"/>
-            <rdf:Description rdf:about="&mlmo;NeuralNetwork"/>
-            <rdf:Description rdf:about="&mlmo;ResultSet"/>
+            <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Dataset"/>
+            <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/NeuralNetwork"/>
+            <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/ResultSet"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
