@@ -190,9 +190,9 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     <owl:DatatypeProperty rdf:about="&pfd;hasStrongNoseMouthLines">
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
-        <rdfs:label xml:lang="en">has strong nose mouth lines</rdfs:label>
+        <rdfs:label xml:lang="en">has strong nasolabial lines</rdfs:label>
         <skos:definition xml:lang="en">the subject&apos;s nose mouth lines are highly visible</skos:definition>
-        <dct:bibliographicCitation xml:lang="en">“have | Definition of have in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/have. [Accessed: 20-Oct-2018].</dct:bibliographicCitation>
+        <dct:bibliographicCitation xml:lang="en">"Nasolabial,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/medical/nasolabial. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
     </owl:DatatypeProperty>
 
 
@@ -856,7 +856,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:label xml:lang="en">rosy cheeks</rdfs:label>
         <skos:definition xml:lang="en">the subject&apos;s cheeks appear rosy</skos:definition>
         <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
-        <dct:bibliographicCitation xml:lang="en">"Rosy,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/rosy. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:bibliographicCitation xml:lang="en">Fletcher, Jenna. “Rosy Cheeks: Causes and What to Do.” Medical News Today, MediLexicon International, www.medicalnewstoday.com/articles/322808.php.</dct:bibliographicCitation>
     </owl:Class>
 
 
