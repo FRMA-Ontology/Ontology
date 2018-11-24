@@ -15,16 +15,41 @@
         <owl:imports rdf:resource="http://www.imagesnippets.com/lio/lio.owl"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <dct:creator>Alexander Schwartzberg</dct:creator>
+        <dct:modified>11/22/2018</dct:modified>
         <rdfs:comment>Added owl:VersionIRI, owlVersionInfo, and owlPriorVersion metadata.</rdfs:comment>
         <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology - Image Sub-Ontology</rdfs:label>
         <owl:priorVersion>https://raw.githubusercontent.com/FRMA-Ontology/Ontology/9ad9704c913d0aee68056473efa1e3574a8808a8/IMG.rdf</owl:priorVersion>
         <owl:versionInfo>Modified on 11/17/2018</owl:versionInfo>
         <skos:definition xml:lang="en">Image Ontology enables the FRMA system to classify the properties of different image files.</skos:definition>
     </owl:Ontology>
-    
 
 
-    <!-- 
+    <!--  This was copied from dcterms to add definitions to terms without importing all of dcterms which causes protege errors -->
+    <!-- &dct;bibliographicCitation -->
+
+    <owl:AnnotationProperty rdf:about="&dct;bibliographicCitation">
+        <dct:description xml:lang="en">Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible.</dct:description>
+        <rdfs:comment xml:lang="en">A bibliographic reference for the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&dct;"/>
+        <rdfs:label xml:lang="en">Bibliographic Citation</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dct;identifier"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&dct;BibliographicResource"/>
+    </owl:AnnotationProperty>
+
+
+    <!-- &mlmo;hasFeature -->
+
+    <owl:ObjectProperty rdf:about="&mlmo;hasFeature">
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <rdfs:label xml:lang="en">has feature</rdfs:label>
+        <skos:definition xml:lang="en">links an entity to the data characteristics</skos:definition>
+    </owl:ObjectProperty>
+
+
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -32,16 +57,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -49,7 +74,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/fidelityDescribedBy -->
@@ -58,7 +83,7 @@
         <rdfs:label xml:lang="en">fidelity described by</rdfs:label>
         <skos:definition xml:lang="en">the fidelity of this image</skos:definition>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/isStoredAs -->
@@ -70,7 +95,7 @@
         <rdfs:label xml:lang="en">is stored as</rdfs:label>
         <skos:definition xml:lang="en">links a given image to a file in which it is stored</skos:definition>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/lightingDescribedBy -->
@@ -79,7 +104,7 @@
         <rdfs:label xml:lang="en">lighting described by</rdfs:label>
         <skos:definition xml:lang="en">the lighting characteristics of this image</skos:definition>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/stores -->
@@ -90,10 +115,10 @@
         <rdfs:label xml:lang="en">stores</rdfs:label>
         <skos:definition xml:lang="en">links a given image file to the image that it contains</skos:definition>
     </owl:ObjectProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -101,7 +126,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/hasFileExtension -->
@@ -113,7 +138,7 @@
         <skos:definition xml:lang="en">the extension of the image file</skos:definition>
         <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Example extensions include jpg, jpeg, gif, png, which have corresponding file format types and characteristics.</skos:example>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/hasFilePath -->
@@ -124,7 +149,7 @@
         <rdfs:label xml:lang="en">has file path</rdfs:label>
         <skos:definition xml:lang="en">an absolute file path for the image file as stored on a local or network file system</skos:definition>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/hasRGB -->
@@ -134,10 +159,10 @@
         <rdfs:label xml:lang="en">has RGB</rdfs:label>
         <skos:definition xml:lang="en">relates the red, green, and blue values of a color ot the Color class</skos:definition>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -145,7 +170,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/BalancedLightingVariation -->
@@ -157,7 +182,7 @@
         <rdfs:label>balanced lighting variation</rdfs:label>
         <skos:definition>both small light source in close proximity relative to the subject and large light source in distant proximity relative to the subject</skos:definition>
     </owl:Class>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/BlackAndWhiteImage -->
@@ -167,7 +192,7 @@
         <rdfs:label xml:lang="en">black and white image</rdfs:label>
         <skos:definition xml:lang="en">an image having, showing, or producing pictures that do not have colors except for black, white, and shades of gray</skos:definition>
     </owl:Class>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/BlurryImageFidelity -->
@@ -178,7 +203,7 @@
         <rdfs:label xml:lang="en">blurry image fidelity</rdfs:label>
         <skos:definition xml:lang="en">lower quality image showing signs of visible distortion or information loss</skos:definition>
     </owl:Class>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/CandidImage -->
@@ -188,7 +213,7 @@
         <rdfs:label>candid image</rdfs:label>
         <skos:definition>a photo in which the subject is acting naturally or spontaneously</skos:definition>
     </owl:Class>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/ColorImage -->
@@ -198,7 +223,7 @@
         <rdfs:label xml:lang="en">color image</rdfs:label>
         <skos:definition xml:lang="en">an image produces useing media capable of reproducing colors</skos:definition>
     </owl:Class>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/DepictedBackground -->
@@ -207,7 +232,7 @@
         <rdfs:label>depicted background</rdfs:label>
         <skos:definition xml:lang="en">the ground or parts, as of a scene, situated in the rear</skos:definition>
     </owl:Class>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/FlashLightingVariation -->
@@ -217,7 +242,7 @@
         <rdfs:label>flash lighting variation</rdfs:label>
         <skos:definition>whether or not the system classifies a photo as using camera flash to illuminate the subject</skos:definition>
     </owl:Class>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/HarshLightingVariation -->
@@ -228,7 +253,7 @@
         <rdfs:label>harsh lighting variation</rdfs:label>
         <skos:definition>small light source in close proximity relative to the subject</skos:definition>
     </owl:Class>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/ImageFidelity -->
@@ -237,7 +262,7 @@
         <rdfs:label xml:lang="en">image fidelity</rdfs:label>
         <skos:definition xml:lang="en">the measurable quality of an image</skos:definition>
     </owl:Class>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/ImageFile -->
@@ -252,7 +277,7 @@
         <rdfs:label xml:lang="en">image file</rdfs:label>
         <skos:definition xml:lang="en">a digital version of a photograph, stored in any of a number of standard formats that can be rasterized for display purposes</skos:definition>
     </owl:Class>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/Indoors -->
@@ -263,7 +288,7 @@
         <rdfs:label xml:lang="en">indoors</rdfs:label>
         <skos:definition xml:lang="en">whether or not the image was taken indoors</skos:definition>
     </owl:Class>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/LightingVariation -->
@@ -272,7 +297,7 @@
         <rdfs:label>lighting variation</rdfs:label>
         <skos:definition>images have differening levels and locations of brightness</skos:definition>
     </owl:Class>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/OptimalConditionImage -->
@@ -281,7 +306,7 @@
         <rdfs:label xml:lang="en">optimal condition image</rdfs:label>
         <skos:definition xml:lang="en">the best possible image for recognition tasks</skos:definition>
     </owl:Class>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/Outdoors -->
@@ -291,7 +316,7 @@
         <rdfs:label>outdoors</rdfs:label>
         <skos:definition xml:lang="en">whether or not the image was taken outdoors</skos:definition>
     </owl:Class>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/PosedImage -->
@@ -301,7 +326,7 @@
         <rdfs:label>posed image</rdfs:label>
         <skos:definition>assumes a posture or attitude usually for artistic purposes</skos:definition>
     </owl:Class>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/SharpImageFidelity -->
@@ -311,7 +336,7 @@
         <rdfs:label xml:lang="en">sharp image fidelity</rdfs:label>
         <skos:definition xml:lang="en">high quality image showing little to no signs of visible distortion or information loss</skos:definition>
     </owl:Class>
-    
+
 
 
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/SoftLightingVariation -->
@@ -321,7 +346,7 @@
         <rdfs:label>soft lighting variation</rdfs:label>
         <skos:definition>large light source in distant proximity relative to the subject</skos:definition>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/lio/v1#Image -->
