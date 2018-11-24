@@ -1,4 +1,17 @@
 <?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY dct "http://purl.org/dc/terms/" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY lio "https://w3id.org/lio/v1#" >
+    <!ENTITY lio-orig "http://purl.org/net/lio#" >
+      <!ENTITY img "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/" >
+]>
+
 <rdf:RDF xmlns="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/"
      xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/"
      xmlns:dct="http://purl.org/dc/terms/"
@@ -9,6 +22,9 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:img="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/"
+     xmlns:lio="https://w3id.org/lio/v1#"
+     xmlns:lio-orig="http://purl.org/net/lio#"
      xmlns:vann="http://purl.org/vocab/vann/">
     <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/">
         <owl:versionIRI rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/1.0.1"/>
@@ -36,17 +52,6 @@
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:domain rdf:resource="&dct;BibliographicResource"/>
     </owl:AnnotationProperty>
-
-
-    <!-- &mlmo;hasFeature -->
-
-    <owl:ObjectProperty rdf:about="&mlmo;hasFeature">
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
-        <rdfs:label xml:lang="en">has feature</rdfs:label>
-        <skos:definition xml:lang="en">links an entity to the data characteristics</skos:definition>
-    </owl:ObjectProperty>
-
 
 
     <!--
