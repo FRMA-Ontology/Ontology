@@ -9,7 +9,7 @@
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY lio "https://w3id.org/lio/v1#" >
     <!ENTITY lio-orig "http://purl.org/net/lio#" >
-      <!ENTITY img "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/" >
+    <!ENTITY img "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/" >
 ]>
 
 <rdf:RDF xmlns="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/"
@@ -22,9 +22,6 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:img="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/"
-     xmlns:lio="https://w3id.org/lio/v1#"
-     xmlns:lio-orig="http://purl.org/net/lio#"
      xmlns:vann="http://purl.org/vocab/vann/">
     <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/">
         <owl:versionIRI rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/1.0.1"/>
@@ -40,19 +37,6 @@
     </owl:Ontology>
 
 
-    <!--  This was copied from dcterms to add definitions to terms without importing all of dcterms which causes protege errors -->
-    <!-- &dct;bibliographicCitation -->
-
-    <owl:AnnotationProperty rdf:about="&dct;bibliographicCitation">
-        <dct:description xml:lang="en">Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible.</dct:description>
-        <rdfs:comment xml:lang="en">A bibliographic reference for the resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="&dct;"/>
-        <rdfs:label xml:lang="en">Bibliographic Citation</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="&dct;identifier"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-        <rdfs:domain rdf:resource="&dct;BibliographicResource"/>
-    </owl:AnnotationProperty>
-
 
     <!--
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -62,6 +46,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/bibliographicCitation -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/bibliographicCitation"/>
+
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
 
 
 
@@ -85,6 +81,8 @@
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/fidelityDescribedBy -->
 
     <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/fidelityDescribedBy">
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, “The relationship between image fidelity and image quality,” Proceedings of 3rd IEEE International Conference on Image Processing.</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, “The relationship between image fidelity and image quality,” Proceedings of 3rd IEEE International Conference on Image Processing.</dct:source>
         <rdfs:label xml:lang="en">fidelity described by</rdfs:label>
         <skos:definition xml:lang="en">the fidelity of this image</skos:definition>
     </owl:ObjectProperty>
@@ -97,6 +95,8 @@
         <owl:inverseOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/stores"/>
         <rdfs:domain rdf:resource="https://w3id.org/lio/v1#Image"/>
         <rdfs:range rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/ImageFile"/>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Raw image format,” Wikipedia, 18-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Raw_image_format. [Accessed: 24-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">“Homepage,” ImageSnippets. [Online]. Available: http://www.imagesnippets.com/. [Accessed: 24-Nov-2018].</dct:source>
         <rdfs:label xml:lang="en">is stored as</rdfs:label>
         <skos:definition xml:lang="en">links a given image to a file in which it is stored</skos:definition>
     </owl:ObjectProperty>
@@ -106,6 +106,8 @@
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/lightingDescribedBy -->
 
     <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/lightingDescribedBy">
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
         <rdfs:label xml:lang="en">lighting described by</rdfs:label>
         <skos:definition xml:lang="en">the lighting characteristics of this image</skos:definition>
     </owl:ObjectProperty>
@@ -117,6 +119,8 @@
     <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/stores">
         <rdfs:domain rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/ImageFile"/>
         <rdfs:range rdf:resource="https://w3id.org/lio/v1#Image"/>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Raw image format,” Wikipedia, 18-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Raw_image_format. [Accessed: 24-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">“Homepage,” ImageSnippets. [Online]. Available: http://www.imagesnippets.com/. [Accessed: 24-Nov-2018].</dct:source>
         <rdfs:label xml:lang="en">stores</rdfs:label>
         <skos:definition xml:lang="en">links a given image file to the image that it contains</skos:definition>
     </owl:ObjectProperty>
@@ -139,6 +143,8 @@
     <owl:DatatypeProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/hasFileExtension">
         <rdfs:domain rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/ImageFile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Filename extension,” Wikipedia, 19-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Filename_extension. [Accessed: 24-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">“Homepage,” ImageSnippets. [Online]. Available: http://www.imagesnippets.com/. [Accessed: 24-Nov-2018].</dct:source>
         <rdfs:label xml:lang="en">has file extension</rdfs:label>
         <skos:definition xml:lang="en">the extension of the image file</skos:definition>
         <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Example extensions include jpg, jpeg, gif, png, which have corresponding file format types and characteristics.</skos:example>
@@ -151,8 +157,10 @@
     <owl:DatatypeProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/hasFilePath">
         <rdfs:domain rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/ImageFile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Path (computing),” Wikipedia, 17-Sep-2018. [Online]. Available: https://en.wikipedia.org/wiki/Path_(computing). [Accessed: 24-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">“Homepage,” ImageSnippets. [Online]. Available: http://www.imagesnippets.com/. [Accessed: 24-Nov-2018].</dct:source>
         <rdfs:label xml:lang="en">has file path</rdfs:label>
-        <skos:definition xml:lang="en">an absolute file path for the image file as stored on a local or network file system</skos:definition>
+        <skos:definition xml:lang="en">the unique location of the image in a file system</skos:definition>
     </owl:DatatypeProperty>
 
 
@@ -161,8 +169,10 @@
 
     <owl:DatatypeProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/hasRGB">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Rgb,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/RGB. [Accessed: 09-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
         <rdfs:label xml:lang="en">has RGB</rdfs:label>
-        <skos:definition xml:lang="en">relates the red, green, and blue values of a color ot the Color class</skos:definition>
+        <skos:definition xml:lang="en">if an image can be expressed using three-color model using red, green, and blue light</skos:definition>
     </owl:DatatypeProperty>
 
 
@@ -184,8 +194,10 @@
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/LightingVariation"/>
         <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/HarshLightingVariation"/>
         <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/SoftLightingVariation"/>
-        <rdfs:label>balanced lighting variation</rdfs:label>
-        <skos:definition>both small light source in close proximity relative to the subject and large light source in distant proximity relative to the subject</skos:definition>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Hard and soft light,” Wikipedia, 04-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Hard_and_soft_light. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
+        <rdfs:label xml:lang="en">balanced lighting variation</rdfs:label>
+        <skos:definition xml:lang="en">both small light source in close proximity relative to the subject and large light source in distant proximity relative to the subject</skos:definition>
     </owl:Class>
 
 
@@ -194,6 +206,8 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/BlackAndWhiteImage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lio/v1#Image"/>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Black-and-white,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/black-and-white. [Accessed: 24-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
         <rdfs:label xml:lang="en">black and white image</rdfs:label>
         <skos:definition xml:lang="en">an image having, showing, or producing pictures that do not have colors except for black, white, and shades of gray</skos:definition>
     </owl:Class>
@@ -205,6 +219,8 @@
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/BlurryImageFidelity">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/ImageFidelity"/>
         <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/SharpImageFidelity"/>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, “The relationship between image fidelity and image quality,” Proceedings of 3rd IEEE International Conference on Image Processing.</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, “The relationship between image fidelity and image quality,” Proceedings of 3rd IEEE International Conference on Image Processing.</dct:source>
         <rdfs:label xml:lang="en">blurry image fidelity</rdfs:label>
         <skos:definition xml:lang="en">lower quality image showing signs of visible distortion or information loss</skos:definition>
     </owl:Class>
@@ -215,8 +231,10 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/CandidImage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lio/v1#Image"/>
-        <rdfs:label>candid image</rdfs:label>
-        <skos:definition>a photo in which the subject is acting naturally or spontaneously</skos:definition>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Candid,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/candid. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
+        <rdfs:label xml:lang="en">candid image</rdfs:label>
+        <skos:definition xml:lang="en">a photo in which the subject is acting naturally or spontaneously </skos:definition>
     </owl:Class>
 
 
@@ -225,6 +243,8 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/ColorImage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lio/v1#Image"/>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Color photography,” Wikipedia, 19-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Color_photography. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
         <rdfs:label xml:lang="en">color image</rdfs:label>
         <skos:definition xml:lang="en">an image produces useing media capable of reproducing colors</skos:definition>
     </owl:Class>
@@ -234,7 +254,9 @@
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/DepictedBackground -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/DepictedBackground">
-        <rdfs:label>depicted background</rdfs:label>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Background,” Dictionary.com. [Online]. Available: https://www.dictionary.com/browse/background. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
+        <rdfs:label xml:lang="en">depicted background</rdfs:label>
         <skos:definition xml:lang="en">the ground or parts, as of a scene, situated in the rear</skos:definition>
     </owl:Class>
 
@@ -244,8 +266,10 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/FlashLightingVariation">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/HarshLightingVariation"/>
-        <rdfs:label>flash lighting variation</rdfs:label>
-        <skos:definition>whether or not the system classifies a photo as using camera flash to illuminate the subject</skos:definition>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <rdfs:label xml:lang="en">flash lighting variation</rdfs:label>
+        <skos:definition xml:lang="en">whether or not the system classifies a photo as using camera flash to illuminate the subject</skos:definition>
     </owl:Class>
 
 
@@ -255,8 +279,10 @@
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/HarshLightingVariation">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/LightingVariation"/>
         <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/SoftLightingVariation"/>
-        <rdfs:label>harsh lighting variation</rdfs:label>
-        <skos:definition>small light source in close proximity relative to the subject</skos:definition>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Hard and soft light,” Wikipedia, 04-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Hard_and_soft_light. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
+        <rdfs:label xml:lang="en">harsh lighting variation</rdfs:label>
+        <skos:definition xml:lang="en">small light source in close proximity relative to the subject</skos:definition>
     </owl:Class>
 
 
@@ -264,6 +290,8 @@
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/ImageFidelity -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/ImageFidelity">
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, “The relationship between image fidelity and image quality,” Proceedings of 3rd IEEE International Conference on Image Processing.</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, “The relationship between image fidelity and image quality,” Proceedings of 3rd IEEE International Conference on Image Processing.</dct:source>
         <rdfs:label xml:lang="en">image fidelity</rdfs:label>
         <skos:definition xml:lang="en">the measurable quality of an image</skos:definition>
     </owl:Class>
@@ -279,6 +307,8 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/lio/v1#Image"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Raw image format,” Wikipedia, 18-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Raw_image_format. [Accessed: 24-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">“Homepage,” ImageSnippets. [Online]. Available: http://www.imagesnippets.com/. [Accessed: 24-Nov-2018].</dct:source>
         <rdfs:label xml:lang="en">image file</rdfs:label>
         <skos:definition xml:lang="en">a digital version of a photograph, stored in any of a number of standard formats that can be rasterized for display purposes</skos:definition>
     </owl:Class>
@@ -290,6 +320,8 @@
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/Indoors">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/DepictedBackground"/>
         <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/Outdoors"/>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Indoors,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/indoors. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
         <rdfs:label xml:lang="en">indoors</rdfs:label>
         <skos:definition xml:lang="en">whether or not the image was taken indoors</skos:definition>
     </owl:Class>
@@ -299,8 +331,11 @@
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/LightingVariation -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/LightingVariation">
-        <rdfs:label>lighting variation</rdfs:label>
-        <skos:definition>images have differening levels and locations of brightness</skos:definition>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">T. Chen, W. Yin, X. S. Zhou, D. Comaniciu, and T. S. Huang, “Total variation models for variable lighting face recognition,” IEEE transactions on pattern analysis and machine intelligence, vol. 28, no. 9, pp. 1519–1524, 2006.
+</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
+        <rdfs:label xml:lang="en">lighting variation</rdfs:label>
+        <skos:definition xml:lang="en">images have differening levels and locations of brightness</skos:definition>
     </owl:Class>
 
 
@@ -308,6 +343,8 @@
     <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/OptimalConditionImage -->
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/OptimalConditionImage">
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, “The relationship between image fidelity and image quality,” Proceedings of 3rd IEEE International Conference on Image Processing.</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, “The relationship between image fidelity and image quality,” Proceedings of 3rd IEEE International Conference on Image Processing.</dct:source>
         <rdfs:label xml:lang="en">optimal condition image</rdfs:label>
         <skos:definition xml:lang="en">the best possible image for recognition tasks</skos:definition>
     </owl:Class>
@@ -318,7 +355,9 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/Outdoors">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/DepictedBackground"/>
-        <rdfs:label>outdoors</rdfs:label>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Outdoors,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/outdoors. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
+        <rdfs:label xml:lang="en">outdoors</rdfs:label>
         <skos:definition xml:lang="en">whether or not the image was taken outdoors</skos:definition>
     </owl:Class>
 
@@ -328,8 +367,10 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/PosedImage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lio/v1#Image"/>
-        <rdfs:label>posed image</rdfs:label>
-        <skos:definition>assumes a posture or attitude usually for artistic purposes</skos:definition>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Pose,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/pose. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
+        <rdfs:label xml:lang="en">posed image</rdfs:label>
+        <skos:definition xml:lang="en">assumes a posture or attitude usually for artistic purposes</skos:definition>
     </owl:Class>
 
 
@@ -338,6 +379,8 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/SharpImageFidelity">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/ImageFidelity"/>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, “The relationship between image fidelity and image quality,” Proceedings of 3rd IEEE International Conference on Image Processing.</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, “The relationship between image fidelity and image quality,” Proceedings of 3rd IEEE International Conference on Image Processing.</dct:source>
         <rdfs:label xml:lang="en">sharp image fidelity</rdfs:label>
         <skos:definition xml:lang="en">high quality image showing little to no signs of visible distortion or information loss</skos:definition>
     </owl:Class>
@@ -348,8 +391,10 @@
 
     <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/SoftLightingVariation">
         <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/LightingVariation"/>
-        <rdfs:label>soft lighting variation</rdfs:label>
-        <skos:definition>large light source in distant proximity relative to the subject</skos:definition>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Hard and soft light,” Wikipedia, 04-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Hard_and_soft_light. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
+        <rdfs:label xml:lang="en">soft lighting variation</rdfs:label>
+        <skos:definition xml:lang="en">large light source in distant proximity relative to the subject</skos:definition>
     </owl:Class>
 
 
