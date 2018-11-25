@@ -238,7 +238,6 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     <!-- &pfd;teethVisible -->
 
     <owl:DatatypeProperty rdf:about="&pfd;teethVisible">
-        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
         <dct:bibliographicCitation xml:lang="en">&quot;Visible,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/visible. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
         <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
