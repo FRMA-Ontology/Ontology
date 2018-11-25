@@ -18,37 +18,37 @@
        <!ENTITY lio "http://purl.org/net/lio#" >
        <!ENTITY fibo-fnd-utl-av "http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/">
        <!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/">
-       <!ENTITY frma-ind "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/">
+       <!ENTITY frma-ind "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/">
        <!ENTITY fibo-fnd-arr-arr "http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/">
        <!ENTITY fibo-fnd-rel-rel "http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/">
        <!ENTITY fibo-fnd-aap-a "http://www.omg.org/spec/EDMC-FIBO/FND/AgentsAndPeople/Agents/">
        <!ENTITY lcc-lr "http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/">
 
-       <!ENTITY image-00 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/Image/BillyCrystal/5/">
-       <!ENTITY image-01 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/Image/JohnnyDepp/2/">
-       <!ENTITY image-02 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/Image/BillPaxton/3/">
-       <!ENTITY image-03 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/Image/ColinFarrell/3/">
-       <!ENTITY image-04 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/Image/JohnnyDepp/1/">
-       <!ENTITY image-05 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/Image/BillOReilly/1/">
-       <!ENTITY image-06 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/Image/AlGore/8/">
-       <!ENTITY image-07 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/Image/AaronEckhart/1/">
-       <!ENTITY image-08 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/Image/BenjaminFranklin/1/">
-       <!ENTITY image-09 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/Image/BillClinton/19/">
-       <!ENTITY image-10 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/Image/BillGates/3/">
-       <!ENTITY image-11 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/Image/DerekJeter/4/">
-       <!ENTITY image-12 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/Image/HarryBelafonte/2/">
-       <!ENTITY image-13 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/Image/AdamSandler/1/">
-       <!ENTITY image-14 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/Image/AlanisMorissette/1/">
-       <!ENTITY image-15 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/Image/AlecBaldwin/1/">
-       <!ENTITY image-16 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/Image/AlexisBledel/1/">
-       <!ENTITY image-17 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/Image/AngelinaJolie/1/">
-       <!ENTITY image-18 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/Image/AntonioBanderas/2/">
-       <!ENTITY image-19 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/Image/ArnoldSchwarzenegger/1/">
+       <!ENTITY image-00 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/Image/BillyCrystal/5/">
+       <!ENTITY image-01 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/Image/JohnnyDepp/2/">
+       <!ENTITY image-02 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/Image/BillPaxton/3/">
+       <!ENTITY image-03 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/Image/ColinFarrell/3/">
+       <!ENTITY image-04 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/Image/JohnnyDepp/1/">
+       <!ENTITY image-05 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/Image/BillOReilly/1/">
+       <!ENTITY image-06 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/Image/AlGore/8/">
+       <!ENTITY image-07 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/Image/AaronEckhart/1/">
+       <!ENTITY image-08 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/Image/BenjaminFranklin/1/">
+       <!ENTITY image-09 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/Image/BillClinton/19/">
+       <!ENTITY image-10 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/Image/BillGates/3/">
+       <!ENTITY image-11 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/Image/DerekJeter/4/">
+       <!ENTITY image-12 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/Image/HarryBelafonte/2/">
+       <!ENTITY image-13 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/Image/AdamSandler/1/">
+       <!ENTITY image-14 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/Image/AlanisMorissette/1/">
+       <!ENTITY image-15 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/Image/AlecBaldwin/1/">
+       <!ENTITY image-16 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/Image/AlexisBledel/1/">
+       <!ENTITY image-17 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/Image/AngelinaJolie/1/">
+       <!ENTITY image-18 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/Image/AntonioBanderas/2/">
+       <!ENTITY image-19 "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/Image/ArnoldSchwarzenegger/1/">
    ]>
 
-   <rdf:RDF xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/"
+   <rdf:RDF xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/"
         xmlns:frma="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/"
-        xmlns:frma-ind="https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/"
+        xmlns:frma-ind="https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/"
         xmlns:img="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/"
         xmlns:owl="http://www.w3.org/2002/07/owl#"
         xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
@@ -70,9 +70,9 @@
         xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
         xmlns:obo="http://purl.obolibrary.org/obo/">
 
-    <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/">
-        <owl:versionIRI rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_10_FRMA_Individuals/1.0.1"/>
-        <owl:imports rdf:resource="&frma;"/>
+    <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/">
+        <owl:versionIRI rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_11_FRMA_Individuals/1.0.2"/>
+        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/"/>
         <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology Examplar Data</rdfs:label>
         <skos:definition xml:lang="en">This ontology contains examplar data used to test the FRMA ontology</skos:definition>
         <dct:creator xml:lang="en">Andrew Gaudet</dct:creator>
@@ -80,9 +80,9 @@
         <dct:creator xml:lang="en">John Angel</dct:creator>
         <dct:creator xml:lang="en">Jordan Faas-Bush</dct:creator>
         <dct:creator xml:lang="en">Alexander Schwartzberg</dct:creator>
-        <owl:versionInfo>Modified on 11/17/2018</owl:versionInfo>
-        <owl:priorVersion>https://raw.githubusercontent.com/FRMA-Ontology/Ontology/9ad9704c913d0aee68056473efa1e3574a8808a8/Individuals.rdf</owl:priorVersion>
-        <rdfs:comment>Modified IRI scheme for data so that iris can have a single prefix: fma-ind:Image/PersonName/2/Person/Face/Eye to image1:Eye. Added owl:VersionIRI, owlVersionInfo, and owlPriorVersion metadata.</rdfs:comment>
+        <dct:modified>11/24/2018</dct:modified>
+        <owl:priorVersion>http://tw.rpi.edu/media/latest/OE_10_Individuals.rdf</owl:priorVersion>
+        <skos:changeNote rdf:datatype="&xsd;string">Updated ontology headers.</skos:changeNote>
     </owl:Ontology>
 
 
