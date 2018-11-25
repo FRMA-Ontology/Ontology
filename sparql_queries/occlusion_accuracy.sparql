@@ -41,7 +41,6 @@ where{
   }
   group by ?OcclusionSourceType ?ResultSet
   }
-  minus{?occlusionSource a owl:NamedIndividual.}
+  filter(?OcclusionSourceType != owl:NamedIndividual)
  }
 order by ?OcclusionSourceType
-
