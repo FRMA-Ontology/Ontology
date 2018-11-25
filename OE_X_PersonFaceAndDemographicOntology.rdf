@@ -235,14 +235,15 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
 
 
-    <!-- &pfd;teethVisable -->
+    <!-- &pfd;teethVisible -->
 
-    <owl:DatatypeProperty rdf:about="&pfd;teethVisable">
+    <owl:DatatypeProperty rdf:about="&pfd;teethVisible">
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
         <dct:bibliographicCitation xml:lang="en">&quot;Visible,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/visible. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
         <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
-        <rdfs:label xml:lang="en">teeth visable</rdfs:label>
-        <skos:definition xml:lang="en">relates the visablity of teeth to features of the mouth</skos:definition>
+        <rdfs:label xml:lang="en">teeth visible</rdfs:label>
+        <skos:definition xml:lang="en">relates the visiblity of teeth to features of the mouth</skos:definition>
     </owl:DatatypeProperty>
 
 
@@ -814,7 +815,7 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
         <rdfs:subClassOf rdf:resource="&pfd;VisualDescriptor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&pfd;teethVisable"/>
+                <owl:onProperty rdf:resource="&pfd;teethVisible"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;boolean"/>
             </owl:Restriction>
