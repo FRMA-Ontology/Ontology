@@ -46,7 +46,7 @@
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/"/>
         <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology</rdfs:label>
-        <skos:definition xml:lang="en">Machine learning allows us to learn a model for a given task such as facial recognition with a high degree of accuracy. However, after these models are generated they are often treated as black boxes and the limitations of a model are often unknown to the end user. The system developed for this use case will provide an intuitive interface to explore the limits of a facial recognition model by semantically integrating “smart” images(semantically describe who the image depicts and what Kumar [2] features the image exhibits) with classification results to discover common causes for misclassifications.</skos:definition>
+        <skos:definition xml:lang="en">Machine learning allows us to learn a model for a given task such as facial recognition with a high degree of accuracy. However, after these models are generated they are often treated as black boxes and the limitations of a model are often unknown to the end user. The system developed for this use case will provide an intuitive interface to explore the limits of a facial recognition model by semantically integrating "smart" images(semantically describe who the image depicts and what Kumar [2] features the image exhibits) with classification results to discover common causes for misclassifications.</skos:definition>
         <dct:creator xml:lang="en">Andrew Gaudet</dct:creator>
         <dct:creator xml:lang="en">Matthew Johnson</dct:creator>
         <dct:creator xml:lang="en">John Angel</dct:creator>
@@ -75,8 +75,8 @@
     <owl:ObjectProperty rdf:about="&frma;hasOcclusion">
         <rdfs:label>has occlusion</rdfs:label>
         <skos:definition xml:lang="en">connects an area of a subject that is not visable to the subject</skos:definition>
-        <dct:bibliographicCitation xml:lang="en">“Facial Region,” The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
     </owl:ObjectProperty>
 
 
@@ -86,8 +86,8 @@
     <owl:ObjectProperty rdf:about="&frma;isOccludingBodyRegion">
         <rdfs:label xml:lang="en">is occluding the region of</rdfs:label>
         <skos:definition xml:lang="en">to be a cover, block, or hamper to the visual representation of a body region in an image</skos:definition>
-        <dct:bibliographicCitation xml:lang="en">“Facial Region,” The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
     </owl:ObjectProperty>
 
 
@@ -97,8 +97,8 @@
     <owl:ObjectProperty rdf:about="&frma;isOcclusionSourceOf">
         <rdfs:label xml:lang="en">is the occlusion source of</rdfs:label>
         <skos:definition xml:lang="en">is the source and/or causes of a specific occlusion on an image of a face</skos:definition>
-        <dct:bibliographicCitation xml:lang="en">“Facial Region,” The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
     </owl:ObjectProperty>
 
 
@@ -151,7 +151,7 @@
          <rdfs:label>mug shot photo</rdfs:label>
          <skos:definition>an image that is posed, has good lighting, is indoors, does not have face occlusions where the subject has his eyes open</skos:definition>
          <dct:bibliographicCitation xml:lang="en">FRMA</dct:bibliographicCitation>
-         <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+         <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
      </owl:Class>
 
 
@@ -161,8 +161,8 @@
         <rdfs:subClassOf rdf:resource="&frma;UpperFaceOcclusion"/>
         <rdfs:label xml:lang="en">auricle occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the ears</skos:definition>
-        <dct:bibliographicCitation xml:lang="en">“Facial Region,” The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
     </owl:Class>
 
 
@@ -179,8 +179,8 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">buccal occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the cheeks</skos:definition>
-        <dct:bibliographicCitation xml:lang="en">“Facial Region,” The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
     </owl:Class>
 
 
@@ -192,8 +192,8 @@
         <owl:disjointWith rdf:resource="&frma;FaceOcclusion"/>
         <rdfs:label xml:lang="en">cervical occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the neck</skos:definition>
-        <dct:bibliographicCitation xml:lang="en">“Facial Region,” The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
     </owl:Class>
 
 
@@ -204,8 +204,8 @@
         <rdfs:subClassOf rdf:resource="&frma;UpperFaceOcclusion"/>
         <rdfs:label xml:lang="en">cranial occlusion</rdfs:label>
         <skos:definition xml:lang="en">occusion of the top of the head, above the ears</skos:definition>
-        <dct:bibliographicCitation xml:lang="en">“Facial Region,” The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
     </owl:Class>
 
 
@@ -222,8 +222,8 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">face occlusion</rdfs:label>
         <skos:definition xml:lang="en">something that blocks the view of a persons face within an image</skos:definition>
-        <dct:bibliographicCitation xml:lang="en">“Facial Region,” The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
     </owl:Class>
 
 
@@ -234,8 +234,8 @@
         <rdfs:subClassOf rdf:resource="&frma;UpperFaceOcclusion"/>
         <rdfs:label xml:lang="en">frontal occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the forehead</skos:definition>
-        <dct:bibliographicCitation xml:lang="en">“Facial Region,” The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
     </owl:Class>
 
 
@@ -246,8 +246,8 @@
         <rdfs:subClassOf rdf:resource="&frma;FaceOcclusion"/>
         <rdfs:label xml:lang="en">lower face occlusion</rdfs:label>
         <skos:definition xml:lang="en">something that blocks a portion of the view of a persons face from the bottom of the nose to the bottom of the head within within an image</skos:definition>
-        <dct:bibliographicCitation xml:lang="en">“Facial Region,” The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
     </owl:Class>
 
 
@@ -264,8 +264,8 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">mental occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the chin</skos:definition>
-        <dct:bibliographicCitation xml:lang="en">“Facial Region,” The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
     </owl:Class>
 
 
@@ -282,8 +282,8 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">nasal occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the nose</skos:definition>
-        <dct:bibliographicCitation xml:lang="en">“Facial Region,” The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
     </owl:Class>
 
 
@@ -293,8 +293,8 @@
     <owl:Class rdf:about="&frma;Occlusion">
         <rdfs:label xml:lang="en">occlusion</rdfs:label>
         <skos:definition xml:lang="en">something that blocks the view of a subject within an image</skos:definition>
-        <dct:bibliographicCitation xml:lang="en">“Facial Region,” The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
     </owl:Class>
 
 
@@ -311,8 +311,8 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">ocular occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the eyes</skos:definition>
-        <dct:bibliographicCitation xml:lang="en">“Facial Region,” The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
     </owl:Class>
 
 
@@ -329,8 +329,8 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">oral occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the lips and mouth</skos:definition>
-        <dct:bibliographicCitation xml:lang="en">“Facial Region,” The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
     </owl:Class>
 
 
@@ -341,8 +341,8 @@
         <rdfs:subClassOf rdf:resource="&frma;LowerFaceOcclusion"/>
         <rdfs:label xml:lang="en">parotid occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the angle of the jaw</skos:definition>
-        <dct:bibliographicCitation xml:lang="en">“Facial Region,” The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
     </owl:Class>
 
 
@@ -353,8 +353,8 @@
         <rdfs:subClassOf rdf:resource="&frma;FaceOcclusion"/>
         <rdfs:label xml:lang="en">upper face occlusion</rdfs:label>
         <skos:definition xml:lang="en">something that blocks a portion of the view of a persons face from the bottom of the nose to the top of the head within within an image</skos:definition>
-        <dct:bibliographicCitation xml:lang="en">“Facial Region,” The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
     </owl:Class>
 
 
@@ -365,8 +365,8 @@
         <rdfs:subClassOf rdf:resource="&frma;LowerFaceOcclusion"/>
         <rdfs:label xml:lang="en">zygomatic occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the cheek bones</skos:definition>
-        <dct:bibliographicCitation xml:lang="en">“Facial Region,” The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
     </owl:Class>
 
 

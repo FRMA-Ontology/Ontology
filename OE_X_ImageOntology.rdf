@@ -71,8 +71,8 @@
     <!-- &img;fidelityDescribedBy -->
 
     <owl:ObjectProperty rdf:about="&img;fidelityDescribedBy">
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, “The relationship between image fidelity and image quality,” Proceedings of 3rd IEEE International Conference on Image Processing.</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, “The relationship between image fidelity and image quality,” Proceedings of 3rd IEEE International Conference on Image Processing.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, "The relationship between image fidelity and image quality," Proceedings of 3rd IEEE International Conference on Image Processing.</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, "The relationship between image fidelity and image quality," Proceedings of 3rd IEEE International Conference on Image Processing.</dct:source>
         <rdfs:label xml:lang="en">fidelity described by</rdfs:label>
         <skos:definition xml:lang="en">the fidelity of this image</skos:definition>
     </owl:ObjectProperty>
@@ -85,8 +85,8 @@
         <owl:inverseOf rdf:resource="&img;stores"/>
         <rdfs:domain rdf:resource="&lio;Image"/>
         <rdfs:range rdf:resource="&img;ImageFile"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Raw image format,” Wikipedia, 18-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Raw_image_format. [Accessed: 24-Nov-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">“Homepage,” ImageSnippets. [Online]. Available: http://www.imagesnippets.com/. [Accessed: 24-Nov-2018].</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Raw image format," Wikipedia, 18-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Raw_image_format. [Accessed: 24-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">"Homepage," ImageSnippets. [Online]. Available: http://www.imagesnippets.com/. [Accessed: 24-Nov-2018].</dct:source>
         <rdfs:label xml:lang="en">is stored as</rdfs:label>
         <skos:definition xml:lang="en">links a given image to a file in which it is stored</skos:definition>
     </owl:ObjectProperty>
@@ -96,8 +96,8 @@
     <!-- &img;lightingDescribedBy -->
 
     <owl:ObjectProperty rdf:about="&img;lightingDescribedBy">
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Labeled Faces in the Wild Home," LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">"Labeled Faces in the Wild Home," LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
         <rdfs:label xml:lang="en">lighting described by</rdfs:label>
         <skos:definition xml:lang="en">the lighting characteristics of this image</skos:definition>
     </owl:ObjectProperty>
@@ -109,8 +109,8 @@
     <owl:ObjectProperty rdf:about="&img;stores">
         <rdfs:domain rdf:resource="&img;ImageFile"/>
         <rdfs:range rdf:resource="&lio;Image"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Raw image format,” Wikipedia, 18-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Raw_image_format. [Accessed: 24-Nov-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">“Homepage,” ImageSnippets. [Online]. Available: http://www.imagesnippets.com/. [Accessed: 24-Nov-2018].</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Raw image format," Wikipedia, 18-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Raw_image_format. [Accessed: 24-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">"Homepage," ImageSnippets. [Online]. Available: http://www.imagesnippets.com/. [Accessed: 24-Nov-2018].</dct:source>
         <rdfs:label xml:lang="en">stores</rdfs:label>
         <skos:definition xml:lang="en">links a given image file to the image that it contains</skos:definition>
     </owl:ObjectProperty>
@@ -133,8 +133,8 @@
     <owl:DatatypeProperty rdf:about="&img;hasFileExtension">
         <rdfs:domain rdf:resource="&img;ImageFile"/>
         <rdfs:range rdf:resource="&xsd;string"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Filename extension,” Wikipedia, 19-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Filename_extension. [Accessed: 24-Nov-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">“Homepage,” ImageSnippets. [Online]. Available: http://www.imagesnippets.com/. [Accessed: 24-Nov-2018].</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Filename extension," Wikipedia, 19-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Filename_extension. [Accessed: 24-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">"Homepage," ImageSnippets. [Online]. Available: http://www.imagesnippets.com/. [Accessed: 24-Nov-2018].</dct:source>
         <rdfs:label xml:lang="en">has file extension</rdfs:label>
         <skos:definition xml:lang="en">the extension of the image file</skos:definition>
         <skos:example rdf:datatype="&xsd;string">Example extensions include jpg, jpeg, gif, png, which have corresponding file format types and characteristics.</skos:example>
@@ -147,8 +147,8 @@
     <owl:DatatypeProperty rdf:about="&img;hasFilePath">
         <rdfs:domain rdf:resource="&img;ImageFile"/>
         <rdfs:range rdf:resource="&xsd;anyURI"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Path (computing),” Wikipedia, 17-Sep-2018. [Online]. Available: https://en.wikipedia.org/wiki/Path_(computing). [Accessed: 24-Nov-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">“Homepage,” ImageSnippets. [Online]. Available: http://www.imagesnippets.com/. [Accessed: 24-Nov-2018].</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Path (computing)," Wikipedia, 17-Sep-2018. [Online]. Available: https://en.wikipedia.org/wiki/Path_(computing). [Accessed: 24-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">"Homepage," ImageSnippets. [Online]. Available: http://www.imagesnippets.com/. [Accessed: 24-Nov-2018].</dct:source>
         <rdfs:label xml:lang="en">has file path</rdfs:label>
         <skos:definition xml:lang="en">the unique location of the image in a file system</skos:definition>
     </owl:DatatypeProperty>
@@ -159,8 +159,8 @@
 
     <owl:DatatypeProperty rdf:about="&img;hasRGB">
         <rdfs:range rdf:resource="&xsd;string"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Rgb,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/RGB. [Accessed: 09-Nov-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Rgb," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/RGB. [Accessed: 09-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">"Labeled Faces in the Wild Home," LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
         <rdfs:label xml:lang="en">has RGB</rdfs:label>
         <skos:definition xml:lang="en">if an image can be expressed using three-color model using red, green, and blue light</skos:definition>
     </owl:DatatypeProperty>
@@ -184,8 +184,8 @@
         <rdfs:subClassOf rdf:resource="&img;LightingVariation"/>
         <owl:disjointWith rdf:resource="&img;HarshLightingVariation"/>
         <owl:disjointWith rdf:resource="&img;SoftLightingVariation"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Hard and soft light,” Wikipedia, 04-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Hard_and_soft_light. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Hard and soft light," Wikipedia, 04-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Hard_and_soft_light. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">"Labeled Faces in the Wild Home," LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
         <rdfs:label xml:lang="en">balanced lighting variation</rdfs:label>
         <skos:definition xml:lang="en">both small light source in close proximity relative to the subject and large light source in distant proximity relative to the subject</skos:definition>
     </owl:Class>
@@ -196,8 +196,8 @@
 
     <owl:Class rdf:about="&img;BlackAndWhiteImage">
         <rdfs:subClassOf rdf:resource="&lio;Image"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Black-and-white,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/black-and-white. [Accessed: 24-Nov-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Black-and-white," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/black-and-white. [Accessed: 24-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">"Labeled Faces in the Wild Home," LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
         <rdfs:label xml:lang="en">black and white image</rdfs:label>
         <skos:definition xml:lang="en">an image having, showing, or producing pictures that do not have colors except for black, white, and shades of gray</skos:definition>
     </owl:Class>
@@ -209,8 +209,8 @@
     <owl:Class rdf:about="&img;BlurryImageFidelity">
         <rdfs:subClassOf rdf:resource="&img;ImageFidelity"/>
         <owl:disjointWith rdf:resource="&img;SharpImageFidelity"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, “The relationship between image fidelity and image quality,” Proceedings of 3rd IEEE International Conference on Image Processing.</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, “The relationship between image fidelity and image quality,” Proceedings of 3rd IEEE International Conference on Image Processing.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, "The relationship between image fidelity and image quality," Proceedings of 3rd IEEE International Conference on Image Processing.</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, "The relationship between image fidelity and image quality," Proceedings of 3rd IEEE International Conference on Image Processing.</dct:source>
         <rdfs:label xml:lang="en">blurry image fidelity</rdfs:label>
         <skos:definition xml:lang="en">lower quality image showing signs of visible distortion or information loss</skos:definition>
     </owl:Class>
@@ -221,8 +221,8 @@
 
     <owl:Class rdf:about="&img;CandidImage">
         <rdfs:subClassOf rdf:resource="&lio;Image"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Candid,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/candid. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Candid," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/candid. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">"Labeled Faces in the Wild Home," LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
         <rdfs:label xml:lang="en">candid image</rdfs:label>
         <skos:definition xml:lang="en">a photo in which the subject is acting naturally or spontaneously </skos:definition>
         <skos:example rdf:datatype="&xsd;string">Snapshot</skos:example>
@@ -234,8 +234,8 @@
 
     <owl:Class rdf:about="&img;ColorImage">
         <rdfs:subClassOf rdf:resource="&lio;Image"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Color photography,” Wikipedia, 19-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Color_photography. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Color photography," Wikipedia, 19-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Color_photography. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">"Labeled Faces in the Wild Home," LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
         <rdfs:label xml:lang="en">color image</rdfs:label>
         <skos:definition xml:lang="en">an image produces useing media capable of reproducing colors</skos:definition>
     </owl:Class>
@@ -245,8 +245,8 @@
     <!-- &img;DepictedBackground -->
 
     <owl:Class rdf:about="&img;DepictedBackground">
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Background,” Dictionary.com. [Online]. Available: https://www.dictionary.com/browse/background. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Background," Dictionary.com. [Online]. Available: https://www.dictionary.com/browse/background. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">"Labeled Faces in the Wild Home," LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
         <rdfs:label xml:lang="en">depicted background</rdfs:label>
         <skos:definition xml:lang="en">the ground or parts, as of a scene, situated in the rear</skos:definition>
     </owl:Class>
@@ -257,8 +257,8 @@
 
     <owl:Class rdf:about="&img;FlashLightingVariation">
         <rdfs:subClassOf rdf:resource="&img;HarshLightingVariation"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Labeled Faces in the Wild Home," LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">flash lighting variation</rdfs:label>
         <skos:definition xml:lang="en">whether or not the system classifies a photo as using camera flash to illuminate the subject</skos:definition>
     </owl:Class>
@@ -270,8 +270,8 @@
     <owl:Class rdf:about="&img;HarshLightingVariation">
         <rdfs:subClassOf rdf:resource="&img;LightingVariation"/>
         <owl:disjointWith rdf:resource="&img;SoftLightingVariation"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Hard and soft light,” Wikipedia, 04-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Hard_and_soft_light. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Hard and soft light," Wikipedia, 04-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Hard_and_soft_light. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">"Labeled Faces in the Wild Home," LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
         <rdfs:label xml:lang="en">harsh lighting variation</rdfs:label>
         <skos:definition xml:lang="en">small light source in close proximity relative to the subject</skos:definition>
     </owl:Class>
@@ -281,8 +281,8 @@
     <!-- &img;ImageFidelity -->
 
     <owl:Class rdf:about="&img;ImageFidelity">
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, “The relationship between image fidelity and image quality,” Proceedings of 3rd IEEE International Conference on Image Processing.</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, “The relationship between image fidelity and image quality,” Proceedings of 3rd IEEE International Conference on Image Processing.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, "The relationship between image fidelity and image quality," Proceedings of 3rd IEEE International Conference on Image Processing.</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, "The relationship between image fidelity and image quality," Proceedings of 3rd IEEE International Conference on Image Processing.</dct:source>
         <rdfs:label xml:lang="en">image fidelity</rdfs:label>
         <skos:definition xml:lang="en">the measurable quality of an image</skos:definition>
     </owl:Class>
@@ -298,8 +298,8 @@
                 <owl:someValuesFrom rdf:resource="&lio;Image"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Raw image format,” Wikipedia, 18-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Raw_image_format. [Accessed: 24-Nov-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">“Homepage,” ImageSnippets. [Online]. Available: http://www.imagesnippets.com/. [Accessed: 24-Nov-2018].</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Raw image format," Wikipedia, 18-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Raw_image_format. [Accessed: 24-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">"Homepage," ImageSnippets. [Online]. Available: http://www.imagesnippets.com/. [Accessed: 24-Nov-2018].</dct:source>
         <rdfs:label xml:lang="en">image file</rdfs:label>
         <skos:definition xml:lang="en">a digital version of a photograph, stored in any of a number of standard formats that can be rasterized for display purposes</skos:definition>
     </owl:Class>
@@ -311,8 +311,8 @@
     <owl:Class rdf:about="&img;Indoors">
         <rdfs:subClassOf rdf:resource="&img;DepictedBackground"/>
         <owl:disjointWith rdf:resource="&img;Outdoors"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Indoors,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/indoors. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Indoors," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/indoors. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">"Labeled Faces in the Wild Home," LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
         <rdfs:label xml:lang="en">indoors</rdfs:label>
         <skos:definition xml:lang="en">whether or not the image was taken indoors</skos:definition>
     </owl:Class>
@@ -322,9 +322,9 @@
     <!-- &img;LightingVariation -->
 
     <owl:Class rdf:about="&img;LightingVariation">
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">T. Chen, W. Yin, X. S. Zhou, D. Comaniciu, and T. S. Huang, “Total variation models for variable lighting face recognition,” IEEE transactions on pattern analysis and machine intelligence, vol. 28, no. 9, pp. 1519–1524, 2006.
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">T. Chen, W. Yin, X. S. Zhou, D. Comaniciu, and T. S. Huang, "Total variation models for variable lighting face recognition," IEEE transactions on pattern analysis and machine intelligence, vol. 28, no. 9, pp. 1519–1524, 2006.
 </dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
+        <dct:source rdf:datatype="&xsd;string">"Labeled Faces in the Wild Home," LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
         <rdfs:label xml:lang="en">lighting variation</rdfs:label>
         <skos:definition xml:lang="en">images have differening levels and locations of brightness</skos:definition>
     </owl:Class>
@@ -334,8 +334,8 @@
     <!-- &img;OptimalConditionImage -->
 
     <owl:Class rdf:about="&img;OptimalConditionImage">
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, “The relationship between image fidelity and image quality,” Proceedings of 3rd IEEE International Conference on Image Processing.</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, “The relationship between image fidelity and image quality,” Proceedings of 3rd IEEE International Conference on Image Processing.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, "The relationship between image fidelity and image quality," Proceedings of 3rd IEEE International Conference on Image Processing.</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, "The relationship between image fidelity and image quality," Proceedings of 3rd IEEE International Conference on Image Processing.</dct:source>
         <rdfs:label xml:lang="en">optimal condition image</rdfs:label>
         <skos:definition xml:lang="en">the best possible image for recognition tasks</skos:definition>
     </owl:Class>
@@ -346,8 +346,8 @@
 
     <owl:Class rdf:about="&img;Outdoors">
         <rdfs:subClassOf rdf:resource="&img;DepictedBackground"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Outdoors,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/outdoors. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Outdoors," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/outdoors. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">"Labeled Faces in the Wild Home," LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
         <rdfs:label xml:lang="en">outdoors</rdfs:label>
         <skos:definition xml:lang="en">whether or not the image was taken outdoors</skos:definition>
     </owl:Class>
@@ -358,8 +358,8 @@
 
     <owl:Class rdf:about="&img;PosedImage">
         <rdfs:subClassOf rdf:resource="&lio;Image"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Pose,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/pose. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Pose," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/pose. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">"Labeled Faces in the Wild Home," LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
         <rdfs:label xml:lang="en">posed image</rdfs:label>
         <skos:definition xml:lang="en">assumes a posture or attitude usually for artistic purposes</skos:definition>
         <skos:example rdf:datatype="&xsd;string">Portrait</skos:example>
@@ -371,8 +371,8 @@
 
     <owl:Class rdf:about="&img;SharpImageFidelity">
         <rdfs:subClassOf rdf:resource="&img;ImageFidelity"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, “The relationship between image fidelity and image quality,” Proceedings of 3rd IEEE International Conference on Image Processing.</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, “The relationship between image fidelity and image quality,” Proceedings of 3rd IEEE International Conference on Image Processing.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, "The relationship between image fidelity and image quality," Proceedings of 3rd IEEE International Conference on Image Processing.</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, "The relationship between image fidelity and image quality," Proceedings of 3rd IEEE International Conference on Image Processing.</dct:source>
         <rdfs:label xml:lang="en">sharp image fidelity</rdfs:label>
         <skos:definition xml:lang="en">high quality image showing little to no signs of visible distortion or information loss</skos:definition>
     </owl:Class>
@@ -383,8 +383,8 @@
 
     <owl:Class rdf:about="&img;SoftLightingVariation">
         <rdfs:subClassOf rdf:resource="&img;LightingVariation"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Hard and soft light,” Wikipedia, 04-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Hard_and_soft_light. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">“Labeled Faces in the Wild Home,” LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Hard and soft light," Wikipedia, 04-Nov-2018. [Online]. Available: https://en.wikipedia.org/wiki/Hard_and_soft_light. [Accessed: 21-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">"Labeled Faces in the Wild Home," LFW : Results. [Online]. Available: http://vis-www.cs.umass.edu/lfw/. [Accessed: 06-Oct-2018].</dct:source>
         <rdfs:label xml:lang="en">soft lighting variation</rdfs:label>
         <skos:definition xml:lang="en">large light source in distant proximity relative to the subject</skos:definition>
     </owl:Class>
