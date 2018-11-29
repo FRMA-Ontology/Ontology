@@ -304,7 +304,7 @@
                 <owl:someValuesFrom rdf:resource="&mlmo;Layer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:bibliographicCitation>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Cornelisse, "An intuitive guide to Convolutional Neural Networks," freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
         <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">inception layer</rdfs:label>
         <skos:definition xml:lang="en">perfroms multiple convolutions and pooling operations in parallel</skos:definition>
