@@ -47,11 +47,12 @@
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/"/>
         <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology</rdfs:label>
         <skos:definition xml:lang="en">Machine learning allows us to learn a model for a given task such as facial recognition with a high degree of accuracy. However, after these models are generated they are often treated as black boxes and the limitations of a model are often unknown to the end user. The system developed for this use case will provide an intuitive interface to explore the limits of a facial recognition model by semantically integrating "smart" images(semantically describe who the image depicts and what Kumar [2] features the image exhibits) with classification results to discover common causes for misclassifications.</skos:definition>
-        <dct:creator xml:lang="en">Andrew Gaudet</dct:creator>
-        <dct:creator xml:lang="en">Matthew Johnson</dct:creator>
-        <dct:creator xml:lang="en">John Angel</dct:creator>
-        <dct:creator xml:lang="en">Jordan Faas-Bush</dct:creator>
-        <dct:creator xml:lang="en">Alexander Schwartzberg</dct:creator>
+        <dct:contributor xml:lang="en">Andrew Gaudet</dct:contributor>
+        <dct:contributor xml:lang="en">Matthew Johnson</dct:contributor>
+        <dct:contributor xml:lang="en">John Angel</dct:contributor>
+        <dct:contributor xml:lang="en">Jordan Faas-Bush</dct:contributor>
+        <dct:contributor xml:lang="en">Alexander Schwartzberg</dct:contributor>
+        <dct:publisher xml:lang="en">FRMA Team</dct:publisher>
         <dct:modified>11/24/2018</dct:modified>
         <owl:priorVersion>http://tw.rpi.edu/media/latest/OE_10_FRMA.rdf</owl:priorVersion>
         <skos:changeNote rdf:datatype="&xsd;string">Updated ontology headers and added the class, property annotations.</skos:changeNote>

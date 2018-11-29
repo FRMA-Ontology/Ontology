@@ -23,6 +23,7 @@
         <owl:imports rdf:resource="http://www.omg.org/techprocess/ab/SpecificationMetadata/"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <dct:creator xml:lang="en">Andrew Gaudet</dct:creator>
+        <dct:publisher xml:lang="en">FRMA Team</dct:publisher>
         <dct:modified>11/22/2018</dct:modified>
         <rdfs:label xml:lang="en">Hair Ontology</rdfs:label>
         <owl:priorVersion rdf:datatype="&xsd;string">http://tw.rpi.edu/media/latest/OE_10_HairOntology.rdf</owl:priorVersion>

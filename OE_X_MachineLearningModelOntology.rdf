@@ -34,6 +34,7 @@
         <owl:imports rdf:resource="http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <dct:creator>Matthew Johnson</dct:creator>
+        <dct:publisher xml:lang="en">FRMA Team</dct:publisher>
         <dct:modified>11/22/2018</dct:modified>
         <rdfs:label xml:lang="en">Machine Learning Model Ontology</rdfs:label>
         <owl:priorVersion>http://tw.rpi.edu/media/latest/OE_10_MachineLearningModelOntology.rdf</owl:priorVersion>

@@ -31,6 +31,7 @@
         <owl:imports rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/AgentsAndPeople/Agents/"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <dct:creator xml:lang="en">Jordan Faas-Bush</dct:creator>
+        <dct:publisher xml:lang="en">FRMA Team</dct:publisher>
         <dct:modified>11/24/2018</dct:modified>
         <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology - Person, Face, and Demographic</rdfs:label>
         <owl:priorVersion rdf:datatype="&xsd;string">http://tw.rpi.edu/media/latest/OE_10_PersonFaceAndDemographicOntology.rdf</owl:priorVersion>

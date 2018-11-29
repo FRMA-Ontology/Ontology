@@ -23,6 +23,7 @@
         <owl:imports rdf:resource="http://www.omg.org/techprocess/ab/SpecificationMetadata/"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <dct:creator>John Angel</dct:creator>
+        <dct:publisher xml:lang="en">FRMA Team</dct:publisher>
         <dct:modified>11/22/2018</dct:modified>
         <rdfs:label xml:lang="en">Wearable Things</rdfs:label>
         <owl:priorVersion rdf:datatype="&xsd;string">http://tw.rpi.edu/media/latest/OE_10_WearableThingsOntology.rdf</owl:priorVersion>

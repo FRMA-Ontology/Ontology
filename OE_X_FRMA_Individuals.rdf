@@ -75,11 +75,12 @@
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/"/>
         <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology Examplar Data</rdfs:label>
         <skos:definition xml:lang="en">This ontology contains examplar data used to test the FRMA ontology</skos:definition>
-        <dct:creator xml:lang="en">Andrew Gaudet</dct:creator>
-        <dct:creator xml:lang="en">Matthew Johnson</dct:creator>
-        <dct:creator xml:lang="en">John Angel</dct:creator>
-        <dct:creator xml:lang="en">Jordan Faas-Bush</dct:creator>
-        <dct:creator xml:lang="en">Alexander Schwartzberg</dct:creator>
+        <dct:contributor xml:lang="en">Andrew Gaudet</dct:contributor>
+        <dct:contributor xml:lang="en">Matthew Johnson</dct:contributor>
+        <dct:contributor xml:lang="en">John Angel</dct:contributor>
+        <dct:contributor xml:lang="en">Jordan Faas-Bush</dct:contributor>
+        <dct:contributor xml:lang="en">Alexander Schwartzberg</dct:contributor>
+        <dct:publisher xml:lang="en">FRMA Team</dct:publisher>
         <dct:modified>11/24/2018</dct:modified>
         <owl:priorVersion>http://tw.rpi.edu/media/latest/OE_10_Individuals.rdf</owl:priorVersion>
         <skos:changeNote rdf:datatype="&xsd;string">Updated ontology headers.</skos:changeNote>
