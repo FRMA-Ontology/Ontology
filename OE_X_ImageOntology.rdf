@@ -335,6 +335,7 @@
     <!-- &img;OptimalConditionImage -->
 
     <owl:Class rdf:about="&img;OptimalConditionImage">
+        <rdfs:subClassOf rdf:resource="&lio;Image"/>
         <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, "The relationship between image fidelity and image quality," Proceedings of 3rd IEEE International Conference on Image Processing.</dct:bibliographicCitation>
         <dct:source rdf:datatype="&xsd;string">D. Silverstein and J. Farrell, "The relationship between image fidelity and image quality," Proceedings of 3rd IEEE International Conference on Image Processing.</dct:source>
         <rdfs:label xml:lang="en">optimal condition image</rdfs:label>
