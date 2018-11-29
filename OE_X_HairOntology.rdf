@@ -349,109 +349,109 @@
 
     <!-- &ho;Bangs -->
 
-    <owl:NamedIndividual rdf:about="&ho;Bangs">
-        <rdf:type rdf:resource="&ho;LongHair"/>
+    <owl:Class rdf:about="&ho;Bangs">
+        <rdfs:subClassOf rdf:resource="&ho;LongHair"/>
         <dct:bibliographicCitation xml:lang="en">"bang | Definition of bang in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/bang. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
         <dct:source xml:lang="en">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">bangs</rdfs:label>
         <skos:definition xml:lang="en">fringe of hair cut straight across the forehead</skos:definition>
-    </owl:NamedIndividual>
+    </owl:Class>
 
 
 
     <!-- &ho;BlackHair -->
 
-    <owl:NamedIndividual rdf:about="&ho;BlackHair">
-        <rdf:type rdf:resource="&ho;HairColor"/>
+    <owl:Class rdf:about="&ho;BlackHair">
+        <rdfs:subClassOf rdf:resource="&ho;HairColor"/>
         <dct:bibliographicCitation xml:lang="en">"black| Definition of black in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/black. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
         <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">black hair</rdfs:label>
         <skos:definition xml:lang="en">hair of the very darkest colour owing to the absence of or complete absorption of light</skos:definition>
-    </owl:NamedIndividual>
+    </owl:Class>
 
 
 
     <!-- &ho;BlondHair -->
 
-    <owl:NamedIndividual rdf:about="&ho;BlondHair">
-        <rdf:type rdf:resource="&ho;HairColor"/>
+    <owl:Class rdf:about="&ho;BlondHair">
+        <rdfs:subClassOf rdf:resource="&ho;HairColor"/>
         <dct:bibliographicCitation xml:lang="en">"blonde| Definition of blonde in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/blonde. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
         <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">blond hair</rdfs:label>
         <skos:definition xml:lang="en">fair or pale yellow hair</skos:definition>
-    </owl:NamedIndividual>
+    </owl:Class>
 
 
 
     <!-- &ho;BrownHair -->
 
-    <owl:NamedIndividual rdf:about="&ho;BrownHair">
-        <rdf:type rdf:resource="&ho;HairColor"/>
+    <owl:Class rdf:about="&ho;BrownHair">
+        <rdfs:subClassOf rdf:resource="&ho;HairColor"/>
         <dct:bibliographicCitation xml:lang="en">"brown| Definition of brown in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/brown. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
         <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">brown hair</rdfs:label>
         <skos:definition xml:lang="en">hair of a colour produced by mixing red, yellow, and blue, as of dark wood or rich soil</skos:definition>
-    </owl:NamedIndividual>
+    </owl:Class>
 
 
 
     <!-- &ho;BushyEyebrows -->
 
-    <owl:NamedIndividual rdf:about="&ho;BushyEyebrows">
-        <rdf:type rdf:resource="&ho;Eyebrows"/>
+    <owl:Class rdf:about="&ho;BushyEyebrows">
+        <rdfs:subClassOf rdf:resource="&ho;Eyebrows"/>
         <dct:bibliographicCitation xml:lang="en">"bushy| Definition of bushy in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/bushy. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
         <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">bushy eyebrows</rdfs:label>
         <skos:definition xml:lang="en">eyebrows that are growing thickly</skos:definition>
-    </owl:NamedIndividual>
+    </owl:Class>
 
 
 
     <!-- &ho;FiveOClockShadow -->
 
-    <owl:NamedIndividual rdf:about="&ho;FiveOClockShadow">
-        <rdf:type rdf:resource="&ho;Beard"/>
+    <owl:Class rdf:about="&ho;FiveOClockShadow">
+        <rdfs:subClassOf rdf:resource="&ho;Beard"/>
         <dct:bibliographicCitation xml:lang="en">"Five o&apos;clock shadow," Dictionary.com. [Online]. Available: https://www.dictionary.com/browse/five-o-clock-shadow. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
         <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">five o clock shadow</rdfs:label>
         <skos:definition xml:lang="en">dark stubble that appears on a man&apos;s face some hours after shaving</skos:definition>
-    </owl:NamedIndividual>
+    </owl:Class>
 
 
 
     <!-- &ho;Goatee -->
 
-    <owl:NamedIndividual rdf:about="&ho;Goatee">
-        <rdf:type rdf:resource="&ho;Beard"/>
+    <owl:Class rdf:about="&ho;Goatee">
+        <rdfs:subClassOf rdf:resource="&ho;Beard"/>
         <dct:bibliographicCitation xml:lang="en">"goatee| Definition of goatee in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/goatee. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
         <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">goatee</rdfs:label>
         <skos:definition xml:lang="en">small pointed beard like that of a goat</skos:definition>
-    </owl:NamedIndividual>
+    </owl:Class>
 
 
 
     <!-- &ho;GrayHair -->
 
-    <owl:NamedIndividual rdf:about="&ho;GrayHair">
-        <rdf:type rdf:resource="&ho;HairColor"/>
+    <owl:Class rdf:about="&ho;GrayHair">
+        <rdfs:subClassOf rdf:resource="&ho;HairColor"/>
         <dct:bibliographicCitation xml:lang="en">"grey| Definition of grey in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/grey. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
         <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">gray hair</rdfs:label>
         <skos:definition xml:lang="en">hair of a colour intermediate between black and white, as of ashes or lead</skos:definition>
-    </owl:NamedIndividual>
+    </owl:Class>
 
 
 
     <!-- &ho;ThinEyebrows -->
 
-    <owl:NamedIndividual rdf:about="&ho;ThinEyebrows">
-        <rdf:type rdf:resource="&ho;Eyebrows"/>
+    <owl:Class rdf:about="&ho;ThinEyebrows">
+        <rdfs:subClassOf rdf:resource="&ho;Eyebrows"/>
         <dct:bibliographicCitation xml:lang="en">"Thin," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/thin. [Accessed: 09-Nov-2018].</dct:bibliographicCitation>
         <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">thin eyebrows</rdfs:label>
         <skos:definition xml:lang="en">eyebrows measuring little in cross section or diameter</skos:definition>
-    </owl:NamedIndividual>
+    </owl:Class>
 </rdf:RDF>
 
 
