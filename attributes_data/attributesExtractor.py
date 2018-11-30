@@ -169,18 +169,18 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 		hasConstituent = rdflib.term.URIRef("http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/hasConstituent")
 		hasTag = rdflib.term.URIRef("http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasTag")
 
-		resultset_facenet_IRI = rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2017/OE_9_FRMA_Individuals/FaceNetTest01ResultSet")
-		result_facenet_IRI = rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2017/OE_9_FRMA_Individuals/FaceNetTest01ResultSetResult" + str(generateFakeResultId))
+		resultset_facenet_IRI = rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_X_FRMA_Individuals/FaceNetTest01ResultSet")
+		result_facenet_IRI = rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_X_FRMA_Individuals/FaceNetTest01ResultSetResult" + str(generateFakeResultId))
 
-		resultset_dlib_IRI = rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2017/OE_9_FRMA_Individuals/dlibTest01ResultSet")
-		result_dlib_IRI = rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2017/OE_9_FRMA_Individuals/dlibTest01ResultSetResult" + str(generateFakeResultId))
+		resultset_dlib_IRI = rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_X_FRMA_Individuals/dlibTest01ResultSet")
+		result_dlib_IRI = rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_X_FRMA_Individuals/dlibTest01ResultSetResult" + str(generateFakeResultId))
 
 		graph.add((resultset_facenet_IRI, hasConstituent, result_facenet_IRI))
 		graph.add((resultset_facenet_IRI, RDFS.label, rdflib.term.Literal("FaceNet", datatype=XSD.string)))
 
 		graph.add((resultset_dlib_IRI, RDF.type, OWL.NamedIndividual))
-		graph.add((resultset_dlib_IRI, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/ResultSet"))
-		
+		graph.add((resultset_dlib_IRI, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/ResultSet")))
+
 		graph.add((resultset_dlib_IRI, hasConstituent, result_dlib_IRI))
 		graph.add((resultset_dlib_IRI, RDFS.label, rdflib.term.Literal("DLib", datatype=XSD.string)))
 
@@ -216,8 +216,43 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 
 
 	# create the lighting information
-	# "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/Lighting_Variation"
-	# graph.add((image_IRI, RDF.type, OWL.NamedIndividual))
+	lighting_iri = rdflib.term.URIRef(base_iri + "/Lighting")
+	graph.add((lighting_iri, RDF.type, OWL.NamedIndividual))
+	graph.add((image_IRI, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/lightingDescribedBy"), lighting_iri))
+
+	if (image_data["Harsh Lighting"] > 0):
+		graph.add((lighting_iri, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/HarshLightingVariation")))
+	else:
+		if (image_data["Flash"] > 0):
+			graph.add((lighting_iri, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/FlashLightingVariation")))
+		else:
+			if (image_data["Soft Lighting"] > 0):
+				graph.add((lighting_iri, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/SoftLightingVariation")))
+			else:
+				graph.add((lighting_iri, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/BalancedLightingVariation")))
+
+
+	# create the fidelity information
+	fidelity_iri = rdflib.term.URIRef(base_iri + "/Fidelity")
+	graph.add((fidelity_iri, RDF.type, OWL.NamedIndividual))
+	graph.add((image_IRI, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/fidelityDescribedBy"), fidelity_iri))
+
+	if (image_data["Blurry"] > 0):
+		graph.add((fidelity_iri, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/BlurryImageFidelity")))
+	else:
+		graph.add((fidelity_iri, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/SharpImageFidelity")))
+
+
+	# create the background information
+	back_iri = rdflib.term.URIRef(base_iri + "/Background")
+	graph.add((back_iri, RDF.type, OWL.NamedIndividual))
+	graph.add((image_IRI, rdflib.term.URIRef("http://purl.org/net/lio#hasDepictedBackground"), back_iri))
+
+	if (image_data["Outdoor"] > 0):
+		graph.add((back_iri, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/Outdoors")))
+	else:
+		graph.add((back_iri, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/Indoors")))
+
 
 	pfd_iri = "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology"
 	hasPart = rdflib.term.URIRef("http://purl.obolibrary.org/obo/BFO_0000051")
