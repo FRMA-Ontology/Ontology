@@ -271,14 +271,17 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 	graph.add((image_IRI, rdflib.term.URIRef("http://purl.org/net/lio#depicts"), person_iri))
 
 	# demographic:
+	ethnicity_iri = rdflib.term.URIRef(base_iri + "/Ethnicity")
+	graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasDemographic"), ethnicity_iri))
+
 	if (image_data["Asian"] > 0):
-		graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasDemographic"), rdflib.term.URIRef(pfd_iri + "/Asian")))
+		graph.add((ethnicity_iri, RDF.type, rdflib.term.URIRef(pfd_iri + "/Asian")))
 	if (image_data["White"] > 0):
-		graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasDemographic"), rdflib.term.URIRef(pfd_iri + "/White")))
+		graph.add((ethnicity_iri, RDF.type, rdflib.term.URIRef(pfd_iri + "/White")))
 	if (image_data["Black"] > 0):
-		graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasDemographic"), rdflib.term.URIRef(pfd_iri + "/Black")))
+		graph.add((ethnicity_iri, RDF.type, rdflib.term.URIRef(pfd_iri + "/Black")))
 	if (image_data["Indian"] > 0):
-		graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasDemographic"), rdflib.term.URIRef(pfd_iri + "/Indian")))
+		graph.add((ethnicity_iri, RDF.type, rdflib.term.URIRef(pfd_iri + "/Indian")))
 
 	if (image_data["Strong Nose-Mouth Lines"] > 0):
 		graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasStrongNoseMouthLines"), rdflib.term.Literal(True, datatype=XSD.boolean)))
@@ -340,7 +343,7 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 		graph.add((wearable_individual, RDF.type, OWL.NamedIndividual))
 		graph.add((wearable_individual, RDF.type, rdflib.term.URIRef(wt_iri + "/" + wearing_item_class)))
 		# make the person wear them:
-		graph.add((person_iri, rdflib.term.URIRef(wt_iri + "/isWearing"), wearable_individual))\
+		graph.add((person_iri, rdflib.term.URIRef(wt_iri + "/isWearing"), wearable_individual))
 
 	if (image_data["Sunglasses"] > 0):
 		# make an sunglasses individual
