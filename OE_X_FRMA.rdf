@@ -1,27 +1,45 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/"
-     xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/"
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY dct "http://purl.org/dc/terms/" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY frma "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/" >
+    <!ENTITY mlmo "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/" >
+    <!ENTITY wt "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/" >
+    <!ENTITY pfd "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/" >
+    <!ENTITY img "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/" >
+	  <!ENTITY ho "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/" >
+    <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY lio "https://w3id.org/lio/v1#" >
+    <!ENTITY lio-orig "http://purl.org/net/lio#" >
+    <!ENTITY fibo-fnd-utl-av "http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/">
+]>
+
+<rdf:RDF xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/"
      xmlns:ho="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/"
      xmlns:wt="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:img="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/"
      xmlns:lio="https://w3id.org/lio/v1#"
+     xmlns:lio-orig="http://purl.org/net/lio#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:pfd="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:frma="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/"
      xmlns:mlmo="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:fibo-fnd-utl-av="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
-     xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+     xmlns:fibo-fnd-utl-av="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/">
     <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/">
-        <owl:versionIRI rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/1.0.2"/>
+        <owl:versionIRI rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/1.0.3"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/"/>
         <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/"/>
@@ -33,17 +51,17 @@
         <dct:contributor xml:lang="en">John Angel</dct:contributor>
         <dct:contributor xml:lang="en">Jordan Faas-Bush</dct:contributor>
         <dct:contributor xml:lang="en">Matthew Johnson</dct:contributor>
-        <dct:modified>11/24/2018</dct:modified>
+        <dct:modified>12/01/2018</dct:modified>
         <dct:publisher xml:lang="en">FRMA Team</dct:publisher>
         <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology</rdfs:label>
-        <owl:priorVersion>http://tw.rpi.edu/media/latest/OE_10_FRMA.rdf</owl:priorVersion>
-        <skos:changeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Updated ontology headers and added the class, property annotations.</skos:changeNote>
-        <skos:definition xml:lang="en">Machine learning allows us to learn a model for a given task such as facial recognition with a high degree of accuracy. However, after these models are generated they are often treated as black boxes and the limitations of a model are often unknown to the end user. The system developed for this use case will provide an intuitive interface to explore the limits of a facial recognition model by semantically integrating &quot;smart&quot; images(semantically describe who the image depicts and what Kumar [2] features the image exhibits) with classification results to discover common causes for misclassifications.</skos:definition>
+        <owl:priorVersion>http://tw.rpi.edu/media/latest/OE_11_FRMA.rdf</owl:priorVersion>
+        <skos:changeNote rdf:datatype="&xsd;string">Moved Occlusion onto Image instead of person, Hair Color moved under Color, Haircut and hair texture became a subclasses of visual descriptor, Hair became a subclasses of subdivision of head. Mugshot inferencing was updted to include background and fidelity.</skos:changeNote>
+        <skos:definition xml:lang="en">Machine learning allows us to learn a model for a given task such as facial recognition with a high degree of accuracy. However, after these models are generated they are often treated as black boxes and the limitations of a model are often unknown to the end user. The system developed for this use case will provide an intuitive interface to explore the limits of a facial recognition model by semantically integrating "smart" images(semantically describe who the image depicts and what Kumar [2] features the image exhibits) with classification results to discover common causes for misclassifications.</skos:definition>
     </owl:Ontology>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -51,43 +69,43 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/hasOcclusion -->
 
-    <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/hasOcclusion">
-        <dct:bibliographicCitation xml:lang="en">&quot;Facial Region,&quot; The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, &quot;Labeled faces in the wild: A database for studying face recognition in unconstrained environments,&quot; in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <!-- &frma;hasOcclusion -->
+
+    <owl:ObjectProperty rdf:about="&frma;hasOcclusion">
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label>has occlusion</rdfs:label>
         <skos:definition xml:lang="en">connects an area of a subject that is not visable to the subject</skos:definition>
     </owl:ObjectProperty>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOccludingBodyRegion -->
 
-    <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOccludingBodyRegion">
-        <dct:bibliographicCitation xml:lang="en">&quot;Facial Region,&quot; The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, &quot;Labeled faces in the wild: A database for studying face recognition in unconstrained environments,&quot; in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <!-- &frma;isOccludingBodyRegion -->
+
+    <owl:ObjectProperty rdf:about="&frma;isOccludingBodyRegion">
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">is occluding the region of</rdfs:label>
         <skos:definition xml:lang="en">to be a cover, block, or hamper to the visual representation of a body region in an image</skos:definition>
     </owl:ObjectProperty>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf -->
 
-    <owl:ObjectProperty rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf">
-        <dct:bibliographicCitation xml:lang="en">&quot;Facial Region,&quot; The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, &quot;Labeled faces in the wild: A database for studying face recognition in unconstrained environments,&quot; in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <!-- &frma;isOcclusionSourceOf -->
+
+    <owl:ObjectProperty rdf:about="&frma;isOcclusionSourceOf">
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">is the occlusion source of</rdfs:label>
         <skos:definition xml:lang="en">is the source and/or causes of a specific occlusion on an image of a face</skos:definition>
     </owl:ObjectProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -95,164 +113,164 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
 
-    <!-- http://purl.obolibrary.org/obo/UBERON_0001456 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001456">
+    <!-- &obo;UBERON_0001456 -->
+
+    <owl:Class rdf:about="&obo;UBERON_0001456">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/Hair"/>
+                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="&ho;Hair"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/AuricleOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/AuricleOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/UpperFaceOcclusion"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Facial Region,&quot; The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, &quot;Labeled faces in the wild: A database for studying face recognition in unconstrained environments,&quot; in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <!-- &frma;AuricleOcclusion -->
+
+    <owl:Class rdf:about="&frma;AuricleOcclusion">
+        <rdfs:subClassOf rdf:resource="&frma;UpperFaceOcclusion"/>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">auricle occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the ears</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/BuccalOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/BuccalOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/LowerFaceOcclusion"/>
+    <!-- &frma;BuccalOcclusion -->
+
+    <owl:Class rdf:about="&frma;BuccalOcclusion">
+        <rdfs:subClassOf rdf:resource="&frma;LowerFaceOcclusion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOccludingBodyRegion"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001567"/>
+                <owl:onProperty rdf:resource="&frma;isOccludingBodyRegion"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001567"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:bibliographicCitation xml:lang="en">&quot;Facial Region,&quot; The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, &quot;Labeled faces in the wild: A database for studying face recognition in unconstrained environments,&quot; in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">buccal occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the cheeks</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/CervicalOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/CervicalOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/Occlusion"/>
-        <owl:disjointWith rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/FaceOcclusion"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Facial Region,&quot; The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, &quot;Labeled faces in the wild: A database for studying face recognition in unconstrained environments,&quot; in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <!-- &frma;CervicalOcclusion -->
+
+    <owl:Class rdf:about="&frma;CervicalOcclusion">
+        <rdfs:subClassOf rdf:resource="&frma;Occlusion"/>
+        <owl:disjointWith rdf:resource="&frma;FaceOcclusion"/>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">cervical occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the neck</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/CranialOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/CranialOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/UpperFaceOcclusion"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Facial Region,&quot; The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, &quot;Labeled faces in the wild: A database for studying face recognition in unconstrained environments,&quot; in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <!-- &frma;CranialOcclusion -->
+
+    <owl:Class rdf:about="&frma;CranialOcclusion">
+        <rdfs:subClassOf rdf:resource="&frma;UpperFaceOcclusion"/>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">cranial occlusion</rdfs:label>
         <skos:definition xml:lang="en">occusion of the top of the head, above the ears</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/FaceOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/FaceOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/Occlusion"/>
+    <!-- &frma;FaceOcclusion -->
+
+    <owl:Class rdf:about="&frma;FaceOcclusion">
+        <rdfs:subClassOf rdf:resource="&frma;Occlusion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOccludingBodyRegion"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001456"/>
+                <owl:onProperty rdf:resource="&frma;isOccludingBodyRegion"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001456"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:bibliographicCitation xml:lang="en">&quot;Facial Region,&quot; The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, &quot;Labeled faces in the wild: A database for studying face recognition in unconstrained environments,&quot; in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">face occlusion</rdfs:label>
         <skos:definition xml:lang="en">something that blocks the view of a persons face within an image</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/FrontalOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/FrontalOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/UpperFaceOcclusion"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Facial Region,&quot; The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, &quot;Labeled faces in the wild: A database for studying face recognition in unconstrained environments,&quot; in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <!-- &frma;FrontalOcclusion -->
+
+    <owl:Class rdf:about="&frma;FrontalOcclusion">
+        <rdfs:subClassOf rdf:resource="&frma;UpperFaceOcclusion"/>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">frontal occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the forehead</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/LowerFaceOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/LowerFaceOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/FaceOcclusion"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Facial Region,&quot; The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, &quot;Labeled faces in the wild: A database for studying face recognition in unconstrained environments,&quot; in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <!-- &frma;LowerFaceOcclusion -->
+
+    <owl:Class rdf:about="&frma;LowerFaceOcclusion">
+        <rdfs:subClassOf rdf:resource="&frma;FaceOcclusion"/>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">lower face occlusion</rdfs:label>
         <skos:definition xml:lang="en">something that blocks a portion of the view of a persons face from the bottom of the nose to the bottom of the head within within an image</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/MentalOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/MentalOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/LowerFaceOcclusion"/>
+    <!-- &frma;MentalOcclusion -->
+
+    <owl:Class rdf:about="&frma;MentalOcclusion">
+        <rdfs:subClassOf rdf:resource="&frma;LowerFaceOcclusion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOccludingBodyRegion"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0008199"/>
+                <owl:onProperty rdf:resource="&frma;isOccludingBodyRegion"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0008199"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:bibliographicCitation xml:lang="en">&quot;Facial Region,&quot; The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, &quot;Labeled faces in the wild: A database for studying face recognition in unconstrained environments,&quot; in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">mental occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the chin</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/MugShotPhoto -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/MugShotPhoto">
+    <!-- &frma;MugShotPhoto -->
+
+    <owl:Class rdf:about="&frma;MugShotPhoto">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/PosedImage"/>
+                    <rdf:Description rdf:about="&img;PosedImage"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/net/lio#depicts"/>
+                        <owl:onProperty rdf:resource="&lio-orig;depicts"/>
                         <owl:someValuesFrom>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001456"/>
+                                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001456"/>
                             </owl:Restriction>
                         </owl:someValuesFrom>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/net/lio#depicts"/>
+                        <owl:onProperty rdf:resource="&lio-orig;depicts"/>
                         <owl:someValuesFrom>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/isWearing"/>
+                                <owl:onProperty rdf:resource="&wt;isWearing"/>
                                 <owl:someValuesFrom>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf"/>
+                                        <owl:onProperty rdf:resource="&frma;isOcclusionSourceOf"/>
                                         <owl:someValuesFrom>
                                             <owl:Class>
-                                                <owl:complementOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/FaceOcclusion"/>
+                                                <owl:complementOf rdf:resource="&frma;FaceOcclusion"/>
                                             </owl:Class>
                                         </owl:someValuesFrom>
                                     </owl:Restriction>
@@ -261,289 +279,289 @@
                         </owl:someValuesFrom>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/fidelityDescribedBy"/>
+                        <owl:onProperty rdf:resource="&img;fidelityDescribedBy"/>
                         <owl:someValuesFrom>
                             <owl:Class>
-                                <owl:complementOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/BlurryImageFidelity"/>
+                                <owl:complementOf rdf:resource="&img;BlurryImageFidelity"/>
                             </owl:Class>
                         </owl:someValuesFrom>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lio/v1#hasDepictedBackground"/>
-                        <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/Indoors"/>
+                        <owl:onProperty rdf:resource="&lio;hasDepictedBackground"/>
+                        <owl:someValuesFrom rdf:resource="&img;Indoors"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
         <dct:bibliographicCitation xml:lang="en">FRMA</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, &quot;Labeled faces in the wild: A database for studying face recognition in unconstrained environments,&quot; in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label>mug shot photo</rdfs:label>
         <skos:definition>an image that is posed, has good lighting, is indoors, does not have face occlusions where the subject has his eyes open</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/NasalOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/NasalOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/UpperFaceOcclusion"/>
+    <!-- &frma;NasalOcclusion -->
+
+    <owl:Class rdf:about="&frma;NasalOcclusion">
+        <rdfs:subClassOf rdf:resource="&frma;UpperFaceOcclusion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOccludingBodyRegion"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000004"/>
+                <owl:onProperty rdf:resource="&frma;isOccludingBodyRegion"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000004"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:bibliographicCitation xml:lang="en">&quot;Facial Region,&quot; The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, &quot;Labeled faces in the wild: A database for studying face recognition in unconstrained environments,&quot; in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">nasal occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the nose</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/Occlusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/Occlusion">
-        <dct:bibliographicCitation xml:lang="en">&quot;Facial Region,&quot; The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, &quot;Labeled faces in the wild: A database for studying face recognition in unconstrained environments,&quot; in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <!-- &frma;Occlusion -->
+
+    <owl:Class rdf:about="&frma;Occlusion">
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">occlusion</rdfs:label>
         <skos:definition xml:lang="en">something that blocks the view of a subject within an image</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/OcularOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/OcularOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/UpperFaceOcclusion"/>
+    <!-- &frma;OcularOcclusion -->
+
+    <owl:Class rdf:about="&frma;OcularOcclusion">
+        <rdfs:subClassOf rdf:resource="&frma;UpperFaceOcclusion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOccludingBodyRegion"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004088"/>
+                <owl:onProperty rdf:resource="&frma;isOccludingBodyRegion"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0004088"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:bibliographicCitation xml:lang="en">&quot;Facial Region,&quot; The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, &quot;Labeled faces in the wild: A database for studying face recognition in unconstrained environments,&quot; in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">ocular occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the eyes</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/OralOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/OralOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/LowerFaceOcclusion"/>
+    <!-- &frma;OralOcclusion -->
+
+    <owl:Class rdf:about="&frma;OralOcclusion">
+        <rdfs:subClassOf rdf:resource="&frma;LowerFaceOcclusion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOccludingBodyRegion"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000165"/>
+                <owl:onProperty rdf:resource="&frma;isOccludingBodyRegion"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000165"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:bibliographicCitation xml:lang="en">&quot;Facial Region,&quot; The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, &quot;Labeled faces in the wild: A database for studying face recognition in unconstrained environments,&quot; in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">oral occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the lips and mouth</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/ParotidOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/ParotidOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/LowerFaceOcclusion"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Facial Region,&quot; The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, &quot;Labeled faces in the wild: A database for studying face recognition in unconstrained environments,&quot; in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <!-- &frma;ParotidOcclusion -->
+
+    <owl:Class rdf:about="&frma;ParotidOcclusion">
+        <rdfs:subClassOf rdf:resource="&frma;LowerFaceOcclusion"/>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">parotid occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the angle of the jaw</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/UpperFaceOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/UpperFaceOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/FaceOcclusion"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Facial Region,&quot; The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, &quot;Labeled faces in the wild: A database for studying face recognition in unconstrained environments,&quot; in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <!-- &frma;UpperFaceOcclusion -->
+
+    <owl:Class rdf:about="&frma;UpperFaceOcclusion">
+        <rdfs:subClassOf rdf:resource="&frma;FaceOcclusion"/>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">upper face occlusion</rdfs:label>
         <skos:definition xml:lang="en">something that blocks a portion of the view of a persons face from the bottom of the nose to the top of the head within within an image</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/ZygomaticOcclusion -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/ZygomaticOcclusion">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/LowerFaceOcclusion"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Facial Region,&quot; The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, &quot;Labeled faces in the wild: A database for studying face recognition in unconstrained environments,&quot; in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <!-- &frma;ZygomaticOcclusion -->
+
+    <owl:Class rdf:about="&frma;ZygomaticOcclusion">
+        <rdfs:subClassOf rdf:resource="&frma;LowerFaceOcclusion"/>
+        <dct:bibliographicCitation xml:lang="en">"Facial Region," The Free Dictionary. [Online]. Available: https://medical-dictionary.thefreedictionary.com/facial region. [Accessed: 03-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">zygomatic occlusion</rdfs:label>
         <skos:definition xml:lang="en">occlusion of the cheek bones</skos:definition>
     </owl:Class>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/Hair -->
 
-    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/Hair">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001444"/>
+    <!-- &ho;Hair -->
+
+    <rdf:Description rdf:about="&ho;Hair">
+        <rdfs:subClassOf rdf:resource="&obo;UBERON_0001444"/>
     </rdf:Description>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/HairColor -->
 
-    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/HairColor">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/Color"/>
+    <!-- &ho;HairColor -->
+
+    <rdf:Description rdf:about="&ho;HairColor">
+        <rdfs:subClassOf rdf:resource="&pfd;Color"/>
     </rdf:Description>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/HairTexture -->
 
-    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/HairTexture">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/VisualDescriptor"/>
+    <!-- &ho;HairTexture -->
+
+    <rdf:Description rdf:about="&ho;HairTexture">
+        <rdfs:subClassOf rdf:resource="&pfd;VisualDescriptor"/>
     </rdf:Description>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/Haircut -->
 
-    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/Haircut">
-        <rdfs:subClassOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/VisualDescriptor"/>
+    <!-- &ho;Haircut -->
+
+    <rdf:Description rdf:about="&ho;Haircut">
+        <rdfs:subClassOf rdf:resource="&pfd;VisualDescriptor"/>
     </rdf:Description>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/Earrings -->
 
-    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/Earrings">
+    <!-- &wt;Earrings -->
+
+    <rdf:Description rdf:about="&wt;Earrings">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/AuricleOcclusion"/>
+                <owl:onProperty rdf:resource="&frma;isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="&frma;AuricleOcclusion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/Eyewear -->
 
-    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/Eyewear">
+    <!-- &wt;Eyewear -->
+
+    <rdf:Description rdf:about="&wt;Eyewear">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/OcularOcclusion"/>
+                <owl:onProperty rdf:resource="&frma;isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="&frma;OcularOcclusion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/Hat -->
 
-    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/Hat">
+    <!-- &wt;Hat -->
+
+    <rdf:Description rdf:about="&wt;Hat">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/CranialOcclusion"/>
+                <owl:onProperty rdf:resource="&frma;isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="&frma;CranialOcclusion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/Headwear -->
 
-    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/Headwear">
+    <!-- &wt;Headwear -->
+
+    <rdf:Description rdf:about="&wt;Headwear">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf"/>
+                <owl:onProperty rdf:resource="&frma;isOcclusionSourceOf"/>
                 <owl:someValuesFrom>
                     <owl:Class>
-                        <owl:complementOf rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/CervicalOcclusion"/>
+                        <owl:complementOf rdf:resource="&frma;CervicalOcclusion"/>
                     </owl:Class>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/Lipstick -->
 
-    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/Lipstick">
+    <!-- &wt;Lipstick -->
+
+    <rdf:Description rdf:about="&wt;Lipstick">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/OralOcclusion"/>
+                <owl:onProperty rdf:resource="&frma;isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="&frma;OralOcclusion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/Makeup -->
 
-    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/Makeup">
+    <!-- &wt;Makeup -->
+
+    <rdf:Description rdf:about="&wt;Makeup">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/FaceOcclusion"/>
+                <owl:onProperty rdf:resource="&frma;isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="&frma;FaceOcclusion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/NeckTie -->
 
-    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/NeckTie">
+    <!-- &wt;NeckTie -->
+
+    <rdf:Description rdf:about="&wt;NeckTie">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/CervicalOcclusion"/>
+                <owl:onProperty rdf:resource="&frma;isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="&frma;CervicalOcclusion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/Necklace -->
 
-    <rdf:Description rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/Necklace">
+    <!-- &wt;Necklace -->
+
+    <rdf:Description rdf:about="&wt;Necklace">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/CervicalOcclusion"/>
+                <owl:onProperty rdf:resource="&frma;isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="&frma;CervicalOcclusion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
-    
 
 
-    <!-- https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/WearableObject -->
 
-    <owl:Class rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/WearableObject">
+    <!-- &wt;WearableObject -->
+
+    <owl:Class rdf:about="&wt;WearableObject">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/isOcclusionSourceOf"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/Occlusion"/>
+                <owl:onProperty rdf:resource="&frma;isOcclusionSourceOf"/>
+                <owl:someValuesFrom rdf:resource="&frma;Occlusion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
 
 
-    <!-- https://w3id.org/lio/v1#Image -->
 
-    <rdf:Description rdf:about="https://w3id.org/lio/v1#Image">
+    <!-- &lio;Image -->
+
+    <rdf:Description rdf:about="&lio;Image">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/hasOcclusion"/>
-                <owl:someValuesFrom rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/Occlusion"/>
+                <owl:onProperty rdf:resource="&frma;hasOcclusion"/>
+                <owl:someValuesFrom rdf:resource="&frma;Occlusion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
@@ -552,4 +570,3 @@
 
 
 <!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
-
