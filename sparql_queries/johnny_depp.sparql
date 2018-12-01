@@ -1,6 +1,6 @@
 prefix mlmo: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/>
 prefix fibo-fnd-arr-arr: <http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/>
-prefix lio: <https://w3id.org/lio/v1#>
+prefix lio: <http://purl.org/net/lio#>
 prefix lcc-lr: <http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
 prefix fibo-fnd-aap-a: <http://www.omg.org/spec/EDMC-FIBO/FND/AgentsAndPeople/Agents/>
 PREFIX wt: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/>
@@ -20,7 +20,8 @@ where {
       ?Person obo:BFO_0000051 ?face .
       ?face obo:BFO_0000051 ?eye .
       ?eye a obo:UBERON_0000970 .
-      ?eye pfd:hasColor pfd:Brown
+      ?eye pfd:hasColor ?eyeColor .
+      ?eyeColor a pfd:Brown.
       optional{
         filter (?classification = "Johnny Depp"^^xsd:string) # This line ensures we only have counts for correctly classified images
         ?Result lcc-lr:hasTag ?classification .

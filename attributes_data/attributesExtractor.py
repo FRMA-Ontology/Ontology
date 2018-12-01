@@ -356,7 +356,7 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 		occlusionIRI = rdflib.term.URIRef(base_iri + "/EyeglassOcclusion")
 		graph.add((occlusionIRI, RDF.type, OWL.NamedIndividual))
 		graph.add((occlusionIRI, RDF.type, rdflib.term.URIRef(frma_iri + "/" + "OcularOcclusion")))
-		graph.add((image_IRI, rdflib.term.URIRef(frma_iri + "/" + "hasOcculsion"), occlusionIRI))
+		graph.add((image_IRI, rdflib.term.URIRef(frma_iri + "/" + "hasOcclusion"), occlusionIRI))
 		# graph.add((occlusionIRI, isOccludingBodyRegion, wearable_individual)) # target not put in yet, I dont wont to include orbital region just for this minimal info
 		graph.add((wearable_individual, isOcclusionSourceOf, occlusionIRI))
 
@@ -372,7 +372,7 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 		occlusionIRI = rdflib.term.URIRef(base_iri + "/SunglassOcclusion")
 		graph.add((occlusionIRI, RDF.type, OWL.NamedIndividual))
 		graph.add((occlusionIRI, RDF.type, rdflib.term.URIRef(frma_iri + "/" + "OcularOcclusion")))
-		graph.add((image_IRI, rdflib.term.URIRef(frma_iri + "/" + "hasOcculsion"), occlusionIRI))
+		graph.add((image_IRI, rdflib.term.URIRef(frma_iri + "/" + "hasOcclusion"), occlusionIRI))
 		graph.add((wearable_individual, isOcclusionSourceOf, occlusionIRI))
 
 	wearable_generic_things = [("Wearing Hat", "Hat", "CranialOcclusion"), ("Wearing Earrings", "Earrings", "AuricleOcclusion"), ("Wearing Necktie", "NeckTie", "CervicalOcclusion"),
@@ -390,7 +390,7 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 			occlusionIRI = rdflib.term.URIRef(base_iri + "/"+ wearing_item_class + "Occlusion")
 			graph.add((occlusionIRI, RDF.type, OWL.NamedIndividual))
 			graph.add((occlusionIRI, RDF.type, rdflib.term.URIRef(frma_iri + "/" + t[2])))
-			graph.add((image_IRI, rdflib.term.URIRef(frma_iri + "/" + "hasOcculsion"), occlusionIRI))
+			graph.add((image_IRI, rdflib.term.URIRef(frma_iri + "/" + "hasOcclusion"), occlusionIRI))
 			graph.add((wearable_individual, isOcclusionSourceOf, occlusionIRI))
 
 	if (image_data["Wearing Lipstick"] > 0 or image_data["Heavy Makeup"] > 0):
@@ -652,7 +652,7 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 		occlusionIRI = rdflib.term.URIRef(base_iri + "/Occlusion")
 		graph.add((occlusionIRI, RDF.type, OWL.NamedIndividual))
 		graph.add((occlusionIRI, RDF.type, rdflib.term.URIRef(frma_iri + "/" + "FrontalOcclusion")))
-		graph.add((image_IRI, rdflib.term.URIRef(frma_iri + "/" + "hasOcculsion"), occlusionIRI))
+		graph.add((image_IRI, rdflib.term.URIRef(frma_iri + "/" + "hasOcclusion"), occlusionIRI))
 
 def clean_up_xml_string(xml):
 	classes = xml.split("\n  <owl")
