@@ -86,7 +86,6 @@ A “face” is defined by visual descriptors including face shape, facial expre
 
 “Demographic” is used to define things like age range, ethnicity, gender expression, and weight range.
 
-<img style="width: 100%" src="https://raw.githubusercontent.com/FRMA-Ontology/diagrams/master/concept-maps/oe_12/jpg/detail/OE_X_PersonFaceAndDemographicOntology-detail-03.svg.jpg" />
 
 
 
