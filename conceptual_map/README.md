@@ -62,13 +62,10 @@ This ontology defines the provenance used throughout the testing data. It is als
 <img style="width: 100%" src="https://raw.githubusercontent.com/FRMA-Ontology/diagrams/master/concept-maps/oe_12/jpg/detail/OE_X_MachineLearningModelOntology-detail-01.svg.jpg" />
 
 
-SOME INFORMATION HERE WOULD BE NICE
+Many machine learning ontologies describe models using simple text fields or overly simplified Latex equations. However, the Machine Learning Model Ontology allows users to describe their model in RDF allowing developers to describe their model layer by layer. This allows future users to more easily understand the model's architecture and more confidently reuse their systems.
 
 <img style="width: 100%" src="https://raw.githubusercontent.com/FRMA-Ontology/diagrams/master/concept-maps/oe_12/jpg/detail/OE_X_MachineLearningModelOntology-detail-02.svg.jpg" />
 
-SOME INFORMATION HERE WOULD BE NICE
-
-<img style="width: 100%" src="https://raw.githubusercontent.com/FRMA-Ontology/diagrams/master/concept-maps/oe_12/jpg/detail/OE_X_MachineLearningModelOntology-detail-03.svg.jpg" />
 
 
 
