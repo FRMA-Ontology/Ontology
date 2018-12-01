@@ -7,7 +7,7 @@ Machine learning allows us to learn a model for a given task such as facial reco
 
 FRMA specifically outlines the concepts of “occlusions” and “wearable objects.” Wearable objects are items recognized by facial recognition algorithms (e.g., eyeglasses, earrings, hats). FRMA breaks these items into two categories; headwear (e.g., eyeglasses, hats) and ornaments (e.g., jewelry, neckwear, and makeup). Occlusions model the concept of something that blocks the view of the subject within an image. FRMA breaks occlusions into two further categories; cervical occlusions (anything obstructing the subject’s neck), and facial occlusions (modeling the upper and lower portions of the subject’s face separately).
 
-<img style="width: 100%;" src="https://raw.githubusercontent.com/FRMA-Ontology/diagrams/master/concept-maps/oe_11/MLMO.jpg" />
+<img style="width: 100%;" src="https://raw.githubusercontent.com/FRMA-Ontology/Ontology/master/conceptual_map/jpg/mlmo.jpg" />
 
 
 ### Hair Ontology
