@@ -273,6 +273,7 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 	# demographic:
 	ethnicity_iri = rdflib.term.URIRef(base_iri + "/Ethnicity")
 	graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasDemographic"), ethnicity_iri))
+	graph.add((ethnicity_iri, RDF.type, rdflib.term.URIRef(pfd_iri + "/Ethnicity")))
 
 	if (image_data["Asian"] > 0):
 		graph.add((ethnicity_iri, RDF.type, rdflib.term.URIRef(pfd_iri + "/Asian")))
@@ -306,6 +307,7 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 
 	age_range_iri = rdflib.term.URIRef(base_iri + "/AgeRange")
 	graph.add((age_range_iri, RDF.type, OWL.NamedIndividual))
+	graph.add((age_range_iri, RDF.type, rdflib.term.URIRef(pfd_iri + "/AgeRange")))
 	graph.add((person_iri, rdflib.term.URIRef(pfd_iri + "/hasDemographic"), age_range_iri))
 
 	# these need to be disjoint
@@ -354,7 +356,7 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 		# make the person wear them:
 		graph.add((person_iri, rdflib.term.URIRef(wt_iri + "/isWearing"), wearable_individual))
 
-	wearable_generic_things = [("Wearing Hat", "Hat"), ("Wearing Earrings", "Earrings"), ("Wearing Necktie", "Necktie"),
+	wearable_generic_things = [("Wearing Hat", "Hat"), ("Wearing Earrings", "Earrings"), ("Wearing Necktie", "NeckTie"),
 					("Wearing Necklace", "Necklace"), ("Wearing Lipstick", "Lipstick")]
 	for t in wearable_generic_things:
 		if (image_data[t[0]] > 0):
@@ -390,7 +392,7 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 
 	hair_texture = rdflib.term.URIRef(base_iri + "/HairTexture")
 	graph.add((hair_individual, RDF.type, OWL.NamedIndividual))
-	graph.add((hair_individual, RDF.type, rdflib.term.URIRef(hair_iri_string + "/" + "HairTexture")))
+	graph.add((hair_texture, RDF.type, rdflib.term.URIRef(hair_iri_string + "/" + "HairTexture")))
 	graph.add((hair_individual, rdflib.term.URIRef(hair_iri_string + "/" + "hasTexture"), hair_texture))
 
 	# these need to be disjoint
@@ -523,7 +525,7 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 	graph.add((cheekIRI, RDF.type, rdflib.term.URIRef("http://purl.obolibrary.org/obo/UBERON_0001567")))
 
 	if (image_data["Rosy Cheeks"] > 0):
-		graph.add((cheekIRI, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "RosyCheek")))
+		graph.add((cheekIRI, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "RosyCheeks")))
 
 	if (image_data["High Cheekbones"] > 0):
 		graph.add((cheekIRI, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "HighCheekbones")))
@@ -547,7 +549,7 @@ def add_image_to_graph(image_data, graph, generateFakeResultId):
 	graph.add((noseShape, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "NoseShape")))
 	graph.add((noseIRI, rdflib.term.URIRef(pfd_iri + "/" + "hasShape"), noseShape))
 	if (image_data["Pointy Nose"] > 0):
-		graph.add((noseShape, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "PointyNoise")))
+		graph.add((noseShape, RDF.type, rdflib.term.URIRef(pfd_iri + "/" + "PointyNose")))
 
 	mouthIRI = rdflib.term.URIRef(base_iri + "/Mouth")
 	graph.add((mouthIRI, RDF.type, OWL.NamedIndividual))
