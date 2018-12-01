@@ -6,6 +6,7 @@ This documentation details an overview of the FRMA project and its associated on
 
 ### FRMA Ontology
 **Overview**
+
 Machine learning allows us to learn a model for a given task such as facial recognition with a high degree of accuracy. However, after these models are generated they are often treated as black boxes and the limitations of a model are often unknown to the end user. Facial Recognition Model Analyzer (FRMA) provides an intuitive interface to explore the limits of a facial recognition model by integrating “smart” images that semantically describe their subject and Kumar [2] features, with classification results aimed at uncovering common causes for misclassifications (including occlusions and wearable objects).
 
 <img style="width: 100%;" src="https://raw.githubusercontent.com/FRMA-Ontology/diagrams/master/concept-maps/oe_12/jpg/frma.jpg" />
@@ -16,11 +17,13 @@ FRMA specifically outlines the concepts of “occlusions” and “wearable obje
 
 ### Hair Ontology
 **Overview**
+
 The Hair Ontology aims to more precisely describe the hair on the subject’s head and/or face. Because human hair is incredibly varied, the hair ontology focuses on multiple traits to more completely describe a person’s head and/or facial hair.
 
 <img style="width: 100%;" src="https://raw.githubusercontent.com/FRMA-Ontology/diagrams/master/concept-maps/oe_12/jpg/hair.jpg" />
 
 **Detail**
+
 The Hair Ontology includes subclasses for hair location, color, texture, and haircut.
 
 <img style="width: 100%" src="https://raw.githubusercontent.com/FRMA-Ontology/diagrams/master/concept-maps/oe_12/jpg/detail/OE_X_HairOntology-detail-01.svg.jpg" />
@@ -35,11 +38,13 @@ This gives our queries the requisite vocabulary to answer competency questions l
 
 ### Image Ontology
 **Overview**
+
 Image Ontology enables the FRMA system to classify the properties of individual image files. This metadata includes semantic descriptors of the visual image and its subject rather than native image metadata describing camera settings and file information. FRMA is interested in semantically defining the dearth of content within the image rather than merely interpreting the image itself as a flat photograph.
 
 <img style="width: 100%;" src="https://raw.githubusercontent.com/FRMA-Ontology/diagrams/master/concept-maps/oe_12/jpg/img.jpg" />
 
 **Detail**
+
 The Image Ontology encapsulates the metadata required to describe images in the context of the FRMA project.
 
 <img style="width: 100%" src="https://raw.githubusercontent.com/FRMA-Ontology/diagrams/master/concept-maps/oe_12/jpg/detail/OE_X_ImageOntology-detail-01.svg.jpg" />
@@ -52,11 +57,13 @@ Specifically, the Image Ontology defines an Image class and numerous subclasses 
 
 ### Machine Learning Model Ontology
 **Overview**
+
 The Machine Learning Model Ontology allows users to describe the learning process, the structure of the learned model, and the evaluation of the model from a data-centric perspective.
 
 <img style="width: 100%;" src="https://raw.githubusercontent.com/FRMA-Ontology/diagrams/master/concept-maps/oe_12/jpg/mlmo.jpg" />
 
 **Detail**
+
 This ontology defines the provenance used throughout the testing data. It is also used to model the concepts of testing and training ML models, each of which is a subclass of an activity.
 
 <img style="width: 100%" src="https://raw.githubusercontent.com/FRMA-Ontology/diagrams/master/concept-maps/oe_12/jpg/detail/OE_X_MachineLearningModelOntology-detail-01.svg.jpg" />
@@ -71,11 +78,13 @@ Many machine learning ontologies describe models using simple text fields or ove
 
 ### Person, Face, and Demographic Ontology
 **Overview**
+
 This sub-ontology focuses specifically on a person’s demographic and facial features that appear in their images, including facial expression, age range, and nose shape.
 
 <img style="width: 100%;" src="https://raw.githubusercontent.com/FRMA-Ontology/diagrams/master/concept-maps/oe_12/jpg/pfd.jpg" />
 
 **Detail**
+
 A “person” is the subject or face that is analyzed by FRMA.
 
 <img style="width: 100%" src="https://raw.githubusercontent.com/FRMA-Ontology/diagrams/master/concept-maps/oe_12/jpg/detail/OE_X_PersonFaceAndDemographicOntology-detail-01.svg.jpg" />
@@ -92,12 +101,14 @@ A “face” is defined by visual descriptors including face shape, facial expre
 
 ### Wearable Things Ontology
 **Overview**
+
 When dealing with facial recognition, people in the images may be wearing some type of clothing or accessory. Those pieces of clothing may effectively block a part of or occlude someone’s face. The Wearable Things Ontology was created to keep track of various clothing and accessories that could disrupt a facial recognition algorithm. This ontology acts as a place to hold potential sources of occlusion that also happen to be wearable things.
 
 <img style="width: 100%;" src="https://raw.githubusercontent.com/FRMA-Ontology/diagrams/master/concept-maps/oe_12/jpg/wto.jpg" />
 
 
 **Detail**
+
 It holds a simple tree like structure of is-a relationships between the different concepts that we currently have in our dataset, all of which span from the root concept of being some “wearable thing.”
 
 <img style="width: 100%" src="https://raw.githubusercontent.com/FRMA-Ontology/diagrams/master/concept-maps/oe_12/jpg/detail/OE_X_WearableThingsOntology-detail-01.svg.jpg" />
