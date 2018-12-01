@@ -7,8 +7,7 @@ Machine learning allows us to learn a model for a given task such as facial reco
 
 FRMA specifically outlines the concepts of “occlusions” and “wearable objects.” Wearable objects are items recognized by facial recognition algorithms (e.g., eyeglasses, earrings, hats). FRMA breaks these items into two categories; headwear (e.g., eyeglasses, hats) and ornaments (e.g., jewelry, neckwear, and makeup). Occlusions model the concept of something that blocks the view of the subject within an image. FRMA breaks occlusions into two further categories; cervical occlusions (anything obstructing the subject’s neck), and facial occlusions (modeling the upper and lower portions of the subject’s face separately).
 
-(3) at least 3 other diagrams that, together with your text descriptions, document the ontology
-
+<img style="width: 100%;" src="https://raw.githubusercontent.com/FRMA-Ontology/diagrams/master/concept-maps/oe_11/MLMO.jpg" />
 
 
 ### Hair Ontology
@@ -17,38 +16,30 @@ The Hair Ontology aims to more precisely describe the hair on the subject’s he
 
 The Hair Ontology includes subclasses for hair location, color, texture, and haircut. Location is broken into further subclasses like facial hair and balding. This allows for more detailed description of facial hair and other traits that are usually a binary option in traditional models. This gives our queries the requisite vocabulary to answer competency questions like, ““Which of these two models is better at classifying people with long hair?"
 
-(3) at least 3 other diagrams that, together with your text descriptions, document the ontology
-
 
 ### Image Ontology
 
-Image Ontology enables the FRMA system to classify the properties of different image files.
+Image Ontology enables the FRMA system to classify the properties of individual image files. This metadata includes semantic descriptors of the visual image and its subject rather than native image metadata describing camera settings and file information. FRMA is interested in semantically defining the dearth of content within the image rather than merely interpreting the image itself as a flat photograph.
 
-The Image Ontology encapsulates the metadata required to describe images in the context of the FRMA project. Specifically, it defines an Image class and numerous subclasses that can describe the fidelity, color, lighting conditions, and pose of a particular image.
-
-The attached diagrams show
-
-(1) an overview of the problem you have been working on and of the ontology itself
-(2) a paragraph description of your ontology overview diagram
-(3) at least 3 other diagrams that, together with your text descriptions, document the ontology
+The Image Ontology encapsulates the metadata required to describe images in the context of the FRMA project. Specifically, the Image Ontology defines an Image class and numerous subclasses that describe descriptors like fidelity, color, lighting conditions, and pose.
 
 
 ### Machine Learning Model Ontology
 
-(1) an overview of the problem you have been working on and of the ontology itself
-(2) a paragraph description of your ontology overview diagram
-(3) at least 3 other diagrams that, together with your text descriptions, document the ontology
+The Machine Learning Model Ontology allows users to describe the learning process, the structure of the learned model, and the evaluation of the model from a data-centric perspective.
+
+This ontology defines the provenance used throughout the testing data. It is also used to model the concepts of testing and training ML models, each of which is a subclass of an activity.
 
 
 ### Person, Face, and Demographic Ontology
 
-(1) an overview of the problem you have been working on and of the ontology itself
-(2) a paragraph description of your ontology overview diagram
-(3) at least 3 other diagrams that, together with your text descriptions, document the ontology
+This sub-ontology focuses specifically on a person’s demographic and facial features that appear in their images, including facial expression, age range, and nose shape.
+
+A “person” is the subject or face that is analyzed by FRMA. A “face” is defined by visual descriptors including face shape, facial expression, nose size, face size, and skin tone. “Demographic” is used to define things like age range, ethnicity, gender expression, and weight range.
 
 
 ### Wearable Things Ontology
 
-When dealing with facial recognition of images, it is fairly normal for the people in the images to be wearing some type of clothing or accessory. It is also reasonable for those pieces of clothing to effectively block a part of the image of someone’s face, to occlude the face in other words. The WearableThingsOntology was created to be a simple to use method of keeping track of the various clothing and accessories that could potentially mess with a facial recognition algorithm. This ontology exists to be used by the higher up FRMA ontology that imports it. From there, it acts as a place to hold potential sources of occlusion that also happen to be wearable things/accessories.
+When dealing with facial recognition, people in the images may be wearing some type of clothing or accessory. Those pieces of clothing may effectively block a part of or occlude someone’s face. The Wearable Things Ontology was created to keep track of various clothing and accessories that could disrupt a facial recognition algorithm. This ontology acts as a place to hold potential sources of occlusion that also happen to be wearable things.
 
-When viewed in a vacuum, the ontologies simplicity is one of it’s best points. It holds a simple tree like structure of is-a relationships between the different concepts that we currently have in our dataset, all of which span from the root concept of being some “wearable thing.” When view in conjunction with the rest of the project, the different concepts within WearableThingsOntology are connected to the FRMA concept of occlusions through the idea that the objects within WTO will typically be a source of a specific type of occlusion. Expressed concisely, (Forall WTO:SomeObject (Exist FRMA:Occlusion [WTO:SomeObject   FRMA:isOcclusionSourceOf   FRMA:Occlusion])).
+It holds a simple tree like structure of is-a relationships between the different concepts that we currently have in our dataset, all of which span from the root concept of being some “wearable thing.” When viewed in conjunction with the rest of the project, the different concepts within Wearable Things Ontology (WTO) are connected to the FRMA concept of occlusions through the idea that the objects within WTO will typically be occlusive. Expressed concisely, (Forall WTO:SomeObject (Exist FRMA:Occlusion [WTO:SomeObject   FRMA:isOcclusionSourceOf   FRMA:Occlusion])).
