@@ -225,7 +225,7 @@
         <dct:bibliographicCitation rdf:datatype="&xsd;string">"tie| Definition of wavy in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/tie. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
         <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, "Labeled faces in the wild: A survey," in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
         <rdfs:label xml:lang="en">necktie</rdfs:label>
-        <skos:definition xml:lang="en">strip of material worn round the collar and tied in a knot at the front with the ends hanging down, typically forming part of a man&apos;s smart or formal outfit</skos:definition>
+        <skos:definition xml:lang="en">strip of material worn round the collar and tied in a knot at the front with the ends hanging down, typically forming part of a man's smart or formal outfit</skos:definition>
     </owl:Class>
 
 
