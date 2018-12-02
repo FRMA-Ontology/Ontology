@@ -76,11 +76,11 @@ This sub-ontology focuses specifically on a person’s demographic and facial fe
 <img style="width: 100%;" src="https://raw.githubusercontent.com/FRMA-Ontology/diagrams/master/concept-maps/oe_12/jpg/pfd.jpg" />
 
 **Detail**
-A “person” is the subject or face that is analyzed by FRMA. A “face” is defined by visual descriptors including face shape, facial expression, nose size, face size, and skin tone.
+A “face” is defined by visual descriptors including face shape, facial expression, nose size, face size, and skin tone.
 
 <img style="width: 100%" src="https://raw.githubusercontent.com/FRMA-Ontology/diagrams/master/concept-maps/oe_12/jpg/detail/OE_X_PersonFaceAndDemographicOntology-detail-01.svg.jpg" />
 
-“Demographic” is used to define things like age range, ethnicity, gender expression, and weight range.
+A “person” is the subject or face that is analyzed by FRMA. “Demographic” is used to define things like age range, ethnicity, gender expression, and weight range.
 
 <img style="width: 100%" src="https://raw.githubusercontent.com/FRMA-Ontology/diagrams/master/concept-maps/oe_12/jpg/detail/OE_X_PersonFaceAndDemographicOntology-detail-02.svg.jpg" />
 
