@@ -168,37 +168,37 @@
 
     <!-- &ho;BlackHair -->
 
-    <owl:Class rdf:about="&ho;BlackHair">
-        <rdfs:subClassOf rdf:resource="&ho;HairColor"/>
+    <owl:NamedIndividual rdf:about="&ho;BlackHair">
+        <rdf:type rdf:resource="&ho;HairColor"/>
         <dct:bibliographicCitation xml:lang="en">"black| Definition of black in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/black. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
         <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">black hair</rdfs:label>
         <skos:definition xml:lang="en">hair of the very darkest colour owing to the absence of or complete absorption of light</skos:definition>
-    </owl:Class>
+    </owl:NamedIndividual>
 
 
 
     <!-- &ho;BlondHair -->
 
-    <owl:Class rdf:about="&ho;BlondHair">
-        <rdfs:subClassOf rdf:resource="&ho;HairColor"/>
+    <owl:NamedIndividual rdf:about="&ho;BlondHair">
+        <rdf:type rdf:resource="&ho;HairColor"/>
         <dct:bibliographicCitation xml:lang="en">"blonde| Definition of blonde in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/blonde. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
         <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">blond hair</rdfs:label>
         <skos:definition xml:lang="en">fair or pale yellow hair</skos:definition>
-    </owl:Class>
+    </owl:NamedIndividual>
 
 
 
     <!-- &ho;BrownHair -->
 
-    <owl:Class rdf:about="&ho;BrownHair">
-        <rdfs:subClassOf rdf:resource="&ho;HairColor"/>
+    <owl:NamedIndividual rdf:about="&ho;BrownHair">
+        <rdf:type rdf:resource="&ho;HairColor"/>
         <dct:bibliographicCitation xml:lang="en">"brown| Definition of brown in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/brown. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
         <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">brown hair</rdfs:label>
         <skos:definition xml:lang="en">hair of a colour produced by mixing red, yellow, and blue, as of dark wood or rich soil</skos:definition>
-    </owl:Class>
+    </owl:NamedIndividual>
 
 
 
@@ -279,13 +279,13 @@
 
     <!-- &ho;GrayHair -->
 
-    <owl:Class rdf:about="&ho;GrayHair">
-        <rdfs:subClassOf rdf:resource="&ho;HairColor"/>
+    <owl:NamedIndividual rdf:about="&ho;GrayHair">
+        <rdf:type rdf:resource="&ho;HairColor"/>
         <dct:bibliographicCitation xml:lang="en">"grey| Definition of grey in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/grey. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
         <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">gray hair</rdfs:label>
         <skos:definition xml:lang="en">hair of a colour intermediate between black and white, as of ashes or lead</skos:definition>
-    </owl:Class>
+    </owl:NamedIndividual>
 
 
 
