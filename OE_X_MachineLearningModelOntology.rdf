@@ -25,19 +25,20 @@
      xmlns:lcc-lr="http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
      xmlns:fibo-fnd-arr-arr="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/"
      xmlns:fibo-fnd-arr-cls="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/ClassificationSchemes/"
-     xmlns:fibo-fnd-rel-rel="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/" >
+     xmlns:fibo-fnd-rel-rel="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/">
     <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/">
-        <owl:versionIRI rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/1.0.2"/>
+        <owl:versionIRI rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/1.0.3"/>
         <owl:imports rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/"/>
         <owl:imports rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/ClassificationSchemes/"/>
         <owl:imports rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/"/>
         <owl:imports rdf:resource="http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <dct:creator>Matthew Johnson</dct:creator>
-        <dct:modified>11/22/2018</dct:modified>
+        <dct:modified>12/01/2018</dct:modified>
+        <dct:publisher xml:lang="en">FRMA Team</dct:publisher>
         <rdfs:label xml:lang="en">Machine Learning Model Ontology</rdfs:label>
-        <owl:priorVersion>http://tw.rpi.edu/media/latest/OE_10_MachineLearningModelOntology.rdf</owl:priorVersion>
-        <skos:changeNote>Updated ontology headers and added the class, property annotations</skos:changeNote>
+        <owl:priorVersion>http://tw.rpi.edu/media/latest/OE_11_MachineLearningModelOntology.rdf</owl:priorVersion>
+        <skos:changeNote>Added datum class and an inverse property for hasFeature</skos:changeNote>
         <skos:definition xml:lang="en">Machine Learning Model Ontology allows users to describe the learning process, the structure of the learned model, and the evaluation of the model from a data-centric perspective.</skos:definition>
     </owl:Ontology>
 
@@ -53,13 +54,11 @@
 
 
 
-    <!--  This was copied from dcterms to add definitions to terms without importing all of dcterms which causes protege errors -->
+
     <!-- &dct;bibliographicCitation -->
 
     <owl:AnnotationProperty rdf:about="&dct;bibliographicCitation">
         <dct:description xml:lang="en">Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible.</dct:description>
-        <rdfs:comment xml:lang="en">A bibliographic reference for the resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="&dct;"/>
         <rdfs:label xml:lang="en">Bibliographic Citation</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&dct;identifier"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -67,13 +66,37 @@
     </owl:AnnotationProperty>
 
 
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
     <!-- &mlmo;hasFeature -->
 
     <owl:ObjectProperty rdf:about="&mlmo;hasFeature">
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <rdfs:subPropertyOf rdf:resource="&lcc-lr;has"/>
+        <owl:inverseOf rdf:resource="&mlmo;isFeatureOf"/>
+        <rdfs:domain rdf:resource="&mlmo;Datum"/>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">has feature</rdfs:label>
         <skos:definition xml:lang="en">links an entity to the data characteristics</skos:definition>
+    </owl:ObjectProperty>
+
+
+
+    <!-- &mlmo;isFeatureOf -->
+
+    <owl:ObjectProperty rdf:about="&mlmo;isFeatureOf">
+        <rdfs:subPropertyOf rdf:resource="&fibo-fnd-rel-rel;represents"/>
+        <rdfs:range rdf:resource="&mlmo;Datum"/>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <rdfs:label rdf:datatype="&xsd;string">is feature of</rdfs:label>
+        <skos:definition xml:lang="en">links a data characteristics to an entity</skos:definition>
     </owl:ObjectProperty>
 
 
@@ -94,8 +117,8 @@
     <owl:DatatypeProperty rdf:about="&mlmo;hasActivationFunction">
         <rdfs:domain rdf:resource="&mlmo;FullyConnectedLayer"/>
         <rdfs:range rdf:resource="&xsd;string"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Cornelisse, “An intuitive guide to Convolutional Neural Networks,” freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Cornelisse, "An intuitive guide to Convolutional Neural Networks," freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">has activation function</rdfs:label>
         <skos:definition xml:lang="en">links a fully connected layer to the activation function used by the neurons</skos:definition>
     </owl:DatatypeProperty>
@@ -107,8 +130,8 @@
     <owl:DatatypeProperty rdf:about="&mlmo;hasDimension">
         <rdfs:domain rdf:resource="&mlmo;Layer"/>
         <rdfs:range rdf:resource="&xsd;integer"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Cornelisse, “An intuitive guide to Convolutional Neural Networks,” freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Cornelisse, "An intuitive guide to Convolutional Neural Networks," freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">has dimension</rdfs:label>
         <skos:definition xml:lang="en">the number of functions with a layer</skos:definition>
     </owl:DatatypeProperty>
@@ -120,8 +143,8 @@
     <owl:DatatypeProperty rdf:about="&mlmo;hasIndex">
         <rdfs:domain rdf:resource="&mlmo;Layer"/>
         <rdfs:range rdf:resource="&xsd;integer"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Cornelisse, “An intuitive guide to Convolutional Neural Networks,” freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Cornelisse, "An intuitive guide to Convolutional Neural Networks," freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">has index</rdfs:label>
         <skos:definition xml:lang="en">the position of the layer in the model</skos:definition>
     </owl:DatatypeProperty>
@@ -132,8 +155,8 @@
 
     <owl:DatatypeProperty rdf:about="&mlmo;hasMatrixSizeX">
         <rdfs:range rdf:resource="&xsd;integer"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Cornelisse, “An intuitive guide to Convolutional Neural Networks,” freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Cornelisse, "An intuitive guide to Convolutional Neural Networks," freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">has matrix size x</rdfs:label>
         <skos:definition xml:lang="en">the number of columns in a matrix</skos:definition>
     </owl:DatatypeProperty>
@@ -144,8 +167,8 @@
 
     <owl:DatatypeProperty rdf:about="&mlmo;hasMatrixSizeY">
         <rdfs:range rdf:resource="&xsd;integer"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Cornelisse, “An intuitive guide to Convolutional Neural Networks,” freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Cornelisse, "An intuitive guide to Convolutional Neural Networks," freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">has matrix size y</rdfs:label>
         <skos:definition xml:lang="en">the number of rows in a matrix</skos:definition>
     </owl:DatatypeProperty>
@@ -157,8 +180,8 @@
     <owl:DatatypeProperty rdf:about="&mlmo;hasPoolingFunction">
         <rdfs:domain rdf:resource="&mlmo;PoolingLayer"/>
         <rdfs:range rdf:resource="&xsd;string"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Cornelisse, “An intuitive guide to Convolutional Neural Networks,” freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Cornelisse, "An intuitive guide to Convolutional Neural Networks," freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">has pooling function</rdfs:label>
         <skos:definition xml:lang="en">links a pooling layer to the pooling function used by the neurons</skos:definition>
     </owl:DatatypeProperty>
@@ -202,8 +225,8 @@
                 <owl:onDataRange rdf:resource="&xsd;integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Cornelisse, “An intuitive guide to Convolutional Neural Networks,” freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Cornelisse, "An intuitive guide to Convolutional Neural Networks," freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">convolutional layer</rdfs:label>
         <skos:definition xml:lang="en">performs the convolution operation using a learned filter</skos:definition>
     </owl:Class>
@@ -221,7 +244,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <dct:bibliographicCitation rdf:datatype="&xsd;string">CS231n Convolutional Neural Networks for Visual Recognition. [Online]. Available: http://cs231n.github.io/convolutional-networks/. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">convolutional neural network</rdfs:label>
         <skos:definition xml:lang="en">a neural network that has one or more layers of learned weighted filters</skos:definition>
         <skos:example rdf:datatype="&xsd;string">FaceNet</skos:example>
@@ -232,22 +255,10 @@
     <!-- &mlmo;DataSample -->
 
     <owl:Class rdf:about="&mlmo;DataSample">
-        <rdfs:subClassOf rdf:resource="&fibo-fnd-arr-arr;CollectionConstituent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&mlmo;hasFeature"/>
-                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&lcc-lr;hasTag"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">10153068920222172, “About Train, Validation and Test Sets in Machine Learning,” Towards Data Science, 06-Dec-2017. [Online]. Available: https://towardsdatascience.com/train-validation-and-test-sets-72cb40cba9e7. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <rdfs:subClassOf rdf:resource="&mlmo;Datum"/>
+        <owl:disjointWith rdf:resource="&mlmo;Result"/>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">10153068920222172, "About Train, Validation and Test Sets in Machine Learning," Towards Data Science, 06-Dec-2017. [Online]. Available: https://towardsdatascience.com/train-validation-and-test-sets-72cb40cba9e7. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">data sample</rdfs:label>
         <skos:definition xml:lang="en">basic unit of data consumed by a machine elarning model containing data features and a groundtruth label</skos:definition>
         <skos:example rdf:datatype="&xsd;string">An image with groundtruth label</skos:example>
@@ -265,10 +276,36 @@
                 <owl:someValuesFrom rdf:resource="&mlmo;DataSample"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">10153068920222172, “About Train, Validation and Test Sets in Machine Learning,” Towards Data Science, 06-Dec-2017. [Online]. Available: https://towardsdatascience.com/train-validation-and-test-sets-72cb40cba9e7. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">10153068920222172, "About Train, Validation and Test Sets in Machine Learning," Towards Data Science, 06-Dec-2017. [Online]. Available: https://towardsdatascience.com/train-validation-and-test-sets-72cb40cba9e7. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">data set</rdfs:label>
         <skos:definition xml:lang="en">collection of data samples used to train and test a machine learning model</skos:definition>
+    </owl:Class>
+
+
+
+    <!-- &mlmo;Datum -->
+
+    <owl:Class rdf:about="&mlmo;Datum">
+        <rdfs:subClassOf rdf:resource="&fibo-fnd-arr-arr;CollectionConstituent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&mlmo;hasFeature"/>
+                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lcc-lr;hasTag"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&mlmo;Layer"/>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Evaluating ML Models," Amazon. [Online]. Available: https://docs.aws.amazon.com/machine-learning/latest/dg/evaluating_models.html. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <rdfs:label rdf:datatype="&xsd;string">datum</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">a piece of tagged information</skos:definition>
     </owl:Class>
 
 
@@ -284,8 +321,8 @@
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Cornelisse, “An intuitive guide to Convolutional Neural Networks,” freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Cornelisse, "An intuitive guide to Convolutional Neural Networks," freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">fully connected layer</rdfs:label>
         <skos:definition xml:lang="en">summation across the products of the learned bias and the previous layers passed through an activation function</skos:definition>
     </owl:Class>
@@ -303,8 +340,8 @@
                 <owl:someValuesFrom rdf:resource="&mlmo;Layer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Cornelisse, "An intuitive guide to Convolutional Neural Networks," freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">inception layer</rdfs:label>
         <skos:definition xml:lang="en">perfroms multiple convolutions and pooling operations in parallel</skos:definition>
     </owl:Class>
@@ -330,7 +367,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <dct:bibliographicCitation rdf:datatype="&xsd;string">Neural Networks. [Online]. Available: https://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol4/cs11/report.html#What is a Neural Network. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">layer</rdfs:label>
         <skos:definition xml:lang="en">collection of functions at the same depth within a neural network</skos:definition>
     </owl:Class>
@@ -341,8 +378,8 @@
 
     <owl:Class rdf:about="&mlmo;Model">
         <rdfs:subClassOf rdf:resource="&fibo-fnd-arr-cls;Classifier"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Training ML Models,” Amazon. [Online]. Available: https://docs.aws.amazon.com/machine-learning/latest/dg/training-ml-models.html. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Training ML Models," Amazon. [Online]. Available: https://docs.aws.amazon.com/machine-learning/latest/dg/training-ml-models.html. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">model</rdfs:label>
         <skos:definition xml:lang="en">collection of learned patterns used to discriminate which of several groups something belongs to</skos:definition>
     </owl:Class>
@@ -361,7 +398,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <dct:bibliographicCitation rdf:datatype="&xsd;string">Neural Networks. [Online]. Available: https://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol4/cs11/report.html#What is a Neural Network. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:source rdf:datatype="&xsd;string">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">neural network</rdfs:label>
         <skos:definition xml:lang="en">machine learning model that is composed of one or more neural layers where each layer is fully connected to the previous layer</skos:definition>
     </owl:Class>
@@ -393,8 +430,8 @@
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Cornelisse, “An intuitive guide to Convolutional Neural Networks,” freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">D. Cornelisse, "An intuitive guide to Convolutional Neural Networks," freeCodeCamp.org, 24-Apr-2018. [Online]. Available: https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">pooling layer</rdfs:label>
         <skos:definition xml:lang="en">perfroms the max function across the previous layer</skos:definition>
         <skos:example rdf:datatype="&xsd;string">Max-Pooling Layer</skos:example>
@@ -405,22 +442,9 @@
     <!-- &mlmo;Result -->
 
     <owl:Class rdf:about="&mlmo;Result">
-        <rdfs:subClassOf rdf:resource="&fibo-fnd-arr-arr;CollectionConstituent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&mlmo;hasFeature"/>
-                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&lcc-lr;hasTag"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Evaluating ML Models,” Amazon. [Online]. Available: https://docs.aws.amazon.com/machine-learning/latest/dg/evaluating_models.html. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <rdfs:subClassOf rdf:resource="&mlmo;Datum"/>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Evaluating ML Models," Amazon. [Online]. Available: https://docs.aws.amazon.com/machine-learning/latest/dg/evaluating_models.html. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">result</rdfs:label>
         <skos:definition xml:lang="en">a prediction that links data features to a predicted result</skos:definition>
     </owl:Class>
@@ -437,8 +461,8 @@
                 <owl:someValuesFrom rdf:resource="&mlmo;Result"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Evaluating ML Models,” Amazon. [Online]. Available: https://docs.aws.amazon.com/machine-learning/latest/dg/evaluating_models.html. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Evaluating ML Models," Amazon. [Online]. Available: https://docs.aws.amazon.com/machine-learning/latest/dg/evaluating_models.html. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">result set</rdfs:label>
         <skos:definition xml:lang="en">collection of predictions generated by a machine learning model during testing</skos:definition>
     </owl:Class>
@@ -451,8 +475,8 @@
         <rdfs:subClassOf rdf:resource="&mlmo;Dataset"/>
         <owl:disjointWith rdf:resource="&mlmo;TrainingSet"/>
         <owl:disjointWith rdf:resource="&mlmo;ValidationSet"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">10153068920222172, “About Train, Validation and Test Sets in Machine Learning,” Towards Data Science, 06-Dec-2017. [Online]. Available: https://towardsdatascience.com/train-validation-and-test-sets-72cb40cba9e7. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">10153068920222172, "About Train, Validation and Test Sets in Machine Learning," Towards Data Science, 06-Dec-2017. [Online]. Available: https://towardsdatascience.com/train-validation-and-test-sets-72cb40cba9e7. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">test set</rdfs:label>
         <skos:definition xml:lang="en">data samples used to provide an unbiased evaluation of a final model</skos:definition>
     </owl:Class>
@@ -484,8 +508,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&mlmo;Training"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Evaluating ML Models,” Amazon. [Online]. Available: https://docs.aws.amazon.com/machine-learning/latest/dg/evaluating_models.html. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Evaluating ML Models," Amazon. [Online]. Available: https://docs.aws.amazon.com/machine-learning/latest/dg/evaluating_models.html. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">testing</rdfs:label>
         <skos:definition xml:lang="en">process that evaluates a machine learning model by calculating the predictive accuracy across a test set</skos:definition>
     </owl:Class>
@@ -514,8 +538,8 @@
                 <owl:someValuesFrom rdf:resource="&mlmo;ValidationSet"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“Training ML Models,” Amazon. [Online]. Available: https://docs.aws.amazon.com/machine-learning/latest/dg/training-ml-models.html. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"Training ML Models," Amazon. [Online]. Available: https://docs.aws.amazon.com/machine-learning/latest/dg/training-ml-models.html. [Accessed: 18-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">training</rdfs:label>
         <skos:definition xml:lang="en">process that uses a machine learning algorithm to find patterns within a training set and captures them as machine learning model</skos:definition>
     </owl:Class>
@@ -526,8 +550,8 @@
 
     <owl:Class rdf:about="&mlmo;TrainingSet">
         <rdfs:subClassOf rdf:resource="&mlmo;Dataset"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">10153068920222172, “About Train, Validation and Test Sets in Machine Learning,” Towards Data Science, 06-Dec-2017. [Online]. Available: https://towardsdatascience.com/train-validation-and-test-sets-72cb40cba9e7. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">10153068920222172, "About Train, Validation and Test Sets in Machine Learning," Towards Data Science, 06-Dec-2017. [Online]. Available: https://towardsdatascience.com/train-validation-and-test-sets-72cb40cba9e7. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">training Set</rdfs:label>
         <skos:definition xml:lang="en">data samples used to fit the model</skos:definition>
     </owl:Class>
@@ -538,23 +562,11 @@
 
     <owl:Class rdf:about="&mlmo;ValidationSet">
         <rdfs:subClassOf rdf:resource="&mlmo;Dataset"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">10153068920222172, “About Train, Validation and Test Sets in Machine Learning,” Towards Data Science, 06-Dec-2017. [Online]. Available: https://towardsdatascience.com/train-validation-and-test-sets-72cb40cba9e7. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, “Facenet: A unified embedding for face recognition and clustering,” in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">10153068920222172, "About Train, Validation and Test Sets in Machine Learning," Towards Data Science, 06-Dec-2017. [Online]. Available: https://towardsdatascience.com/train-validation-and-test-sets-72cb40cba9e7. [Accessed: 06-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">F. Schroff, D. Kalenichenko, and J. Philbin, "Facenet: A unified embedding for face recognition and clustering," in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 815–823.</dct:source>
         <rdfs:label xml:lang="en">validation set</rdfs:label>
         <skos:definition xml:lang="en">data samples used to provide an unbiased evaluation of a model fit while tuning model hyperparameters</skos:definition>
     </owl:Class>
-    <rdf:Description>
-        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-    </rdf:Description>
 
 
 
@@ -572,14 +584,6 @@
             <rdf:Description rdf:about="&mlmo;ConvolutionalLayer"/>
             <rdf:Description rdf:about="&mlmo;FullyConnectedLayer"/>
             <rdf:Description rdf:about="&mlmo;PoolingLayer"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&mlmo;DataSample"/>
-            <rdf:Description rdf:about="&mlmo;Layer"/>
-            <rdf:Description rdf:about="&mlmo;Result"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>

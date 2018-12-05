@@ -5,3 +5,4 @@ catalog-*.xml
 attributes_data/found_images/
 attributes_data/lfw_images/
 attributes_data/all_names.txt
+release*

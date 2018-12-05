@@ -27,17 +27,16 @@
      xmlns:fibo-fnd-utl-av="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
      xmlns:fibo-fnd-aap-agt="http://www.omg.org/spec/EDMC-FIBO/FND/AgentsAndPeople/Agents/">
     <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/">
-        <owl:versionIRI rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/1.0.2"/>
+        <owl:versionIRI rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/1.0.3"/>
         <owl:imports rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/AgentsAndPeople/Agents/"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <dct:creator xml:lang="en">Jordan Faas-Bush</dct:creator>
-        <dct:modified>11/24/2018</dct:modified>
-        <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology - Person, Face, and Demographic</rdfs:label>
-        <owl:priorVersion rdf:datatype="&xsd;string">http://tw.rpi.edu/media/latest/OE_10_PersonFaceAndDemographicOntology.rdf</owl:priorVersion>
-        <skos:changeNote rdf:datatype="&xsd;string">Updated ontology headers and added the class, property annotations. Also added organ/organism subdivision from the uberon ontology and created the visual descriptor class which includes a variety of classes including color, size, face shape, etc.</skos:changeNote>
-        <skos:definition xml:lang="en">Machine learning allows us to learn a model for a given task such as facial recognition with a high degree of accuracy. However, after these models are generated they are often treated as black boxes and the limitations of a model are often unknown to the end user. The system developed for this use case will provide an intuitive interface to explore the limits of a facial recognition model by semantically integrating “smart” images(semantically describe who the image depicts and what Kumar [2] features the image exhibits) with classification results to discover common causes for misclassifications.
-
-This sub-ontology is a section of the overall ontology focusing specifically on the features of a person such as their demographic and facial features that appear in their photos such as expression or nose shape.</skos:definition>
+        <dct:publisher xml:lang="en">FRMA Team</dct:publisher>
+        <dct:modified>12/01/2018</dct:modified>
+        <rdfs:label xml:lang="en">Person, Face, and Demographic Ontology</rdfs:label>
+        <owl:priorVersion rdf:datatype="&xsd;string">http://tw.rpi.edu/media/latest/OE_11_PersonFaceAndDemographicOntology.rdf</owl:priorVersion>
+        <skos:changeNote rdf:datatype="&xsd;string">Converted individuals into classes for consistency.</skos:changeNote>
+        <skos:definition xml:lang="en">This sub-ontology is a section of the overall ontology focusing specifically on the features of a person such as their demographic and facial features that appear in their photos such as expression or nose shape.</skos:definition>
     </owl:Ontology>
 
 
@@ -113,8 +112,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     <!-- &pfd;hasColor -->
 
     <owl:ObjectProperty rdf:about="&pfd;hasColor">
-        <dct:bibliographicCitation xml:lang="en">“have | Definition of have in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/have. [Accessed: 20-Oct-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"have | Definition of have in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/have. [Accessed: 20-Oct-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">has color</rdfs:label>
         <skos:definition>relates an object to its color</skos:definition>
     </owl:ObjectProperty>
@@ -124,8 +123,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     <!-- &pfd;hasDemographic -->
 
     <owl:ObjectProperty rdf:about="&pfd;hasDemographic">
-        <dct:bibliographicCitation xml:lang="en">“have | Definition of have in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/have. [Accessed: 20-Oct-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"have | Definition of have in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/have. [Accessed: 20-Oct-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">has demographic</rdfs:label>
         <skos:definition>relates the demograophic properties to a person who exhibts them</skos:definition>
     </owl:ObjectProperty>
@@ -135,8 +134,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     <!-- &pfd;hasShape -->
 
     <owl:ObjectProperty rdf:about="&pfd;hasShape">
-        <dct:bibliographicCitation xml:lang="en">“have | Definition of have in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/have. [Accessed: 20-Oct-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"have | Definition of have in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/have. [Accessed: 20-Oct-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">has shape</rdfs:label>
         <skos:definition>relates an object to its shape</skos:definition>
     </owl:ObjectProperty>
@@ -146,8 +145,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     <!-- &pfd;hasSize -->
 
     <owl:ObjectProperty rdf:about="&pfd;hasSize">
-        <dct:bibliographicCitation xml:lang="en">“have | Definition of have in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/have. [Accessed: 20-Oct-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"have | Definition of have in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/have. [Accessed: 20-Oct-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">has size</rdfs:label>
         <skos:definition>relates an object to its size</skos:definition>
     </owl:ObjectProperty>
@@ -157,8 +156,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     <!-- &pfd;hasVisualFeature -->
 
     <owl:ObjectProperty rdf:about="&pfd;hasVisualFeature">
-        <dct:bibliographicCitation xml:lang="en">“have | Definition of have in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/have. [Accessed: 20-Oct-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"have | Definition of have in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/have. [Accessed: 20-Oct-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">has visual feature</rdfs:label>
         <skos:definition>relates a visual feature to the object exhibiting it</skos:definition>
     </owl:ObjectProperty>
@@ -180,8 +179,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:DatatypeProperty rdf:about="&pfd;hasRGB">
         <rdfs:range rdf:resource="&xsd;string"/>
-        <dct:bibliographicCitation xml:lang="en">“have | Definition of have in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/have. [Accessed: 20-Oct-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"have | Definition of have in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/have. [Accessed: 20-Oct-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">has RGB</rdfs:label>
         <skos:definition xml:lang="en">relates the red, green, and blue values of a color ot the Color class</skos:definition>
     </owl:DatatypeProperty>
@@ -192,10 +191,10 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:DatatypeProperty rdf:about="&pfd;hasStrongNoseMouthLines">
         <rdfs:range rdf:resource="&xsd;boolean"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Nasolabial,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/medical/nasolabial. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Nasolabial," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/medical/nasolabial. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">has strong nasolabial lines</rdfs:label>
-        <skos:definition xml:lang="en">the subject&apos;s nose mouth lines are highly visible</skos:definition>
+        <skos:definition xml:lang="en">the subject's nose mouth lines are highly visible</skos:definition>
     </owl:DatatypeProperty>
 
 
@@ -204,8 +203,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:DatatypeProperty rdf:about="&pfd;isAttractive">
         <rdfs:range rdf:resource="&xsd;boolean"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Attractive,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/attractive. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Attractive," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/attractive. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">is attractive</rdfs:label>
         <skos:definition xml:lang="en">a face that adheres to scientific beauty standards (golden ratio, horizontal face symmetry)</skos:definition>
     </owl:DatatypeProperty>
@@ -216,8 +215,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:DatatypeProperty rdf:about="&pfd;isBaggy">
         <rdfs:range rdf:resource="&xsd;boolean"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Baggy,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/baggy. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Baggy," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/baggy. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">is baggy</rdfs:label>
         <skos:definition xml:lang="en">relates whether an eye is baggy to eye features</skos:definition>
     </owl:DatatypeProperty>
@@ -227,8 +226,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     <!-- &pfd;isOpen -->
 
     <owl:DatatypeProperty rdf:about="&pfd;isOpen">
-        <dct:bibliographicCitation xml:lang="en">&quot;Open,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/open. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Open," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/open. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">is open</rdfs:label>
         <skos:definition xml:lang="en">relates whether an eye is open to eye features</skos:definition>
     </owl:DatatypeProperty>
@@ -238,10 +237,9 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     <!-- &pfd;teethVisible -->
 
     <owl:DatatypeProperty rdf:about="&pfd;teethVisible">
-        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Visible,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/visible. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Visible," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/visible. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">teeth visible</rdfs:label>
         <skos:definition xml:lang="en">relates the visiblity of teeth to features of the mouth</skos:definition>
     </owl:DatatypeProperty>
@@ -340,10 +338,10 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:UBPROP_0000001 rdf:datatype="&xsd;string">Cavity in which food is initially ingested and generally contains teeth, tongue and glands.[AAO]</obo:UBPROP_0000001>
-        <obo:UBPROP_0000003 rdf:datatype="&xsd;string">Molecular and developmental cell lineage data suggest that the acoel mouth opening is homologous to the mouth of protostomes and deuterostomes and that the last common ancestor of the Bilateria (the &apos;urbilaterian&apos;) had only this single digestive opening.[well established][VHOG]</obo:UBPROP_0000003>
+        <obo:UBPROP_0000003 rdf:datatype="&xsd;string">Molecular and developmental cell lineage data suggest that the acoel mouth opening is homologous to the mouth of protostomes and deuterostomes and that the last common ancestor of the Bilateria (the 'urbilaterian') had only this single digestive opening.[well established][VHOG]</obo:UBPROP_0000003>
         <obo:UBPROP_0000007 rdf:datatype="&xsd;string">oral</obo:UBPROP_0000007>
         <obo:UBPROP_0000011 rdf:datatype="&xsd;string">some AOs place this as developing from the stomodeum but we weaken this to developmental contribution, as the mouth includes non-ectodermal derivatives</obo:UBPROP_0000011>
-        <obo:UBPROP_0000012 rdf:datatype="&xsd;string">in FMA, the tongue, palate etc are part of the mouth which is itself a subdivision of the face. ZFA includes a separate class &apos;oral region&apos; which is part of the mouth, but excludes tongue and lips</obo:UBPROP_0000012>
+        <obo:UBPROP_0000012 rdf:datatype="&xsd;string">in FMA, the tongue, palate etc are part of the mouth which is itself a subdivision of the face. ZFA includes a separate class 'oral region' which is part of the mouth, but excludes tongue and lips</obo:UBPROP_0000012>
         <rdfs:label rdf:datatype="&xsd;string">mouth</rdfs:label>
     </owl:Class>
 
@@ -435,7 +433,6 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
                 <owl:onDataRange rdf:resource="&xsd;boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A subdivision of the head that has as parts the layers deep to the surface of the anterior surface, including the mouth, eyes, and nose (when present). In vertebrates, this includes the facial skeleton and structures superficial to the facial skeleton (cheeks, mouth, eyeballs, skin of face, etc).</obo:IAO_0000115>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">A subdivision of the head that has as parts the layers deep to the surface of the anterior surface, including the mouth, eyes, and olfactory apparatus (when present). In vertebrates, this includes the facial skeleton and structures superficial to the facial skeleton (cheeks, mouth, eyeballs, skin of face, etc).</obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">facia/facies</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">visage</oboInOwl:hasRelatedSynonym>
@@ -588,8 +585,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;AgeRange">
         <rdfs:subClassOf rdf:resource="&pfd;Demographic"/>
-        <dct:bibliographicCitation xml:lang="en">N. Geifman and E. Rubin, “The Age-Phenome Knowledgebase: an example to handling ab-straction and expressiveness in a knowledge domain.”</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">N. Geifman and E. Rubin, "The Age-Phenome Knowledgebase: an example to handling ab-straction and expressiveness in a knowledge domain."</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">age range</rdfs:label>
         <skos:definition xml:lang="en">how many years old a person is</skos:definition>
     </owl:Class>
@@ -600,8 +597,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;Baby">
         <rdfs:subClassOf rdf:resource="&pfd;AgeRange"/>
-        <dct:bibliographicCitation xml:lang="en">N. Geifman and E. Rubin, “The Age-Phenome Knowledgebase: an example to handling ab-straction and expressiveness in a knowledge domain.”</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">N. Geifman and E. Rubin, "The Age-Phenome Knowledgebase: an example to handling ab-straction and expressiveness in a knowledge domain."</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">baby</rdfs:label>
         <skos:definition xml:lang="en">person from age 0 to 1 years old</skos:definition>
     </owl:Class>
@@ -612,8 +609,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;Child">
         <rdfs:subClassOf rdf:resource="&pfd;AgeRange"/>
-        <dct:bibliographicCitation xml:lang="en">N. Geifman and E. Rubin, “The Age-Phenome Knowledgebase: an example to handling ab-straction and expressiveness in a knowledge domain.”</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">N. Geifman and E. Rubin, "The Age-Phenome Knowledgebase: an example to handling ab-straction and expressiveness in a knowledge domain."</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">child</rdfs:label>
         <skos:definition xml:lang="en">person from age 1 to 5 years old</skos:definition>
     </owl:Class>
@@ -624,10 +621,10 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;Chubby">
         <rdfs:subClassOf rdf:resource="&pfd;WeightRange"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Chubby,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/chubby. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Chubby," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/chubby. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">chubby</rdfs:label>
-        <skos:definition xml:lang="en">categorized as &quot;chubby&quot; by the LFW tags</skos:definition>
+        <skos:definition xml:lang="en">categorized as "chubby" by the LFW tags</skos:definition>
     </owl:Class>
 
 
@@ -643,8 +640,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:bibliographicCitation xml:lang="en">&quot;Color,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/color. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Color," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/color. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">color</rdfs:label>
         <skos:definition xml:lang="en">a phenomenon of light (such as red, brown, pink, or gray) or visual perception that enables one to differentiate otherwise identical objects</skos:definition>
     </owl:Class>
@@ -654,8 +651,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     <!-- &pfd;Demographic -->
 
     <owl:Class rdf:about="&pfd;Demographic">
-        <dct:bibliographicCitation xml:lang="en">“demographics| Definition of wavy in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/demographics. [Accessed: 28-Oct-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"demographics| Definition of wavy in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/demographics. [Accessed: 28-Oct-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label>demographic</rdfs:label>
         <skos:definition>statistical data relating to the population and particular groups within it</skos:definition>
     </owl:Class>
@@ -666,8 +663,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;Ethnicity">
         <rdfs:subClassOf rdf:resource="&pfd;Demographic"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Ethnicity,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/ethnicity. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Ethnicity," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/ethnicity. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">ethnicity</rdfs:label>
         <skos:definition xml:lang="en">the ethnicity of the individual in the photo</skos:definition>
     </owl:Class>
@@ -678,8 +675,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;EyeColor">
         <rdfs:subClassOf rdf:resource="&pfd;Color"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Eye Color,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/eye%20color. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Eye Color," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/eye%20color. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">eye color</rdfs:label>
         <skos:definition xml:lang="en">the color of the iris of an eye</skos:definition>
     </owl:Class>
@@ -690,10 +687,10 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;FaceShape">
         <rdfs:subClassOf rdf:resource="&pfd;VisualDescriptor"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Shape,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/shape. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Shape," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/shape. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">face shape</rdfs:label>
-        <skos:definition xml:lang="en">the shape of the subject&apos;s face</skos:definition>
+        <skos:definition xml:lang="en">the shape of the subject's face</skos:definition>
     </owl:Class>
 
 
@@ -702,8 +699,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;FacialExpression">
         <rdfs:subClassOf rdf:resource="&pfd;VisualDescriptor"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Expression,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/expression. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Expression," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/expression. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">facial expression</rdfs:label>
         <skos:definition xml:lang="en">the expression the subject is making in the photo</skos:definition>
     </owl:Class>
@@ -715,10 +712,10 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     <owl:Class rdf:about="&pfd;Feminine">
         <rdfs:subClassOf rdf:resource="&pfd;GenderExpression"/>
         <owl:disjointWith rdf:resource="&pfd;Masculine"/>
-        <dct:bibliographicCitation xml:lang="en">“Feminine,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/feminine. [Accessed: 09-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Feminine," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/feminine. [Accessed: 09-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">feminine</rdfs:label>
-        <skos:definition xml:lang="en">categorized as &quot;female&quot; by the LFW tags</skos:definition>
+        <skos:definition xml:lang="en">categorized as "female" by the LFW tags</skos:definition>
     </owl:Class>
 
 
@@ -727,8 +724,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;Finish">
         <rdfs:subClassOf rdf:resource="&pfd;VisualDescriptor"/>
-        <dct:bibliographicCitation xml:lang="en">“Finish,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/finish. [Accessed: 09-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Finish," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/finish. [Accessed: 09-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">finish</rdfs:label>
         <skos:definition xml:lang="en">the refelectivness of a material</skos:definition>
     </owl:Class>
@@ -739,10 +736,10 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;ForheadVisibility">
         <rdfs:subClassOf rdf:resource="&pfd;VisualDescriptor"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Visibility,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/visibility. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Visibility," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/visibility. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">forehead visibility</rdfs:label>
-        <skos:definition xml:lang="en">amount of the subject&apos;s forehead that can be seen in the photo</skos:definition>
+        <skos:definition xml:lang="en">amount of the subject's forehead that can be seen in the photo</skos:definition>
     </owl:Class>
 
 
@@ -752,10 +749,20 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     <owl:Class rdf:about="&pfd;Frowning">
         <rdfs:subClassOf rdf:resource="&pfd;FacialExpression"/>
         <owl:disjointWith rdf:resource="&pfd;Smiling"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Frown,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/frowning. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Frown," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/frowning. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">frowning</rdfs:label>
-        <skos:definition xml:lang="en">the subject&apos;s mouth is in the shape of a frown</skos:definition>
+        <skos:definition xml:lang="en">the subject's mouth is in the shape of a frown</skos:definition>
+    </owl:Class>
+
+    <!-- &pfd;Frowning -->
+
+    <owl:Class rdf:about="&pfd;ArchedEyebrow">
+        <rdfs:subClassOf rdf:resource="&pfd;FacialExpression"/>
+        <dct:bibliographicCitation xml:lang="en">"Raise An Eyebrow," Collins. [Online]. Available: https://www.collinsdictionary.com/us/dictionary/english/raise-an-eyebrow. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <rdfs:label xml:lang="en">arched eyebrow</rdfs:label>
+        <skos:definition xml:lang="en">to look quizzical or surprised</skos:definition>
     </owl:Class>
 
 
@@ -764,10 +771,10 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;GenderExpression">
         <rdfs:subClassOf rdf:resource="&pfd;Demographic"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Gender Expression,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/gender%20expression. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">TWed Talk: Katie Chastain on &quot;Breaking the Gender Schema&quot; (6p, 24 Oct), 24-Oct-2018. [Online]. Available: https://www.youtube.com/watch?v=OQsXqJBZ3mQ. [Accessed: 28-Oct-2018].</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Gender Expression," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/gender%20expression. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">TWed Talk: Katie Chastain on "Breaking the Gender Schema" (6p, 24 Oct), 24-Oct-2018. [Online]. Available: https://www.youtube.com/watch?v=OQsXqJBZ3mQ. [Accessed: 28-Oct-2018].</dct:source>
         <rdfs:label xml:lang="en">gender expression</rdfs:label>
-        <skos:definition xml:lang="en">the physical and behavioral manifestations of one&apos;s gender identity</skos:definition>
+        <skos:definition xml:lang="en">the physical and behavioral manifestations of one's gender identity</skos:definition>
     </owl:Class>
 
 
@@ -777,10 +784,10 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     <owl:Class rdf:about="&pfd;HighCheekbones">
         <rdfs:subClassOf rdf:resource="&obo;UBERON_0001567"/>
         <owl:disjointWith rdf:resource="&pfd;RosyCheeks"/>
-        <dct:bibliographicCitation xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">high cheekbones</rdfs:label>
-        <skos:definition xml:lang="en">the subject&apos;s cheeks are labeled as high</skos:definition>
+        <skos:definition xml:lang="en">the subject's cheeks are labeled as high</skos:definition>
     </owl:Class>
 
 
@@ -789,10 +796,10 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;Masculine">
         <rdfs:subClassOf rdf:resource="&pfd;GenderExpression"/>
-        <dct:bibliographicCitation xml:lang="en">“Masculine,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/masculine. [Accessed: 09-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Masculine," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/masculine. [Accessed: 09-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">masculine</rdfs:label>
-        <skos:definition xml:lang="en">categorized as &quot;male&quot; by the LFW tags</skos:definition>
+        <skos:definition xml:lang="en">categorized as "male" by the LFW tags</skos:definition>
     </owl:Class>
 
 
@@ -801,8 +808,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;MiddleAged">
         <rdfs:subClassOf rdf:resource="&pfd;AgeRange"/>
-        <dct:bibliographicCitation xml:lang="en">N. Geifman and E. Rubin, “The Age-Phenome Knowledgebase: an example to handling ab-straction and expressiveness in a knowledge domain.”</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">N. Geifman and E. Rubin, "The Age-Phenome Knowledgebase: an example to handling ab-straction and expressiveness in a knowledge domain."</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">middle aged</rdfs:label>
         <skos:definition xml:lang="en">person from age 45 to 64</skos:definition>
     </owl:Class>
@@ -820,10 +827,10 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
                 <owl:onDataRange rdf:resource="&xsd;boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:bibliographicCitation xml:lang="en">&quot;Open,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/open. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Open," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/open. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">mouth open state</rdfs:label>
-        <skos:definition xml:lang="en">the state of how open the subject&apos;s mouth is</skos:definition>
+        <skos:definition xml:lang="en">the state of how open the subject's mouth is</skos:definition>
     </owl:Class>
 
 
@@ -832,10 +839,10 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;NarrowEyes">
         <rdfs:subClassOf rdf:resource="&pfd;FacialExpression"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Narrow,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/narrow. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Narrow," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/narrow. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">narrow eyes</rdfs:label>
-        <skos:definition xml:lang="en">the subject&apos;s eyes appear narrow</skos:definition>
+        <skos:definition xml:lang="en">the subject's eyes appear narrow</skos:definition>
     </owl:Class>
 
 
@@ -844,8 +851,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;NoseShape">
         <rdfs:subClassOf rdf:resource="&pfd;VisualDescriptor"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Shape,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/shape. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Shape," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/shape. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">nose shape</rdfs:label>
         <skos:definition xml:lang="en">having a pointy tip or end</skos:definition>
     </owl:Class>
@@ -862,8 +869,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
                 <owl:someValuesFrom rdf:resource="&pfd;Demographic"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:bibliographicCitation xml:lang="en">&quot;Person,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/person. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Person," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/person. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">person</rdfs:label>
         <skos:definition xml:lang="en">human being</skos:definition>
     </owl:Class>
@@ -874,10 +881,10 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;RosyCheeks">
         <rdfs:subClassOf rdf:resource="&obo;UBERON_0001567"/>
-        <dct:bibliographicCitation xml:lang="en">Fletcher, Jenna. “Rosy Cheeks: Causes and What to Do.” Medical News Today, MediLexicon International, www.medicalnewstoday.com/articles/322808.php.</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">Fletcher, Jenna. "Rosy Cheeks: Causes and What to Do." Medical News Today, MediLexicon International, www.medicalnewstoday.com/articles/322808.php.</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">rosy cheeks</rdfs:label>
-        <skos:definition xml:lang="en">the subject&apos;s cheeks appear rosy</skos:definition>
+        <skos:definition xml:lang="en">the subject's cheeks appear rosy</skos:definition>
     </owl:Class>
 
 
@@ -886,8 +893,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;Senior">
         <rdfs:subClassOf rdf:resource="&pfd;AgeRange"/>
-        <dct:bibliographicCitation xml:lang="en">N. Geifman and E. Rubin, “The Age-Phenome Knowledgebase: an example to handling ab-straction and expressiveness in a knowledge domain.”</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">N. Geifman and E. Rubin, "The Age-Phenome Knowledgebase: an example to handling ab-straction and expressiveness in a knowledge domain."</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">senior</rdfs:label>
         <skos:definition xml:lang="en">person from 65 and up</skos:definition>
     </owl:Class>
@@ -898,8 +905,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;Size">
         <rdfs:subClassOf rdf:resource="&pfd;VisualDescriptor"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Size,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/size. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Size," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/size. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">size</rdfs:label>
         <skos:definition xml:lang="en">how large an object is</skos:definition>
     </owl:Class>
@@ -910,8 +917,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;SkinTone">
         <rdfs:subClassOf rdf:resource="&pfd;VisualDescriptor"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Tone,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/tone. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Tone," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/tone. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">skin tone</rdfs:label>
         <skos:definition xml:lang="en">the realtive color</skos:definition>
     </owl:Class>
@@ -922,10 +929,10 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;Skinny">
         <rdfs:subClassOf rdf:resource="&pfd;WeightRange"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Skinny,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/skinny. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Skinny," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/skinny. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label>skinny</rdfs:label>
-        <skos:definition>categorized as &quot;skinny&quot; by the LFW tags</skos:definition>
+        <skos:definition>categorized as "skinny" by the LFW tags</skos:definition>
     </owl:Class>
 
 
@@ -934,10 +941,10 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;Smiling">
         <rdfs:subClassOf rdf:resource="&pfd;FacialExpression"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Smiling,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/smiling. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Smiling," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/smiling. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">smiling</rdfs:label>
-        <skos:definition xml:lang="en">the subject&apos;s mouth is in the shape of a smile</skos:definition>
+        <skos:definition xml:lang="en">the subject's mouth is in the shape of a smile</skos:definition>
     </owl:Class>
 
 
@@ -945,8 +952,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
     <!-- &pfd;VisualDescriptor -->
 
     <owl:Class rdf:about="&pfd;VisualDescriptor">
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">J. Stauder, J. Sirot, H. Le Borgne, E. Cooke, and N. E. O’Connor “Relatingvisual and semantic image descriptors,” 2004.</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">N. Kumar, A. Berg, P. N. Belhumeur, and S. Nayar, “Describable visual attributes for face verification and image search,” IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 33, no. 10, pp. 1962–1977, 2011.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">J. Stauder, J. Sirot, H. Le Borgne, E. Cooke, and N. E. O’Connor "Relatingvisual and semantic image descriptors," 2004.</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">N. Kumar, A. Berg, P. N. Belhumeur, and S. Nayar, "Describable visual attributes for face verification and image search," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 33, no. 10, pp. 1962–1977, 2011.</dct:source>
         <rdfs:label rdf:datatype="&xsd;string">visual descriptor</rdfs:label>
         <skos:definition rdf:datatype="&xsd;string">defines the syntax and the semantics of an elementary feature, which may be low-level or high-level</skos:definition>
     </owl:Class>
@@ -957,8 +964,8 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;WeightRange">
         <rdfs:subClassOf rdf:resource="&pfd;Demographic"/>
-        <dct:bibliographicCitation xml:lang="en">“Range.” Merriam-Webster, Merriam-Webster, www.merriam-webster.com/dictionary/range.</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">"Range." Merriam-Webster, Merriam-Webster, www.merriam-webster.com/dictionary/range.</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">weight range</rdfs:label>
         <skos:definition xml:lang="en">subjective labels given by the tags for LFW</skos:definition>
     </owl:Class>
@@ -969,274 +976,262 @@ This sub-ontology is a section of the overall ontology focusing specifically on 
 
     <owl:Class rdf:about="&pfd;Youth">
         <rdfs:subClassOf rdf:resource="&pfd;AgeRange"/>
-        <dct:bibliographicCitation xml:lang="en">N. Geifman and E. Rubin, “The Age-Phenome Knowledgebase: an example to handling ab-straction and expressiveness in a knowledge domain.”</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+        <dct:bibliographicCitation xml:lang="en">N. Geifman and E. Rubin, "The Age-Phenome Knowledgebase: an example to handling ab-straction and expressiveness in a knowledge domain."</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">youth</rdfs:label>
         <skos:definition xml:lang="en">person from age 5 to 17 years old</skos:definition>
     </owl:Class>
 
 
-
-    <!--
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-
-
     <!-- &pfd;Asian -->
 
-    <owl:NamedIndividual rdf:about="&pfd;Asian">
-        <rdf:type rdf:resource="&pfd;Ethnicity"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Asian,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/Asian. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <owl:Class rdf:about="&pfd;Asian">
+        <rdfs:subClassOf rdf:resource="&pfd;Ethnicity"/>
+        <dct:bibliographicCitation xml:lang="en">"Asian," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/Asian. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label rdf:datatype="&xsd;string">asian</rdfs:label>
         <skos:definition xml:lang="en">a person of Asian descent</skos:definition>
-    </owl:NamedIndividual>
+    </owl:Class>
 
 
 
     <!-- &pfd;Black -->
 
-    <owl:NamedIndividual rdf:about="&pfd;Black">
-        <rdf:type rdf:resource="&pfd;Ethnicity"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Black,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/black. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <owl:Class rdf:about="&pfd;Black">
+        <rdfs:subClassOf rdf:resource="&pfd;Ethnicity"/>
+        <dct:bibliographicCitation xml:lang="en">"Black," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/black. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label rdf:datatype="&xsd;string">black</rdfs:label>
         <skos:definition xml:lang="en">a person belonging to any of various population groups having dark pigmentation of the skin</skos:definition>
-    </owl:NamedIndividual>
+    </owl:Class>
 
 
 
     <!-- &pfd;Brown -->
 
-    <owl:NamedIndividual rdf:about="&pfd;Brown">
-        <rdf:type rdf:resource="&pfd;EyeColor"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Brown,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/brown. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <owl:Class rdf:about="&pfd;Brown">
+        <rdfs:subClassOf rdf:resource="&pfd;EyeColor"/>
+        <dct:bibliographicCitation xml:lang="en">"Brown," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/brown. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">brown eye color</rdfs:label>
         <skos:definition xml:lang="en">the eye has a brown color</skos:definition>
-    </owl:NamedIndividual>
+    </owl:Class>
 
 
 
     <!-- &pfd;DoubleChin -->
 
-    <owl:NamedIndividual rdf:about="&pfd;DoubleChin">
-        <rdf:type rdf:resource="&obo;UBERON_0008199"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Double Chin,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/double%20chin. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <owl:Class rdf:about="&pfd;DoubleChin">
+        <rdfs:subClassOf rdf:resource="&obo;UBERON_0008199"/>
+        <dct:bibliographicCitation xml:lang="en">"Double Chin," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/double%20chin. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">double chin</rdfs:label>
         <skos:definition xml:lang="en">the subject has a double chin in this photo</skos:definition>
-    </owl:NamedIndividual>
+    </owl:Class>
 
 
 
     <!-- &pfd;Flush -->
 
-    <owl:NamedIndividual rdf:about="&pfd;Flush">
-        <rdf:type rdf:resource="&pfd;SkinTone"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Flush,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/flush. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <owl:Class rdf:about="&pfd;Flush">
+        <rdfs:subClassOf rdf:resource="&pfd;SkinTone"/>
+        <dct:bibliographicCitation xml:lang="en">"Flush," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/flush. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">flush</rdfs:label>
         <skos:definition xml:lang="en">excited or elated by something</skos:definition>
-    </owl:NamedIndividual>
+    </owl:Class>
 
 
 
     <!-- &pfd;Indian -->
 
-    <owl:NamedIndividual rdf:about="&pfd;Indian">
-        <rdf:type rdf:resource="&pfd;Ethnicity"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Indian,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/Indian. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <owl:Class rdf:about="&pfd;Indian">
+        <rdfs:subClassOf rdf:resource="&pfd;Ethnicity"/>
+        <dct:bibliographicCitation xml:lang="en">"Indian," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/Indian. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label rdf:datatype="&xsd;string">indian</rdfs:label>
         <skos:definition xml:lang="en">a person of Indian descent</skos:definition>
-    </owl:NamedIndividual>
+    </owl:Class>
 
 
 
     <!-- &pfd;Large -->
 
-    <owl:NamedIndividual rdf:about="&pfd;Large">
-        <rdf:type rdf:resource="&pfd;Size"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Large,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/large. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <owl:Class rdf:about="&pfd;Large">
+        <rdfs:subClassOf rdf:resource="&pfd;Size"/>
+        <dct:bibliographicCitation xml:lang="en">"Large," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/large. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">large</rdfs:label>
-        <skos:definition xml:lang="en">categorized as &quot;large&quot; by the LFW tags</skos:definition>
-    </owl:NamedIndividual>
+        <skos:definition xml:lang="en">categorized as "large" by the LFW tags</skos:definition>
+    </owl:Class>
 
 
 
     <!-- &pfd;Medium -->
 
-    <owl:NamedIndividual rdf:about="&pfd;Medium">
-        <rdf:type rdf:resource="&pfd;Size"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Medium,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/medium. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <owl:Class rdf:about="&pfd;Medium">
+        <rdfs:subClassOf rdf:resource="&pfd;Size"/>
+        <dct:bibliographicCitation xml:lang="en">"Medium," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/medium. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">medium</rdfs:label>
-        <skos:definition xml:lang="en">categorized as &quot;medium&quot; by the LFW tags</skos:definition>
-    </owl:NamedIndividual>
+        <skos:definition xml:lang="en">categorized as "medium" by the LFW tags</skos:definition>
+    </owl:Class>
 
 
 
     <!-- &pfd;MouthClosed -->
 
-    <owl:NamedIndividual rdf:about="&pfd;MouthClosed">
-        <rdf:type rdf:resource="&pfd;MouthOpenState"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Closed,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/closed. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <owl:Class rdf:about="&pfd;MouthClosed">
+        <rdfs:subClassOf rdf:resource="&pfd;MouthOpenState"/>
+        <dct:bibliographicCitation xml:lang="en">"Closed," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/closed. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">mouth closed</rdfs:label>
-        <skos:definition xml:lang="en">the subject&apos;s mouth is closed</skos:definition>
-    </owl:NamedIndividual>
+        <skos:definition xml:lang="en">the subject's mouth is closed</skos:definition>
+    </owl:Class>
 
 
 
     <!-- &pfd;MouthSlightlyOpen -->
 
-    <owl:NamedIndividual rdf:about="&pfd;MouthSlightlyOpen">
-        <rdf:type rdf:resource="&pfd;MouthOpenState"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Slightly,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/slightly. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <owl:Class rdf:about="&pfd;MouthSlightlyOpen">
+        <rdfs:subClassOf rdf:resource="&pfd;MouthOpenState"/>
+        <dct:bibliographicCitation xml:lang="en">"Slightly," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/slightly. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">mouth slightly open</rdfs:label>
-        <skos:definition xml:lang="en">the subject&apos;s mouth is slightly open</skos:definition>
-    </owl:NamedIndividual>
+        <skos:definition xml:lang="en">the subject's mouth is slightly open</skos:definition>
+    </owl:Class>
 
 
 
     <!-- &pfd;MouthWideOpen -->
 
-    <owl:NamedIndividual rdf:about="&pfd;MouthWideOpen">
-        <rdf:type rdf:resource="&pfd;MouthOpenState"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Open,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/open. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <owl:Class rdf:about="&pfd;MouthWideOpen">
+        <rdfs:subClassOf rdf:resource="&pfd;MouthOpenState"/>
+        <dct:bibliographicCitation xml:lang="en">"Open," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/open. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">mouth wide open</rdfs:label>
-        <skos:definition xml:lang="en">the subject&apos;s mouth is wide open</skos:definition>
-    </owl:NamedIndividual>
+        <skos:definition xml:lang="en">the subject's mouth is wide open</skos:definition>
+    </owl:Class>
 
 
 
     <!-- &pfd;OvalFace -->
 
-    <owl:NamedIndividual rdf:about="&pfd;OvalFace">
-        <rdf:type rdf:resource="&pfd;FaceShape"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Oval,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/oval. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <owl:Class rdf:about="&pfd;OvalFace">
+        <rdfs:subClassOf rdf:resource="&pfd;FaceShape"/>
+        <dct:bibliographicCitation xml:lang="en">"Oval," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/oval. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">oval face</rdfs:label>
-        <skos:definition xml:lang="en">the shape of the subject&apos;s face appears oval shaped</skos:definition>
-    </owl:NamedIndividual>
+        <skos:definition xml:lang="en">the shape of the subject's face appears oval shaped</skos:definition>
+    </owl:Class>
 
 
 
     <!-- &pfd;Pale -->
 
-    <owl:NamedIndividual rdf:about="&pfd;Pale">
-        <rdf:type rdf:resource="&pfd;SkinTone"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Pale,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/pale. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <owl:Class rdf:about="&pfd;Pale">
+        <rdfs:subClassOf rdf:resource="&pfd;SkinTone"/>
+        <dct:bibliographicCitation xml:lang="en">"Pale," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/pale. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">pale</rdfs:label>
         <skos:definition xml:lang="en">has little color</skos:definition>
-    </owl:NamedIndividual>
+    </owl:Class>
 
 
 
     <!-- &pfd;PartiallyVisibleForehead -->
 
-    <owl:NamedIndividual rdf:about="&pfd;PartiallyVisibleForehead">
-        <rdf:type rdf:resource="&pfd;ForheadVisibility"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Partially,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/partially. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <owl:Class rdf:about="&pfd;PartiallyVisibleForehead">
+        <rdfs:subClassOf rdf:resource="&pfd;ForheadVisibility"/>
+        <dct:bibliographicCitation xml:lang="en">"Partially," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/partially. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">partially visible forehead</rdfs:label>
-        <skos:definition xml:lang="en">the subject&apos;s forehead is partially visible in the photo</skos:definition>
-    </owl:NamedIndividual>
+        <skos:definition xml:lang="en">the subject's forehead is partially visible in the photo</skos:definition>
+    </owl:Class>
 
 
 
     <!-- &pfd;PointyNose -->
 
-    <owl:NamedIndividual rdf:about="&pfd;PointyNose">
-        <rdf:type rdf:resource="&pfd;NoseShape"/>
-        <dct:bibliographicCitation xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <owl:Class rdf:about="&pfd;PointyNose">
+        <rdfs:subClassOf rdf:resource="&pfd;NoseShape"/>
+        <dct:bibliographicCitation xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">pointy nose</rdfs:label>
-        <skos:definition xml:lang="en">categorized as having a &quot;pointy nose&quot; by the LFW tags</skos:definition>
-    </owl:NamedIndividual>
+        <skos:definition xml:lang="en">categorized as having a "pointy nose" by the LFW tags</skos:definition>
+    </owl:Class>
 
 
 
     <!-- &pfd;RoundFace -->
 
-    <owl:NamedIndividual rdf:about="&pfd;RoundFace">
-        <rdf:type rdf:resource="&pfd;FaceShape"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Round,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/round. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <owl:Class rdf:about="&pfd;RoundFace">
+        <rdfs:subClassOf rdf:resource="&pfd;FaceShape"/>
+        <dct:bibliographicCitation xml:lang="en">"Round," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/round. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">round face</rdfs:label>
-        <skos:definition xml:lang="en">the shape of the subject&apos;s face appears rounded</skos:definition>
-    </owl:NamedIndividual>
+        <skos:definition xml:lang="en">the shape of the subject's face appears rounded</skos:definition>
+    </owl:Class>
 
 
 
     <!-- &pfd;RoundJaw -->
 
-    <owl:NamedIndividual rdf:about="&pfd;RoundJaw">
-        <rdf:type rdf:resource="&obo;UBERON_0008199"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Round,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/round. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <owl:Class rdf:about="&pfd;RoundJaw">
+        <rdfs:subClassOf rdf:resource="&obo;UBERON_0008199"/>
+        <dct:bibliographicCitation xml:lang="en">"Round," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/round. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">round jaw</rdfs:label>
         <skos:definition xml:lang="en">The subject has a round jaw</skos:definition>
-    </owl:NamedIndividual>
+    </owl:Class>
 
 
 
     <!-- &pfd;Shiny -->
 
-    <owl:NamedIndividual rdf:about="&pfd;Shiny">
-        <rdf:type rdf:resource="&pfd;Finish"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Shiny,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/shiny. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <owl:Class rdf:about="&pfd;Shiny">
+        <rdfs:subClassOf rdf:resource="&pfd;Finish"/>
+        <dct:bibliographicCitation xml:lang="en">"Shiny," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/shiny. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">shiny</rdfs:label>
         <skos:definition xml:lang="en">skin that is shiny as labeled by LFW</skos:definition>
-    </owl:NamedIndividual>
+    </owl:Class>
 
 
 
     <!-- &pfd;Small -->
 
-    <owl:NamedIndividual rdf:about="&pfd;Small">
-        <rdf:type rdf:resource="&pfd;Size"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Small,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/small. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <owl:Class rdf:about="&pfd;Small">
+        <rdfs:subClassOf rdf:resource="&pfd;Size"/>
+        <dct:bibliographicCitation xml:lang="en">"Small," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/small. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">small</rdfs:label>
-        <skos:definition xml:lang="en">categorized as &quot;small&quot; by the LFW tags</skos:definition>
-    </owl:NamedIndividual>
+        <skos:definition xml:lang="en">categorized as "small" by the LFW tags</skos:definition>
+    </owl:Class>
 
 
 
     <!-- &pfd;SquareFace -->
 
-    <owl:NamedIndividual rdf:about="&pfd;SquareFace">
-        <rdf:type rdf:resource="&pfd;FaceShape"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;Square,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/square. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <owl:Class rdf:about="&pfd;SquareFace">
+        <rdfs:subClassOf rdf:resource="&pfd;FaceShape"/>
+        <dct:bibliographicCitation xml:lang="en">"Square," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/square. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label xml:lang="en">square face</rdfs:label>
-        <skos:definition xml:lang="en">the shape of the subject&apos;s face appears square</skos:definition>
-    </owl:NamedIndividual>
+        <skos:definition xml:lang="en">the shape of the subject's face appears square</skos:definition>
+    </owl:Class>
 
 
 
     <!-- &pfd;White -->
 
-    <owl:NamedIndividual rdf:about="&pfd;White">
-        <rdf:type rdf:resource="&pfd;Ethnicity"/>
-        <dct:bibliographicCitation xml:lang="en">&quot;White,” Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/white. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
-        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, “Labeled faces in the wild: A database for studying face recognition in unconstrained environments,” in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
+    <owl:Class rdf:about="&pfd;White">
+        <rdfs:subClassOf rdf:resource="&pfd;Ethnicity"/>
+        <dct:bibliographicCitation xml:lang="en">"White," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/white. [Accessed: 23-Nov-2018].</dct:bibliographicCitation>
+        <dct:source xml:lang="en">G. B. Huang, M. Mattar, T. Berg, and E. Learned-Miller, "Labeled faces in the wild: A database for studying face recognition in unconstrained environments," in Workshop on faces in’Real-Life’Images: detection, alignment, and recognition, 2008.</dct:source>
         <rdfs:label rdf:datatype="&xsd;string">white</rdfs:label>
         <skos:definition xml:lang="en">being a member of a group or race characterized by light pigmentation of the skin</skos:definition>
-    </owl:NamedIndividual>
+    </owl:Class>
 
 
 

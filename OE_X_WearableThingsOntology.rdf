@@ -19,14 +19,15 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#" >
     <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/">
-        <owl:versionIRI rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/1.0.2"/>
+        <owl:versionIRI rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/1.0.3"/>
         <owl:imports rdf:resource="http://www.omg.org/techprocess/ab/SpecificationMetadata/"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <dct:creator>John Angel</dct:creator>
-        <dct:modified>11/22/2018</dct:modified>
+        <dct:publisher xml:lang="en">FRMA Team</dct:publisher>
+        <dct:modified>12/01/2018</dct:modified>
         <rdfs:label xml:lang="en">Wearable Things</rdfs:label>
-        <owl:priorVersion rdf:datatype="&xsd;string">http://tw.rpi.edu/media/latest/OE_10_WearableThingsOntology.rdf</owl:priorVersion>
-        <skos:changeNote rdf:datatype="&xsd;string">Added owl:VersionIRI, owlVersionInfo, and owlPriorVersion metadata.</skos:changeNote>
+        <owl:priorVersion rdf:datatype="&xsd;string">http://tw.rpi.edu/media/latest/OE_11_WearableThingsOntology.rdf</owl:priorVersion>
+        <skos:changeNote rdf:datatype="&xsd;string">Updated publisher information</skos:changeNote>
         <skos:definition xml:lang="en">When dealing with facial recognition on images of people, it is common to need to effectively deal with items that the image subject is wearing. This ontolgy exists to represent objects commonly worn by people in photos and images.</skos:definition>
     </owl:Ontology>
 
@@ -71,8 +72,8 @@
     <!-- &wt;isWearing -->
 
     <owl:ObjectProperty rdf:about="&wt;isWearing">
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“wear| Definition of wavy in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/wear. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, “Labeled faces in the wild: A survey,” in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"wear| Definition of wavy in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/wear. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, "Labeled faces in the wild: A survey," in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
         <rdfs:label xml:lang="en">is wearing</rdfs:label>
         <skos:definition xml:lang="en">the state of a Person wearing a Wearable object</skos:definition>
     </owl:ObjectProperty>
@@ -95,8 +96,8 @@
     <owl:DatatypeProperty rdf:about="&wt;isHeavyMakeup">
         <rdfs:domain rdf:resource="&wt;Makeup"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“heavy| Definition of wavy in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/heavy. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, “Labeled faces in the wild: A survey,” in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"heavy| Definition of wavy in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/heavy. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, "Labeled faces in the wild: A survey," in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
         <rdfs:label xml:lang="en">is heavy makeup</rdfs:label>
         <skos:definition xml:lang="en">the attribute of an application of makeup being of great density</skos:definition>
     </owl:DatatypeProperty>
@@ -118,8 +119,8 @@
 
     <owl:Class rdf:about="&wt;Earrings">
         <rdfs:subClassOf rdf:resource="&wt;Jewelry"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“earring| Definition of wavy in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/earring. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, “Labeled faces in the wild: A survey,” in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"earring| Definition of wavy in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/earring. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, "Labeled faces in the wild: A survey," in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
         <rdfs:label xml:lang="en">earrings</rdfs:label>
         <skos:definition xml:lang="en">piece of jewellery worn on the lobe or edge of the ear</skos:definition>
     </owl:Class>
@@ -130,8 +131,8 @@
 
     <owl:Class rdf:about="&wt;Eyeglasses">
         <rdfs:subClassOf rdf:resource="&wt;Eyewear"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“eyeglass| Definition of wavy in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/eyeglass. [Accessed: 19-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, “Labeled faces in the wild: A survey,” in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"eyeglass| Definition of wavy in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/eyeglass. [Accessed: 19-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, "Labeled faces in the wild: A survey," in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
         <rdfs:label xml:lang="en">eyeglasses</rdfs:label>
         <skos:definition xml:lang="en">set of two lenses for correcting or assisting defective eyesight</skos:definition>
     </owl:Class>
@@ -142,8 +143,8 @@
 
     <owl:Class rdf:about="&wt;Eyewear">
         <rdfs:subClassOf rdf:resource="&wt;Headwear"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“eyewear| Definition of wavy in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/eyewear. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, “Labeled faces in the wild: A survey,” in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"eyewear| Definition of wavy in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/eyewear. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, "Labeled faces in the wild: A survey," in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
         <rdfs:label xml:lang="en">eyewear</rdfs:label>
         <skos:definition xml:lang="en">things worn on the eyes</skos:definition>
     </owl:Class>
@@ -154,8 +155,8 @@
 
     <owl:Class rdf:about="&wt;Hat">
         <rdfs:subClassOf rdf:resource="&wt;Headwear"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“hat| Definition of wavy in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/hat. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, “Labeled faces in the wild: A survey,” in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"hat| Definition of wavy in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/hat. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, "Labeled faces in the wild: A survey," in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
         <rdfs:label xml:lang="en">hat</rdfs:label>
         <skos:definition xml:lang="en">shaped covering for the head</skos:definition>
         <skos:example rdf:datatype="&xsd;string">Fedora</skos:example>
@@ -167,8 +168,8 @@
 
     <owl:Class rdf:about="&wt;Headwear">
         <rdfs:subClassOf rdf:resource="&wt;WearableObject"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“headwear| Definition of wavy in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/headwear. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, “Labeled faces in the wild: A survey,” in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"headwear| Definition of wavy in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/headwear. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, "Labeled faces in the wild: A survey," in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
         <rdfs:label xml:lang="en">headwear</rdfs:label>
         <skos:definition xml:lang="en">items worn on the head</skos:definition>
     </owl:Class>
@@ -179,8 +180,8 @@
 
     <owl:Class rdf:about="&wt;Jewelry">
         <rdfs:subClassOf rdf:resource="&wt;Ornament"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“jewelry| Definition of wavy in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/jewelry. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, “Labeled faces in the wild: A survey,” in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"jewelry| Definition of wavy in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/jewelry. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, "Labeled faces in the wild: A survey," in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
         <rdfs:label xml:lang="en">jewelry</rdfs:label>
         <skos:definition xml:lang="en">personal ornaments that are typically made from or contain jewels and precious metal</skos:definition>
     </owl:Class>
@@ -191,8 +192,8 @@
 
     <owl:Class rdf:about="&wt;Lipstick">
         <rdfs:subClassOf rdf:resource="&wt;Makeup"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“lipstick| Definition of wavy in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/lipstick. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, “Labeled faces in the wild: A survey,” in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"lipstick| Definition of wavy in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/lipstick. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, "Labeled faces in the wild: A survey," in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
         <rdfs:label xml:lang="en">lipstick</rdfs:label>
         <skos:definition xml:lang="en">coloured cosmetic applied to the lips from a small solid stick</skos:definition>
     </owl:Class>
@@ -209,8 +210,8 @@
                 <owl:someValuesFrom rdf:resource="&xsd;boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“make-up| Definition of wavy in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/make-up. [Accessed: 19-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, “Labeled faces in the wild: A survey,” in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"make-up| Definition of wavy in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/make-up. [Accessed: 19-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, "Labeled faces in the wild: A survey," in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
         <rdfs:label xml:lang="en">makeup</rdfs:label>
         <skos:definition xml:lang="en">Cosmetics applied to the face that are used to enhance or alter its appearance</skos:definition>
     </owl:Class>
@@ -221,10 +222,10 @@
 
     <owl:Class rdf:about="&wt;NeckTie">
         <rdfs:subClassOf rdf:resource="&wt;Ornament"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“tie| Definition of wavy in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/tie. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, “Labeled faces in the wild: A survey,” in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"tie| Definition of wavy in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/tie. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, "Labeled faces in the wild: A survey," in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
         <rdfs:label xml:lang="en">necktie</rdfs:label>
-        <skos:definition xml:lang="en">strip of material worn round the collar and tied in a knot at the front with the ends hanging down, typically forming part of a man&apos;s smart or formal outfit</skos:definition>
+        <skos:definition xml:lang="en">strip of material worn round the collar and tied in a knot at the front with the ends hanging down, typically forming part of a man's smart or formal outfit</skos:definition>
     </owl:Class>
 
 
@@ -233,8 +234,8 @@
 
     <owl:Class rdf:about="&wt;Necklace">
         <rdfs:subClassOf rdf:resource="&wt;Jewelry"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“necklace| Definition of wavy in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/necklace. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, “Labeled faces in the wild: A survey,” in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"necklace| Definition of wavy in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/necklace. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, "Labeled faces in the wild: A survey," in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
         <rdfs:label xml:lang="en">necklace</rdfs:label>
         <skos:definition xml:lang="en">ornamental chain or string of beads, jewels, or links worn round the neck</skos:definition>
     </owl:Class>
@@ -245,8 +246,8 @@
 
     <owl:Class rdf:about="&wt;Ornament">
         <rdfs:subClassOf rdf:resource="&wt;WearableObject"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“ornament| Definition of wavy in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/ornament. [Accessed: 19-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, “Labeled faces in the wild: A survey,” in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"ornament| Definition of wavy in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/ornament. [Accessed: 19-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, "Labeled faces in the wild: A survey," in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
         <rdfs:label xml:lang="en">ornament</rdfs:label>
         <skos:definition xml:lang="en">thing used or serving to make something look more attractive but usually having no practical purpose</skos:definition>
     </owl:Class>
@@ -257,8 +258,8 @@
 
     <owl:Class rdf:about="&wt;Sunglasses">
         <rdfs:subClassOf rdf:resource="&wt;Eyewear"/>
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“sunglasses| Definition of wavy in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/sunglasses. [Accessed: 19-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, “Labeled faces in the wild: A survey,” in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"sunglasses| Definition of wavy in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/sunglasses. [Accessed: 19-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, "Labeled faces in the wild: A survey," in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
         <rdfs:label xml:lang="en">sunglasses</rdfs:label>
         <skos:altLabel xml:lang="en">shades</skos:altLabel>
         <skos:definition xml:lang="en">glasses tinted to protect the eyes from sunlight or glare</skos:definition>
@@ -270,8 +271,8 @@
     <!-- &wt;WearableObject -->
 
     <owl:Class rdf:about="&wt;WearableObject">
-        <dct:bibliographicCitation rdf:datatype="&xsd;string">“wearable| Definition of wavy in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/wearable. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
-        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, “Labeled faces in the wild: A survey,” in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
+        <dct:bibliographicCitation rdf:datatype="&xsd;string">"wearable| Definition of wavy in English by Oxford Dictionaries," Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/wearable. [Accessed: 13-Oct-2018].</dct:bibliographicCitation>
+        <dct:source rdf:datatype="&xsd;string">E. Learned-Miller, G. B. Huang, A. RoyChowdhury, H. Li, and G. Hua, "Labeled faces in the wild: A survey," in Advances in face detection and facial image analysis. Springer, 2016, pp. 189–248.</dct:source>
         <rdfs:label xml:lang="en">wearable object</rdfs:label>
         <skos:definition xml:lang="en">item that can be worn</skos:definition>
     </owl:Class>
