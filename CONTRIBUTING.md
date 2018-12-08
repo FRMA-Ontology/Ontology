@@ -1,10 +1,10 @@
-#### Contributing to the FRMA Ontology
+### Contributing to the FRMA Ontology
 
-This document will walk you through the steps of setting up your computer for contributing to the FRMA Ontology.
+This document will walk you through the steps of setting up your computer for contributing to the FRMA Ontology. Before you start, be sure to check our [open issues](https://github.com/FRMA-Ontology/Ontology/issues) or [open a new issue](https://github.com/FRMA-Ontology/Ontology/issues/new).
 
 
 
-#### First Steps
+### First Steps
 
 1. Make sure [Git](https://git-scm.com/) is installed on your local system
 
@@ -12,7 +12,7 @@ This document will walk you through the steps of setting up your computer for co
 
 
 
-#### Development Environment Setup
+### Development Environment Setup
 
 1. Fork the [FRMA-Ontology/Ontology](https://github.com/FRMA-Ontology/Ontology) repository on GitHub.
 
@@ -37,16 +37,7 @@ This enables you to pull the latest upstream changes. You can ensure this worked
 
 
 
-#### Developing
-
-TODO - flesh out this section a bit.
-- Opening the file in Protege
-- Check our [open issues](https://github.com/FRMA-Ontology/Ontology/issues)
-- [Open a new issue](https://github.com/FRMA-Ontology/Ontology/issues/new)
-
-
-
-#### Commiting Changes
+### Commiting Changes
 
 To commit your changes, do the following steps:
 
@@ -72,7 +63,7 @@ You can push your commited changes to your `dev` branch with the following comma
 
 
 
-#### Merging Changes
+### Merging Changes
 
 1. Navigate [here](https://github.com/FRMA-Ontology/Ontology/compare) to open a new pull request into the [FRMA-Ontology/Ontology](https://github.com/FRMA-Ontology/Ontology) GitHub repository
 
@@ -80,6 +71,6 @@ You can push your commited changes to your `dev` branch with the following comma
 
 3. Make sure that you're opening your PR from your `dev` branch into the `rcos/observatory` `dev` branch
 
-4. Reference the GitHub issue inside the pull request comment with `#787`, with `787` being the GitHub issue number
+4. Reference the GitHub issue inside the pull request comment with the GitHub issue number
 
 5. Click `Create Pull Request` and your code will be reviewed by an administrator.
