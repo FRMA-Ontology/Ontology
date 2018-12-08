@@ -6,6 +6,9 @@ checking which labeled vector (from the train data) the test data is closest to,
 
 python nearestNeighborTest.py ../../../../Downloads/facenet_lfw_vector.txt training_split.txt testing_split.txt facenet_results.txt
 
+python nearestNeighborTest.py dlib_output_vectors.txt training_split.txt testing_split.txt dlib_results.txt
+
+
 """
 import sys
 import numpy as np
@@ -24,6 +27,7 @@ def nearest_neighbor(vector, neighbors):
 	# requires at least one neighbor
 	# this could be done much, much more efficiently
 	closest = neighbors[0]
+	# print(neighbors[0])
 	closestDistance = np.linalg.norm(vector - neighbors[0][2])
 	for neighbor in neighbors:
 		distance = np.linalg.norm(vector - neighbor[2])
@@ -51,8 +55,17 @@ def main(args):
 		vector = np.array([float(x) for x in result[1].replace("[", "").replace("]", "").split(", ")])
 		r = (name, number, vector)
 		all_results += [r]
-		all_vector_dict[(name, number)] = r
+		if (name, number) not in all_vector_dict:
+			all_vector_dict[(name, number)] = []
+		all_vector_dict[(name, number)] += [r] # add it to the list of vectors under that name and number because some photos have multiple faces :P
 	results_file.close()
+
+	vector_length = len(all_results[0][2])
+	# we assume that at least one of the first two is correct otherwise we'll just fail I guess...
+	if len(all_results[1][2]) != vector_length:
+		print("ERROR: unknown vector length " + str(vector_length) + " != " + str(len(all_results[1][2])))
+		sys.exit(1)
+
 
 	# now we have the vectors. Now lets load the split
 
@@ -63,7 +76,13 @@ def main(args):
 	labeled_data = []
 	for label in training_names:
 		# add the vector to our list of labeled data:
-		labeled_data += [all_vector_dict[label]]
+		if label not in all_vector_dict:
+			# then we just add a zero vector to it with that name and number
+			labeled_data += [(label[0], label[1], np.zeros(vector_length))]
+			print("Created zeros vector for " + str(label))
+		else:
+			for face_in_photo in all_vector_dict[label]:
+				labeled_data += [face_in_photo]
 	print("amount of labeled data: " + str(len(labeled_data)))
 
 	# then go test it!
@@ -78,18 +97,37 @@ def main(args):
 	# results = []
 	# I also save everything to here just in case Matt wants to just edit this code instead of loading the file I guess?
 	# there are a couple lines inside the for loop which have to be uncommented to use the results array
+	
+	total = 0
+	correct = 0
 
 	for testing_name in testing_names:
 		# this is a name and number tuple
-		testing_vector = all_vector_dict[testing_name]
-		nearest, nearest_distance = nearest_neighbor(testing_vector[2], labeled_data)
+		# first create a default fake thing if we weren't able to find a face in that photo
+		testing_vector = [(testing_name[0], testing_name[1], np.zeros(vector_length))]
+		if testing_name in all_vector_dict:
+			# print("Found testing vector for " + str(testing_name))
+			testing_vector = all_vector_dict[testing_name] # a list of all the photos in the picture with all their faces
+		# [(name, number, vector), (name, number, vector)]
+		nearest = None
+		nearest_distance = -1
+		for face_vector in testing_vector:
+			# print("HERE", testing_vector, face_vector)
+			nearest_face, nearest_face_distance = nearest_neighbor(face_vector[2], labeled_data)
+			if nearest_face_distance < nearest_distance or nearest_distance == -1:
+				# then it's closer, so choose that one
+				nearest_distance = nearest_face_distance
+				nearest = nearest_face
 		# nearest is (name, number, vector)
 		r = (testing_name[0], testing_name[1], nearest_distance < .6, nearest[0], nearest[1], testing_name[0] == nearest[0])
+		total += 1
+		correct += testing_name[0] == nearest[0]
 		# results += [r]
 		string_r = [str(x) for x in r]
 		o = "\t".join(string_r) + "\n"
 		output_file.write(o)
 	output_file.close()
+	print("Total:", total, "Correct:", correct)
 
 	# if you uncomment things you can now do stuff with results, which is a list of (name, number, is_result_less_than_.6, nearest_name, nearest_number, is_same_person_bool)
 	# for each result. Currently we only test the testing_files, you can also uncomment the line above the for loop which then means
