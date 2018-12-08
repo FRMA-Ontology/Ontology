@@ -6,13 +6,140 @@
 # triple: image rdf:type MugShotPhoto. In the future we plan to run an inference
 # engine to generate these triples and include them in our triple store.
 
-prefix frma: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/>
-prefix lio: <https://w3id.org/lio/v1#>
+prefix mlmo: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/>
+prefix fibo-fnd-arr-arr: <http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/>
+prefix lio: <http://purl.org/net/lio#>
+prefix lcc-lr: <http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
 prefix fibo-fnd-aap-a: <http://www.omg.org/spec/EDMC-FIBO/FND/AgentsAndPeople/Agents/>
+prefix img: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/>
+prefix frma: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/>
 
-SELECT ?mugshot ?name
-WHERE {
-    ?mugshot a frma:MugShotPhoto .
-    ?mugshot lio:depicts ?person .
-    ?person  fibo-fnd-aap-a:hasName ?name .
- }
+select ?ResultSet ((?numCorrect/?total)*100 as ?accuracy)
+where {
+  {
+    select ?ResultSet (count(distinct ?classification) as ?numCorrect)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result lcc-lr:hasTag ?classification .
+      ?Result mlmo:hasFeature ?Image .
+
+      # Add restrictions here to get specific Accuracy
+      ?Image lio:depicts ?person .
+
+      # Posed Image
+      ?Image a img:PosedImage.
+
+      # Indoors
+      ?Image lio:hasDepictedBackground ?background .
+      ?background a img:Indoors .
+
+      # No Face occlusions
+      OPTIONAL{
+        ?Image frma:hasOcclusion ?occlusion.
+        minus{
+        	?occlusion a frma:OcularOcclusion .
+        }
+        minus{
+        	?occlusion a frma:BuccalOcclusion .
+        }
+        minus{
+        	?occlusion a frma:MentalOcclusion .
+        }
+        minus{
+        	?occlusion a frma:OralOcclusion .
+        }
+        minus{
+        	?occlusion a frma:ParotidOcclusion .
+        }
+        minus{
+        	?occlusion a frma:ZygomaticOcclusion .
+        }
+        minus{
+        	?occlusion a frma:AuricleOcclusion .
+        }
+        minus{
+        	?occlusion a frma:CranialOcclusion .
+        }
+        minus{
+        	?occlusion a frma:FrontalOcclusion .
+        }
+        minus{
+        	?occlusion a frma:NasalOcclusion .
+        }
+       }
+
+      # Image Fidelity not blurry
+      ?Image img:fidelityDescribedBy ?fidelity .
+      minus{
+        ?fidelity a img:BlurryImageFidelity .
+       }
+
+      ?Image lio:depicts ?Person .
+      ?Person fibo-fnd-aap-a:hasName ?Name
+      filter (?classification = ?Name)
+    }
+    group by ?ResultSet
+  }
+  {
+    select ?ResultSet (count(distinct ?Result) as ?total)
+    where{
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      # Add restrictions here to get specific Accuracy
+      ?Image lio:depicts ?person .
+
+      # Posed Image
+      ?Image a img:PosedImage.
+
+      # Indoors
+      ?Image lio:hasDepictedBackground ?background .
+      ?background a img:Indoors .
+
+      # No Face occlusions
+      OPTIONAL{
+        ?Image frma:hasOcclusion ?occlusion.
+        minus{
+        	?occlusion a frma:OcularOcclusion .
+        }
+        minus{
+        	?occlusion a frma:BuccalOcclusion .
+        }
+        minus{
+        	?occlusion a frma:MentalOcclusion .
+        }
+        minus{
+        	?occlusion a frma:OralOcclusion .
+        }
+        minus{
+        	?occlusion a frma:ParotidOcclusion .
+        }
+        minus{
+        	?occlusion a frma:ZygomaticOcclusion .
+        }
+        minus{
+        	?occlusion a frma:AuricleOcclusion .
+        }
+        minus{
+        	?occlusion a frma:CranialOcclusion .
+        }
+        minus{
+        	?occlusion a frma:FrontalOcclusion .
+        }
+        minus{
+        	?occlusion a frma:NasalOcclusion .
+        }
+       }
+
+      # Image Fidelity not blurry
+      ?Image img:fidelityDescribedBy ?fidelity .
+      minus{
+        ?fidelity a img:BlurryImageFidelity .
+       }
+
+    }
+    group by ?ResultSet
+  }
+}
