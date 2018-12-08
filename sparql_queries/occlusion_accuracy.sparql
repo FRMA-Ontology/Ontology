@@ -9,7 +9,7 @@ prefix frma: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/>
 select ?ResultSet ?OcclusionSourceType ((?numCorrect/?total)*100 as ?accuracy)
 where{
   {
-  select ?ResultSet ?OcclusionSourceType (count(?classification) as ?numCorrect)
+  select ?ResultSet ?OcclusionSourceType (count(distinct ?classification) as ?numCorrect)
   where{
     ?ResultSet a mlmo:ResultSet .
     ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
