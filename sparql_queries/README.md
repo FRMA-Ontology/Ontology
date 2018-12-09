@@ -18,5 +18,5 @@ This is the query for the competency question, “How well would my model work a
 This is the query for the competency question, “What part of the face does my facial recognition model depend on the most?” What the query actually grabs is the accuracy rate for all sources of occlusion in the individuals that are used, along with the type of the occlusion source object. From here, we can use a seperate description logic inferencing software to connect the type of the occlusion source to the body region being occluded and so answer the question.
 
 
-#### Johnny Depp
-This is the query for the competency question, “What type of image attributes does the model most associate with Johnny Depp?"
+#### George W. Bush
+This is the query for the competency question, “What type of image attributes does the model most associate with George W. Bush?"
