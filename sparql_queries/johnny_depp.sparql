@@ -11,7 +11,7 @@ prefix mlmo: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearnin
 prefix pfd: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/>
 prefix wt: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/>
 
-select ?ResultSet ?sideburnCount ?mustacheCount ?fiveoclockshadowCount ?goateeCount ?whiteCount ?asianCount ?blackCount ?indianCount ?strongnosemouthlinesCount ?nostrongnosemouthlinesCount ?isattractiveCount ?notisattractiveCount ?masculineCount ?feminineCount ?babyCount ?childCount ?youthCount ?middleagedCount ?seniorCount ?chubbyCount ?skinnyCount ?browneyeCount ?eyeglassesCount ?sunglassesCount ?earringsCount ?hatCount ?lipstickCount ?necktieCount ?necklaceCount ?baldCount ?bangsCount ?balancedlightingvariationCount ?harshlightingvariationCount ?softlightingvariationCount ?blurryimagefidelityCount ?sharpimagefidelityCount
+select ?ResultSet ?sideburnCount ?mustacheCount ?fiveoclockshadowCount ?goateeCount ?whiteCount ?asianCount ?blackCount ?indianCount ?strongnosemouthlinesCount ?nostrongnosemouthlinesCount ?isattractiveCount ?notisattractiveCount ?masculineCount ?feminineCount ?babyCount ?childCount ?youthCount ?middleagedCount ?seniorCount ?chubbyCount ?skinnyCount ?browneyeCount ?eyeglassesCount ?sunglassesCount ?earringsCount ?hatCount ?lipstickCount ?necktieCount ?necklaceCount ?baldCount ?bangsCount ?balancedlightingvariationCount ?harshlightingvariationCount ?flashlightingvariationCount ?softlightingvariationCount ?blurryimagefidelityCount ?sharpimagefidelityCount ?outdoorsCount ?indoorsCount ?posedimageCount ?candidimageCount ?colorimageCount ?blackandwhiteimageCount
 where {
 
   ## calculates how many instances of sideburn are associated with the person
@@ -677,6 +677,26 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of flashlightingvariation are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?flashlightingvariationCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image img:lightingDescribedBy ?lightingDescription .
+      ?lightingDescription a img:FlashLightingVariation .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates how many instances of softlightingvariation are associated with the person
   {
     select ?ResultSet (count(?classification) as ?softlightingvariationCount)
@@ -728,6 +748,122 @@ where {
       ?Image lio:depicts ?Person .
       ?Image img:fidelityDescribedBy ?imageFidelity .
       ?imageFidelity a img:SharpImageFidelity .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of outdoors are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?outdoorsCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image lio:hasDepictedBackground ?imageBackground .
+      ?imageBackground a img:Outdoors .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of indoors are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?indoorsCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image lio:hasDepictedBackground ?imageBackground .
+      ?imageBackground a img:Indoors .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of posedimage are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?posedimageCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image a img:PosedImage .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of candidimage are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?candidimageCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image a img:CandidImage .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of colorimage are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?colorimageCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image a img:ColorImage .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of blackandwhiteimage are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?blackandwhiteimageCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image a img:BlackAndWhiteImage .
 
       optional{
         ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
