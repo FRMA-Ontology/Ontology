@@ -1,33 +1,19 @@
-prefix mlmo: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/>
+
 prefix fibo-fnd-arr-arr: <http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/>
 prefix lio: <http://purl.org/net/lio#>
 prefix lcc-lr: <http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
 prefix fibo-fnd-aap-a: <http://www.omg.org/spec/EDMC-FIBO/FND/AgentsAndPeople/Agents/>
-prefix ho: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/>
 prefix obo: <http://purl.obolibrary.org/obo/>
 
-select ?ResultSet ((?sideburnMiss/?totalMiss)*100 as ?sideburn_missclass_rate) ((?mustacheMiss/?totalMiss)*100 as ?mustache_missclass_rate)
+prefix ho: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/>
+prefix img: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/>
+prefix frma: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/>
+prefix mlmo: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/>
+prefix pfd: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/>
+prefix wt: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/>
+
+select ?ResultSet ((?sideburnMiss/?totalMiss)*100 as ?sideburn_missclass_rate) ((?mustacheMiss/?totalMiss)*100 as ?mustache_missclass_rate) ((?whiteMiss/?totalMiss)*100 as ?white_missclass_rate) ((?asianMiss/?totalMiss)*100 as ?asian_missclass_rate) ((?blackMiss/?totalMiss)*100 as ?black_missclass_rate) ((?indianMiss/?totalMiss)*100 as ?indian_missclass_rate) ((?strongnosemouthlinesMiss/?totalMiss)*100 as ?strongnosemouthlines_missclass_rate) ((?nostrongnosemouthlinesMiss/?totalMiss)*100 as ?nostrongnosemouthlines_missclass_rate) ((?isattractiveMiss/?totalMiss)*100 as ?isattractive_missclass_rate) ((?notisattractiveMiss/?totalMiss)*100 as ?notisattractive_missclass_rate) ((?masculineMiss/?totalMiss)*100 as ?masculine_missclass_rate) ((?feminineMiss/?totalMiss)*100 as ?feminine_missclass_rate) ((?babyMiss/?totalMiss)*100 as ?baby_missclass_rate) ((?childMiss/?totalMiss)*100 as ?child_missclass_rate) ((?youthMiss/?totalMiss)*100 as ?youth_missclass_rate) ((?middleagedMiss/?totalMiss)*100 as ?middleaged_missclass_rate) ((?seniorMiss/?totalMiss)*100 as ?senior_missclass_rate) ((?chubbyMiss/?totalMiss)*100 as ?chubby_missclass_rate) ((?skinnyMiss/?totalMiss)*100 as ?skinny_missclass_rate)
 where {
-
-  ## calculates Mustache Missclassification
-  {
-    select ?ResultSet (count(?classification) as ?mustacheMiss)
-    where {
-      ?ResultSet a mlmo:ResultSet .
-      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
-      ?Result lcc-lr:hasTag ?classification .
-      ?Result mlmo:hasFeature ?Image .
-
-      ?Image lio:depicts ?Person .
-      ?Person obo:BFO_0000051 ?facialHair .
-      ?facialHair a ho:Mustache .
-
-
-      ?Person fibo-fnd-aap-a:hasName ?Name .
-      filter (?classification != ?Name)
-    }
-    group by ?ResultSet
-  }
 
   ## calculates sideburn Missclassification
   {
@@ -35,16 +21,391 @@ where {
     where {
       ?ResultSet a mlmo:ResultSet .
       ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
-      ?Result lcc-lr:hasTag ?classification .
       ?Result mlmo:hasFeature ?Image .
 
       ?Image lio:depicts ?Person .
       ?Person obo:BFO_0000051 ?facialHair .
       ?facialHair a ho:Sideburn .
 
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates mustache Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?mustacheMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person obo:BFO_0000051 ?facialHair .
+      ?facialHair a ho:Mustache .
 
       ?Person fibo-fnd-aap-a:hasName ?Name .
-      filter (?classification != ?Name)
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates white Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?whiteMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ethnicity .
+      ?ethnicity a pfd:White .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates asian Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?asianMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ethnicity .
+      ?ethnicity a pfd:Asian .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates black Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?blackMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ethnicity .
+      ?ethnicity a pfd:Black .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates indian Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?indianMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ethnicity .
+      ?ethnicity a pfd:Indian .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates strongnosemouthlines Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?strongnosemouthlinesMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasStrongNoseMouthLines True .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates nostrongnosemouthlines Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?nostrongnosemouthlinesMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasStrongNoseMouthLines False .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates isattractive Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?isattractiveMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:isAttractive True .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates notisattractive Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?notisattractiveMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:isAttractive False .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates masculine Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?masculineMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?genderExpression .
+      ?genderExpression a pfd:Masculine .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates feminine Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?feminineMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?genderExpression .
+      ?genderExpression a pfd:Feminine .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates baby Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?babyMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ageRange .
+      ?ageRange a pfd:Baby .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates child Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?childMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ageRange .
+      ?ageRange a pfd:Child .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates youth Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?youthMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ageRange .
+      ?ageRange a pfd:Youth .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates middleaged Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?middleagedMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ageRange .
+      ?ageRange a pfd:MiddleAged .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates senior Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?seniorMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ageRange .
+      ?ageRange a pfd:Senior .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates chubby Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?chubbyMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?weightRange .
+      ?weightRange a pfd:Chubby .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates skinny Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?skinnyMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?weightRange .
+      ?weightRange a pfd:Skinny .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
     }
     group by ?ResultSet
   }
@@ -55,11 +416,14 @@ where {
     where {
       ?ResultSet a mlmo:ResultSet .
       ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
-      ?Result lcc-lr:hasTag ?classification .
       ?Result mlmo:hasFeature ?Image .
       ?Image lio:depicts ?Person .
       ?Person fibo-fnd-aap-a:hasName ?Name
-      filter (?classification != ?Name)
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
 
     }
     group by ?ResultSet
