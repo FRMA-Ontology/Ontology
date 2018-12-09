@@ -1,4 +1,3 @@
-
 prefix fibo-fnd-arr-arr: <http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/>
 prefix lio: <http://purl.org/net/lio#>
 prefix lcc-lr: <http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
@@ -12,7 +11,7 @@ prefix mlmo: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearnin
 prefix pfd: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/>
 prefix wt: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/>
 
-select ?ResultSet ((?sideburnMiss/?totalMiss)*100 as ?sideburn_missclass_rate) ((?mustacheMiss/?totalMiss)*100 as ?mustache_missclass_rate) ((?fiveoclockshadowMiss/?totalMiss)*100 as ?fiveoclockshadow_missclass_rate) ((?goateeMiss/?totalMiss)*100 as ?goatee_missclass_rate) ((?whiteMiss/?totalMiss)*100 as ?white_missclass_rate) ((?asianMiss/?totalMiss)*100 as ?asian_missclass_rate) ((?blackMiss/?totalMiss)*100 as ?black_missclass_rate) ((?indianMiss/?totalMiss)*100 as ?indian_missclass_rate) ((?strongnosemouthlinesMiss/?totalMiss)*100 as ?strongnosemouthlines_missclass_rate) ((?nostrongnosemouthlinesMiss/?totalMiss)*100 as ?nostrongnosemouthlines_missclass_rate) ((?isattractiveMiss/?totalMiss)*100 as ?isattractive_missclass_rate) ((?notisattractiveMiss/?totalMiss)*100 as ?notisattractive_missclass_rate) ((?masculineMiss/?totalMiss)*100 as ?masculine_missclass_rate) ((?feminineMiss/?totalMiss)*100 as ?feminine_missclass_rate) ((?babyMiss/?totalMiss)*100 as ?baby_missclass_rate) ((?childMiss/?totalMiss)*100 as ?child_missclass_rate) ((?youthMiss/?totalMiss)*100 as ?youth_missclass_rate) ((?middleagedMiss/?totalMiss)*100 as ?middleaged_missclass_rate) ((?seniorMiss/?totalMiss)*100 as ?senior_missclass_rate) ((?chubbyMiss/?totalMiss)*100 as ?chubby_missclass_rate) ((?skinnyMiss/?totalMiss)*100 as ?skinny_missclass_rate) ((?browneyeMiss/?totalMiss)*100 as ?browneye_missclass_rate) ((?eyeglassesMiss/?totalMiss)*100 as ?eyeglasses_missclass_rate) ((?sunglassesMiss/?totalMiss)*100 as ?sunglasses_missclass_rate) ((?earringsMiss/?totalMiss)*100 as ?earrings_missclass_rate) ((?hatMiss/?totalMiss)*100 as ?hat_missclass_rate) ((?lipstickMiss/?totalMiss)*100 as ?lipstick_missclass_rate) ((?necktieMiss/?totalMiss)*100 as ?necktie_missclass_rate) ((?necklaceMiss/?totalMiss)*100 as ?necklace_missclass_rate) ((?baldMiss/?totalMiss)*100 as ?bald_missclass_rate) ((?bangsMiss/?totalMiss)*100 as ?bangs_missclass_rate) ((?balancedlightingvariationMiss/?totalMiss)*100 as ?balancedlightingvariation_missclass_rate) ((?harshlightingvariationMiss/?totalMiss)*100 as ?harshlightingvariation_missclass_rate) ((?flashlightingvariationMiss/?totalMiss)*100 as ?flashlightingvariation_missclass_rate) ((?softlightingvariationMiss/?totalMiss)*100 as ?softlightingvariation_missclass_rate) ((?blurryimagefidelityMiss/?totalMiss)*100 as ?blurryimagefidelity_missclass_rate) ((?sharpimagefidelityMiss/?totalMiss)*100 as ?sharpimagefidelity_missclass_rate) ((?outdoorsMiss/?totalMiss)*100 as ?outdoors_missclass_rate) ((?indoorsMiss/?totalMiss)*100 as ?indoors_missclass_rate) ((?posedimageMiss/?totalMiss)*100 as ?posedimage_missclass_rate) ((?candidimageMiss/?totalMiss)*100 as ?candidimage_missclass_rate) ((?colorimageMiss/?totalMiss)*100 as ?colorimage_missclass_rate) ((?blackandwhiteimageMiss/?totalMiss)*100 as ?blackandwhiteimage_missclass_rate)
+select ?ResultSet ((?sideburnMiss/?sideburnCount)*100 as ?sideburn_missclass_rate) ((?mustacheMiss/?mustacheCount)*100 as ?mustache_missclass_rate) ((?fiveoclockshadowMiss/?fiveoclockshadowCount)*100 as ?fiveoclockshadow_missclass_rate) ((?goateeMiss/?goateeCount)*100 as ?goatee_missclass_rate) ((?whiteMiss/?whiteCount)*100 as ?white_missclass_rate) ((?asianMiss/?asianCount)*100 as ?asian_missclass_rate) ((?blackMiss/?blackCount)*100 as ?black_missclass_rate) ((?indianMiss/?indianCount)*100 as ?indian_missclass_rate) ((?strongnosemouthlinesMiss/?strongnosemouthlinesCount)*100 as ?strongnosemouthlines_missclass_rate) ((?nostrongnosemouthlinesMiss/?nostrongnosemouthlinesCount)*100 as ?nostrongnosemouthlines_missclass_rate) ((?isattractiveMiss/?isattractiveCount)*100 as ?isattractive_missclass_rate) ((?notisattractiveMiss/?notisattractiveCount)*100 as ?notisattractive_missclass_rate) ((?masculineMiss/?masculineCount)*100 as ?masculine_missclass_rate) ((?feminineMiss/?feminineCount)*100 as ?feminine_missclass_rate) ((?babyMiss/?babyCount)*100 as ?baby_missclass_rate) ((?childMiss/?childCount)*100 as ?child_missclass_rate) ((?youthMiss/?youthCount)*100 as ?youth_missclass_rate) ((?middleagedMiss/?middleagedCount)*100 as ?middleaged_missclass_rate) ((?seniorMiss/?seniorCount)*100 as ?senior_missclass_rate) ((?chubbyMiss/?chubbyCount)*100 as ?chubby_missclass_rate) ((?skinnyMiss/?skinnyCount)*100 as ?skinny_missclass_rate) ((?browneyeMiss/?browneyeCount)*100 as ?browneye_missclass_rate) ((?eyeglassesMiss/?eyeglassesCount)*100 as ?eyeglasses_missclass_rate) ((?sunglassesMiss/?sunglassesCount)*100 as ?sunglasses_missclass_rate) ((?earringsMiss/?earringsCount)*100 as ?earrings_missclass_rate) ((?hatMiss/?hatCount)*100 as ?hat_missclass_rate) ((?lipstickMiss/?lipstickCount)*100 as ?lipstick_missclass_rate) ((?necktieMiss/?necktieCount)*100 as ?necktie_missclass_rate) ((?necklaceMiss/?necklaceCount)*100 as ?necklace_missclass_rate) ((?baldMiss/?baldCount)*100 as ?bald_missclass_rate) ((?bangsMiss/?bangsCount)*100 as ?bangs_missclass_rate) ((?balancedlightingvariationMiss/?balancedlightingvariationCount)*100 as ?balancedlightingvariation_missclass_rate) ((?harshlightingvariationMiss/?harshlightingvariationCount)*100 as ?harshlightingvariation_missclass_rate) ((?flashlightingvariationMiss/?flashlightingvariationCount)*100 as ?flashlightingvariation_missclass_rate) ((?softlightingvariationMiss/?softlightingvariationCount)*100 as ?softlightingvariation_missclass_rate) ((?blurryimagefidelityMiss/?blurryimagefidelityCount)*100 as ?blurryimagefidelity_missclass_rate) ((?sharpimagefidelityMiss/?sharpimagefidelityCount)*100 as ?sharpimagefidelity_missclass_rate) ((?outdoorsMiss/?outdoorsCount)*100 as ?outdoors_missclass_rate) ((?indoorsMiss/?indoorsCount)*100 as ?indoors_missclass_rate) ((?posedimageMiss/?posedimageCount)*100 as ?posedimage_missclass_rate) ((?candidimageMiss/?candidimageCount)*100 as ?candidimage_missclass_rate) ((?colorimageMiss/?colorimageCount)*100 as ?colorimage_missclass_rate) ((?blackandwhiteimageMiss/?blackandwhiteimageCount)*100 as ?blackandwhiteimage_missclass_rate)
 where {
 
   ## calculates sideburn Missclassification
@@ -31,6 +30,25 @@ where {
       optional{
        ?Result lcc-lr:hasTag ?classification .
        filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of sideburn there are
+  {
+    select ?ResultSet (count(?classification) as ?sideburnCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person obo:BFO_0000051 ?facialHair .
+      ?facialHair a ho:Sideburn .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
       }
     }
     group by ?ResultSet
@@ -57,6 +75,25 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of mustache there are
+  {
+    select ?ResultSet (count(?classification) as ?mustacheCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person obo:BFO_0000051 ?facialHair .
+      ?facialHair a ho:Mustache .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates fiveoclockshadow Missclassification
   {
     select ?ResultSet (count(?classification) as ?fiveoclockshadowMiss)
@@ -73,6 +110,25 @@ where {
       optional{
        ?Result lcc-lr:hasTag ?classification .
        filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of fiveoclockshadow there are
+  {
+    select ?ResultSet (count(?classification) as ?fiveoclockshadowCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person obo:BFO_0000051 ?facialHair .
+      ?facialHair a ho:FiveOClockShadow .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
       }
     }
     group by ?ResultSet
@@ -99,6 +155,25 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of goatee there are
+  {
+    select ?ResultSet (count(?classification) as ?goateeCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person obo:BFO_0000051 ?facialHair .
+      ?facialHair a ho:Goatee .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates white Missclassification
   {
     select ?ResultSet (count(?classification) as ?whiteMiss)
@@ -115,6 +190,25 @@ where {
       optional{
        ?Result lcc-lr:hasTag ?classification .
        filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of white there are
+  {
+    select ?ResultSet (count(?classification) as ?whiteCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ethnicity .
+      ?ethnicity a pfd:White .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
       }
     }
     group by ?ResultSet
@@ -141,6 +235,25 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of asian there are
+  {
+    select ?ResultSet (count(?classification) as ?asianCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ethnicity .
+      ?ethnicity a pfd:Asian .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates black Missclassification
   {
     select ?ResultSet (count(?classification) as ?blackMiss)
@@ -157,6 +270,25 @@ where {
       optional{
        ?Result lcc-lr:hasTag ?classification .
        filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of black there are
+  {
+    select ?ResultSet (count(?classification) as ?blackCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ethnicity .
+      ?ethnicity a pfd:Black .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
       }
     }
     group by ?ResultSet
@@ -183,6 +315,25 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of indian there are
+  {
+    select ?ResultSet (count(?classification) as ?indianCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ethnicity .
+      ?ethnicity a pfd:Indian .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates strongnosemouthlines Missclassification
   {
     select ?ResultSet (count(?classification) as ?strongnosemouthlinesMiss)
@@ -198,6 +349,24 @@ where {
       optional{
        ?Result lcc-lr:hasTag ?classification .
        filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of strongnosemouthlines there are
+  {
+    select ?ResultSet (count(?classification) as ?strongnosemouthlinesCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasStrongNoseMouthLines True .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
       }
     }
     group by ?ResultSet
@@ -223,6 +392,24 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of nostrongnosemouthlines there are
+  {
+    select ?ResultSet (count(?classification) as ?nostrongnosemouthlinesCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasStrongNoseMouthLines False .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates isattractive Missclassification
   {
     select ?ResultSet (count(?classification) as ?isattractiveMiss)
@@ -243,6 +430,24 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of isattractive there are
+  {
+    select ?ResultSet (count(?classification) as ?isattractiveCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:isAttractive True .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates notisattractive Missclassification
   {
     select ?ResultSet (count(?classification) as ?notisattractiveMiss)
@@ -258,6 +463,24 @@ where {
       optional{
        ?Result lcc-lr:hasTag ?classification .
        filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of notisattractive there are
+  {
+    select ?ResultSet (count(?classification) as ?notisattractiveCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:isAttractive False .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
       }
     }
     group by ?ResultSet
@@ -284,6 +507,25 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of masculine there are
+  {
+    select ?ResultSet (count(?classification) as ?masculineCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?genderExpression .
+      ?genderExpression a pfd:Masculine .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates feminine Missclassification
   {
     select ?ResultSet (count(?classification) as ?feminineMiss)
@@ -300,6 +542,25 @@ where {
       optional{
        ?Result lcc-lr:hasTag ?classification .
        filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of feminine there are
+  {
+    select ?ResultSet (count(?classification) as ?feminineCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?genderExpression .
+      ?genderExpression a pfd:Feminine .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
       }
     }
     group by ?ResultSet
@@ -326,6 +587,25 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of baby there are
+  {
+    select ?ResultSet (count(?classification) as ?babyCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ageRange .
+      ?ageRange a pfd:Baby .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates child Missclassification
   {
     select ?ResultSet (count(?classification) as ?childMiss)
@@ -342,6 +622,25 @@ where {
       optional{
        ?Result lcc-lr:hasTag ?classification .
        filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of child there are
+  {
+    select ?ResultSet (count(?classification) as ?childCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ageRange .
+      ?ageRange a pfd:Child .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
       }
     }
     group by ?ResultSet
@@ -368,6 +667,25 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of youth there are
+  {
+    select ?ResultSet (count(?classification) as ?youthCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ageRange .
+      ?ageRange a pfd:Youth .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates middleaged Missclassification
   {
     select ?ResultSet (count(?classification) as ?middleagedMiss)
@@ -384,6 +702,25 @@ where {
       optional{
        ?Result lcc-lr:hasTag ?classification .
        filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of middleaged there are
+  {
+    select ?ResultSet (count(?classification) as ?middleagedCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ageRange .
+      ?ageRange a pfd:MiddleAged .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
       }
     }
     group by ?ResultSet
@@ -410,6 +747,25 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of senior there are
+  {
+    select ?ResultSet (count(?classification) as ?seniorCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ageRange .
+      ?ageRange a pfd:Senior .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates chubby Missclassification
   {
     select ?ResultSet (count(?classification) as ?chubbyMiss)
@@ -431,6 +787,25 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of chubby there are
+  {
+    select ?ResultSet (count(?classification) as ?chubbyCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?weightRange .
+      ?weightRange a pfd:Chubby .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates skinny Missclassification
   {
     select ?ResultSet (count(?classification) as ?skinnyMiss)
@@ -447,6 +822,25 @@ where {
       optional{
        ?Result lcc-lr:hasTag ?classification .
        filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of skinny there are
+  {
+    select ?ResultSet (count(?classification) as ?skinnyCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?weightRange .
+      ?weightRange a pfd:Skinny .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
       }
     }
     group by ?ResultSet
@@ -476,6 +870,28 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of browneye there are
+  {
+    select ?ResultSet (count(?classification) as ?browneyeCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person obo:BFO_0000051 ?face .
+      ?face obo:BFO_0000051 ?eye .
+      ?eye a obo:UBERON_0000970 .
+      ?eye pfd:hasColor ?eyeColor .
+      ?eyeColor a pfd:Brown.
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates eyeglasses Missclassification
   {
     select ?ResultSet (count(?classification) as ?eyeglassesMiss)
@@ -492,6 +908,25 @@ where {
       optional{
        ?Result lcc-lr:hasTag ?classification .
        filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of eyeglasses there are
+  {
+    select ?ResultSet (count(?classification) as ?eyeglassesCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person wt:isWearing ?wearable .
+      ?wearable a wt:Eyeglasses .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
       }
     }
     group by ?ResultSet
@@ -518,6 +953,25 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of sunglasses there are
+  {
+    select ?ResultSet (count(?classification) as ?sunglassesCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person wt:isWearing ?wearable .
+      ?wearable a wt:Sunglasses .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates earrings Missclassification
   {
     select ?ResultSet (count(?classification) as ?earringsMiss)
@@ -534,6 +988,25 @@ where {
       optional{
        ?Result lcc-lr:hasTag ?classification .
        filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of earrings there are
+  {
+    select ?ResultSet (count(?classification) as ?earringsCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person wt:isWearing ?wearable .
+      ?wearable a wt:Earrings .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
       }
     }
     group by ?ResultSet
@@ -560,6 +1033,25 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of hat there are
+  {
+    select ?ResultSet (count(?classification) as ?hatCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person wt:isWearing ?wearable .
+      ?wearable a wt:Hat .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates lipstick Missclassification
   {
     select ?ResultSet (count(?classification) as ?lipstickMiss)
@@ -576,6 +1068,25 @@ where {
       optional{
        ?Result lcc-lr:hasTag ?classification .
        filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of lipstick there are
+  {
+    select ?ResultSet (count(?classification) as ?lipstickCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person wt:isWearing ?wearable .
+      ?wearable a wt:Lipstick .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
       }
     }
     group by ?ResultSet
@@ -602,6 +1113,25 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of necktie there are
+  {
+    select ?ResultSet (count(?classification) as ?necktieCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person wt:isWearing ?wearable .
+      ?wearable a wt:NeckTie .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates necklace Missclassification
   {
     select ?ResultSet (count(?classification) as ?necklaceMiss)
@@ -618,6 +1148,25 @@ where {
       optional{
        ?Result lcc-lr:hasTag ?classification .
        filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of necklace there are
+  {
+    select ?ResultSet (count(?classification) as ?necklaceCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person wt:isWearing ?wearable .
+      ?wearable a wt:Necklace .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
       }
     }
     group by ?ResultSet
@@ -646,6 +1195,27 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of bald there are
+  {
+    select ?ResultSet (count(?classification) as ?baldCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person obo:BFO_0000051 ?headhair .
+      ?headhair a ho:HeadHair .
+      ?headhair ho:hasHaircut ?haircut .
+      ?haircut a ho:Bald .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates bangs Missclassification
   {
     select ?ResultSet (count(?classification) as ?bangsMiss)
@@ -664,6 +1234,27 @@ where {
       optional{
        ?Result lcc-lr:hasTag ?classification .
        filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of bangs there are
+  {
+    select ?ResultSet (count(?classification) as ?bangsCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person obo:BFO_0000051 ?headhair .
+      ?headhair a ho:HeadHair .
+      ?headhair ho:hasHaircut ?haircut .
+      ?haircut a ho:Bangs .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
       }
     }
     group by ?ResultSet
@@ -690,6 +1281,25 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of balancedlightingvariation there are
+  {
+    select ?ResultSet (count(?classification) as ?balancedlightingvariationCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image img:lightingDescribedBy ?lightingDescription .
+      ?lightingDescription a img:BalancedLightingVariation .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates harshlightingvariation Missclassification
   {
     select ?ResultSet (count(?classification) as ?harshlightingvariationMiss)
@@ -706,6 +1316,25 @@ where {
       optional{
        ?Result lcc-lr:hasTag ?classification .
        filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of harshlightingvariation there are
+  {
+    select ?ResultSet (count(?classification) as ?harshlightingvariationCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image img:lightingDescribedBy ?lightingDescription .
+      ?lightingDescription a img:HarshLightingVariation .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
       }
     }
     group by ?ResultSet
@@ -732,6 +1361,25 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of flashlightingvariation there are
+  {
+    select ?ResultSet (count(?classification) as ?flashlightingvariationCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image img:lightingDescribedBy ?lightingDescription .
+      ?lightingDescription a img:FlashLightingVariation .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates softlightingvariation Missclassification
   {
     select ?ResultSet (count(?classification) as ?softlightingvariationMiss)
@@ -748,6 +1396,25 @@ where {
       optional{
        ?Result lcc-lr:hasTag ?classification .
        filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of softlightingvariation there are
+  {
+    select ?ResultSet (count(?classification) as ?softlightingvariationCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image img:lightingDescribedBy ?lightingDescription .
+      ?lightingDescription a img:SoftLightingVariation .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
       }
     }
     group by ?ResultSet
@@ -774,6 +1441,25 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of blurryimagefidelity there are
+  {
+    select ?ResultSet (count(?classification) as ?blurryimagefidelityCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image img:fidelityDescribedBy ?imageFidelity .
+      ?imageFidelity a img:BlurryImageFidelity .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates sharpimagefidelity Missclassification
   {
     select ?ResultSet (count(?classification) as ?sharpimagefidelityMiss)
@@ -790,6 +1476,25 @@ where {
       optional{
        ?Result lcc-lr:hasTag ?classification .
        filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of sharpimagefidelity there are
+  {
+    select ?ResultSet (count(?classification) as ?sharpimagefidelityCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image img:fidelityDescribedBy ?imageFidelity .
+      ?imageFidelity a img:SharpImageFidelity .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
       }
     }
     group by ?ResultSet
@@ -816,6 +1521,25 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of outdoors there are
+  {
+    select ?ResultSet (count(?classification) as ?outdoorsCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image lio:hasDepictedBackground ?imageBackground .
+      ?imageBackground a img:Outdoors .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates indoors Missclassification
   {
     select ?ResultSet (count(?classification) as ?indoorsMiss)
@@ -832,6 +1556,25 @@ where {
       optional{
        ?Result lcc-lr:hasTag ?classification .
        filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of indoors there are
+  {
+    select ?ResultSet (count(?classification) as ?indoorsCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image lio:hasDepictedBackground ?imageBackground .
+      ?imageBackground a img:Indoors .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
       }
     }
     group by ?ResultSet
@@ -857,6 +1600,24 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of posedimage there are
+  {
+    select ?ResultSet (count(?classification) as ?posedimageCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image a img:PosedImage .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates candidimage Missclassification
   {
     select ?ResultSet (count(?classification) as ?candidimageMiss)
@@ -872,6 +1633,24 @@ where {
       optional{
        ?Result lcc-lr:hasTag ?classification .
        filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of candidimage there are
+  {
+    select ?ResultSet (count(?classification) as ?candidimageCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image a img:CandidImage .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
       }
     }
     group by ?ResultSet
@@ -897,6 +1676,24 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates how many instances of colorimage there are
+  {
+    select ?ResultSet (count(?classification) as ?colorimageCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image a img:ColorImage .
+
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates blackandwhiteimage Missclassification
   {
     select ?ResultSet (count(?classification) as ?blackandwhiteimageMiss)
@@ -917,21 +1714,20 @@ where {
     group by ?ResultSet
   }
 
-  # Calulates the total number of incorrect Images
+  ## calculates how many instances of blackandwhiteimage there are
   {
-    select ?ResultSet (count(distinct ?Result) as ?totalMiss)
+    select ?ResultSet (count(?classification) as ?blackandwhiteimageCount)
     where {
       ?ResultSet a mlmo:ResultSet .
       ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
       ?Result mlmo:hasFeature ?Image .
+
       ?Image lio:depicts ?Person .
-      ?Person fibo-fnd-aap-a:hasName ?Name
+      ?Image a img:BlackAndWhiteImage .
 
       optional{
        ?Result lcc-lr:hasTag ?classification .
-       filter (?classification != ?Name)
       }
-
     }
     group by ?ResultSet
   }

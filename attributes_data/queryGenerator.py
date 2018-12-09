@@ -104,6 +104,44 @@ all_misclassified_ending = """
 """
 
 
+# generic_misclassified_ending_1 = """
+#   # Calulates the total number of incorrect Images
+#   {
+#     select ?ResultSet (count(distinct ?Result) as ?totalMiss)
+#     where {
+#       ?ResultSet a mlmo:ResultSet .
+#       ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+#       ?Result mlmo:hasFeature ?Image .
+#       ?Image lio:depicts ?Person .
+# """
+
+# generic_misclassified_ending_2 = """
+
+#     }
+#     group by ?ResultSet
+#   }
+# }
+# """
+count_all_instances_generic_intro = """
+  ## calculates how many instances of [lowercase_name] there are
+  {
+    select ?ResultSet (count(?classification) as ?[lowercase_name]Count)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+"""
+
+count_all_instances_generic_ending = """
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+"""
 
 def generate_misclassified_attributes(attributes):
 	# attributes is a list of tuples:
@@ -115,7 +153,7 @@ def generate_misclassified_attributes(attributes):
 	all_results_list = []
 	for a in attributes:
 		name = a[0].lower()
-		t = "((?" + str(name) + "Miss/?totalMiss)*100 as ?" + str(name) + "_missclass_rate)"
+		t = "((?" + str(name) + "Miss/?" + str(name) + "Count)*100 as ?" + str(name) + "_missclass_rate)"
 		all_results_list.append(t)
 	all_results = "select ?ResultSet " + " ".join(all_results_list)
 	output_text += all_results
@@ -124,16 +162,23 @@ def generate_misclassified_attributes(attributes):
 	output_text += all_missclassified_intro_2
 
 	# then loop over all the attributes adding the attributes in
+	# also generate the query for their count
 	for a in attributes:
 		name = a[0].lower()
 		a_text = all_misclassified_generic_intro.replace("[lowercase_name]", name)
+		count_text = count_all_instances_generic_intro.replace("[lowercase_name]", name)
 		for hierarchy in a[1]:
 			# loop through the way to get to the attribute adding it to the text:
 			a_text += "      " + hierarchy + "\n"
+			count_text += "      " + hierarchy + "\n"
+		
 		a_text += all_misclassified_generic_ending
-		output_text += a_text
+		count_text += count_all_instances_generic_ending
 
-	output_text += all_misclassified_ending
+		output_text += a_text
+		output_text += count_text
+
+	output_text += johnny_depp_ending
 	return output_text
 
 def generate_johnny_depp(attributes, person_name, use_all_images_tagged = False):
