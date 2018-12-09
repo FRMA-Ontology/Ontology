@@ -1,4 +1,3 @@
-
 prefix fibo-fnd-arr-arr: <http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/>
 prefix lio: <http://purl.org/net/lio#>
 prefix lcc-lr: <http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
