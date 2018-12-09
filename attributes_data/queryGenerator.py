@@ -212,10 +212,21 @@ if __name__ == "__main__":
 		
 		("BalancedLightingVariation", ["?Image img:lightingDescribedBy ?lightingDescription .", "?lightingDescription a img:BalancedLightingVariation ."]),
 		("HarshLightingVariation", ["?Image img:lightingDescribedBy ?lightingDescription .", "?lightingDescription a img:HarshLightingVariation ."]),
+		("FlashLightingVariation", ["?Image img:lightingDescribedBy ?lightingDescription .", "?lightingDescription a img:FlashLightingVariation ."]),
 		("SoftLightingVariation", ["?Image img:lightingDescribedBy ?lightingDescription .", "?lightingDescription a img:SoftLightingVariation ."]),
 
 		("BlurryImageFidelity", ["?Image img:fidelityDescribedBy ?imageFidelity .", "?imageFidelity a img:BlurryImageFidelity ."]),
 		("SharpImageFidelity", ["?Image img:fidelityDescribedBy ?imageFidelity .", "?imageFidelity a img:SharpImageFidelity ."]),
+
+		("Outdoors", ["?Image lio:hasDepictedBackground ?imageBackground .", "?imageBackground a img:Outdoors ."]),
+		("Indoors", ["?Image lio:hasDepictedBackground ?imageBackground .", "?imageBackground a img:Indoors ."]),
+
+		("PosedImage", ["?Image a img:PosedImage ."]),
+		("CandidImage", ["?Image a img:CandidImage ."]),
+		("ColorImage", ["?Image a img:ColorImage ."]),
+		("BlackAndWhiteImage", ["?Image a img:BlackAndWhiteImage ."]),
+
+
 
 		]
 

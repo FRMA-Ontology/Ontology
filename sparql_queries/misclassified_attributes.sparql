@@ -12,7 +12,7 @@ prefix mlmo: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearnin
 prefix pfd: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/>
 prefix wt: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/>
 
-select ?ResultSet ((?sideburnMiss/?totalMiss)*100 as ?sideburn_missclass_rate) ((?mustacheMiss/?totalMiss)*100 as ?mustache_missclass_rate) ((?fiveoclockshadowMiss/?totalMiss)*100 as ?fiveoclockshadow_missclass_rate) ((?goateeMiss/?totalMiss)*100 as ?goatee_missclass_rate) ((?whiteMiss/?totalMiss)*100 as ?white_missclass_rate) ((?asianMiss/?totalMiss)*100 as ?asian_missclass_rate) ((?blackMiss/?totalMiss)*100 as ?black_missclass_rate) ((?indianMiss/?totalMiss)*100 as ?indian_missclass_rate) ((?strongnosemouthlinesMiss/?totalMiss)*100 as ?strongnosemouthlines_missclass_rate) ((?nostrongnosemouthlinesMiss/?totalMiss)*100 as ?nostrongnosemouthlines_missclass_rate) ((?isattractiveMiss/?totalMiss)*100 as ?isattractive_missclass_rate) ((?notisattractiveMiss/?totalMiss)*100 as ?notisattractive_missclass_rate) ((?masculineMiss/?totalMiss)*100 as ?masculine_missclass_rate) ((?feminineMiss/?totalMiss)*100 as ?feminine_missclass_rate) ((?babyMiss/?totalMiss)*100 as ?baby_missclass_rate) ((?childMiss/?totalMiss)*100 as ?child_missclass_rate) ((?youthMiss/?totalMiss)*100 as ?youth_missclass_rate) ((?middleagedMiss/?totalMiss)*100 as ?middleaged_missclass_rate) ((?seniorMiss/?totalMiss)*100 as ?senior_missclass_rate) ((?chubbyMiss/?totalMiss)*100 as ?chubby_missclass_rate) ((?skinnyMiss/?totalMiss)*100 as ?skinny_missclass_rate) ((?browneyeMiss/?totalMiss)*100 as ?browneye_missclass_rate) ((?eyeglassesMiss/?totalMiss)*100 as ?eyeglasses_missclass_rate) ((?sunglassesMiss/?totalMiss)*100 as ?sunglasses_missclass_rate) ((?earringsMiss/?totalMiss)*100 as ?earrings_missclass_rate) ((?hatMiss/?totalMiss)*100 as ?hat_missclass_rate) ((?lipstickMiss/?totalMiss)*100 as ?lipstick_missclass_rate) ((?necktieMiss/?totalMiss)*100 as ?necktie_missclass_rate) ((?necklaceMiss/?totalMiss)*100 as ?necklace_missclass_rate) ((?baldMiss/?totalMiss)*100 as ?bald_missclass_rate) ((?bangsMiss/?totalMiss)*100 as ?bangs_missclass_rate) ((?balancedlightingvariationMiss/?totalMiss)*100 as ?balancedlightingvariation_missclass_rate) ((?harshlightingvariationMiss/?totalMiss)*100 as ?harshlightingvariation_missclass_rate) ((?softlightingvariationMiss/?totalMiss)*100 as ?softlightingvariation_missclass_rate) ((?blurryimagefidelityMiss/?totalMiss)*100 as ?blurryimagefidelity_missclass_rate) ((?sharpimagefidelityMiss/?totalMiss)*100 as ?sharpimagefidelity_missclass_rate)
+select ?ResultSet ((?sideburnMiss/?totalMiss)*100 as ?sideburn_missclass_rate) ((?mustacheMiss/?totalMiss)*100 as ?mustache_missclass_rate) ((?fiveoclockshadowMiss/?totalMiss)*100 as ?fiveoclockshadow_missclass_rate) ((?goateeMiss/?totalMiss)*100 as ?goatee_missclass_rate) ((?whiteMiss/?totalMiss)*100 as ?white_missclass_rate) ((?asianMiss/?totalMiss)*100 as ?asian_missclass_rate) ((?blackMiss/?totalMiss)*100 as ?black_missclass_rate) ((?indianMiss/?totalMiss)*100 as ?indian_missclass_rate) ((?strongnosemouthlinesMiss/?totalMiss)*100 as ?strongnosemouthlines_missclass_rate) ((?nostrongnosemouthlinesMiss/?totalMiss)*100 as ?nostrongnosemouthlines_missclass_rate) ((?isattractiveMiss/?totalMiss)*100 as ?isattractive_missclass_rate) ((?notisattractiveMiss/?totalMiss)*100 as ?notisattractive_missclass_rate) ((?masculineMiss/?totalMiss)*100 as ?masculine_missclass_rate) ((?feminineMiss/?totalMiss)*100 as ?feminine_missclass_rate) ((?babyMiss/?totalMiss)*100 as ?baby_missclass_rate) ((?childMiss/?totalMiss)*100 as ?child_missclass_rate) ((?youthMiss/?totalMiss)*100 as ?youth_missclass_rate) ((?middleagedMiss/?totalMiss)*100 as ?middleaged_missclass_rate) ((?seniorMiss/?totalMiss)*100 as ?senior_missclass_rate) ((?chubbyMiss/?totalMiss)*100 as ?chubby_missclass_rate) ((?skinnyMiss/?totalMiss)*100 as ?skinny_missclass_rate) ((?browneyeMiss/?totalMiss)*100 as ?browneye_missclass_rate) ((?eyeglassesMiss/?totalMiss)*100 as ?eyeglasses_missclass_rate) ((?sunglassesMiss/?totalMiss)*100 as ?sunglasses_missclass_rate) ((?earringsMiss/?totalMiss)*100 as ?earrings_missclass_rate) ((?hatMiss/?totalMiss)*100 as ?hat_missclass_rate) ((?lipstickMiss/?totalMiss)*100 as ?lipstick_missclass_rate) ((?necktieMiss/?totalMiss)*100 as ?necktie_missclass_rate) ((?necklaceMiss/?totalMiss)*100 as ?necklace_missclass_rate) ((?baldMiss/?totalMiss)*100 as ?bald_missclass_rate) ((?bangsMiss/?totalMiss)*100 as ?bangs_missclass_rate) ((?balancedlightingvariationMiss/?totalMiss)*100 as ?balancedlightingvariation_missclass_rate) ((?harshlightingvariationMiss/?totalMiss)*100 as ?harshlightingvariation_missclass_rate) ((?flashlightingvariationMiss/?totalMiss)*100 as ?flashlightingvariation_missclass_rate) ((?softlightingvariationMiss/?totalMiss)*100 as ?softlightingvariation_missclass_rate) ((?blurryimagefidelityMiss/?totalMiss)*100 as ?blurryimagefidelity_missclass_rate) ((?sharpimagefidelityMiss/?totalMiss)*100 as ?sharpimagefidelity_missclass_rate) ((?outdoorsMiss/?totalMiss)*100 as ?outdoors_missclass_rate) ((?indoorsMiss/?totalMiss)*100 as ?indoors_missclass_rate) ((?posedimageMiss/?totalMiss)*100 as ?posedimage_missclass_rate) ((?candidimageMiss/?totalMiss)*100 as ?candidimage_missclass_rate) ((?colorimageMiss/?totalMiss)*100 as ?colorimage_missclass_rate) ((?blackandwhiteimageMiss/?totalMiss)*100 as ?blackandwhiteimage_missclass_rate)
 where {
 
   ## calculates sideburn Missclassification
@@ -711,6 +711,27 @@ where {
     group by ?ResultSet
   }
 
+  ## calculates flashlightingvariation Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?flashlightingvariationMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image img:lightingDescribedBy ?lightingDescription .
+      ?lightingDescription a img:FlashLightingVariation .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
   ## calculates softlightingvariation Missclassification
   {
     select ?ResultSet (count(?classification) as ?softlightingvariationMiss)
@@ -764,6 +785,128 @@ where {
       ?Image lio:depicts ?Person .
       ?Image img:fidelityDescribedBy ?imageFidelity .
       ?imageFidelity a img:SharpImageFidelity .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates outdoors Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?outdoorsMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image lio:hasDepictedBackground ?imageBackground .
+      ?imageBackground a img:Outdoors .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates indoors Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?indoorsMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image lio:hasDepictedBackground ?imageBackground .
+      ?imageBackground a img:Indoors .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates posedimage Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?posedimageMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image a img:PosedImage .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates candidimage Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?candidimageMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image a img:CandidImage .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates colorimage Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?colorimageMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image a img:ColorImage .
+
+      ?Person fibo-fnd-aap-a:hasName ?Name .
+      optional{
+       ?Result lcc-lr:hasTag ?classification .
+       filter (?classification != ?Name)
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates blackandwhiteimage Missclassification
+  {
+    select ?ResultSet (count(?classification) as ?blackandwhiteimageMiss)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image a img:BlackAndWhiteImage .
 
       ?Person fibo-fnd-aap-a:hasName ?Name .
       optional{
