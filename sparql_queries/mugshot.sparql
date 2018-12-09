@@ -1,11 +1,3 @@
-# MugShot Query:
-# The query below returns the image IRI and the depicted persons name for
-# every image that is inferred by the ontology to be a mugshot photo.
-# Because this query relies on the inferencing in our ontology it can only run
-# in the Snap SPARQL Query, which when a reasoner is run generates the extra inferred
-# triple: image rdf:type MugShotPhoto. In the future we plan to run an inference
-# engine to generate these triples and include them in our triple store.
-
 prefix mlmo: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/>
 prefix fibo-fnd-arr-arr: <http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/>
 prefix lio: <http://purl.org/net/lio#>
