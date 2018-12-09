@@ -1,0 +1,876 @@
+prefix fibo-fnd-arr-arr: <http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/>
+prefix lio: <http://purl.org/net/lio#>
+prefix lcc-lr: <http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
+prefix fibo-fnd-aap-a: <http://www.omg.org/spec/EDMC-FIBO/FND/AgentsAndPeople/Agents/>
+prefix obo: <http://purl.obolibrary.org/obo/>
+
+prefix ho: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/>
+prefix img: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/>
+prefix frma: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/>
+prefix mlmo: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/>
+prefix pfd: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/>
+prefix wt: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/>
+
+select ?ResultSet ?sideburnCount ?mustacheCount ?fiveoclockshadowCount ?goateeCount ?whiteCount ?asianCount ?blackCount ?indianCount ?strongnosemouthlinesCount ?nostrongnosemouthlinesCount ?isattractiveCount ?notisattractiveCount ?masculineCount ?feminineCount ?babyCount ?childCount ?youthCount ?middleagedCount ?seniorCount ?chubbyCount ?skinnyCount ?browneyeCount ?eyeglassesCount ?sunglassesCount ?earringsCount ?hatCount ?lipstickCount ?necktieCount ?necklaceCount ?baldCount ?bangsCount ?balancedlightingvariationCount ?harshlightingvariationCount ?flashlightingvariationCount ?softlightingvariationCount ?blurryimagefidelityCount ?sharpimagefidelityCount ?outdoorsCount ?indoorsCount ?posedimageCount ?candidimageCount ?colorimageCount ?blackandwhiteimageCount
+where {
+
+  ## calculates how many instances of sideburn are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?sideburnCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person obo:BFO_0000051 ?facialHair .
+      ?facialHair a ho:Sideburn .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of mustache are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?mustacheCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person obo:BFO_0000051 ?facialHair .
+      ?facialHair a ho:Mustache .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of fiveoclockshadow are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?fiveoclockshadowCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person obo:BFO_0000051 ?facialHair .
+      ?facialHair a ho:FiveOClockShadow .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of goatee are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?goateeCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person obo:BFO_0000051 ?facialHair .
+      ?facialHair a ho:Goatee .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of white are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?whiteCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ethnicity .
+      ?ethnicity a pfd:White .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of asian are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?asianCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ethnicity .
+      ?ethnicity a pfd:Asian .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of black are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?blackCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ethnicity .
+      ?ethnicity a pfd:Black .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of indian are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?indianCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ethnicity .
+      ?ethnicity a pfd:Indian .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of strongnosemouthlines are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?strongnosemouthlinesCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasStrongNoseMouthLines True .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of nostrongnosemouthlines are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?nostrongnosemouthlinesCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasStrongNoseMouthLines False .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of isattractive are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?isattractiveCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:isAttractive True .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of notisattractive are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?notisattractiveCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:isAttractive False .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of masculine are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?masculineCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?genderExpression .
+      ?genderExpression a pfd:Masculine .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of feminine are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?feminineCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?genderExpression .
+      ?genderExpression a pfd:Feminine .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of baby are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?babyCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ageRange .
+      ?ageRange a pfd:Baby .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of child are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?childCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ageRange .
+      ?ageRange a pfd:Child .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of youth are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?youthCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ageRange .
+      ?ageRange a pfd:Youth .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of middleaged are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?middleagedCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ageRange .
+      ?ageRange a pfd:MiddleAged .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of senior are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?seniorCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?ageRange .
+      ?ageRange a pfd:Senior .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of chubby are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?chubbyCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?weightRange .
+      ?weightRange a pfd:Chubby .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of skinny are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?skinnyCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person pfd:hasDemographic ?weightRange .
+      ?weightRange a pfd:Skinny .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of browneye are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?browneyeCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person obo:BFO_0000051 ?face .
+      ?face obo:BFO_0000051 ?eye .
+      ?eye a obo:UBERON_0000970 .
+      ?eye pfd:hasColor ?eyeColor .
+      ?eyeColor a pfd:Brown.
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of eyeglasses are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?eyeglassesCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person wt:isWearing ?wearable .
+      ?wearable a wt:Eyeglasses .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of sunglasses are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?sunglassesCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person wt:isWearing ?wearable .
+      ?wearable a wt:Sunglasses .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of earrings are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?earringsCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person wt:isWearing ?wearable .
+      ?wearable a wt:Earrings .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of hat are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?hatCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person wt:isWearing ?wearable .
+      ?wearable a wt:Hat .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of lipstick are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?lipstickCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person wt:isWearing ?wearable .
+      ?wearable a wt:Lipstick .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of necktie are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?necktieCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person wt:isWearing ?wearable .
+      ?wearable a wt:NeckTie .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of necklace are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?necklaceCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person wt:isWearing ?wearable .
+      ?wearable a wt:Necklace .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of bald are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?baldCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person obo:BFO_0000051 ?headhair .
+      ?headhair a ho:HeadHair .
+      ?headhair ho:hasHaircut ?haircut .
+      ?haircut a ho:Bald .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of bangs are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?bangsCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Person obo:BFO_0000051 ?headhair .
+      ?headhair a ho:HeadHair .
+      ?headhair ho:hasHaircut ?haircut .
+      ?haircut a ho:Bangs .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of balancedlightingvariation are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?balancedlightingvariationCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image img:lightingDescribedBy ?lightingDescription .
+      ?lightingDescription a img:BalancedLightingVariation .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of harshlightingvariation are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?harshlightingvariationCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image img:lightingDescribedBy ?lightingDescription .
+      ?lightingDescription a img:HarshLightingVariation .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of flashlightingvariation are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?flashlightingvariationCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image img:lightingDescribedBy ?lightingDescription .
+      ?lightingDescription a img:FlashLightingVariation .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of softlightingvariation are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?softlightingvariationCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image img:lightingDescribedBy ?lightingDescription .
+      ?lightingDescription a img:SoftLightingVariation .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of blurryimagefidelity are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?blurryimagefidelityCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image img:fidelityDescribedBy ?imageFidelity .
+      ?imageFidelity a img:BlurryImageFidelity .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of sharpimagefidelity are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?sharpimagefidelityCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image img:fidelityDescribedBy ?imageFidelity .
+      ?imageFidelity a img:SharpImageFidelity .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of outdoors are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?outdoorsCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image lio:hasDepictedBackground ?imageBackground .
+      ?imageBackground a img:Outdoors .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of indoors are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?indoorsCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image lio:hasDepictedBackground ?imageBackground .
+      ?imageBackground a img:Indoors .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of posedimage are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?posedimageCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image a img:PosedImage .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of candidimage are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?candidimageCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image a img:CandidImage .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of colorimage are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?colorimageCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image a img:ColorImage .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+  ## calculates how many instances of blackandwhiteimage are associated with the person
+  {
+    select ?ResultSet (count(?classification) as ?blackandwhiteimageCount)
+    where {
+      ?ResultSet a mlmo:ResultSet .
+      ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
+      ?Result mlmo:hasFeature ?Image .
+
+      ?Image lio:depicts ?Person .
+      ?Image a img:BlackAndWhiteImage .
+
+      optional{
+        ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .
+        ?Result lcc-lr:hasTag ?classification .
+      }
+    }
+    group by ?ResultSet
+  }
+
+}
