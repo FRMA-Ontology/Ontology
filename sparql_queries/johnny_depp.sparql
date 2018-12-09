@@ -16,14 +16,14 @@ where {
       ?ResultSet fibo-fnd-arr-arr:hasConstituent ?Result .
       ?Result mlmo:hasFeature ?Image .
       ?Image lio:depicts ?Person .
-      ?Person fibo-fnd-aap-a:hasName "Johnny Depp"^^xsd:string .
+      ?Person fibo-fnd-aap-a:hasName "George W Bush"^^xsd:string .
       ?Person obo:BFO_0000051 ?face .
       ?face obo:BFO_0000051 ?eye .
       ?eye a obo:UBERON_0000970 .
       ?eye pfd:hasColor ?eyeColor .
       ?eyeColor a pfd:Brown.
       optional{
-        filter (?classification = "Johnny Depp"^^xsd:string) # This line ensures we only have counts for correctly classified images
+        filter (?classification = "George W Bush"^^xsd:string) # This line ensures we only have counts for correctly classified images
         ?Result lcc-lr:hasTag ?classification .
       }
     }
@@ -37,11 +37,11 @@ where {
 
       ?Result mlmo:hasFeature ?Image .
       ?Image lio:depicts ?Person .
-      ?Person fibo-fnd-aap-a:hasName "Johnny Depp"^^xsd:string .
+      ?Person fibo-fnd-aap-a:hasName "George W Bush"^^xsd:string .
       ?Person wt:isWearing ?wearable .
       ?wearable a wt:Eyeglasses
       optional{
-        filter (?classification = "Johnny Depp"^^xsd:string) # This line ensures we only have counts for correctly classified images
+        filter (?classification = "George W Bush"^^xsd:string) # This line ensures we only have counts for correctly classified images
         ?Result lcc-lr:hasTag ?classification .
       }
     }
