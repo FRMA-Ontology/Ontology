@@ -11,35 +11,40 @@
 	  <!ENTITY fibo-fnd-arr-arr "http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/">
 	  <!ENTITY fibo-fnd-arr-cls "http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/ClassificationSchemes/">
 	  <!ENTITY fibo-fnd-rel-rel "http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/">
-	  <!ENTITY mlmo "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/" >
+	  <!ENTITY mlmo "https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/" >
+    <!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/" >
 ]>
 
-<rdf:RDF xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/"
+<rdf:RDF xml:base="https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:mlmo="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/"
+     xmlns:mlmo="https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:lcc-lr="http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
      xmlns:fibo-fnd-arr-arr="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/"
      xmlns:fibo-fnd-arr-cls="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/ClassificationSchemes/"
+     xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
      xmlns:fibo-fnd-rel-rel="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/">
-    <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/">
-        <owl:versionIRI rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/1.0.3"/>
+    <owl:Ontology rdf:about="https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/">
+        <owl:versionIRI rdf:resource="https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/1.0.4"/>
+        <owl:imports rdf:resource="http://www.omg.org/techprocess/ab/SpecificationMetadata/"/>
         <owl:imports rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Arrangements/"/>
         <owl:imports rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/ClassificationSchemes/"/>
         <owl:imports rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/"/>
         <owl:imports rdf:resource="http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <dct:creator>Matthew Johnson</dct:creator>
-        <dct:modified>12/01/2018</dct:modified>
+        <dct:modified>12/13/2018</dct:modified>
         <dct:publisher xml:lang="en">FRMA Team</dct:publisher>
         <rdfs:label xml:lang="en">Machine Learning Model Ontology</rdfs:label>
-        <owl:priorVersion>http://tw.rpi.edu/media/latest/OE_11_MachineLearningModelOntology.rdf</owl:priorVersion>
-        <skos:changeNote>Added datum class and an inverse property for hasFeature</skos:changeNote>
+        <owl:priorVersion>http://tw.rpi.edu/media/latest/OE_12_MachineLearningModelOntology.rdf</owl:priorVersion>
+        <skos:changeNote>Added copyright/license info</skos:changeNote>
         <skos:definition xml:lang="en">Machine Learning Model Ontology allows users to describe the learning process, the structure of the learned model, and the evaluation of the model from a data-centric perspective.</skos:definition>
+        <sm:copyright rdf:datatype="&xsd;string">Copyright (c) 2018 FRMA Team</sm:copyright>
+        <dct:license rdf:resource="&sm;MITLicense"/>
     </owl:Ontology>
 
 
