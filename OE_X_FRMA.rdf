@@ -7,56 +7,60 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY dct "http://purl.org/dc/terms/" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
-    <!ENTITY frma "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/" >
-    <!ENTITY mlmo "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/" >
-    <!ENTITY wt "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/" >
-    <!ENTITY pfd "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/" >
-    <!ENTITY img "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/" >
-	  <!ENTITY ho "https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/" >
+    <!ENTITY frma "https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/FRMA/" >
+    <!ENTITY mlmo "https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/" >
+    <!ENTITY wt "https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/WearableThingsOntology/" >
+    <!ENTITY pfd "https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/" >
+    <!ENTITY img "https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/ImageOntology/" >
+	  <!ENTITY ho "https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/HairOntology/" >
     <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
     <!ENTITY obo "http://purl.obolibrary.org/obo/" >
     <!ENTITY lio "https://w3id.org/lio/v1#" >
     <!ENTITY lio-orig "http://purl.org/net/lio#" >
+    <!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/" >
     <!ENTITY fibo-fnd-utl-av "http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/">
 ]>
 
-<rdf:RDF xml:base="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/"
-     xmlns:ho="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/"
-     xmlns:wt="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/"
+<rdf:RDF xml:base="https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/FRMA/"
+     xmlns:ho="https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/HairOntology/"
+     xmlns:wt="https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/WearableThingsOntology/"
      xmlns:dct="http://purl.org/dc/terms/"
-     xmlns:img="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/"
+     xmlns:img="https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/ImageOntology/"
      xmlns:lio="https://w3id.org/lio/v1#"
      xmlns:lio-orig="http://purl.org/net/lio#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:pfd="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/"
+     xmlns:pfd="https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:frma="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/"
-     xmlns:mlmo="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/"
+     xmlns:frma="https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/FRMA/"
+     xmlns:mlmo="https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
      xmlns:fibo-fnd-utl-av="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/">
-    <owl:Ontology rdf:about="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/">
-        <owl:versionIRI rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/1.0.3"/>
+    <owl:Ontology rdf:about="https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/FRMA/">
+        <owl:versionIRI rdf:resource="https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/FRMA/1.0.4"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
-        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/"/>
-        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/"/>
-        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/"/>
-        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/"/>
-        <owl:imports rdf:resource="https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/"/>
+        <owl:imports rdf:resource="https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/HairOntology/"/>
+        <owl:imports rdf:resource="https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/ImageOntology/"/>
+        <owl:imports rdf:resource="https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/"/>
+        <owl:imports rdf:resource="https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/"/>
+        <owl:imports rdf:resource="https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/WearableThingsOntology/"/>
         <dct:contributor xml:lang="en">Alexander Schwartzberg</dct:contributor>
         <dct:contributor xml:lang="en">Andrew Gaudet</dct:contributor>
         <dct:contributor xml:lang="en">John Angel</dct:contributor>
         <dct:contributor xml:lang="en">Jordan Faas-Bush</dct:contributor>
         <dct:contributor xml:lang="en">Matthew Johnson</dct:contributor>
-        <dct:modified>12/01/2018</dct:modified>
+        <dct:modified>12/13/2018</dct:modified>
         <dct:publisher xml:lang="en">FRMA Team</dct:publisher>
         <rdfs:label xml:lang="en">Face Recognition Model Analyzer Ontology</rdfs:label>
-        <owl:priorVersion>http://tw.rpi.edu/media/latest/OE_11_FRMA.rdf</owl:priorVersion>
-        <skos:changeNote rdf:datatype="&xsd;string">Moved Occlusion onto Image instead of person, Hair Color moved under Color, Haircut and hair texture became a subclasses of visual descriptor, Hair became a subclasses of subdivision of head. Mugshot inferencing was updted to include background and fidelity.</skos:changeNote>
+        <owl:priorVersion>http://tw.rpi.edu/media/latest/OE_12_FRMA.rdf</owl:priorVersion>
+        <skos:changeNote>Added copyright/license info</skos:changeNote>
         <skos:definition xml:lang="en">Machine learning allows us to learn a model for a given task such as facial recognition with a high degree of accuracy. However, after these models are generated they are often treated as black boxes and the limitations of a model are often unknown to the end user. The system developed for this use case will provide an intuitive interface to explore the limits of a facial recognition model by semantically integrating "smart" images(semantically describe who the image depicts and what Kumar [2] features the image exhibits) with classification results to discover common causes for misclassifications.</skos:definition>
+        <sm:copyright rdf:datatype="&xsd;string">Copyright (c) 2018 FRMA Team</sm:copyright>
+        <dct:license rdf:resource="&sm;MITLicense"/>
     </owl:Ontology>
 
 
