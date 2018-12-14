@@ -2,21 +2,21 @@ import rdflib
 from rdflib.namespace import RDF, Namespace, OWL, XSD, RDFS
 import sys
 
-# python generateTestResults.py ALGORITHM_NAME PATH_TO_RESULTS_FILE PATH_TO_OUTPUT_RDF_FILE.ttl
+# python generateTestResults.py ALGORITHM_NAME TEST_NAME PATH_TO_RESULTS_FILE PATH_TO_OUTPUT_RDF_FILE.ttl
 
 
 
 
-def generate_results(results_filepath, algorithm_name, output_filepath):
+def generate_results(algorithm_name, test_name, results_input_filepath, output_filepath):
     graph = rdflib.Graph()
 
     # Create resultset
-    resultset_IRI = rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_9_FRMA_Individuals/" + algorithm_name + "Test01ResultSet")
+    resultset_IRI = rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_9_FRMA_Individuals/" + algorithm_name + test_name + "ResultSet")
     graph.add((resultset_IRI, RDF.type, OWL.NamedIndividual))
     graph.add((resultset_IRI, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/ResultSet")))
     graph.add((resultset_IRI, RDFS.label, rdflib.term.Literal(algorithm_name, datatype=XSD.string)))
 
-    with open(results_filepath) as fp:
+    with open(results_input_filepath) as fp:
         for cnt, line in enumerate(fp):
             lsplit = line.split("\t")
 
@@ -34,7 +34,7 @@ def generate_results(results_filepath, algorithm_name, output_filepath):
 
 
             # Create the result
-            result_IRI = rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_9_FRMA_Individuals/" + algorithm_name + "Test01ResultSetResult" + str(cnt))
+            result_IRI = rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_9_FRMA_Individuals/" + algorithm_name + test_name + "ResultSetResult" + str(cnt))
             graph.add((result_IRI, RDF.type, OWL.NamedIndividual))
             graph.add((result_IRI, RDF.type, rdflib.term.URIRef("https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/Result")))
             graph.add((result_IRI, hasTag, rdflib.term.Literal(lsplit[3].replace("_", " "), datatype=XSD.string)))
@@ -47,10 +47,10 @@ def generate_results(results_filepath, algorithm_name, output_filepath):
 
 
 if __name__ == "__main__":
-    # python generateTestResults.py ALGORITHM_NAME PATH_TO_RESULTS_FILE PATH_TO_OUTPUT_RDF_FILE.ttl
+    # python generateTestResults.py ALGORITHM_NAME TEST_NAME PATH_TO_RESULTS_FILE PATH_TO_OUTPUT_RDF_FILE.ttl
     if len(sys.argv) != 4:
-        print("Run as 'python generateTestResults.py ALGORITHM_NAME PATH_TO_RESULTS_FILE PATH_TO_OUTPUT_RDF_FILE.ttl'")
+        print("Run as 'python generateTestResults.py ALGORITHM_NAME TEST_NAME PATH_TO_RESULTS_FILE PATH_TO_OUTPUT_RDF_FILE.ttl'")
         sys.exit(0)
     else:
         # run the program:
-        generate_results(sys.argv[2], sys.argv[1], sys.argv[3])
+        generate_results(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
