@@ -4,12 +4,12 @@ prefix lcc-lr: <http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
 prefix fibo-fnd-aap-a: <http://www.omg.org/spec/EDMC-FIBO/FND/AgentsAndPeople/Agents/>
 prefix obo: <http://purl.obolibrary.org/obo/>
 
-prefix ho: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/>
-prefix img: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/>
-prefix frma: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/>
-prefix mlmo: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/>
-prefix pfd: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/>
-prefix wt: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/>
+prefix ho: <https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/HairOntology/>
+prefix img: <https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/ImageOntology/>
+prefix frma: <https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/FRMA/>
+prefix mlmo: <https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/>
+prefix pfd: <https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/>
+prefix wt: <https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/WearableThingsOntology/>
 
 select ?ResultSet ?sideburnCount ?mustacheCount ?fiveoclockshadowCount ?goateeCount ?whiteCount ?asianCount ?blackCount ?indianCount ?strongnosemouthlinesCount ?nostrongnosemouthlinesCount ?isattractiveCount ?notisattractiveCount ?masculineCount ?feminineCount ?babyCount ?childCount ?youthCount ?middleagedCount ?seniorCount ?chubbyCount ?skinnyCount ?browneyeCount ?eyeglassesCount ?sunglassesCount ?earringsCount ?hatCount ?lipstickCount ?necktieCount ?necklaceCount ?baldCount ?bangsCount ?balancedlightingvariationCount ?harshlightingvariationCount ?flashlightingvariationCount ?softlightingvariationCount ?blurryimagefidelityCount ?sharpimagefidelityCount ?outdoorsCount ?indoorsCount ?posedimageCount ?candidimageCount ?colorimageCount ?blackandwhiteimageCount
 where {
@@ -442,8 +442,7 @@ where {
       ?Person obo:BFO_0000051 ?face .
       ?face obo:BFO_0000051 ?eye .
       ?eye a obo:UBERON_0000970 .
-      ?eye pfd:hasColor ?eyeColor .
-      ?eyeColor a pfd:Brown.
+      ?eye pfd:hasColor pfd:Brown .
 
       optional{
         ?Result lcc-lr:hasTag "George W Bush"^^xsd:string .

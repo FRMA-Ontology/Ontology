@@ -4,12 +4,12 @@ prefix lcc-lr: <http://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
 prefix fibo-fnd-aap-a: <http://www.omg.org/spec/EDMC-FIBO/FND/AgentsAndPeople/Agents/>
 prefix obo: <http://purl.obolibrary.org/obo/>
 
-prefix ho: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/HairOntology/>
-prefix img: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/ImageOntology/>
-prefix frma: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/FRMA/>
-prefix mlmo: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/>
-prefix pfd: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/>
-prefix wt: <https://tw.rpi.edu/web/Courses/Ontologies/2018/FRMA/WearableThingsOntology/>
+prefix ho: <https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/HairOntology/>
+prefix img: <https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/ImageOntology/>
+prefix frma: <https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/FRMA/>
+prefix mlmo: <https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/MachineLearningModelOntology/>
+prefix pfd: <https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/PersonFaceAndDemographicOntology/>
+prefix wt: <https://tw.rpi.edu/Courses/Ontologies/2018/FRMA/WearableThingsOntology/>
 
 select ?ResultSet ((?sideburnMiss/?sideburnCount)*100 as ?sideburn_missclass_rate) ((?mustacheMiss/?mustacheCount)*100 as ?mustache_missclass_rate) ((?fiveoclockshadowMiss/?fiveoclockshadowCount)*100 as ?fiveoclockshadow_missclass_rate) ((?goateeMiss/?goateeCount)*100 as ?goatee_missclass_rate) ((?whiteMiss/?whiteCount)*100 as ?white_missclass_rate) ((?asianMiss/?asianCount)*100 as ?asian_missclass_rate) ((?blackMiss/?blackCount)*100 as ?black_missclass_rate) ((?indianMiss/?indianCount)*100 as ?indian_missclass_rate) ((?strongnosemouthlinesMiss/?strongnosemouthlinesCount)*100 as ?strongnosemouthlines_missclass_rate) ((?nostrongnosemouthlinesMiss/?nostrongnosemouthlinesCount)*100 as ?nostrongnosemouthlines_missclass_rate) ((?isattractiveMiss/?isattractiveCount)*100 as ?isattractive_missclass_rate) ((?notisattractiveMiss/?notisattractiveCount)*100 as ?notisattractive_missclass_rate) ((?masculineMiss/?masculineCount)*100 as ?masculine_missclass_rate) ((?feminineMiss/?feminineCount)*100 as ?feminine_missclass_rate) ((?babyMiss/?babyCount)*100 as ?baby_missclass_rate) ((?childMiss/?childCount)*100 as ?child_missclass_rate) ((?youthMiss/?youthCount)*100 as ?youth_missclass_rate) ((?middleagedMiss/?middleagedCount)*100 as ?middleaged_missclass_rate) ((?seniorMiss/?seniorCount)*100 as ?senior_missclass_rate) ((?chubbyMiss/?chubbyCount)*100 as ?chubby_missclass_rate) ((?skinnyMiss/?skinnyCount)*100 as ?skinny_missclass_rate) ((?browneyeMiss/?browneyeCount)*100 as ?browneye_missclass_rate) ((?eyeglassesMiss/?eyeglassesCount)*100 as ?eyeglasses_missclass_rate) ((?sunglassesMiss/?sunglassesCount)*100 as ?sunglasses_missclass_rate) ((?earringsMiss/?earringsCount)*100 as ?earrings_missclass_rate) ((?hatMiss/?hatCount)*100 as ?hat_missclass_rate) ((?lipstickMiss/?lipstickCount)*100 as ?lipstick_missclass_rate) ((?necktieMiss/?necktieCount)*100 as ?necktie_missclass_rate) ((?necklaceMiss/?necklaceCount)*100 as ?necklace_missclass_rate) ((?baldMiss/?baldCount)*100 as ?bald_missclass_rate) ((?bangsMiss/?bangsCount)*100 as ?bangs_missclass_rate) ((?balancedlightingvariationMiss/?balancedlightingvariationCount)*100 as ?balancedlightingvariation_missclass_rate) ((?harshlightingvariationMiss/?harshlightingvariationCount)*100 as ?harshlightingvariation_missclass_rate) ((?flashlightingvariationMiss/?flashlightingvariationCount)*100 as ?flashlightingvariation_missclass_rate) ((?softlightingvariationMiss/?softlightingvariationCount)*100 as ?softlightingvariation_missclass_rate) ((?blurryimagefidelityMiss/?blurryimagefidelityCount)*100 as ?blurryimagefidelity_missclass_rate) ((?sharpimagefidelityMiss/?sharpimagefidelityCount)*100 as ?sharpimagefidelity_missclass_rate) ((?outdoorsMiss/?outdoorsCount)*100 as ?outdoors_missclass_rate) ((?indoorsMiss/?indoorsCount)*100 as ?indoors_missclass_rate) ((?posedimageMiss/?posedimageCount)*100 as ?posedimage_missclass_rate) ((?candidimageMiss/?candidimageCount)*100 as ?candidimage_missclass_rate) ((?colorimageMiss/?colorimageCount)*100 as ?colorimage_missclass_rate) ((?blackandwhiteimageMiss/?blackandwhiteimageCount)*100 as ?blackandwhiteimage_missclass_rate)
 where {
@@ -858,8 +858,7 @@ where {
       ?Person obo:BFO_0000051 ?face .
       ?face obo:BFO_0000051 ?eye .
       ?eye a obo:UBERON_0000970 .
-      ?eye pfd:hasColor ?eyeColor .
-      ?eyeColor a pfd:Brown.
+      ?eye pfd:hasColor pfd:Brown .
 
       ?Person fibo-fnd-aap-a:hasName ?Name .
       optional{
@@ -882,8 +881,7 @@ where {
       ?Person obo:BFO_0000051 ?face .
       ?face obo:BFO_0000051 ?eye .
       ?eye a obo:UBERON_0000970 .
-      ?eye pfd:hasColor ?eyeColor .
-      ?eyeColor a pfd:Brown.
+      ?eye pfd:hasColor pfd:Brown .
 
       optional{
        ?Result lcc-lr:hasTag ?classification .
