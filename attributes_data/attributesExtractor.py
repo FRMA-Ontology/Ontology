@@ -122,6 +122,7 @@ def generate_rdf_individuals(names, tags, base_filename, output_filename, genera
 		photos = tags[name]
 
 		for photo_num in range(len(photos)):
+			# print(photos[photo_num])
 			# add the info for this photo:
 			if (restricted_images):
 				if (name, photo_num+1) not in restricted_images: # added 1 since images have base number 1 not 0
@@ -131,6 +132,9 @@ def generate_rdf_individuals(names, tags, base_filename, output_filename, genera
 					id = id + 1
 				else:
 					add_image_to_graph(photos[photo_num], g, 0)
+			else:
+				print(name + " " + str(photo_num))
+				add_image_to_graph(photos[photo_num], g, 0)
 	# here add another triple to test this
 	# instantiatedNamespace = Namespace(individualsNamespaceString)
 	# g.add((instantiatedNamespace.ThisIsATest, RDF.type, OWL.NamedIndividual))
@@ -741,7 +745,9 @@ if __name__ == "__main__":
 
 	# restricted_single = [('Patrick Bourrat', 1)]
 	restricted_single = [('Bill Clinton', 19), ('Billy Crystal', 5), ('Colin Farrell', 3), ('Derek Jeter', 4), ('Harry Belafonte', 2), ('Arnold Schwarzenegger', 1), ('Benjamin Franklin', 1), ('Bill Gates', 3), ('Bill OReilly', 1), ('Bill Paxton', 3), ('Al Gore', 8), ('Alexis Bledel', 1), ('Angelina Jolie', 1), ('Antonio Banderas', 2), ('George W Bush', 344), ('George W Bush', 471), ('Aaron Eckhart', 1), ('Adam Sandler', 1), ('Alanis Morissette', 1), ('Alec Baldwin', 1)]
-	generate_rdf_individuals(names, tags, "../FaceNet_Individual.rdf", "individuals.rdf", True, restricted_single)
+	# generate_rdf_individuals(names, tags, "../FaceNet_Individual.rdf", "individuals.rdf", True, restricted_single)
+
+	generate_rdf_individuals(names, tags, "empty.rdf", "lfw_tags.rdf", False)
 
 
 
